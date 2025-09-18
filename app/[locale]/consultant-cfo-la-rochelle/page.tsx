@@ -1,15 +1,51 @@
 'use client'
 
+import { useState, useEffect } from 'react'
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { MapPin, Building, Users, TrendingUp, Calendar, Star, ArrowRight, CheckCircle } from 'lucide-react'
+import { MapPin, Building, Users, TrendingUp, Calendar, Star, ArrowRight, CheckCircle, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
 import Button from '../../components/Button'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 
+interface NewsItem {
+  title: string
+  summary: string
+  link: string
+  pubDate: string
+  source: string
+  category: string
+}
+
 export default function ConsultantCFOLaRochellePage() {
   const t = useTranslations('consultant-cfo-la-rochelle')
   const locale = useLocale()
+  const [localNews, setLocalNews] = useState<NewsItem[]>([])
+  const [isLoadingNews, setIsLoadingNews] = useState(true)
+  const [lastUpdated, setLastUpdated] = useState<string>('')
+
+  // Fonction pour récupérer les actualités
+  const fetchNews = async () => {
+    try {
+      setIsLoadingNews(true)
+      const response = await fetch('/api/news')
+      const data = await response.json()
+      
+      if (data.success && data.news) {
+        setLocalNews(data.news)
+        setLastUpdated(data.lastUpdated)
+      }
+    } catch (error) {
+      console.error('Erreur lors de la récupération des actualités:', error)
+    } finally {
+      setIsLoadingNews(false)
+    }
+  }
+
+  // Charger les actualités au montage du composant
+  useEffect(() => {
+    fetchNews()
+  }, [])
 
   const localServices = [
     {
@@ -106,56 +142,6 @@ export default function ConsultantCFOLaRochellePage() {
     { number: "24h", label: "Réponse garantie" }
   ]
 
-  const localNews = [
-    {
-      title: "Actualités économiques La Rochelle",
-      summary: "Suivez l'actualité économique et les développements des entreprises à La Rochelle et en Charente-Maritime.",
-      date: "Actualités en continu",
-      category: "Économie",
-      source: "La Rochelle Info",
-      link: "https://larochelleinfo.media/"
-    },
-    {
-      title: "Écosystème startup Nouvelle-Aquitaine",
-      summary: "Découvrez les dernières innovations, levées de fonds et créations d'entreprises dans la région rochelaise.",
-      date: "Actualités en continu",
-      category: "Startups",
-      source: "France 3 Nouvelle-Aquitaine",
-      link: "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/charente-maritime/la-rochelle"
-    },
-    {
-      title: "Informations locales La Rochelle",
-      summary: "Toute l'actualité locale : politique, économie, culture, sport et vie quotidienne à La Rochelle.",
-      date: "Actualités en continu",
-      category: "Local",
-      source: "France Bleu La Rochelle",
-      link: "https://www.francebleu.fr/la-rochelle/actu"
-    },
-    {
-      title: "Actualités Charente-Maritime",
-      summary: "Informations régionales sur le développement économique, les entreprises et l'innovation en Charente-Maritime.",
-      date: "Actualités en continu",
-      category: "Région",
-      source: "Sud Ouest",
-      link: "https://www.sudouest.fr/charente-maritime/la-rochelle"
-    },
-    {
-      title: "Innovation et numérique La Rochelle",
-      summary: "Suivez l'évolution du secteur numérique et des nouvelles technologies à La Rochelle et sa région.",
-      date: "Actualités en continu",
-      category: "Tech",
-      source: "AUNISTV",
-      link: "https://www.aunistv.fr/"
-    },
-    {
-      title: "Entreprises et emploi La Rochelle",
-      summary: "Actualités sur le marché de l'emploi, les créations d'entreprises et l'économie locale rochelaise.",
-      date: "Actualités en continu",
-      category: "Emploi",
-      source: "Charente Libre",
-      link: "https://www.charentelibre.fr/la-rochelle"
-    }
-  ]
 
   return (
     <div className="pt-16">
@@ -420,14 +406,37 @@ export default function ConsultantCFOLaRochellePage() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-4"
             >
               Restez informé de l'actualité économique et tech de La Rochelle
             </motion.p>
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={fetchNews}
+                disabled={isLoadingNews}
+                className="flex items-center gap-2 px-4 py-2 text-sm text-primary-600 hover:text-primary-700 disabled:opacity-50 transition-colors"
+              >
+                <RefreshCw className={`w-4 h-4 ${isLoadingNews ? 'animate-spin' : ''}`} />
+                {isLoadingNews ? 'Chargement...' : 'Actualiser'}
+              </button>
+              {lastUpdated && (
+                <span className="text-xs text-gray-500">
+                  Dernière mise à jour : {new Date(lastUpdated).toLocaleTimeString('fr-FR')}
+                </span>
+              )}
+            </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-            {localNews.map((news, index) => (
+          {isLoadingNews ? (
+            <div className="flex items-center justify-center py-12">
+              <div className="flex items-center gap-3">
+                <RefreshCw className="w-6 h-6 animate-spin text-primary-600" />
+                <span className="text-gray-600">Chargement des actualités...</span>
+              </div>
+            </div>
+          ) : (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+              {localNews.map((news, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 30 }}
@@ -447,7 +456,7 @@ export default function ConsultantCFOLaRochellePage() {
                         <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
                           {news.category}
                         </span>
-                        <span className="text-xs text-gray-500">{news.date}</span>
+                        <span className="text-xs text-gray-500">{news.pubDate}</span>
                       </div>
                       
                       <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
@@ -468,8 +477,9 @@ export default function ConsultantCFOLaRochellePage() {
                   </Card>
                 </a>
               </motion.div>
-            ))}
-          </div>
+              ))}
+            </div>
+          )}
 
           <div className="text-center mt-12">
             <motion.div
