@@ -54,8 +54,8 @@ export default function HomePage() {
   const services = [
     {
       icon: (
-        <div className="w-24 h-24 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
-          <TrendingUp className="w-12 h-12 text-white drop-shadow-lg" />
+        <div className="w-16 h-16 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 rounded-lg flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 mx-auto">
+          <TrendingUp className="w-8 h-8 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('cfo.title'),
@@ -71,8 +71,8 @@ export default function HomePage() {
     },
     {
       icon: (
-        <div className="w-24 h-24 bg-gradient-to-br from-green-400 via-green-600 to-green-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
-          <Zap className="w-12 h-12 text-white drop-shadow-lg" />
+        <div className="w-16 h-16 bg-gradient-to-br from-green-400 via-green-600 to-green-800 rounded-lg flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 mx-auto">
+          <Zap className="w-8 h-8 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('coo.title'),
@@ -88,8 +88,8 @@ export default function HomePage() {
     },
     {
       icon: (
-        <div className="w-24 h-24 bg-gradient-to-br from-red-400 via-red-600 to-red-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
-          <AlertTriangle className="w-12 h-12 text-white drop-shadow-lg" />
+        <div className="w-16 h-16 bg-gradient-to-br from-red-400 via-red-600 to-red-800 rounded-lg flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105 mx-auto">
+          <AlertTriangle className="w-8 h-8 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('pompier.title'),
