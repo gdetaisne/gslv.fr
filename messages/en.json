@@ -1,0 +1,97 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "services": "Services",
+    "blog": "Blog",
+    "contact": "Contact",
+    "book": "Book a call"
+  },
+  "hero": {
+    "title": "A part-time CFO & COO to accelerate your growth, without fixed costs.",
+    "subtitle": "Expert in structuring, fundraising and scaling for startups and scaleups",
+    "cta": "Book a discovery call",
+    "ctaSecondary": "Discover our services"
+  },
+  "services": {
+    "cfo": {
+      "title": "Part-time CFO",
+      "description": "Externalized financial management to optimize your operations and prepare your fundraising",
+      "features": [
+        "Monthly financial reporting",
+        "Cash flow management",
+        "Forecasts and budgets",
+        "Fundraising preparation",
+        "KPI dashboards"
+      ]
+    },
+    "coo": {
+      "title": "Part-time COO",
+      "description": "Operational management to structure and optimize your growth processes",
+      "features": [
+        "Process structuring",
+        "Operational optimization",
+        "Hypergrowth management",
+        "Tool implementation",
+        "Team training"
+      ]
+    },
+    "scalability": {
+      "title": "Scalability",
+      "description": "Personalized support according to your development stage",
+      "stages": [
+        "Startup (0-10 employees)",
+        "Scale-up (10-50 employees)",
+        "Growth (50+ employees)"
+      ]
+    }
+  },
+  "about": {
+    "title": "About Guillaume",
+    "subtitle": "Part-time CFO/COO expert for growing startups",
+    "experience": "15+ years of experience",
+    "description": "Pragmatic and results-oriented, I support startups and scaleups in their financial and operational structuring to accelerate their growth.",
+    "expertise": [
+      "Financial structuring",
+      "Fundraising (Seed to Series B)",
+      "Operational optimization",
+      "Scaling and hypergrowth"
+    ]
+  },
+  "testimonials": {
+    "title": "Client testimonials",
+    "subtitle": "They trust us for their growth"
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Tips and insights for growing startups",
+    "readMore": "Read more",
+    "categories": {
+      "scaling": "Scaling & Operations",
+      "finance": "Finance for startups",
+      "tools": "Tools & Processes",
+      "fundraising": "Fundraising"
+    }
+  },
+  "contact": {
+    "title": "Book a discovery call",
+    "subtitle": "Let's discuss your needs and the best way to support you",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "company": "Company",
+      "stage": "Growth stage",
+      "message": "Message",
+      "submit": "Book the call"
+    }
+  },
+  "footer": {
+    "description": "Part-time CFO & COO for startups and scaleups",
+    "links": {
+      "privacy": "Privacy policy",
+      "terms": "Terms of use",
+      "cookies": "Cookie management"
+    },
+    "copyright": "© 2024 GSLV.cloud. All rights reserved."
+  }
+}

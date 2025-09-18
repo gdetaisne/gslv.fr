@@ -1,0 +1,17 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://gslv.cloud/sitemap.xml
+
+# Disallow admin and private areas
+Disallow: /admin/
+Disallow: /private/
+Disallow: /api/
+
+# Allow all blog content
+Allow: /blog/
+Allow: /fr/blog/
+Allow: /en/blog/
+Allow: /th/blog/
+
