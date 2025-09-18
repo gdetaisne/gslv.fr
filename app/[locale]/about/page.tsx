@@ -137,7 +137,7 @@ export default function AboutPage() {
               { name: 'Kaymu', logo: '/images/companies/kaymu.png', description: 'Marketplace e-commerce' },
               { name: 'Glossybox', logo: '/images/companies/glossybox.png', description: 'Beauté et cosmétiques' },
               { name: 'Orami', logo: '/images/companies/orami.png', description: 'Maternité et bébé' },
-              { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Sécurité et clés' },
+              { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Tech clés à distance brevetée' },
               { name: 'Jaiye', logo: '/images/companies/jaiye.jpeg', description: 'Plateforme digitale' },
               { name: 'Lamudi', logo: '/images/companies/lamudi.png', description: 'Immobilier en ligne' },
               { name: 'Lexolia', logo: '/images/companies/lexolia.png', description: 'Solutions digitales' },
