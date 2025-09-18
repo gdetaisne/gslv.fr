@@ -108,7 +108,7 @@ export default function HomePage() {
   return (
     <div className="pt-16">
       {/* Hero Section with Carousel */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50 py-20">
+      <section className="relative overflow-hidden bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 py-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
         
         {/* Carousel Background */}
@@ -144,13 +144,13 @@ export default function HomePage() {
           </div>
         )}
         
-        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg"
+              className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-2xl"
             >
               {t('title')}
             </motion.h1>
@@ -158,7 +158,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto drop-shadow-lg"
+              className="text-xl md:text-2xl text-white mb-8 max-w-4xl mx-auto drop-shadow-2xl"
             >
               {t('subtitle')}
             </motion.p>
