@@ -218,15 +218,15 @@
     }
   },
   "contact": {
-    "title": "Emergency Call - 24h",
-    "subtitle": "Critical situation? Contact me immediately for emergency intervention",
+    "title": "Contact",
+    "subtitle": "Need information? Contact me to discuss your project",
     "form": {
       "name": "Name",
       "email": "Email",
       "company": "Company",
-      "stage": "Criticality level",
-      "message": "Description of the emergency situation",
-      "submit": "Request intervention"
+      "stage": "Type of service",
+      "message": "Description of your project",
+      "submit": "Send message"
     }
   },
   "methodology": {
@@ -285,7 +285,7 @@
       "terms": "Terms of use",
       "cookies": "Cookie management"
     },
-    "copyright": "© 2024 GSLV.fr. All rights reserved."
+    "copyright": "© 2018 GSLV.fr. All rights reserved."
   },
   "values": {
     "title": "Our Values",

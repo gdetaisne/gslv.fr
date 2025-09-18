@@ -218,15 +218,15 @@
     }
   },
   "contact": {
-    "title": "Appel d'urgence - 24h",
-    "subtitle": "Situation critique ? Contactez-moi immédiatement pour une intervention d'urgence",
+    "title": "Contact",
+    "subtitle": "Besoin d'informations ? Contactez-moi pour discuter de votre projet",
     "form": {
       "name": "Nom",
       "email": "Email",
       "company": "Entreprise",
-      "stage": "Niveau de criticité",
-      "message": "Description de la situation d'urgence",
-      "submit": "Demander une intervention"
+      "stage": "Type de service",
+      "message": "Description de votre projet",
+      "submit": "Envoyer le message"
     }
   },
       "methodology": {
@@ -285,7 +285,7 @@
           "terms": "Conditions d'utilisation",
           "cookies": "Gestion des cookies"
         },
-        "copyright": "© 2024 GSLV.fr. Tous droits réservés."
+        "copyright": "© 2018 GSLV.fr. Tous droits réservés."
       },
       "values": {
         "title": "Nos Valeurs",

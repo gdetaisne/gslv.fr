@@ -33,7 +33,7 @@ export default function ContactPage() {
         },
         body: JSON.stringify({
           to: 'gdetaisne@gmail.com',
-          subject: `Demande d'intervention d'urgence - ${formData.company || 'Particulier'}`,
+          subject: `Demande de contact - ${formData.company || 'Particulier'}`,
           name: formData.name,
           email: formData.email,
           company: formData.company,
@@ -50,7 +50,7 @@ export default function ContactPage() {
     } catch (error) {
       console.error('Erreur:', error)
       // Fallback: redirection vers mailto
-      const subject = encodeURIComponent(`Demande d'intervention d'urgence - ${formData.company || 'Particulier'}`)
+      const subject = encodeURIComponent(`Demande de contact - ${formData.company || 'Particulier'}`)
       const body = encodeURIComponent(`
 Nom: ${formData.name}
 Email: ${formData.email}
@@ -76,7 +76,7 @@ ${formData.message}
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-primary-600" />,
-      title: 'Email d\'urgence',
+      title: 'Email',
       value: 'gdetaisne@gmail.com',
       link: 'mailto:gdetaisne@gmail.com'
     },
@@ -101,16 +101,17 @@ ${formData.message}
     {
       icon: <Clock className="w-6 h-6 text-primary-600" />,
       title: 'Disponibilité',
-      value: '24h/24 - Interventions d\'urgence',
+      value: 'Réponse sous 24h garantie',
       link: null
     }
   ]
 
   const stages = [
-    '🚨 Situation critique (0-48h)',
-    '⚠️ Difficultés majeures (1-2 semaines)',
-    '🔧 Restructuration (1-3 mois)',
+    '💼 CFO Part-time',
+    '⚙️ COO Part-time',
+    '🚀 Consultant Coup de Poing',
     '📊 Audit préventif',
+    '💡 Conseil stratégique',
     'Autre'
   ]
 
@@ -129,7 +130,7 @@ ${formData.message}
                 Message envoyé !
               </h2>
               <p className="text-gray-600 mb-6">
-                Votre demande d'intervention d'urgence a été transmise à gdetaisne@gmail.com. 
+                Votre demande de contact a été transmise à gdetaisne@gmail.com. 
                 Je vous réponds sous 24h maximum.
               </p>
               <Button onClick={() => setIsSubmitted(false)}>
@@ -179,11 +180,11 @@ ${formData.message}
           >
             <Shield className="w-8 h-8 text-red-600" />
             <div className="text-center">
-              <h3 className="text-xl font-bold text-red-800 mb-2">
+              <h3 className="text-xl font-bold text-primary-800 mb-2">
                 Garantie de réponse sous 24h
               </h3>
-              <p className="text-red-700">
-                Toute demande d'intervention d'urgence reçoit une réponse dans les 24h maximum
+              <p className="text-primary-700">
+                Toute demande de contact reçoit une réponse dans les 24h maximum
               </p>
             </div>
           </motion.div>
@@ -290,7 +291,7 @@ ${formData.message}
                         onChange={handleChange}
                         rows={4}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="Décrivez brièvement votre situation d'urgence..."
+                        placeholder="Décrivez brièvement votre projet ou vos besoins..."
                       />
                     </div>
 
@@ -300,7 +301,7 @@ ${formData.message}
                       className="w-full btn-hover"
                       isLoading={isSubmitting}
                     >
-                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande d\'urgence'}
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
@@ -317,10 +318,10 @@ ${formData.message}
               <Card>
                 <CardHeader>
                   <h2 className="text-2xl font-bold text-dark-900 mb-2">
-                    Contact d'urgence
+                    Contact
                   </h2>
                   <p className="text-gray-600">
-                    Situation critique ? Contactez-moi immédiatement
+                    Besoin de me contacter ? Voici mes coordonnées
                   </p>
                 </CardHeader>
                 <CardContent>

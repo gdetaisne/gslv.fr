@@ -85,53 +85,67 @@ export default function ConsultantCFOLaRochellePage() {
 
   const coworkingSpaces = [
     {
+      name: "Le Bastion Coworking",
+      address: "24 Rue du Bastion Saint-Nicolas, 17000 La Rochelle",
+      description: "500m² d'espace de travail en face de la gare, ouvert 24h/24, 7j/7",
+      price: "À partir de 25€/jour",
+      features: ["Bureaux partagés", "Bureaux privatifs", "Salles de réunion", "Wi-Fi haut débit", "Événements networking"],
+      link: "https://coworking-larochelle.fr/"
+    },
+    {
       name: "9 Coworking",
       address: "6 rue Virginie Hériot, 17000 La Rochelle",
-      description: "Espace moderne avec postes flexibles, bureaux privatifs et salles de réunion",
+      description: "Espace moderne avec postes flexibles et bureaux privatifs",
       price: "À partir de 21€/jour",
-      features: ["Open-space", "Bureaux privatifs", "Salles de réunion", "Cuisine équipée"]
+      features: ["Open-space", "Bureaux privatifs", "Salles de réunion", "Cuisine équipée", "Parking"],
+      link: "https://9coworking.fr/"
     },
     {
       name: "WorkingShare Kastler",
       address: "15 rue Alfred Kastler, 17000 La Rochelle",
-      description: "Espace dédié aux professionnels de divers secteurs",
+      description: "Espace professionnel avec bureaux privatifs et salles de réunion équipées",
       price: "À partir de 20€/heure",
-      features: ["Bureaux privatifs", "Salles de réunion", "Réseau professionnel", "Événements"]
-    },
-    {
-      name: "WorkingShare Newton",
-      address: "17 rue Isaac Newton, 17000 La Rochelle",
-      description: "Espace spécialisé web et numérique",
-      price: "Tarifs sur demande",
-      features: ["Webdesigners", "Développeurs", "Consultants SEO", "Communauté tech"]
+      features: ["Bureaux privatifs", "Salles de réunion", "Wi-Fi haut débit", "Équipements visioconférence"],
+      link: "https://workin.space/coworking/france/charente-maritime-17/la-rochelle-17000/"
     },
     {
       name: "Les Cabanes Urbaines",
       address: "22 Rue Cardinal, 17000 La Rochelle",
-      description: "Cadre de travail atypique et inspirant",
+      description: "Cadre de travail atypique et inspirant dans le centre historique",
       price: "Tarifs flexibles",
-      features: ["Coworking", "Salles de réunion", "Ambiance conviviale", "Événements"]
+      features: ["Coworking créatif", "Salles de réunion", "Ambiance conviviale", "Événements culturels"],
+      link: "http://www.lescabanesurbaines.fr/"
     }
   ]
 
   const localEcosystem = [
     {
-      name: "Le Village by CA",
+      name: "La Rochelle Technopole",
+      type: "Structure d'animation économique",
+      description: "Accompagnement des projets innovants et développement économique local",
+      focus: "Innovation, développement économique, accompagnement",
+      link: "https://www.larochelle-innovation.com/"
+    },
+    {
+      name: "Le Village by CA La Rochelle",
       type: "Incubateur",
-      description: "Accompagnement startups avec solutions d'hébergement flexibles et réseau de mentors",
-      focus: "Innovation, tech, services"
+      description: "Incubateur du Crédit Agricole offrant financement, mentorat et réseau",
+      focus: "Financement, mentorat, réseau, incubation",
+      link: "https://levillagebyca.com/"
     },
     {
       name: "Pépinière Créatio®ImagéTIC",
       type: "Pépinière d'entreprises",
-      description: "Bureaux à partir de 13m² pour jeunes entreprises TIC",
-      focus: "Technologies de l'information"
+      description: "Bureaux à partir de 13m² pour jeunes entreprises innovantes TIC",
+      focus: "Technologies de l'information, innovation, hébergement",
+      link: "https://www.creatio-imagetic.fr/"
     },
     {
       name: "La Rochelle Tech",
-      type: "Communauté",
+      type: "Communauté tech",
       description: "Meetups, conférences techniques et ateliers pour professionnels du numérique",
-      focus: "Tech, innovation, networking"
+      focus: "Tech, innovation, networking, formation",
+      link: "https://www.meetup.com/fr-FR/La-Rochelle-Tech/"
     }
   ]
 
@@ -140,6 +154,15 @@ export default function ConsultantCFOLaRochellePage() {
     { number: "50+", label: "Entreprises accompagnées" },
     { number: "100%", label: "Satisfaction client" },
     { number: "24h", label: "Réponse garantie" }
+  ]
+
+  const startupEcosystemStats = [
+    { number: "200+", label: "Startups actives", description: "Entreprises innovantes dans l'agglomération rochelaise" },
+    { number: "45M€", label: "Levées de fonds 2023", description: "Investissements captés par les startups locales" },
+    { number: "12", label: "Incubateurs & accélérateurs", description: "Structures d'accompagnement pour entrepreneurs" },
+    { number: "8%", label: "Croissance emploi tech", description: "Évolution annuelle des emplois numériques" },
+    { number: "1500+", label: "Emplois numériques", description: "Professionnels du digital à La Rochelle" },
+    { number: "25+", label: "Événements tech/an", description: "Meetups, conférences et ateliers organisés" }
   ]
 
 
@@ -287,30 +310,42 @@ export default function ConsultantCFOLaRochellePage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="group"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-center mb-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg mr-4">
-                        {actor.name.charAt(0)}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-gray-900 text-sm sm:text-base">
-                          {actor.name}
-                        </h3>
-                        <div className="text-xs sm:text-sm text-primary-600 font-medium">
-                          {actor.type}
+                <a 
+                  href={actor.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center mb-4">
+                        <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                          {actor.name.charAt(0)}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-gray-900 text-sm sm:text-base group-hover:text-primary-600 transition-colors">
+                            {actor.name}
+                          </h3>
+                          <div className="text-xs sm:text-sm text-primary-600 font-medium">
+                            {actor.type}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                    <p className="text-sm sm:text-base text-gray-700 mb-4 leading-relaxed">
-                      {actor.description}
-                    </p>
-                    <div className="text-xs sm:text-sm text-gray-500 font-medium">
-                      Focus: {actor.focus}
-                    </div>
-                  </CardContent>
-                </Card>
+                      <p className="text-sm sm:text-base text-gray-700 mb-4 leading-relaxed">
+                        {actor.description}
+                      </p>
+                      <div className="text-xs sm:text-sm text-gray-500 font-medium mb-4">
+                        Focus: {actor.focus}
+                      </div>
+                      <div className="flex items-center text-primary-600 text-sm font-medium">
+                        <span>En savoir plus</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -346,44 +381,57 @@ export default function ConsultantCFOLaRochellePage() {
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
+                className="group"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300">
-                  <CardContent className="p-6">
-                    <div className="flex items-start justify-between mb-4">
-                      <div>
-                        <h3 className="text-lg font-bold text-gray-900 mb-2">
-                          {space.name}
-                        </h3>
-                        <div className="flex items-center text-sm text-gray-600 mb-2">
-                          <MapPin className="w-4 h-4 mr-2" />
-                          {space.address}
+                <a 
+                  href={space.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-start justify-between mb-4">
+                        <div>
+                          <h3 className="text-lg font-bold text-gray-900 mb-2 group-hover:text-primary-600 transition-colors">
+                            {space.name}
+                          </h3>
+                          <div className="flex items-center text-sm text-gray-600 mb-2">
+                            <MapPin className="w-4 h-4 mr-2" />
+                            {space.address}
+                          </div>
+                          <div className="text-sm font-semibold text-primary-600">
+                            {space.price}
+                          </div>
                         </div>
-                        <div className="text-sm font-semibold text-primary-600">
-                          {space.price}
+                        <div className="flex items-center">
+                          <Star className="w-4 h-4 text-yellow-400 fill-current" />
+                          <span className="text-sm text-gray-600 ml-1">4.5</span>
                         </div>
                       </div>
-                      <div className="flex items-center">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current" />
-                        <span className="text-sm text-gray-600 ml-1">4.5</span>
+                      
+                      <p className="text-sm text-gray-700 mb-4 leading-relaxed">
+                        {space.description}
+                      </p>
+                      
+                      <div className="flex flex-wrap gap-2 mb-4">
+                        {space.features.map((feature, featureIndex) => (
+                          <span
+                            key={featureIndex}
+                            className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
+                          >
+                            {feature}
+                          </span>
+                        ))}
                       </div>
-                    </div>
-                    
-                    <p className="text-sm text-gray-700 mb-4 leading-relaxed">
-                      {space.description}
-                    </p>
-                    
-                    <div className="flex flex-wrap gap-2">
-                      {space.features.map((feature, featureIndex) => (
-                        <span
-                          key={featureIndex}
-                          className="px-3 py-1 bg-gray-100 text-gray-700 text-xs rounded-full"
-                        >
-                          {feature}
-                        </span>
-                      ))}
-                    </div>
-                  </CardContent>
-                </Card>
+                      
+                      <div className="flex items-center text-primary-600 text-sm font-medium">
+                        <span>Voir le site</span>
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -500,6 +548,55 @@ export default function ConsultantCFOLaRochellePage() {
                 </Button>
               </a>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Startup Ecosystem Stats Section */}
+      <section className="py-12 sm:py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
+            >
+              L'écosystème des startups à La Rochelle en chiffres
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            >
+              Un écosystème dynamique qui attire les talents et les investissements
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {startupEcosystemStats.map((stat, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+              >
+                <Card className="h-full hover:shadow-xl transition-all duration-300">
+                  <CardContent className="p-6 text-center">
+                    <div className="text-3xl sm:text-4xl font-bold text-primary-600 mb-2">
+                      {stat.number}
+                    </div>
+                    <h3 className="text-lg sm:text-xl font-bold text-gray-900 mb-2">
+                      {stat.label}
+                    </h3>
+                    <p className="text-sm text-gray-600 leading-relaxed">
+                      {stat.description}
+                    </p>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

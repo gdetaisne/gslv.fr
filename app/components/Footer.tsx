@@ -15,6 +15,9 @@ export default function Footer() {
       { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
       { name: 'Tarifs', href: `/${locale}/pricing` },
     ],
+    local: [
+      { name: 'CFO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
+    ],
     company: [
       { name: t('links.privacy'), href: `/${locale}/privacy` },
       { name: t('links.terms'), href: `/${locale}/terms` },
@@ -38,7 +41,7 @@ export default function Footer() {
               <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">G</span>
               </div>
-              <span className="text-xl font-bold">GSLV.fr</span>
+              <span className="text-xl font-bold">GSLV</span>
             </Link>
             <p className="text-gray-300 mb-6 max-w-sm">
               {t('description')}
@@ -68,6 +71,23 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Services</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* Local Pages */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Pages locales</h3>
+            <ul className="space-y-2">
+              {footerLinks.local.map((link) => (
                 <li key={link.name}>
                   <Link
                     href={link.href}
