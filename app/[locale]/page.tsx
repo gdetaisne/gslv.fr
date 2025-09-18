@@ -220,31 +220,31 @@ export default function HomePage() {
       {/* Services Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-20">
+          <div className="text-center mb-16">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
               className="relative"
             >
-              <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-accent-600 to-primary-800 mb-6">
+              <h2 className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-accent-600 to-primary-800 mb-6">
                 Nos Services
               </h2>
-              <div className="absolute -top-2 -right-2 w-4 h-4 bg-accent-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
+              <div className="absolute -top-2 -right-2 w-3 h-3 bg-accent-500 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-primary-500 rounded-full animate-bounce"></div>
             </motion.div>
             
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-medium"
+              className="text-lg md:text-xl text-gray-700 max-w-3xl mx-auto font-medium"
             >
               Des solutions personnalisées pour chaque stade de votre croissance
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
@@ -257,10 +257,10 @@ export default function HomePage() {
                   bounce: 0.3
                 }}
                 whileHover={{ 
-                  y: -15, 
-                  scale: 1.05,
-                  rotateY: 5,
-                  rotateX: 5
+                  y: -8, 
+                  scale: 1.02,
+                  rotateY: 2,
+                  rotateX: 2
                 }}
                 className="group perspective-1000"
               >
@@ -272,17 +272,17 @@ export default function HomePage() {
                     {/* Icône avec animation ultra-punchy */}
                     <motion.div
                       whileHover={{ 
-                        scale: 1.3, 
-                        rotate: 15,
-                        y: -10
+                        scale: 1.1, 
+                        rotate: 8,
+                        y: -5
                       }}
-                      whileTap={{ scale: 0.9 }}
+                      whileTap={{ scale: 0.95 }}
                       transition={{ 
-                        duration: 0.4,
+                        duration: 0.3,
                         type: "spring",
-                        bounce: 0.6
+                        bounce: 0.4
                       }}
-                      className="mb-8 relative"
+                      className="mb-6 relative"
                     >
                       {service.icon}
                       {/* Effet de particules */}
@@ -292,16 +292,16 @@ export default function HomePage() {
                     
                     {/* Titre avec effet de brillance */}
                     <motion.h3 
-                      className="text-2xl md:text-3xl font-black text-dark-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 transition-all duration-500"
-                      whileHover={{ scale: 1.05 }}
+                      className="text-xl md:text-2xl font-black text-dark-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 transition-all duration-500"
+                      whileHover={{ scale: 1.02 }}
                     >
                       {service.title}
                     </motion.h3>
                     
                     {/* Description avec animation */}
                     <motion.p 
-                      className="text-gray-600 mb-8 leading-relaxed text-lg"
-                      whileHover={{ scale: 1.02 }}
+                      className="text-gray-600 mb-6 leading-relaxed"
+                      whileHover={{ scale: 1.01 }}
                       transition={{ duration: 0.3 }}
                     >
                       {service.description}
@@ -310,7 +310,7 @@ export default function HomePage() {
                   
                   <CardContent className="pt-0 relative z-10">
                     {/* Features avec animations ultra-dynamiques */}
-                    <div className="space-y-4 mb-10">
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
                         <motion.div
                           key={featureIndex}
@@ -323,18 +323,18 @@ export default function HomePage() {
                             bounce: 0.4
                           }}
                           whileHover={{ 
-                            x: 10, 
-                            scale: 1.02,
+                            x: 5, 
+                            scale: 1.01,
                             backgroundColor: "rgba(59, 130, 246, 0.05)"
                           }}
-                          className="flex items-center space-x-4 p-3 rounded-lg transition-all duration-300 group-hover:bg-primary-50"
+                          className="flex items-center space-x-3 p-2 rounded-lg transition-all duration-300 group-hover:bg-primary-50"
                         >
                           <motion.div 
                             className="w-3 h-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex-shrink-0"
                             whileHover={{ scale: 1.5, rotate: 180 }}
                             transition={{ duration: 0.3 }}
                           ></motion.div>
-                          <span className="text-gray-700 font-medium text-base">
+                          <span className="text-gray-700 font-medium text-sm">
                             {feature}
                           </span>
                         </motion.div>
@@ -343,16 +343,16 @@ export default function HomePage() {
                     
                     {/* CTA ultra-punchy */}
                     <motion.div
-                      whileHover={{ scale: 1.08, y: -2 }}
-                      whileTap={{ scale: 0.95 }}
+                      whileHover={{ scale: 1.05, y: -1 }}
+                      whileTap={{ scale: 0.98 }}
                       className="text-center"
                     >
                       <Button
                         variant="outline"
-                        className="w-full group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 group-hover:text-white group-hover:border-transparent group-hover:shadow-lg transition-all duration-500 font-bold text-lg py-4 relative overflow-hidden"
+                        className="w-full group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 group-hover:text-white group-hover:border-transparent group-hover:shadow-lg transition-all duration-500 font-bold py-3 relative overflow-hidden"
                       >
                         <span className="relative z-10">En savoir plus</span>
-                        <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
                         {/* Effet de brillance sur le bouton */}
                         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                       </Button>
