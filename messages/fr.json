@@ -8,85 +8,85 @@
     "book": "Réserver un appel"
   },
   "hero": {
-    "title": "Un CFO & COO part-time pour accélérer votre croissance, sans coûts fixes.",
-    "subtitle": "Expert en structuration, levées de fonds et scaling pour startups et scaleups",
-    "cta": "Réserver un appel découverte",
-    "ctaSecondary": "Découvrir nos services"
+    "title": "CFO & COO 'Pompier' - Je redresse la barre quand la situation se complique",
+    "subtitle": "Interventions d'urgence pour startups et scaleups en difficulté. Structuration, levées de fonds et redressement opérationnel.",
+    "cta": "Appel d'urgence - 24h",
+    "ctaSecondary": "Découvrir mes interventions"
   },
   "services": {
     "cfo": {
-      "title": "CFO Part-time",
-      "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
+      "title": "CFO Pompier - Urgences Financières",
+      "description": "Intervention d'urgence pour redresser la situation financière. Restructuration, refinancement et préparation de levées de fonds en situation critique.",
       "features": [
-        "Reporting financier mensuel",
-        "Gestion de trésorerie et cashflow",
-        "Prévisions et budgets",
-        "Préparation levées de fonds",
-        "Tableaux de bord KPI"
+        "Diagnostic financier express (48h)",
+        "Restructuration de trésorerie",
+        "Préparation levées de fonds d'urgence",
+        "Négociation avec les créanciers",
+        "Tableaux de bord de crise"
       ]
     },
     "coo": {
-      "title": "COO Part-time",
-      "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
+      "title": "COO Pompier - Redressement Opérationnel",
+      "description": "Intervention pour stabiliser et redresser les opérations en difficulté. Restructuration des processus et optimisation d'urgence.",
       "features": [
-        "Structuration des processus",
-        "Optimisation opérationnelle",
-        "Gestion de l'hypercroissance",
-        "Mise en place d'outils",
-        "Formation des équipes"
+        "Audit opérationnel express",
+        "Restructuration des processus critiques",
+        "Gestion de crise opérationnelle",
+        "Mise en place d'outils d'urgence",
+        "Formation accélérée des équipes"
       ]
     },
     "scalability": {
-      "title": "Scalabilité",
-      "description": "Accompagnement personnalisé selon votre stade de développement",
+      "title": "Interventions d'Urgence",
+      "description": "Missions de redressement selon le niveau de criticité de la situation",
       "stages": [
-        "Startup (0-10 employés)",
-        "Scale-up (10-50 employés)",
-        "Growth (50+ employés)"
+        "🚨 Situation critique (0-48h)",
+        "⚠️ Difficultés majeures (1-2 semaines)",
+        "🔧 Restructuration (1-3 mois)"
       ]
     }
   },
   "about": {
-    "title": "À propos de Guillaume",
-    "subtitle": "Expert CFO/COO part-time pour startups en croissance",
-    "experience": "15+ années d'expérience",
-    "description": "Pragmatique et orienté résultats, j'accompagne les startups et scaleups dans leur structuration financière et opérationnelle pour accélérer leur croissance.",
+    "title": "À propos de Guillaume - Le Pompier des Startups",
+    "subtitle": "CFO/COO d'urgence spécialisé dans le redressement de situations critiques",
+    "experience": "15+ années d'expérience en crise",
+    "description": "Spécialiste du redressement, j'interviens quand la situation devient critique. Pragmatique et orienté résultats, je redresse la barre des startups et scaleups en difficulté.",
     "expertise": [
-      "Structuration financière",
-      "Levées de fonds (Seed à Series B)",
-      "Optimisation opérationnelle",
-      "Scaling et hypercroissance"
+      "Redressement financier d'urgence",
+      "Levées de fonds de dernière chance",
+      "Restructuration opérationnelle",
+      "Gestion de crise et stabilisation"
     ]
   },
   "testimonials": {
-    "title": "Témoignages clients",
-    "subtitle": "Ils nous font confiance pour leur croissance"
+    "title": "Témoignages de redressement",
+    "subtitle": "Ils m'ont fait confiance pour redresser leur situation"
   },
   "blog": {
-    "title": "Blog",
-    "subtitle": "Conseils et insights pour startups en croissance",
+    "title": "Blog - Urgences & Redressement",
+    "subtitle": "Conseils d'urgence et stratégies de redressement pour startups en difficulté",
     "readMore": "Lire la suite",
     "categories": {
-      "scaling": "Scaling & Opérations",
-      "finance": "Finance pour startups",
-      "tools": "Outils & Processus",
-      "fundraising": "Levées de fonds"
+      "scaling": "Redressement Opérationnel",
+      "finance": "Urgences Financières",
+      "tools": "Outils de Crise",
+      "fundraising": "Levées de Dernière Chance"
     }
   },
   "contact": {
-    "title": "Réserver un appel découverte",
-    "subtitle": "Discutons de vos besoins et de la meilleure façon de vous accompagner",
+    "title": "Appel d'urgence - 24h",
+    "subtitle": "Situation critique ? Contactez-moi immédiatement pour une intervention d'urgence",
     "form": {
       "name": "Nom",
       "email": "Email",
       "company": "Entreprise",
-      "stage": "Stade de croissance",
-      "message": "Message",
-      "submit": "Réserver l'appel"
+      "stage": "Niveau de criticité",
+      "message": "Description de la situation d'urgence",
+      "submit": "Demander une intervention"
     }
   },
   "footer": {
-    "description": "CFO & COO part-time pour startups et scaleups",
+    "description": "CFO & COO Pompier - Interventions d'urgence pour startups en difficulté",
     "links": {
       "privacy": "Politique de confidentialité",
       "terms": "Conditions d'utilisation",

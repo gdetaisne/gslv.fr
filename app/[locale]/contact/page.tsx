@@ -41,35 +41,41 @@ export default function ContactPage() {
   const contactInfo = [
     {
       icon: <Mail className="w-6 h-6 text-primary-600" />,
-      title: 'Email',
-      value: 'contact@gslv.cloud',
-      link: 'mailto:contact@gslv.cloud'
+      title: 'Email d\'urgence',
+      value: 'gdetaisne@gmail.com',
+      link: 'mailto:gdetaisne@gmail.com'
     },
     {
       icon: <Phone className="w-6 h-6 text-primary-600" />,
-      title: 'Téléphone',
-      value: '+33 1 23 45 67 89',
-      link: 'tel:+33123456789'
+      title: 'Téléphone France',
+      value: '+33 6 33 04 60 59',
+      link: 'tel:+33633046059'
+    },
+    {
+      icon: <Phone className="w-6 h-6 text-primary-600" />,
+      title: 'Téléphone Thaïlande',
+      value: '+66 6 47 58 20 32',
+      link: 'tel:+66647582032'
     },
     {
       icon: <MapPin className="w-6 h-6 text-primary-600" />,
-      title: 'Adresse',
-      value: 'Paris, France',
+      title: 'Localisation',
+      value: 'Paris, France & Bangkok, Thailand',
       link: null
     },
     {
       icon: <Clock className="w-6 h-6 text-primary-600" />,
       title: 'Disponibilité',
-      value: 'Lun-Ven 9h-18h',
+      value: '24h/24 - Interventions d\'urgence',
       link: null
     }
   ]
 
   const stages = [
-    'Idée / MVP',
-    'Startup (0-10 employés)',
-    'Scale-up (10-50 employés)',
-    'Growth (50+ employés)',
+    '🚨 Situation critique (0-48h)',
+    '⚠️ Difficultés majeures (1-2 semaines)',
+    '🔧 Restructuration (1-3 mois)',
+    '📊 Audit préventif',
     'Autre'
   ]
 

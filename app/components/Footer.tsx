@@ -98,29 +98,38 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact</h3>
+            <h3 className="text-lg font-semibold mb-4">Contact d'urgence</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
                 <a
-                  href="mailto:contact@gslv.cloud"
+                  href="mailto:gdetaisne@gmail.com"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  contact@gslv.cloud
+                  gdetaisne@gmail.com
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-primary-400" />
                 <a
-                  href="tel:+33123456789"
+                  href="tel:+33633046059"
                   className="text-gray-300 hover:text-white transition-colors"
                 >
-                  +33 1 23 45 67 89
+                  +33 6 33 04 60 59
+                </a>
+              </div>
+              <div className="flex items-center space-x-3">
+                <Phone className="w-5 h-5 text-primary-400" />
+                <a
+                  href="tel:+66647582032"
+                  className="text-gray-300 hover:text-white transition-colors"
+                >
+                  +66 6 47 58 20 32
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400" />
-                <span className="text-gray-300">Paris, France</span>
+                <span className="text-gray-300">Paris, France & Bangkok, Thailand</span>
               </div>
             </div>
           </div>
