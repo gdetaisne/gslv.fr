@@ -18,40 +18,58 @@
   "services": {
     "title": "Nos Services",
     "subtitle": "Des solutions personnalisées pour chaque stade de votre croissance",
-    "cfo": {
-      "title": "CFO Part-time",
-      "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
-      "features": [
-        "Reporting financier mensuel",
-        "Gestion de trésorerie et cashflow",
-        "Prévisions et budgets",
-        "Préparation levées de fonds",
-        "Tableaux de bord KPI"
-      ]
-    },
-    "coo": {
-      "title": "COO Part-time",
-      "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
-      "features": [
-        "Structuration des processus",
-        "Optimisation opérationnelle",
-        "Gestion de l'hypercroissance",
-        "Mise en place d'outils",
-        "Formation des équipes"
-      ]
-    },
-    "pompier": {
-      "title": "Consultant Opérations Coup de Poing",
-      "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
-      "features": [
-        "🚨 Prise de commande immédiate (24-48h)",
-        "👔 Remplacement intérimaire de dirigeant",
-        "🔧 Restructuration d'urgence",
-        "⚖️ Accompagnement en redressement judiciaire",
-        "⚡ Stabilisation opérationnelle",
-        "🎯 Plan de redressement personnalisé"
-      ]
-    }
+        "cfo": {
+          "title": "CFO Part-time",
+          "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
+          "features": [
+            "Reporting financier mensuel",
+            "Gestion de trésorerie et cashflow",
+            "Prévisions et budgets",
+            "Préparation levées de fonds",
+            "Tableaux de bord KPI"
+          ],
+          "budget": {
+            "title": "Budget indicatif",
+            "price": "750€ HT/jour",
+            "description": "Facturation à la tâche avec liste détaillée en fin de mois",
+            "note": "Phase de cadrage facturée selon complexité du projet"
+          }
+        },
+        "coo": {
+          "title": "COO Part-time",
+          "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
+          "features": [
+            "Structuration des processus",
+            "Optimisation opérationnelle",
+            "Gestion de l'hypercroissance",
+            "Mise en place d'outils",
+            "Formation des équipes"
+          ],
+          "budget": {
+            "title": "Budget indicatif",
+            "price": "750€ HT/jour",
+            "description": "Facturation à la tâche avec liste détaillée en fin de mois",
+            "note": "Phase de cadrage facturée selon complexité du projet"
+          }
+        },
+        "pompier": {
+          "title": "Consultant Opérations Coup de Poing",
+          "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
+          "features": [
+            "🚨 Prise de commande immédiate (24-48h)",
+            "👔 Remplacement intérimaire de dirigeant",
+            "🔧 Restructuration d'urgence",
+            "⚖️ Accompagnement en redressement judiciaire",
+            "⚡ Stabilisation opérationnelle",
+            "🎯 Plan de redressement personnalisé"
+          ],
+          "budget": {
+            "title": "Budget indicatif",
+            "price": "1000€ HT/jour",
+            "description": "Intervention d'urgence - Facturation à la tâche",
+            "note": "Phase de cadrage facturée selon complexité de la situation"
+          }
+        }
   },
   "about": {
     "title": "À propos de Guillaume - Consultant Opérations Coup de Poing",

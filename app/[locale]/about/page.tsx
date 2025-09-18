@@ -2,13 +2,15 @@
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { CheckCircle, Award, Users, TrendingUp, Target, Lightbulb, Linkedin } from 'lucide-react'
+import { CheckCircle, Award, Users, TrendingUp, Target, Lightbulb, Linkedin, ChevronDown, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader } from '../../components/Card'
+import { useState } from 'react'
 
 export default function AboutPage() {
   const t = useTranslations('about')
+  const [isTimelineExpanded, setIsTimelineExpanded] = useState(false)
 
   const stats = [
     { number: '15+', label: 'Années d\'expérience' },
@@ -77,7 +79,280 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Stats Section */}
+      {/* Timeline Section - 1. Parcours professionnel */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+              Parcours professionnel
+            </h2>
+            <p className="text-xl text-gray-600">
+              15+ années d'expérience en restructuration d'entreprises et gestion de crise
+            </p>
+          </div>
+
+          <div className="space-y-8">
+            {/* Affichage des 3 premières expériences (jusqu'à SecurClés) */}
+            {timeline.slice(0, 3).map((item: any, index: number) => (
+              <motion.div
+                key={item.year}
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative"
+              >
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                        {item.year}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {item.achievements?.length || 0} réalisations clés
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-dark-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+                    {item.achievements && (
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        {item.achievements.map((achievement: string, achievementIndex: number) => (
+                          <div
+                            key={achievementIndex}
+                            className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
+                          >
+                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <span className="text-sm text-gray-700 font-medium">
+                              {achievement}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
+                  </div>
+                </div>
+                {index < 2 && (
+                  <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
+                )}
+              </motion.div>
+            ))}
+
+            {/* Bouton d'expansion */}
+            <div className="text-center pt-8">
+              <button
+                onClick={() => setIsTimelineExpanded(!isTimelineExpanded)}
+                className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-300 font-medium"
+              >
+                {isTimelineExpanded ? (
+                  <>
+                    <ChevronUp className="w-5 h-5 mr-2" />
+                    Voir moins
+                  </>
+                ) : (
+                  <>
+                    <ChevronDown className="w-5 h-5 mr-2" />
+                    Voir le parcours complet
+                  </>
+                )}
+              </button>
+            </div>
+
+            {/* Expériences supplémentaires (affichées si expandé) */}
+            {isTimelineExpanded && (
+              <motion.div
+                initial={{ opacity: 0, height: 0 }}
+                animate={{ opacity: 1, height: 'auto' }}
+                exit={{ opacity: 0, height: 0 }}
+                transition={{ duration: 0.5 }}
+                className="space-y-8 pt-8 border-t border-gray-200"
+              >
+                {timeline.slice(3).map((item: any, index: number) => (
+                  <motion.div
+                    key={item.year}
+                    initial={{ opacity: 0, x: -20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                    className="relative"
+                  >
+                    <div className="flex items-start space-x-6">
+                      <div className="flex-shrink-0">
+                        <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                          {index + 4}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <div className="flex items-center space-x-4 mb-2">
+                          <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                            {item.year}
+                          </div>
+                          <div className="text-sm text-gray-500">
+                            {item.achievements?.length || 0} réalisations clés
+                          </div>
+                        </div>
+                        <h3 className="text-xl font-bold text-dark-900 mb-3">
+                          {item.title}
+                        </h3>
+                        <p className="text-gray-700 mb-4 leading-relaxed">
+                          {item.description}
+                        </p>
+                        {item.achievements && (
+                          <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                            {item.achievements.map((achievement: string, achievementIndex: number) => (
+                              <div
+                                key={achievementIndex}
+                                className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
+                              >
+                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                <span className="text-sm text-gray-700 font-medium">
+                                  {achievement}
+                                </span>
+                              </div>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </div>
+                    {index < timeline.slice(3).length - 1 && (
+                      <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
+                    )}
+                  </motion.div>
+                ))}
+              </motion.div>
+            )}
+          </div>
+        </div>
+      </section>
+
+      {/* Expertise Section - 2. Domaines d'expertise */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+              Domaines d'expertise
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Une approche complète pour accompagner votre croissance
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {expertise.map((item, index) => (
+              <motion.div
+                key={item.title}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+              >
+                <Card hover className="h-full">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                      {item.icon}
+                    </div>
+                    <h3 className="text-xl font-bold text-dark-900 mb-2">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-600">
+                      {item.description}
+                    </p>
+                  </CardHeader>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* About Guillaume - 3. Approche */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
+                Mon approche
+              </h2>
+              <p className="text-lg text-gray-600 mb-6">
+                {t('description')}
+              </p>
+              <div className="space-y-4">
+                {['Structuration financière', 'Levées de fonds (Seed à Series B)', 'Optimisation opérationnelle', 'Scaling et hypercroissance'].map((item, index) => (
+                  <div key={index} className="flex items-center space-x-3">
+                    <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
+                    <span className="text-gray-700">{item}</span>
+                  </div>
+                ))}
+              </div>
+            </motion.div>
+                 <motion.div
+                   initial={{ opacity: 0, x: 20 }}
+                   animate={{ opacity: 1, x: 0 }}
+                   transition={{ duration: 0.8, delay: 0.2 }}
+                   className="relative"
+                 >
+                   <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                     {/* Photo de Guillaume */}
+                     <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                       <Image
+                         src="/images/guillaume/guillaume-stehelin.jpg"
+                         alt="Guillaume Stehelin - Consultant Opérations Coup de Poing"
+                         fill
+                         className="object-cover"
+                         onError={(e) => {
+                           // Fallback si l'image n'existe pas
+                           e.currentTarget.style.display = 'none'
+                           const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                           if (nextElement) {
+                             nextElement.style.display = 'flex'
+                           }
+                         }}
+                       />
+                       <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
+                         G
+                       </div>
+                     </div>
+                     
+                     {/* Lien LinkedIn */}
+                     <Link
+                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="absolute bottom-4 right-4 bg-white hover:bg-blue-50 text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                     >
+                       <Linkedin className="w-6 h-6" />
+                     </Link>
+                   </div>
+                   
+                   {/* Informations sous la photo */}
+                   <div className="text-center mt-6">
+                     <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin</h3>
+                     <p className="text-lg text-gray-600 mb-3">Consultant Opérations Coup de Poing</p>
+                     <Link
+                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300"
+                     >
+                       <Linkedin className="w-5 h-5 mr-2" />
+                       Voir le profil LinkedIn
+                     </Link>
+                   </div>
+                 </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section - 4. Les chiffres */}
       <section className="py-16 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
@@ -319,73 +594,6 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* Timeline Section */}
-      <section className="py-20 bg-gray-50">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
-              Parcours professionnel
-            </h2>
-            <p className="text-xl text-gray-600">
-              15+ années d'expérience en restructuration d'entreprises et gestion de crise
-            </p>
-          </div>
-
-          <div className="space-y-12">
-            {timeline.map((item: any, index: number) => (
-              <motion.div
-                key={item.year}
-                initial={{ opacity: 0, x: -20 }}
-                animate={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="relative"
-              >
-                <div className="flex items-start space-x-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
-                      {index + 1}
-                    </div>
-                  </div>
-                  <div className="flex-1">
-                    <div className="flex items-center space-x-4 mb-2">
-                      <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
-                        {item.year}
-                      </div>
-                      <div className="text-sm text-gray-500">
-                        {item.achievements?.length || 0} réalisations clés
-                      </div>
-                    </div>
-                    <h3 className="text-xl font-bold text-dark-900 mb-3">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-700 mb-4 leading-relaxed">
-                      {item.description}
-                    </p>
-                    {item.achievements && (
-                      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
-                        {item.achievements.map((achievement: string, achievementIndex: number) => (
-                          <div
-                            key={achievementIndex}
-                            className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
-                          >
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
-                            <span className="text-sm text-gray-700 font-medium">
-                              {achievement}
-                            </span>
-                          </div>
-                        ))}
-                      </div>
-                    )}
-                  </div>
-                </div>
-                {index < timeline.length - 1 && (
-                  <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
     </div>
   )
 }

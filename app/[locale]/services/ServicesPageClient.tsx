@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { CheckCircle, TrendingUp, Zap, AlertTriangle, ArrowRight } from 'lucide-react'
+import { CheckCircle, TrendingUp, Zap, AlertTriangle, ArrowRight, Euro } from 'lucide-react'
 import Link from 'next/link'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 import Button from '../../components/Button'
@@ -17,6 +17,7 @@ export default function ServicesPageClient() {
       title: t('cfo.title'),
       description: t('cfo.description'),
       features: t.raw('cfo.features'),
+      budget: t.raw('cfo.budget'),
       icon: TrendingUp,
       color: 'from-blue-500 to-blue-600',
       hoverColor: 'hover:from-blue-600 hover:to-blue-700'
@@ -26,6 +27,7 @@ export default function ServicesPageClient() {
       title: t('coo.title'),
       description: t('coo.description'),
       features: t.raw('coo.features'),
+      budget: t.raw('coo.budget'),
       icon: Zap,
       color: 'from-green-500 to-green-600',
       hoverColor: 'hover:from-green-600 hover:to-green-700'
@@ -35,6 +37,7 @@ export default function ServicesPageClient() {
       title: t('pompier.title'),
       description: t('pompier.description'),
       features: t.raw('pompier.features'),
+      budget: t.raw('pompier.budget'),
       icon: AlertTriangle,
       color: 'from-red-500 to-red-600',
       hoverColor: 'hover:from-red-600 hover:to-red-700'
@@ -96,6 +99,7 @@ export default function ServicesPageClient() {
                       </li>
                     ))}
                   </ul>
+                  
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg">
                       Discuter de ce service
@@ -113,9 +117,26 @@ export default function ServicesPageClient() {
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed">
+                        <p className="text-gray-600 leading-relaxed mb-6">
                           {service.description}
                         </p>
+                        
+                        {/* Budget Section - Alternance de côté */}
+                        <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-6 border border-gray-200">
+                          <div className="flex items-center justify-center mb-4">
+                            <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-primary-600 rounded-lg flex items-center justify-center mr-3">
+                              <Euro className="w-5 h-5 text-white" />
+                            </div>
+                            <h3 className="text-xl font-bold text-gray-900">{service.budget.title}</h3>
+                          </div>
+                          <div className="space-y-3">
+                            <div className="flex items-center justify-center">
+                              <span className="text-2xl font-bold text-primary-600">{service.budget.price}</span>
+                            </div>
+                            <p className="text-gray-600 text-sm text-center">{service.budget.description}</p>
+                            <p className="text-gray-500 text-xs italic text-center">{service.budget.note}</p>
+                          </div>
+                        </div>
                       </div>
                     </CardContent>
                   </Card>

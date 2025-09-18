@@ -27,7 +27,13 @@
         "Forecasts and budgets",
         "Fundraising preparation",
         "KPI dashboards"
-      ]
+      ],
+      "budget": {
+        "title": "Indicative budget",
+        "price": "€750 ex VAT/day",
+        "description": "Task-based billing with detailed list at month-end",
+        "note": "Framing phase billed according to project complexity"
+      }
     },
     "coo": {
       "title": "Part-time COO",
@@ -38,7 +44,13 @@
         "Hypergrowth management",
         "Tool implementation",
         "Team training"
-      ]
+      ],
+      "budget": {
+        "title": "Indicative budget",
+        "price": "€750 ex VAT/day",
+        "description": "Task-based billing with detailed list at month-end",
+        "note": "Framing phase billed according to project complexity"
+      }
     },
     "pompier": {
       "title": "Emergency Operations Consultant",
@@ -50,7 +62,13 @@
         "⚖️ Judicial recovery support",
         "⚡ Operational stabilization",
         "🎯 Personalized recovery plan"
-      ]
+      ],
+      "budget": {
+        "title": "Indicative budget",
+        "price": "€1000 ex VAT/day",
+        "description": "Emergency intervention - Task-based billing",
+        "note": "Framing phase billed according to situation complexity"
+      }
     }
   },
   "about": {

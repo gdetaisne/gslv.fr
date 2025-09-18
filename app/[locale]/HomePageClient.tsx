@@ -15,7 +15,6 @@ export default function HomePageClient() {
   const tServices = useTranslations('services')
   const tTestimonials = useTranslations('testimonials')
   const tMethodology = useTranslations('methodology')
-  const tStats = useTranslations('stats')
   
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -85,7 +84,7 @@ export default function HomePageClient() {
   return (
     <div className="min-h-screen">
       {/* Hero Section with Carousel */}
-      <section className="relative h-screen overflow-hidden">
+      <section className="relative h-[60vh] overflow-hidden">
         {/* Carousel Background */}
         <div className="absolute inset-0 z-0">
           {carouselImages.map((image, index) => (
@@ -287,51 +286,6 @@ export default function HomePageClient() {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 to-accent-600">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-white mb-4"
-            >
-              {tStats('title')}
-            </motion.h2>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-white/90 max-w-3xl mx-auto"
-            >
-              {tStats('subtitle')}
-            </motion.p>
-          </div>
-
-          <div className="grid md:grid-cols-4 gap-8">
-            {tStats.raw('items').map((stat: any, index: number) => (
-              <motion.div
-                key={index}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                className="text-center"
-              >
-                <div className="text-5xl font-bold text-white mb-2">
-                  {stat.value}
-                </div>
-                <div className="text-xl text-white/90 mb-2">
-                  {stat.label}
-                </div>
-                <div className="text-white/75">
-                  {stat.description}
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Testimonials Section */}
       <section className="py-20 bg-gray-50">
