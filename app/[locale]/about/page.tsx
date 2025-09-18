@@ -2,8 +2,9 @@
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { CheckCircle, Award, Users, TrendingUp, Target, Lightbulb } from 'lucide-react'
+import { CheckCircle, Award, Users, TrendingUp, Target, Lightbulb, Linkedin } from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 
 export default function AboutPage() {
@@ -218,22 +219,57 @@ export default function AboutPage() {
                 ))}
               </div>
             </motion.div>
-            <motion.div
-              initial={{ opacity: 0, x: 20 }}
-              animate={{ opacity: 1, x: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="relative"
-            >
-              <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-32 h-32 bg-gradient-to-br from-primary-600 to-accent-600 rounded-full mx-auto mb-4 flex items-center justify-center">
-                    <span className="text-4xl font-bold text-white">G</span>
-                  </div>
-                  <h3 className="text-xl font-semibold text-dark-900">Guillaume Stehelin</h3>
-                  <p className="text-gray-600">CFO & COO Part-time</p>
-                </div>
-              </div>
-            </motion.div>
+                 <motion.div
+                   initial={{ opacity: 0, x: 20 }}
+                   animate={{ opacity: 1, x: 0 }}
+                   transition={{ duration: 0.8, delay: 0.2 }}
+                   className="relative"
+                 >
+                   <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                     {/* Photo de Guillaume */}
+                     <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                       <Image
+                         src="/images/guillaume/guillaume-stehelin.jpg"
+                         alt="Guillaume Stehelin - Consultant Opérations Coup de Poing"
+                         fill
+                         className="object-cover"
+                         onError={(e) => {
+                           // Fallback si l'image n'existe pas
+                           e.currentTarget.style.display = 'none'
+                           e.currentTarget.nextElementSibling.style.display = 'flex'
+                         }}
+                       />
+                       <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
+                         G
+                       </div>
+                     </div>
+                     
+                     {/* Lien LinkedIn */}
+                     <Link
+                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="absolute bottom-4 right-4 bg-white hover:bg-blue-50 text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                     >
+                       <Linkedin className="w-6 h-6" />
+                     </Link>
+                   </div>
+                   
+                   {/* Informations sous la photo */}
+                   <div className="text-center mt-6">
+                     <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin</h3>
+                     <p className="text-lg text-gray-600 mb-3">Consultant Opérations Coup de Poing</p>
+                     <Link
+                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300"
+                     >
+                       <Linkedin className="w-5 h-5 mr-2" />
+                       Voir le profil LinkedIn
+                     </Link>
+                   </div>
+                 </motion.div>
           </div>
         </div>
       </section>
