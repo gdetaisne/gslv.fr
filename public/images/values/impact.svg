@@ -1,0 +1,15 @@
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="impactGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1e40af;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  <circle cx="32" cy="32" r="30" fill="url(#impactGradient)" opacity="0.1"/>
+  <path d="M32 8C32 8 40 16 40 24C40 32 32 40 32 40C32 40 24 32 24 24C24 16 32 8 32 8Z" fill="url(#impactGradient)" opacity="0.8"/>
+  <path d="M32 12C32 12 37 17 37 22C37 27 32 32 32 32C32 32 27 27 27 22C27 17 32 12 32 12Z" fill="white" opacity="0.9"/>
+  <path d="M32 44L28 52L36 52L32 44Z" fill="url(#impactGradient)" opacity="0.8"/>
+  <path d="M32 46L30 50L34 50L32 46Z" fill="white" opacity="0.9"/>
+  <circle cx="32" cy="32" r="3" fill="white"/>
+  <path d="M20 20L24 24M40 20L36 24M20 44L24 40M40 44L36 40" stroke="url(#impactGradient)" stroke-width="2" stroke-linecap="round"/>
+</svg>
