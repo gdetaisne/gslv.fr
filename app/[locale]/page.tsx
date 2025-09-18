@@ -230,8 +230,6 @@ export default function HomePage() {
               <h2 className="text-3xl md:text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-accent-600 to-primary-800 mb-6">
                 Nos Services
               </h2>
-              <div className="absolute -top-2 -right-2 w-3 h-3 bg-accent-500 rounded-full animate-pulse"></div>
-              <div className="absolute -bottom-2 -left-2 w-2 h-2 bg-primary-500 rounded-full animate-bounce"></div>
             </motion.div>
             
             <motion.p
@@ -285,9 +283,6 @@ export default function HomePage() {
                       className="mb-6 relative"
                     >
                       {service.icon}
-                      {/* Effet de particules */}
-                      <div className="absolute -top-2 -right-2 w-2 h-2 bg-accent-400 rounded-full animate-ping"></div>
-                      <div className="absolute -bottom-2 -left-2 w-1.5 h-1.5 bg-primary-400 rounded-full animate-pulse"></div>
                     </motion.div>
                     
                     {/* Titre avec effet de brillance */}
@@ -308,9 +303,9 @@ export default function HomePage() {
                     </motion.p>
                   </CardHeader>
                   
-                  <CardContent className="pt-0 relative z-10">
+                  <CardContent className="pt-0 relative z-10 flex flex-col h-full">
                     {/* Features avec animations ultra-dynamiques */}
-                    <div className="space-y-3 mb-8">
+                    <div className="space-y-3 mb-8 flex-grow">
                       {service.features.map((feature, featureIndex) => (
                         <motion.div
                           key={featureIndex}
@@ -341,11 +336,11 @@ export default function HomePage() {
                       ))}
                     </div>
                     
-                    {/* CTA ultra-punchy */}
+                    {/* CTA ultra-punchy aligné en bas */}
                     <motion.div
                       whileHover={{ scale: 1.05, y: -1 }}
                       whileTap={{ scale: 0.98 }}
-                      className="text-center"
+                      className="text-center mt-auto"
                     >
                       <Button
                         variant="outline"
