@@ -3,7 +3,7 @@
 import { useState } from 'react'
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight } from 'lucide-react'
+import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight, Shield } from 'lucide-react'
 import Button from '../../components/Button'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 
@@ -24,11 +24,46 @@ export default function ContactPage() {
     e.preventDefault()
     setIsSubmitting(true)
     
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 2000))
+    try {
+      // Envoi de l'email via l'API
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          to: 'gdetaisne@gmail.com',
+          subject: `Demande d'intervention d'urgence - ${formData.company || 'Particulier'}`,
+          name: formData.name,
+          email: formData.email,
+          company: formData.company,
+          stage: formData.stage,
+          message: formData.message,
+        }),
+      })
+
+      if (response.ok) {
+        setIsSubmitted(true)
+      } else {
+        throw new Error('Erreur lors de l\'envoi')
+      }
+    } catch (error) {
+      console.error('Erreur:', error)
+      // Fallback: redirection vers mailto
+      const subject = encodeURIComponent(`Demande d'intervention d'urgence - ${formData.company || 'Particulier'}`)
+      const body = encodeURIComponent(`
+Nom: ${formData.name}
+Email: ${formData.email}
+Entreprise: ${formData.company}
+Situation: ${formData.stage}
+
+Message:
+${formData.message}
+      `)
+      window.location.href = `mailto:gdetaisne@gmail.com?subject=${subject}&body=${body}`
+    }
     
     setIsSubmitting(false)
-    setIsSubmitted(true)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
@@ -86,21 +121,21 @@ export default function ContactPage() {
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
-          className="max-w-md mx-auto text-center"
         >
-          <Card className="p-8">
-            <div className="w-16 h-16 bg-accent-100 rounded-full flex items-center justify-center mx-auto mb-6">
-              <CheckCircle className="w-8 h-8 text-accent-600" />
-            </div>
-            <h2 className="text-2xl font-bold text-dark-900 mb-4">
-              Message envoyé !
-            </h2>
-            <p className="text-gray-600 mb-6">
-              Merci pour votre message. Nous vous recontacterons dans les plus brefs délais.
-            </p>
-            <Button onClick={() => setIsSubmitted(false)}>
-              Envoyer un autre message
-            </Button>
+          <Card className="max-w-md mx-auto text-center">
+            <CardContent className="p-8">
+              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
+              <h2 className="text-2xl font-bold text-dark-900 mb-4">
+                Message envoyé !
+              </h2>
+              <p className="text-gray-600 mb-6">
+                Votre demande d'intervention d'urgence a été transmise à gdetaisne@gmail.com. 
+                Je vous réponds sous 24h maximum.
+              </p>
+              <Button onClick={() => setIsSubmitted(false)}>
+                Envoyer un autre message
+              </Button>
+            </CardContent>
           </Card>
         </motion.div>
       </div>
@@ -133,6 +168,28 @@ export default function ContactPage() {
         </div>
       </section>
 
+      {/* Garantie de réponse */}
+      <section className="py-12 bg-red-50 border-b border-red-200">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex items-center justify-center space-x-4"
+          >
+            <Shield className="w-8 h-8 text-red-600" />
+            <div className="text-center">
+              <h3 className="text-xl font-bold text-red-800 mb-2">
+                Garantie de réponse sous 24h
+              </h3>
+              <p className="text-red-700">
+                Toute demande d'intervention d'urgence reçoit une réponse dans les 24h maximum
+              </p>
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
       {/* Contact Form & Info */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -146,10 +203,10 @@ export default function ContactPage() {
               <Card>
                 <CardHeader>
                   <h2 className="text-2xl font-bold text-dark-900 mb-2">
-                    Réserver un appel découverte
+                    Demande d'intervention d'urgence
                   </h2>
                   <p className="text-gray-600">
-                    Remplissez le formulaire et nous vous recontacterons sous 24h
+                    Situation critique ? Envoyez-moi un message immédiat
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -188,7 +245,7 @@ export default function ContactPage() {
 
                     <div>
                       <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
-                        {t('form.company')} *
+                        {t('form.company')}
                       </label>
                       <input
                         type="text"
@@ -196,7 +253,6 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        required
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
                         placeholder="Nom de votre entreprise"
                       />
@@ -234,7 +290,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         rows={4}
                         className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="Décrivez brièvement vos besoins..."
+                        placeholder="Décrivez brièvement votre situation d'urgence..."
                       />
                     </div>
 
@@ -244,7 +300,7 @@ export default function ContactPage() {
                       className="w-full btn-hover"
                       isLoading={isSubmitting}
                     >
-                      {isSubmitting ? 'Envoi en cours...' : t('form.submit')}
+                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer la demande d\'urgence'}
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
@@ -257,58 +313,44 @@ export default function ContactPage() {
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="space-y-8"
             >
-              <div>
-                <h2 className="text-2xl font-bold text-dark-900 mb-6">
-                  Informations de contact
-                </h2>
-                <div className="space-y-6">
-                  {contactInfo.map((info, index) => (
-                    <div key={index} className="flex items-start space-x-4">
-                      <div className="w-12 h-12 bg-primary-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                        {info.icon}
-                      </div>
-                      <div>
-                        <h3 className="font-semibold text-dark-900 mb-1">
-                          {info.title}
-                        </h3>
-                        {info.link ? (
-                          <a
-                            href={info.link}
-                            className="text-primary-600 hover:text-primary-700 transition-colors"
-                          >
-                            {info.value}
-                          </a>
-                        ) : (
-                          <p className="text-gray-600">{info.value}</p>
-                        )}
-                      </div>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
               <Card>
                 <CardHeader>
-                  <h3 className="text-lg font-bold text-dark-900 mb-2">
-                    Calendly intégré
-                  </h3>
+                  <h2 className="text-2xl font-bold text-dark-900 mb-2">
+                    Contact d'urgence
+                  </h2>
                   <p className="text-gray-600">
-                    Réservez directement un créneau dans mon agenda
+                    Situation critique ? Contactez-moi immédiatement
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-gray-100 rounded-lg p-6 text-center">
-                    <div className="w-16 h-16 bg-primary-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <Clock className="w-8 h-8 text-primary-600" />
-                    </div>
-                    <p className="text-gray-600 mb-4">
-                      Widget Calendly à intégrer ici
-                    </p>
-                    <Button variant="outline" size="sm">
-                      Ouvrir Calendly
-                    </Button>
+                  <div className="space-y-6">
+                    {contactInfo.map((info, index) => (
+                      <motion.div
+                        key={index}
+                        initial={{ opacity: 0, x: -20 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.6, delay: index * 0.1 }}
+                        className="flex items-center space-x-4"
+                      >
+                        <div className="flex-shrink-0">
+                          {info.icon}
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-dark-900">{info.title}</h3>
+                          {info.link ? (
+                            <a
+                              href={info.link}
+                              className="text-primary-600 hover:text-primary-700 transition-colors"
+                            >
+                              {info.value}
+                            </a>
+                          ) : (
+                            <p className="text-gray-600">{info.value}</p>
+                          )}
+                        </div>
+                      </motion.div>
+                    ))}
                   </div>
                 </CardContent>
               </Card>
