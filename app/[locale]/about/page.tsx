@@ -11,9 +11,9 @@ export default function AboutPage() {
 
   const stats = [
     { number: '15+', label: 'Années d\'expérience' },
-    { number: '12+', label: 'Entreprises accompagnées' },
-    { number: '€100M+', label: 'Levées de fonds réalisées' },
-    { number: '95%', label: 'Taux de satisfaction' }
+    { number: '50+', label: 'Entreprises restructurées' },
+    { number: '€100M+', label: 'CA géré cumulé' },
+    { number: '550+', label: 'Employés supervisés' }
   ]
 
   const expertise = [
@@ -39,28 +39,7 @@ export default function AboutPage() {
     }
   ]
 
-  const timeline = [
-    {
-      year: '2008-2012',
-      title: 'Débuts en finance',
-      description: 'Formation en finance d\'entreprise et premières expériences dans des PME en croissance.'
-    },
-    {
-      year: '2012-2018',
-      title: 'Spécialisation startup',
-      description: 'Accompagnement de startups tech dans leur structuration financière et opérationnelle.'
-    },
-    {
-      year: '2018-2022',
-      title: 'Expertise scale-up',
-      description: 'Focus sur les scale-ups et les levées de fonds, avec plus de 20 opérations réussies.'
-    },
-    {
-      year: '2022-2024',
-      title: 'GSLV.cloud',
-      description: 'Création de GSLV.cloud pour démocratiser l\'accès à l\'expertise CFO/COO part-time.'
-    }
-  ]
+  const timeline = t.raw('timeline')
 
   return (
     <div className="pt-16">
@@ -306,35 +285,60 @@ export default function AboutPage() {
               Parcours professionnel
             </h2>
             <p className="text-xl text-gray-600">
-              15+ années d'expérience au service des startups
+              15+ années d'expérience en restructuration d'entreprises et gestion de crise
             </p>
           </div>
 
-          <div className="space-y-8">
-            {timeline.map((item, index) => (
+          <div className="space-y-12">
+            {timeline.map((item: any, index: number) => (
               <motion.div
                 key={item.year}
                 initial={{ opacity: 0, x: -20 }}
                 animate={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="flex items-start space-x-6"
+                className="relative"
               >
-                <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-primary-600 text-white rounded-full flex items-center justify-center font-bold">
-                    {index + 1}
+                <div className="flex items-start space-x-6">
+                  <div className="flex-shrink-0">
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                      {index + 1}
+                    </div>
+                  </div>
+                  <div className="flex-1">
+                    <div className="flex items-center space-x-4 mb-2">
+                      <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                        {item.year}
+                      </div>
+                      <div className="text-sm text-gray-500">
+                        {item.achievements?.length || 0} réalisations clés
+                      </div>
+                    </div>
+                    <h3 className="text-xl font-bold text-dark-900 mb-3">
+                      {item.title}
+                    </h3>
+                    <p className="text-gray-700 mb-4 leading-relaxed">
+                      {item.description}
+                    </p>
+                    {item.achievements && (
+                      <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
+                        {item.achievements.map((achievement: string, achievementIndex: number) => (
+                          <div
+                            key={achievementIndex}
+                            className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
+                          >
+                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <span className="text-sm text-gray-700 font-medium">
+                              {achievement}
+                            </span>
+                          </div>
+                        ))}
+                      </div>
+                    )}
                   </div>
                 </div>
-                <div className="flex-1">
-                  <div className="text-sm font-semibold text-primary-600 mb-1">
-                    {item.year}
-                  </div>
-                  <h3 className="text-lg font-bold text-dark-900 mb-2">
-                    {item.title}
-                  </h3>
-                  <p className="text-gray-600">
-                    {item.description}
-                  </p>
-                </div>
+                {index < timeline.length - 1 && (
+                  <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
+                )}
               </motion.div>
             ))}
           </div>

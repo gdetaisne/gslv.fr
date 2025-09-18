@@ -59,6 +59,74 @@
       "Prise de commande d'urgence",
       "Redressement financier express",
       "Gestion de crise et stabilisation"
+    ],
+    "timeline": [
+      {
+        "year": "2021-2025",
+        "title": "Co-CEO & Co-Fondateur - Ligerio",
+        "description": "Leader de la vente en ligne de revêtements de sols et murs de caractère en France. CA 2024 : 10M€. Croissance exceptionnelle : 50% à 100% par an pendant 3 ans consécutifs. Efficacité opérationnelle : flux logistiques x20 en 3 ans sans augmenter les effectifs.",
+        "achievements": [
+          "CA 10M€ en 4 ans",
+          "Croissance 50-100% annuelle",
+          "Flux logistiques x20",
+          "Équipe AAA recrutée et formée"
+        ]
+      },
+      {
+        "year": "2019-2021",
+        "title": "CFO - SecurClés",
+        "description": "Direction financière d'une entreprise de sécurité et clés. Restructuration complète des processus financiers et mise en place de contrôles internes robustes.",
+        "achievements": [
+          "Restructuration financière",
+          "Contrôles internes IFRS",
+          "Optimisation des coûts",
+          "Conformité réglementaire"
+        ]
+      },
+      {
+        "year": "2017-2018",
+        "title": "VP Finance - Orami (WhatsNew Group)",
+        "description": "Direction financière du groupe e-commerce basé en Thaïlande, maison-mère de plusieurs marques (Petloft, Orami, Sanoga, Lafema, MOXY).",
+        "achievements": [
+          "Consolidation multi-marques",
+          "Gestion de trésorerie",
+          "Reporting groupe",
+          "Optimisation opérationnelle"
+        ]
+      },
+      {
+        "year": "2016-2017",
+        "title": "Group CFO - Glossybox (Rocket Internet)",
+        "description": "Direction financière d'une success story de Rocket Internet. CA consolidé : 70M€, actif dans 8 pays. Gestion de la due diligence et de l'acquisition par The Hut Group.",
+        "achievements": [
+          "CA consolidé 70M€",
+          "Due diligence acquisition",
+          "Contrôles IFRS",
+          "Standardisation des processus"
+        ]
+      },
+      {
+        "year": "2013-2016",
+        "title": "Senior Executive Finance Manager - Jumia",
+        "description": "Missions SWAT dans des pays africains à haut risque. Restructuration financière, conformité légale et formation d'équipes AAA. 22 entreprises, 550 employés sous supervision.",
+        "achievements": [
+          "22 entreprises restructurées",
+          "550 employés supervisés",
+          "Processus optimisés",
+          "Conformité irréprochable"
+        ]
+      },
+      {
+        "year": "2011-2013",
+        "title": "Head of Finance - Groupe Lactalis Kazakhstan",
+        "description": "Modernisation des finances d'un kolkhoze. 9 divisions, 380 employés, division financière de 25 personnes. Restructuration complète et rétablissement de la gouvernance.",
+        "achievements": [
+          "Modernisation complète",
+          "Plan d'investissement 8 ans",
+          "Break-even en 2 ans",
+          "Lutte contre la fraude"
+        ]
+      }
     ]
   },
   "testimonials": {
