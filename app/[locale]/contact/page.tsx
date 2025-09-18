@@ -203,10 +203,10 @@ ${formData.message}
               <Card>
                 <CardHeader>
                   <h2 className="text-2xl font-bold text-dark-900 mb-2">
-                    Demande d'intervention d'urgence
+                    Demande d'information / contact
                   </h2>
                   <p className="text-gray-600">
-                    Situation critique ? Envoyez-moi un message immédiat
+                    Besoin d'informations ? Envoyez-moi un message
                   </p>
                 </CardHeader>
                 <CardContent>

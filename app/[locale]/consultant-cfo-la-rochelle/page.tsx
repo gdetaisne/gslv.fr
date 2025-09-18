@@ -106,6 +106,51 @@ export default function ConsultantCFOLaRochellePage() {
     { number: "24h", label: "Réponse garantie" }
   ]
 
+  const localNews = [
+    {
+      title: "La Rochelle : Nouvelle dynamique pour l'innovation tech",
+      summary: "L'écosystème tech rochelais se renforce avec l'ouverture de nouveaux espaces de coworking et l'arrivée de startups innovantes.",
+      date: "15 janvier 2024",
+      category: "Innovation",
+      source: "La Rochelle Info"
+    },
+    {
+      title: "Startups rochelaises : levées de fonds en hausse",
+      summary: "Plusieurs entreprises locales ont réussi leurs levées de fonds cette année, témoignant de la vitalité de l'écosystème entrepreneurial.",
+      date: "10 janvier 2024",
+      category: "Financement",
+      source: "Charente Libre"
+    },
+    {
+      title: "Le Village by CA La Rochelle : 50 startups accompagnées",
+      summary: "L'incubateur du Crédit Agricole célèbre ses 2 ans avec un bilan positif et de nouveaux projets d'accompagnement.",
+      date: "8 janvier 2024",
+      category: "Incubation",
+      source: "Sud Ouest"
+    },
+    {
+      title: "Économie numérique : La Rochelle mise sur l'attractivité",
+      summary: "La ville renforce son positionnement dans le numérique avec de nouveaux investissements et des partenariats stratégiques.",
+      date: "5 janvier 2024",
+      category: "Économie",
+      source: "France 3 Nouvelle-Aquitaine"
+    },
+    {
+      title: "Coworking à La Rochelle : une offre qui se diversifie",
+      summary: "Les espaces de travail partagés se multiplient dans la ville, répondant à la demande croissante des entrepreneurs et freelances.",
+      date: "3 janvier 2024",
+      category: "Coworking",
+      source: "La Rochelle Info"
+    },
+    {
+      title: "PME rochelaises : accompagnement financier renforcé",
+      summary: "De nouveaux dispositifs d'aide sont mis en place pour soutenir la croissance des entreprises locales.",
+      date: "1er janvier 2024",
+      category: "PME",
+      source: "Charente-Maritime Entreprises"
+    }
+  ]
+
   return (
     <div className="pt-16">
       {/* Hero Section */}
@@ -349,6 +394,83 @@ export default function ConsultantCFOLaRochellePage() {
                 </Card>
               </motion.div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Local News Section */}
+      <section className="py-12 sm:py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12 sm:mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
+            >
+              Actualités locales
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
+            >
+              Restez informé de l'actualité économique et tech de La Rochelle
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
+            {localNews.map((news, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: index * 0.1 }}
+                className="group"
+              >
+                <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                  <CardContent className="p-6">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
+                        {news.category}
+                      </span>
+                      <span className="text-xs text-gray-500">{news.date}</span>
+                    </div>
+                    
+                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
+                      {news.title}
+                    </h3>
+                    
+                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                      {news.summary}
+                    </p>
+                    
+                    <div className="flex items-center justify-between">
+                      <span className="text-xs text-gray-500 font-medium">
+                        {news.source}
+                      </span>
+                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-600 transition-colors" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </motion.div>
+            ))}
+          </div>
+
+          <div className="text-center mt-12">
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+            >
+              <p className="text-sm text-gray-600 mb-4">
+                Sources : La Rochelle Info, Charente Libre, Sud Ouest, France 3 Nouvelle-Aquitaine
+              </p>
+              <Button variant="outline" size="lg" className="text-sm px-6 py-3">
+                Voir toutes les actualités
+              </Button>
+            </motion.div>
           </div>
         </div>
       </section>
