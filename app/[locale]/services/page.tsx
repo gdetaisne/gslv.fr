@@ -67,7 +67,7 @@ export default function ServicesPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link href="/fr/contact">
+              <Link href={`/${locale}/contact`}>
                 <Button className="btn-hover">
                   {tHero('cta')}
                   <ArrowRight className="w-5 h-5 ml-2" />
@@ -135,7 +135,7 @@ export default function ServicesPage() {
                       ))}
                     </ul>
                     <div className="mt-6">
-                      <Link href="/fr/contact">
+                      <Link href={`/${locale}/contact`}>
                         <Button className="w-full">
                           Demander une intervention
                           <ArrowRight className="w-4 h-4 ml-2" />
@@ -164,7 +164,7 @@ export default function ServicesPage() {
             <p className="text-xl text-white/90 mb-8">
               Contactez-moi immédiatement pour une intervention d'urgence
             </p>
-            <Link href="/fr/contact">
+            <Link href={`/${locale}/contact`}>
               <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
                 Appel d'urgence - 24h
                 <ArrowRight className="w-5 h-5 ml-2" />

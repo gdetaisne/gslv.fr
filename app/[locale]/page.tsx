@@ -168,13 +168,13 @@ export default function HomePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
-              <Link href="/contact">
+              <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-hover bg-white text-primary-600 hover:bg-gray-100">
                   {t('cta')}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
-              <Link href="/services">
+              <Link href={`/${locale}/services`}>
                 <Button variant="secondary" size="lg" className="btn-hover bg-white/20 text-white border-white hover:bg-white/30">
                   {t('ctaSecondary')}
                 </Button>
@@ -564,7 +564,7 @@ export default function HomePage() {
             <p className="text-xl text-white/90 mb-8">
               Réservez un appel découverte gratuit pour discuter de vos besoins
             </p>
-            <Link href="/contact">
+            <Link href={`/${locale}/contact`}>
               <Button size="lg" variant="secondary" className="btn-hover">
                 Réserver un appel découverte
                 <ArrowRight className="w-5 h-5 ml-2" />

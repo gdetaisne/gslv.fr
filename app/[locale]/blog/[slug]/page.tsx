@@ -89,7 +89,7 @@ export default function BlogPostPage() {
           <h1 className="text-2xl font-bold text-gray-900 mb-4">Article non trouvé</h1>
           <p className="text-gray-600 mb-6">L'article que vous recherchez n'existe pas.</p>
           <Link
-            href="/blog"
+            href={`/${locale}/blog`}
             className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
           >
             <ArrowLeft className="w-4 h-4 mr-2" />
@@ -107,7 +107,7 @@ export default function BlogPostPage() {
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="mb-6">
             <Link
-              href="/blog"
+              href={`/${locale}/blog`}
               className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
             >
               <ArrowLeft className="w-4 h-4 mr-2" />
@@ -251,13 +251,13 @@ export default function BlogPostPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link
-                href="/contact"
+                href={`/${locale}/contact`}
                 className="inline-flex items-center px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 Réserver un appel découverte
               </Link>
               <Link
-                href="/services"
+                href={`/${locale}/services`}
                 className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
               >
                 Découvrir nos services
