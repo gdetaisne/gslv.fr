@@ -3,6 +3,7 @@
     "home": "Accueil",
     "about": "À propos",
     "services": "Services",
+    "values": "Valeurs",
     "blog": "Blog",
     "contact": "Contact",
     "book": "Réserver un appel"
@@ -285,5 +286,127 @@
           "cookies": "Gestion des cookies"
         },
         "copyright": "© 2024 GSLV.fr. Tous droits réservés."
+      },
+      "values": {
+        "title": "Nos Valeurs",
+        "subtitle": "Les principes qui guident notre approche et définissent notre engagement envers l'excellence",
+        "investment": {
+          "title": "Investissement",
+          "principles": [
+            {
+              "title": "Se lever chaque matin pour un objectif commun",
+              "behaviors": [
+                "Fait preuve d'investissement",
+                "Ne ménage pas ses efforts"
+              ]
+            },
+            {
+              "title": "Voir grand, agir vite",
+              "behaviors": [
+                "S'approprie et est disposé à prendre des décisions",
+                "Anticipe les problèmes avant qu'ils ne surviennent",
+                "Se montre davantage proactif que réactif"
+              ]
+            },
+            {
+              "title": "Pas besoin d'un titre pour être un leader",
+              "behaviors": [
+                "Est énergique et motive les membres de l'équipe",
+                "Contribue activement à la réalisation des objectifs des équipes",
+                "Aide ses pairs à assurer l'efficacité de l'équipe avec confiance et humilité"
+              ]
+            },
+            {
+              "title": "Quand on veut, on peut",
+              "behaviors": [
+                "Croit que tout peut être fait",
+                "Cherche des solutions aux problèmes",
+                "Est capable de convaincre quand il y a légitimité"
+              ]
+            }
+          ]
+        },
+        "impact": {
+          "title": "Impact",
+          "principles": [
+            {
+              "title": "Voler haut, plonger profond",
+              "behaviors": [
+                "Fait preuve de précision et de rigueur",
+                "Atteint un haut niveau de qualité dans ses tâches et ses résultats",
+                "A recours au retour d'information sur la qualité du travail",
+                "Est capable de décomposer des problèmes complexes en plusieurs parties",
+                "Utilise des compétences quantitatives pour tirer des conclusions"
+              ]
+            },
+            {
+              "title": "Faire simple pour agir intelligemment",
+              "behaviors": [
+                "Est capable de structurer les problèmes pour trouver des solutions claires",
+                "S'appuie sur des faits pour tirer des conclusions",
+                "Communique efficacement"
+              ]
+            },
+            {
+              "title": "Réfléchit, décide et exécute les choses avec souplesse",
+              "behaviors": [
+                "Fait preuve de ponctualité vis-à-vis des heures de travail",
+                "Respecte les délais en fournissant un travail complet dans les délais impartis",
+                "Recherche activement de nouvelles façons d'améliorer la vitesse d'exécution des tâches",
+                "Participe à des formations pertinentes pour améliorer son efficacité",
+                "Partage les nouvelles méthodes avec l'équipe"
+              ]
+            },
+            {
+              "title": "Innover avec parcimonie",
+              "behaviors": [
+                "Pose des questions et fait preuve de curiosité",
+                "Fait preuve d'innovation"
+              ]
+            }
+          ]
+        },
+        "leadership": {
+          "title": "Leadership",
+          "principles": [
+            {
+              "title": "Laisser se développer les meilleurs éléments et les meilleures idées",
+              "behaviors": [
+                "Travaille avec les membres juniors de l'équipe pour les aider à améliorer leurs compétences",
+                "Met en place des retours d'information constructifs"
+              ]
+            },
+            {
+              "title": "Jouer pour l'équipe",
+              "behaviors": [
+                "Est capable de structurer le travail des membres de l'équipe",
+                "Est capable de mobiliser et d'inspirer l'équipe pour qu'elle exécute collectivement une tâche",
+                "Est capable d'identifier les éléments peu performants et de les encadrer pour améliorer leur efficacité"
+              ]
+            },
+            {
+              "title": "Faire ce qu'il faut, non ce qui est facile",
+              "behaviors": [
+                "Est une personne de confiance et éthique",
+                "Assure un équilibre efficace entre opinion et prise de décision",
+                "Agit comme un modèle pour les équipes"
+              ]
+            },
+            {
+              "title": "Travailler dur et avec plaisir",
+              "behaviors": [
+                "Réfléchit de manière positive",
+                "Égaye l'atmosphère",
+                "Promeut l'hygiène de vie",
+                "Contribue en interne au développement de l'entreprise"
+              ]
+            }
+          ]
+        },
+        "cta": {
+          "title": "Prêt à travailler avec ces valeurs ?",
+          "subtitle": "Découvrez comment ces principes peuvent transformer votre entreprise",
+          "button": "Nous contacter"
+        }
       }
-}
+    }

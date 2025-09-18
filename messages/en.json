@@ -3,6 +3,7 @@
     "home": "Home",
     "about": "About",
     "services": "Services",
+    "values": "Values",
     "blog": "Blog",
     "contact": "Contact",
     "book": "Book a call"
@@ -285,5 +286,127 @@
       "cookies": "Cookie management"
     },
     "copyright": "© 2024 GSLV.fr. All rights reserved."
+  },
+  "values": {
+    "title": "Our Values",
+    "subtitle": "The principles that guide our approach and define our commitment to excellence",
+    "investment": {
+      "title": "Investment",
+      "principles": [
+        {
+          "title": "Wake up every morning for a common objective",
+          "behaviors": [
+            "Shows investment",
+            "Doesn't spare efforts"
+          ]
+        },
+        {
+          "title": "Think big, act fast",
+          "behaviors": [
+            "Takes ownership and is willing to make decisions",
+            "Anticipates problems before they arise",
+            "Is more proactive than reactive"
+          ]
+        },
+        {
+          "title": "No need for a title to be a leader",
+          "behaviors": [
+            "Is energetic and motivates team members",
+            "Actively contributes to achieving team objectives",
+            "Helps peers ensure team effectiveness with confidence and humility"
+          ]
+        },
+        {
+          "title": "Where there's a will, there's a way",
+          "behaviors": [
+            "Believes that anything can be done",
+            "Seeks solutions to problems",
+            "Is able to convince when there is legitimacy"
+          ]
+        }
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "principles": [
+        {
+          "title": "Fly high, dive deep",
+          "behaviors": [
+            "Demonstrates precision and rigor",
+            "Achieves a high level of quality in tasks and results",
+            "Uses feedback on work quality",
+            "Is capable of breaking down complex problems into several parts",
+            "Uses quantitative skills to draw conclusions"
+          ]
+        },
+        {
+          "title": "Keep it simple to act intelligently",
+          "behaviors": [
+            "Is capable of structuring problems to find clear solutions",
+            "Relies on facts to draw conclusions",
+            "Communicates effectively"
+          ]
+        },
+        {
+          "title": "Think, decide and execute things with flexibility",
+          "behaviors": [
+            "Demonstrates punctuality regarding working hours",
+            "Respects deadlines by delivering complete work within given timeframes",
+            "Actively seeks new ways to improve task execution speed",
+            "Participates in relevant training to improve efficiency",
+            "Shares new methods with the team"
+          ]
+        },
+        {
+          "title": "Innovate sparingly",
+          "behaviors": [
+            "Asks questions and shows curiosity",
+            "Demonstrates innovation"
+          ]
+        }
+      ]
+    },
+    "leadership": {
+      "title": "Leadership",
+      "principles": [
+        {
+          "title": "Let the best elements and best ideas develop",
+          "behaviors": [
+            "Works with junior team members to help them improve their skills",
+            "Implements constructive feedback"
+          ]
+        },
+        {
+          "title": "Play for the team",
+          "behaviors": [
+            "Is capable of structuring team members' work",
+            "Is capable of mobilizing and inspiring the team to collectively execute a task",
+            "Is capable of identifying underperforming elements and coaching them to improve their effectiveness"
+          ]
+        },
+        {
+          "title": "Do what's necessary, not what's easy",
+          "behaviors": [
+            "Is a trustworthy and ethical person",
+            "Ensures an effective balance between opinion and decision-making",
+            "Acts as a role model for teams"
+          ]
+        },
+        {
+          "title": "Work hard and with pleasure",
+          "behaviors": [
+            "Thinks positively",
+            "Brightens the atmosphere",
+            "Promotes a healthy lifestyle",
+            "Contributes internally to the company's development"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Ready to work with these values?",
+      "subtitle": "Discover how these principles can transform your company",
+      "button": "Contact us"
+    }
   }
 }
