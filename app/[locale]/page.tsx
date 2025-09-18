@@ -336,7 +336,7 @@ export default function HomePage() {
                       ))}
                     </div>
                     
-                    {/* CTA ultra-punchy aligné en bas */}
+                    {/* CTA aligné en bas */}
                     <motion.div
                       whileHover={{ scale: 1.05, y: -1 }}
                       whileTap={{ scale: 0.98 }}
@@ -344,12 +344,10 @@ export default function HomePage() {
                     >
                       <Button
                         variant="outline"
-                        className="w-full group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 group-hover:text-white group-hover:border-transparent group-hover:shadow-lg transition-all duration-500 font-bold py-3 relative overflow-hidden"
+                        className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600 transition-all duration-300 font-bold"
                       >
-                        <span className="relative z-10">En savoir plus</span>
+                        En savoir plus
                         <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
-                        {/* Effet de brillance sur le bouton */}
-                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                       </Button>
                     </motion.div>
                   </CardContent>
