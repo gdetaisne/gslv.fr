@@ -12,6 +12,10 @@ Ce dossier contient les logos des entreprises que Guillaume a accompagnées.
 - `glossybox.png` - Logo de Glossybox (beauté et cosmétiques)
 - `orami.png` - Logo d'Orami (maternité et bébé)
 - `securcles.png` - Logo de Securclés (sécurité et clés)
+- `jaiye.jpeg` - Logo de Jaiye (plateforme digitale)
+- `lamudi.png` - Logo de Lamudi (immobilier en ligne)
+- `lexolia.png` - Logo de Lexolia (solutions digitales)
+- `petloft.png` - Logo de Petloft (services pour animaux)
 
 ## Spécifications techniques :
 

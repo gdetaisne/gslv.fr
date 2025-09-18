@@ -11,7 +11,7 @@ export default function AboutPage() {
 
   const stats = [
     { number: '15+', label: 'Années d\'expérience' },
-    { number: '8+', label: 'Entreprises accompagnées' },
+    { number: '12+', label: 'Entreprises accompagnées' },
     { number: '€100M+', label: 'Levées de fonds réalisées' },
     { number: '95%', label: 'Taux de satisfaction' }
   ]
@@ -158,7 +158,11 @@ export default function AboutPage() {
               { name: 'Kaymu', logo: '/images/companies/kaymu.png', description: 'Marketplace e-commerce' },
               { name: 'Glossybox', logo: '/images/companies/glossybox.png', description: 'Beauté et cosmétiques' },
               { name: 'Orami', logo: '/images/companies/orami.png', description: 'Maternité et bébé' },
-              { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Sécurité et clés' }
+              { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Sécurité et clés' },
+              { name: 'Jaiye', logo: '/images/companies/jaiye.jpeg', description: 'Plateforme digitale' },
+              { name: 'Lamudi', logo: '/images/companies/lamudi.png', description: 'Immobilier en ligne' },
+              { name: 'Lexolia', logo: '/images/companies/lexolia.png', description: 'Solutions digitales' },
+              { name: 'Petloft', logo: '/images/companies/petloft.png', description: 'Services pour animaux' }
             ].map((company, index) => (
               <motion.div
                 key={company.name}
@@ -205,7 +209,7 @@ export default function AboutPage() {
             </p>
             <div className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-700 rounded-full font-semibold">
               <Users className="w-5 h-5 mr-2" />
-              8+ entreprises accompagnées
+              12+ entreprises accompagnées
             </div>
           </motion.div>
         </div>
