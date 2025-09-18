@@ -142,7 +142,7 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6"
+              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6 leading-tight"
             >
               {t('title')}
             </motion.h1>
@@ -150,7 +150,7 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl sm:text-2xl text-white mb-8 max-w-3xl mx-auto"
+              className="text-base sm:text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               {t('subtitle')}
             </motion.p>
@@ -161,12 +161,12 @@ export default function HomePageClient() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="text-lg px-8 py-4">
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
                   {t('cta.primary')}
                 </Button>
               </Link>
               <Link href={`/${locale}/services`}>
-                <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
+                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 w-full sm:w-auto">
                   {t('cta.secondary')}
                 </Button>
               </Link>
@@ -176,14 +176,14 @@ export default function HomePageClient() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
             >
               {tServices('title')}
             </motion.h2>
@@ -191,13 +191,13 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tServices('subtitle')}
             </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.id}
@@ -211,10 +211,10 @@ export default function HomePageClient() {
                     <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${service.color} ${service.hoverColor} flex items-center justify-center text-3xl transition-all duration-300 group-hover:scale-110`}>
                       {service.icon}
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-2">
+                    <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 leading-tight">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                       {service.description}
                     </p>
                   </CardHeader>
@@ -222,8 +222,8 @@ export default function HomePageClient() {
                     <ul className="space-y-3 mb-6">
                       {service.features.map((feature: string, featureIndex: number) => (
                         <li key={featureIndex} className="flex items-start">
-                          <CheckCircle className="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
+                          <CheckCircle className="w-4 h-4 sm:w-5 sm:h-5 text-green-500 mr-2 sm:mr-3 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm sm:text-base text-gray-700">{feature}</span>
                         </li>
                       ))}
                     </ul>
@@ -241,14 +241,14 @@ export default function HomePageClient() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
             >
               {tMethodology('title')}
             </motion.h2>
@@ -256,13 +256,13 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tMethodology('subtitle')}
             </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
             {tMethodology.raw('steps').map((step: any, index: number) => (
               <motion.div
                 key={index}
@@ -274,10 +274,10 @@ export default function HomePageClient() {
                 <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-2xl font-bold text-white">
                   {index + 1}
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-4 leading-tight">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 leading-relaxed">
+                <p className="text-sm sm:text-base text-gray-600 leading-relaxed">
                   {step.description}
                 </p>
               </motion.div>
@@ -288,14 +288,14 @@ export default function HomePageClient() {
 
 
       {/* Testimonials Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+          <div className="text-center mb-12 sm:mb-16">
             <motion.h2
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl font-bold text-gray-900 mb-4"
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
             >
               {tTestimonials('title')}
             </motion.h2>
@@ -303,13 +303,13 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tTestimonials('subtitle')}
             </motion.p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
             {testimonials.map((testimonial: any, index: number) => (
               <motion.div
                 key={index}
@@ -324,7 +324,7 @@ export default function HomePageClient() {
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
                     </div>
-                    <blockquote className="text-gray-700 mb-6 italic">
+                    <blockquote className="text-sm sm:text-base text-gray-700 mb-6 italic leading-relaxed">
                       "{testimonial.content}"
                     </blockquote>
                     <div className="flex items-center">
@@ -332,10 +332,10 @@ export default function HomePageClient() {
                         {testimonial.name.charAt(0)}
                       </div>
                       <div>
-                        <div className="font-semibold text-gray-900">
+                        <div className="font-semibold text-sm sm:text-base text-gray-900">
                           {testimonial.name}
                         </div>
-                        <div className="text-sm text-gray-600">
+                        <div className="text-xs sm:text-sm text-gray-600">
                           {testimonial.position}, {testimonial.company}
                         </div>
                       </div>
@@ -349,13 +349,13 @@ export default function HomePageClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-600 to-accent-600">
+      <section className="py-12 sm:py-20 bg-gradient-to-br from-primary-600 to-accent-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
-            className="text-4xl font-bold text-white mb-6"
+            className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
           >
             Prêt à accélérer votre croissance ?
           </motion.h2>
@@ -363,7 +363,7 @@ export default function HomePageClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-xl text-white/90 mb-8"
+            className="text-base sm:text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
           >
             Réservez un appel découverte gratuit pour discuter de vos besoins
           </motion.p>
@@ -373,7 +373,7 @@ export default function HomePageClient() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="text-lg px-8 py-4 bg-white text-primary-600 hover:bg-gray-100">
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 hover:bg-gray-100 w-full sm:w-auto">
                   {t('buttons.bookCall')}
                 </Button>
               </Link>

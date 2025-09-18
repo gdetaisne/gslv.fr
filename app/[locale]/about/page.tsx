@@ -54,7 +54,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-bold text-dark-900 mb-6"
+              className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-dark-900 mb-6 leading-tight"
             >
               {t('title')}
             </motion.h1>
@@ -62,7 +62,7 @@ export default function AboutPage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              className="text-base sm:text-lg md:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed"
             >
               {t('subtitle')}
             </motion.p>
@@ -80,13 +80,13 @@ export default function AboutPage() {
       </section>
 
       {/* Expertise Section - 1. Domaines d'expertise */}
-      <section className="py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+          <div className="text-center mb-12 sm:mb-16">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-900 mb-4 leading-tight">
               Domaines d'expertise
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Une approche complète pour accompagner votre croissance
             </p>
           </div>
@@ -439,12 +439,12 @@ export default function AboutPage() {
                 ))}
               </div>
             </motion.div>
-                 <motion.div
-                   initial={{ opacity: 0, x: 20 }}
-                   animate={{ opacity: 1, x: 0 }}
-                   transition={{ duration: 0.8, delay: 0.2 }}
-                   className="relative"
-                 >
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="relative"
+            >
                    <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
                      {/* Photo de Guillaume */}
                      <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
@@ -464,7 +464,7 @@ export default function AboutPage() {
                        />
                        <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
                          G
-                       </div>
+                </div>
                      </div>
                      
                      {/* Lien LinkedIn */}
@@ -491,8 +491,8 @@ export default function AboutPage() {
                        <Linkedin className="w-5 h-5 mr-2" />
                        Voir le profil LinkedIn
                      </Link>
-                   </div>
-                 </motion.div>
+              </div>
+            </motion.div>
           </div>
         </div>
       </section>
