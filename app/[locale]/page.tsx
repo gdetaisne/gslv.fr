@@ -54,8 +54,8 @@ export default function HomePage() {
   const services = [
     {
       icon: (
-        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-          <TrendingUp className="w-10 h-10 text-white" />
+        <div className="w-24 h-24 bg-gradient-to-br from-blue-400 via-blue-600 to-blue-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
+          <TrendingUp className="w-12 h-12 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('cfo.title'),
@@ -67,12 +67,12 @@ export default function HomePage() {
         'Préparation levées de fonds',
         'Tableaux de bord KPI'
       ],
-      color: 'from-blue-500 to-blue-700'
+      color: 'from-blue-400 via-blue-600 to-blue-800'
     },
     {
       icon: (
-        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-          <Zap className="w-10 h-10 text-white" />
+        <div className="w-24 h-24 bg-gradient-to-br from-green-400 via-green-600 to-green-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
+          <Zap className="w-12 h-12 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('coo.title'),
@@ -84,12 +84,12 @@ export default function HomePage() {
         'Mise en place d\'outils',
         'Formation des équipes'
       ],
-      color: 'from-green-500 to-green-700'
+      color: 'from-green-400 via-green-600 to-green-800'
     },
     {
       icon: (
-        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
-          <AlertTriangle className="w-10 h-10 text-white" />
+        <div className="w-24 h-24 bg-gradient-to-br from-red-400 via-red-600 to-red-800 rounded-3xl flex items-center justify-center shadow-2xl hover:shadow-3xl transition-all duration-300 hover:scale-110 mx-auto">
+          <AlertTriangle className="w-12 h-12 text-white drop-shadow-lg" />
         </div>
       ),
       title: tServices('pompier.title'),
@@ -101,7 +101,7 @@ export default function HomePage() {
         '⚡ Stabilisation opérationnelle',
         '🎯 Plan de redressement personnalisé'
       ],
-      color: 'from-red-500 to-red-700'
+      color: 'from-red-400 via-red-600 to-red-800'
     }
   ]
 
