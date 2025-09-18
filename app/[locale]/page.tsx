@@ -387,44 +387,59 @@ export default function HomePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <Card className="h-full">
-                  <CardContent>
-                    <div className="flex items-center mb-4">
-                      <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mr-4 shadow-sm border border-gray-200">
-                        <Image
-                          src={testimonial.logo}
-                          alt={`Logo ${testimonial.company}`}
-                          width={48}
-                          height={48}
-                          className="object-contain max-w-full max-h-full"
-                          onError={(e) => {
-                            // Fallback si l'image n'existe pas
-                            e.currentTarget.style.display = 'none'
-                            const nextElement = e.currentTarget.nextElementSibling as HTMLElement
-                            if (nextElement) {
-                              nextElement.style.display = 'flex'
-                            }
-                          }}
-                        />
-                        <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold text-lg hidden">
-                          {testimonial.name.charAt(0)}
+                <Card className="h-full hover:shadow-xl transition-all duration-300 group">
+                  <CardContent className="p-8">
+                    {/* Citation avec guillemets stylisés */}
+                    <div className="mb-6">
+                      <div className="flex items-start mb-4">
+                        <div className="text-4xl text-primary-200 font-serif leading-none mr-3">"</div>
+                        <p className="text-gray-700 italic text-lg leading-relaxed flex-1">
+                          {testimonial.content}
+                        </p>
+                        <div className="text-4xl text-primary-200 font-serif leading-none ml-2">"</div>
+                      </div>
+                    </div>
+
+                    {/* Note avec étoiles */}
+                    <div className="flex items-center justify-center mb-6">
+                      <div className="flex items-center space-x-1">
+                        {[...Array(testimonial.rating)].map((_, i) => (
+                          <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        ))}
+                      </div>
+                    </div>
+
+                    {/* Informations client en bas */}
+                    <div className="border-t border-gray-100 pt-6">
+                      <div className="flex items-center justify-center">
+                        <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center shadow-md border-2 border-gray-100 group-hover:border-primary-200 transition-colors duration-300">
+                          <Image
+                            src={testimonial.logo}
+                            alt={`Logo ${testimonial.company}`}
+                            width={40}
+                            height={40}
+                            className="object-contain max-w-full max-h-full"
+                            onError={(e) => {
+                              // Fallback si l'image n'existe pas
+                              e.currentTarget.style.display = 'none'
+                              const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                              if (nextElement) {
+                                nextElement.style.display = 'flex'
+                              }
+                            }}
+                          />
+                          <div className="w-10 h-10 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold text-sm hidden">
+                            {testimonial.name.charAt(0)}
+                          </div>
                         </div>
                       </div>
-                      <div className="flex-1">
-                        <p className="font-semibold text-dark-900">{testimonial.name}</p>
-                        <p className="text-sm text-gray-600">{testimonial.position}</p>
-                        <p className="text-sm text-primary-600 font-medium">{testimonial.company}</p>
+                      
+                      <div className="text-center mt-4">
+                        <h4 className="font-bold text-dark-900 text-lg">{testimonial.name}</h4>
+                        <p className="text-gray-600 text-sm mb-1">{testimonial.position}</p>
+                        <p className="text-primary-600 font-semibold text-sm">{testimonial.company}</p>
                       </div>
                     </div>
-                    <div className="flex items-center mb-4">
-                      <span className="text-sm text-gray-500 mr-2">Note :</span>
-                      {[...Array(testimonial.rating)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
-                      ))}
-                    </div>
-                    <p className="text-gray-700 mb-6 italic">
-                      "{testimonial.content}"
-                    </p>
                   </CardContent>
                 </Card>
               </motion.div>
