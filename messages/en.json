@@ -14,6 +14,8 @@
     "ctaSecondary": "Discover my services"
   },
   "services": {
+    "title": "Our Services",
+    "subtitle": "Personalized solutions for every stage of your growth",
     "cfo": {
       "title": "Part-time CFO",
       "description": "Externalized financial management to optimize your operations and prepare your fundraising",
@@ -34,15 +36,6 @@
         "Hypergrowth management",
         "Tool implementation",
         "Team training"
-      ]
-    },
-    "scalability": {
-      "title": "Scalability",
-      "description": "Personalized support according to your development stage",
-      "stages": [
-        "Startup (0-10 employees)",
-        "Scale-up (10-50 employees)",
-        "Growth (50+ employees)"
       ]
     },
     "pompier": {
@@ -193,26 +186,26 @@
     ]
   },
   "blog": {
-    "title": "Blog",
-    "subtitle": "Tips and insights for growing startups",
+    "title": "Blog - Emergency & Recovery",
+    "subtitle": "Emergency tips and recovery strategies for struggling startups",
     "readMore": "Read more",
     "categories": {
-      "scaling": "Scaling & Operations",
-      "finance": "Finance for startups",
-      "tools": "Tools & Processes",
-      "fundraising": "Fundraising"
+      "scaling": "Operational Recovery",
+      "finance": "Financial Emergencies",
+      "tools": "Crisis Tools",
+      "fundraising": "Last Chance Fundraising"
     }
   },
   "contact": {
-    "title": "Book a discovery call",
-    "subtitle": "Let's discuss your needs and the best way to support you",
+    "title": "Emergency Call - 24h",
+    "subtitle": "Critical situation? Contact me immediately for emergency intervention",
     "form": {
       "name": "Name",
       "email": "Email",
       "company": "Company",
-      "stage": "Growth stage",
-      "message": "Message",
-      "submit": "Book the call"
+      "stage": "Criticality level",
+      "message": "Description of the emergency situation",
+      "submit": "Request intervention"
     }
   },
   "methodology": {
@@ -265,7 +258,7 @@
     ]
   },
   "footer": {
-    "description": "Part-time CFO & COO for startups and scaleups",
+    "description": "Emergency Operations Consultant - Interim executive replacement for critical situations",
     "links": {
       "privacy": "Privacy policy",
       "terms": "Terms of use",
