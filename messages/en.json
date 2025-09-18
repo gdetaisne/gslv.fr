@@ -59,15 +59,83 @@
     }
   },
   "about": {
-    "title": "About Guillaume",
-    "subtitle": "Part-time CFO/COO expert for growing startups",
-    "experience": "15+ years of experience",
-    "description": "Pragmatic and results-oriented, I support startups and scaleups in their financial and operational structuring to accelerate their growth.",
+    "title": "About Guillaume - Emergency Operations Consultant",
+    "subtitle": "Specialist in interim executive replacement for critical situations",
+    "experience": "15+ years of crisis experience",
+    "description": "Emergency operations consultant, I take command when the situation becomes uncontrollable. Pragmatic and results-oriented, I turn around struggling startups and scaleups.",
     "expertise": [
-      "Financial structuring",
-      "Fundraising (Seed to Series B)",
-      "Operational optimization",
-      "Scaling and hypergrowth"
+      "Interim executive replacement",
+      "Emergency takeover",
+      "Express financial recovery",
+      "Crisis management and stabilization"
+    ],
+    "timeline": [
+      {
+        "year": "2021-2025",
+        "title": "Co-CEO & Co-Founder - Ligerio",
+        "description": "Leader in online sales of distinctive floor and wall coverings in France. From €0 to €10M turnover in 4 years. Exceptional growth: 50% to 100% per year for 3 consecutive years. Operational efficiency: logistics flow x20 in 3 years without increasing staff.",
+        "achievements": [
+          "From €0 to €10M in 4 years",
+          "50-100% annual growth",
+          "Logistics flow x20",
+          "AAA team recruited and trained"
+        ]
+      },
+      {
+        "year": "2019-2021",
+        "title": "CFO - SecurClés",
+        "description": "Financial management of a security and keys company. Complete restructuring of financial processes and implementation of robust internal controls.",
+        "achievements": [
+          "Financial restructuring",
+          "IFRS internal controls",
+          "Cost optimization",
+          "Regulatory compliance"
+        ]
+      },
+      {
+        "year": "2017-2018",
+        "title": "VP Finance - Orami (WhatsNew Group)",
+        "description": "Financial management of the e-commerce group based in Thailand, parent company of several brands (Petloft, Orami, Sanoga, Lafema, MOXY).",
+        "achievements": [
+          "Multi-brand consolidation",
+          "Treasury management",
+          "Group reporting",
+          "Operational optimization"
+        ]
+      },
+      {
+        "year": "2016-2017",
+        "title": "Group CFO - Glossybox (Rocket Internet)",
+        "description": "Financial management of a Rocket Internet success story. Consolidated turnover: €70M, active in 8 countries. Management of due diligence and acquisition by The Hut Group.",
+        "achievements": [
+          "€70M consolidated turnover",
+          "Acquisition due diligence",
+          "IFRS controls",
+          "Process standardization"
+        ]
+      },
+      {
+        "year": "2013-2016",
+        "title": "Senior Executive Finance Manager - Jumia",
+        "description": "SWAT missions in high-risk African countries. Financial restructuring, legal compliance and AAA team training. 22 companies, 550 employees under supervision.",
+        "achievements": [
+          "22 companies restructured",
+          "550 employees supervised",
+          "Optimized processes",
+          "Impeccable compliance"
+        ]
+      },
+      {
+        "year": "2011-2013",
+        "title": "Head of Finance - Groupe Lactalis Kazakhstan",
+        "description": "Modernization of kolkhoz finances. 9 divisions, 380 employees, financial division of 25 people. Complete restructuring and restoration of governance.",
+        "achievements": [
+          "Complete modernization",
+          "8-year investment plan",
+          "Break-even in 2 years",
+          "Fraud prevention"
+        ]
+      }
     ]
   },
   "testimonials": {
