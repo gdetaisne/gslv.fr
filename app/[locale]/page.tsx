@@ -2,8 +2,10 @@
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, AlertTriangle } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
+import Image from 'next/image'
+import { useState, useEffect } from 'react'
 import Button from '../components/Button'
 import { Card, CardContent, CardHeader } from '../components/Card'
 
@@ -11,6 +13,41 @@ export default function HomePage() {
   const t = useTranslations('hero')
   const tServices = useTranslations('services')
   const tTestimonials = useTranslations('testimonials')
+  
+  // Carousel state
+  const [currentImage, setCurrentImage] = useState(0)
+  const [carouselImages, setCarouselImages] = useState<string[]>([])
+  
+  // Load carousel images
+  useEffect(() => {
+    // For now, we'll use placeholder images. In production, you would load from the carousel folder
+    const images = [
+      '/images/carousel/carousel-1.jpg',
+      '/images/carousel/carousel-2.jpg',
+      '/images/carousel/carousel-3.jpg',
+      '/images/carousel/carousel-4.jpg',
+      '/images/carousel/carousel-5.jpg'
+    ]
+    setCarouselImages(images)
+  }, [])
+  
+  // Auto-rotate carousel
+  useEffect(() => {
+    if (carouselImages.length > 1) {
+      const interval = setInterval(() => {
+        setCurrentImage((prev) => (prev + 1) % carouselImages.length)
+      }, 5000) // Change image every 5 seconds
+      return () => clearInterval(interval)
+    }
+  }, [carouselImages.length])
+  
+  const nextImage = () => {
+    setCurrentImage((prev) => (prev + 1) % carouselImages.length)
+  }
+  
+  const prevImage = () => {
+    setCurrentImage((prev) => (prev - 1 + carouselImages.length) % carouselImages.length)
+  }
 
   const services = [
     {
@@ -58,16 +95,50 @@ export default function HomePage() {
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
+      {/* Hero Section with Carousel */}
       <section className="relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-50 py-20">
         <div className="absolute inset-0 bg-grid-pattern opacity-5"></div>
+        
+        {/* Carousel Background */}
+        {carouselImages.length > 0 && (
+          <div className="absolute inset-0 overflow-hidden">
+            <div className="relative w-full h-full">
+              {carouselImages.map((image, index) => (
+                <motion.div
+                  key={index}
+                  className="absolute inset-0"
+                  initial={{ opacity: 0 }}
+                  animate={{ 
+                    opacity: index === currentImage ? 1 : 0,
+                    scale: index === currentImage ? 1 : 1.1
+                  }}
+                  transition={{ duration: 1, ease: "easeInOut" }}
+                >
+                  <Image
+                    src={image}
+                    alt={`Carousel image ${index + 1}`}
+                    fill
+                    className="object-cover"
+                    priority={index === 0}
+                    onError={() => {
+                      // Fallback to gradient if image doesn't exist
+                      console.log(`Image ${image} not found, using gradient fallback`)
+                    }}
+                  />
+                  <div className="absolute inset-0 bg-black/40"></div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        )}
+        
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-6xl font-bold text-dark-900 mb-6"
+              className="text-4xl md:text-6xl font-bold text-white mb-6 drop-shadow-lg"
             >
               {t('title')}
             </motion.h1>
@@ -75,7 +146,7 @@ export default function HomePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl md:text-2xl text-gray-600 mb-8 max-w-4xl mx-auto"
+              className="text-xl md:text-2xl text-white/90 mb-8 max-w-4xl mx-auto drop-shadow-lg"
             >
               {t('subtitle')}
             </motion.p>
@@ -86,19 +157,52 @@ export default function HomePage() {
               className="flex flex-col sm:flex-row gap-4 justify-center"
             >
               <Link href="/contact">
-                <Button size="lg" className="btn-hover">
+                <Button size="lg" className="btn-hover bg-white text-primary-600 hover:bg-gray-100">
                   {t('cta')}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
               <Link href="/services">
-                <Button variant="outline" size="lg">
+                <Button variant="secondary" size="lg" className="btn-hover bg-white/20 text-white border-white hover:bg-white/30">
                   {t('ctaSecondary')}
                 </Button>
               </Link>
             </motion.div>
           </div>
         </div>
+        
+        {/* Carousel Controls */}
+        {carouselImages.length > 1 && (
+          <>
+            <button
+              onClick={prevImage}
+              className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+            >
+              <ChevronLeft className="w-6 h-6" />
+            </button>
+            <button
+              onClick={nextImage}
+              className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/20 hover:bg-white/30 text-white p-2 rounded-full transition-all duration-300"
+            >
+              <ChevronRight className="w-6 h-6" />
+            </button>
+            
+            {/* Dots Indicator */}
+            <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+              {carouselImages.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentImage(index)}
+                  className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                    index === currentImage 
+                      ? 'bg-white' 
+                      : 'bg-white/50 hover:bg-white/70'
+                  }`}
+                />
+              ))}
+            </div>
+          </>
+        )}
       </section>
 
       {/* Services Section */}
