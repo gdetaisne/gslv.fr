@@ -164,7 +164,7 @@ export default function PricingPage() {
                     </ul>
                     <Link href={`/${locale}/contact`} className="mt-auto">
                       <Button 
-                        variant={plan.isPopular ? "default" : "secondary"} 
+                        variant={plan.isPopular ? "primary" : "secondary"} 
                         className={`w-full btn-hover ${plan.isPopular ? 'bg-red-600 hover:bg-red-700 text-white' : ''}`}
                       >
                         Demander un devis
