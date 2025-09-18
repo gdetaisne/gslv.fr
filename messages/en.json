@@ -8,10 +8,10 @@
     "book": "Book a call"
   },
   "hero": {
-    "title": "A part-time CFO & COO to accelerate your growth, without fixed costs.",
-    "subtitle": "Expert in structuring, fundraising and scaling for startups and scaleups",
+    "title": "A part-time CFO & COO to accelerate your growth, without fixed costs",
+    "subtitle": "Expert in structuring, fundraising and scaling for startups and scaleups. Specialized in emergency operations.",
     "cta": "Book a discovery call",
-    "ctaSecondary": "Discover our services"
+    "ctaSecondary": "Discover my services"
   },
   "services": {
     "cfo": {

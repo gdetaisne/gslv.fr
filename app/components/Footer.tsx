@@ -13,6 +13,7 @@ export default function Footer() {
       { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
       { name: 'COO Part-time', href: `/${locale}/services#coo` },
       { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
+      { name: 'Tarifs', href: `/${locale}/pricing` },
     ],
     company: [
       { name: t('links.privacy'), href: `/${locale}/privacy` },

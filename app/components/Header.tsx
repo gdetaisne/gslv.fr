@@ -16,8 +16,8 @@ export default function Header() {
   const navigation = [
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
-    { 
-      name: t('services'), 
+    {
+      name: t('services'),
       href: `/${locale}/services`,
       hasDropdown: true,
       dropdownItems: [
@@ -26,6 +26,7 @@ export default function Header() {
         { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
       ]
     },
+    { name: 'Tarifs', href: `/${locale}/pricing` },
     { name: t('blog'), href: `/${locale}/blog` },
     { name: t('contact'), href: `/${locale}/contact` },
   ]
