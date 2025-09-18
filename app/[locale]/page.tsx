@@ -2,7 +2,7 @@
 
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, AlertTriangle } from 'lucide-react'
 import Link from 'next/link'
 import Button from '../components/Button'
 import { Card, CardContent, CardHeader } from '../components/Card'
@@ -40,15 +40,17 @@ export default function HomePage() {
       color: 'from-accent-500 to-accent-700'
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-600" />,
-      title: tServices('scalability.title'),
-      description: tServices('scalability.description'),
+      icon: <AlertTriangle className="w-8 h-8 text-red-600" />,
+      title: tServices('pompier.title'),
+      description: tServices('pompier.description'),
       features: [
-        'Startup (0-10 employés)',
-        'Scale-up (10-50 employés)',
-        'Growth (50+ employés)'
+        '🚨 Diagnostic express (24-48h)',
+        '🔧 Restructuration d\'urgence',
+        '💰 Levées de fonds de dernière chance',
+        '⚡ Stabilisation opérationnelle',
+        '🎯 Plan de redressement personnalisé'
       ],
-      color: 'from-purple-500 to-purple-700'
+      color: 'from-red-500 to-red-700'
     }
   ]
 

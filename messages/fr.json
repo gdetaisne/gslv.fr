@@ -15,34 +15,36 @@
   },
   "services": {
     "cfo": {
-      "title": "CFO Pompier - Urgences Financières",
-      "description": "Intervention d'urgence pour redresser la situation financière. Restructuration, refinancement et préparation de levées de fonds en situation critique.",
+      "title": "CFO Part-time",
+      "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
       "features": [
-        "Diagnostic financier express (48h)",
-        "Restructuration de trésorerie",
-        "Préparation levées de fonds d'urgence",
-        "Négociation avec les créanciers",
-        "Tableaux de bord de crise"
+        "Reporting financier mensuel",
+        "Gestion de trésorerie et cashflow",
+        "Prévisions et budgets",
+        "Préparation levées de fonds",
+        "Tableaux de bord KPI"
       ]
     },
     "coo": {
-      "title": "COO Pompier - Redressement Opérationnel",
-      "description": "Intervention pour stabiliser et redresser les opérations en difficulté. Restructuration des processus et optimisation d'urgence.",
+      "title": "COO Part-time",
+      "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
       "features": [
-        "Audit opérationnel express",
-        "Restructuration des processus critiques",
-        "Gestion de crise opérationnelle",
-        "Mise en place d'outils d'urgence",
-        "Formation accélérée des équipes"
+        "Structuration des processus",
+        "Optimisation opérationnelle",
+        "Gestion de l'hypercroissance",
+        "Mise en place d'outils",
+        "Formation des équipes"
       ]
     },
-    "scalability": {
-      "title": "Interventions d'Urgence",
-      "description": "Missions de redressement selon le niveau de criticité de la situation",
-      "stages": [
-        "🚨 Situation critique (0-48h)",
-        "⚠️ Difficultés majeures (1-2 semaines)",
-        "🔧 Restructuration (1-3 mois)"
+    "pompier": {
+      "title": "Pompier - Interventions d'Urgence",
+      "description": "Interventions d'urgence pour redresser des situations critiques. Spécialisé dans le sauvetage de startups en difficulté.",
+      "features": [
+        "🚨 Diagnostic express (24-48h)",
+        "🔧 Restructuration d'urgence",
+        "💰 Levées de fonds de dernière chance",
+        "⚡ Stabilisation opérationnelle",
+        "🎯 Plan de redressement personnalisé"
       ]
     }
   },

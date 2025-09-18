@@ -23,7 +23,7 @@ export default function Header() {
       dropdownItems: [
         { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
         { name: 'COO Part-time', href: `/${locale}/services#coo` },
-        { name: 'Scalabilité', href: `/${locale}/services#scalability` },
+        { name: 'Pompier - Urgences', href: `/${locale}/services#pompier` },
       ]
     },
     { name: t('blog'), href: `/${locale}/blog` },

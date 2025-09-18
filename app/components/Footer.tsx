@@ -12,7 +12,7 @@ export default function Footer() {
     services: [
       { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
       { name: 'COO Part-time', href: `/${locale}/services#coo` },
-      { name: 'Scalabilité', href: `/${locale}/services#scalability` },
+      { name: 'Pompier - Urgences', href: `/${locale}/services#pompier` },
     ],
     company: [
       { name: t('links.privacy'), href: `/${locale}/privacy` },
