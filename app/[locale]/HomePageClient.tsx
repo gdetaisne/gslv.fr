@@ -372,11 +372,11 @@ export default function HomePageClient() {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >
-            <Link href={`/${locale}/contact`}>
-              <Button size="lg" className="text-lg px-8 py-4 bg-white text-primary-600 hover:bg-gray-100">
-                Réserver un appel découverte
-              </Button>
-            </Link>
+              <Link href={`/${locale}/contact`}>
+                <Button size="lg" className="text-lg px-8 py-4 bg-white text-primary-600 hover:bg-gray-100">
+                  {t('buttons.bookCall')}
+                </Button>
+              </Link>
           </motion.div>
         </div>
       </section>

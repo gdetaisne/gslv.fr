@@ -407,6 +407,14 @@
       "title": "Ready to work with these values?",
       "subtitle": "Discover how these principles can transform your company",
       "button": "Contact us"
+    },
+    "buttons": {
+      "discussService": "Discuss this service",
+      "requestQuote": "Request a quote",
+      "viewPricing": "View pricing",
+      "bookCall": "Book a discovery call",
+      "requestCustomQuote": "Request a custom quote",
+      "emergencyCall": "24/7 emergency call"
     }
   }
 }

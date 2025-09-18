@@ -167,7 +167,7 @@ export default function PricingPage() {
                         variant={plan.isPopular ? "primary" : "secondary"} 
                         className={`w-full btn-hover ${plan.isPopular ? 'bg-red-600 hover:bg-red-700 text-white' : ''}`}
                       >
-                        Demander un devis
+                        {t('buttons.requestQuote')}
                         <ArrowRight className="w-5 h-5 ml-2" />
                       </Button>
                     </Link>
@@ -239,7 +239,7 @@ export default function PricingPage() {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="btn-hover">
-                  Demander un devis personnalisé
+                  {t('buttons.requestCustomQuote')}
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
               </Link>
@@ -277,7 +277,7 @@ export default function PricingPage() {
                 size="lg"
                 className="bg-white text-red-700 hover:bg-gray-100 focus:ring-white shadow-lg hover:shadow-xl btn-hover"
               >
-                <Phone className="w-5 h-5 mr-2" /> Appel d'urgence 24h/24
+                <Phone className="w-5 h-5 mr-2" /> {t('buttons.emergencyCall')}
               </Button>
             </Link>
           </motion.div>

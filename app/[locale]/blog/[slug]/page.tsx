@@ -220,7 +220,7 @@ export default function BlogPostPage() {
                         {relatedArticle.excerpt}
                       </p>
                       <Link
-                        href={`/blog/${relatedArticle.slug}`}
+                        href={`/${locale}/blog/${relatedArticle.slug}`}
                         className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm"
                       >
                         Lire la suite
@@ -254,7 +254,7 @@ export default function BlogPostPage() {
                 href={`/${locale}/contact`}
                 className="inline-flex items-center px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
-                Réserver un appel découverte
+                {t('buttons.bookCall')}
               </Link>
               <Link
                 href={`/${locale}/services`}

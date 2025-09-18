@@ -407,6 +407,14 @@
           "title": "Prêt à travailler avec ces valeurs ?",
           "subtitle": "Découvrez comment ces principes peuvent transformer votre entreprise",
           "button": "Nous contacter"
+        },
+        "buttons": {
+          "discussService": "Discuter de ce service",
+          "requestQuote": "Demander un devis",
+          "viewPricing": "Voir les tarifs",
+          "bookCall": "Réserver un appel découverte",
+          "requestCustomQuote": "Demander un devis personnalisé",
+          "emergencyCall": "Appel d'urgence 24h/24"
         }
       }
     }

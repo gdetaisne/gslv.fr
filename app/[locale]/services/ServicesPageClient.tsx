@@ -102,7 +102,7 @@ export default function ServicesPageClient() {
                   
                   <Link href={`/${locale}/contact`}>
                     <Button size="lg">
-                      Discuter de ce service
+                      {t('buttons.discussService')}
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </Link>
@@ -174,12 +174,12 @@ export default function ServicesPageClient() {
           >
             <Link href={`/${locale}/contact`}>
               <Button size="lg" className="text-lg px-8 py-4 bg-white text-primary-600 hover:bg-gray-100">
-                Réserver un appel découverte
+                {t('buttons.bookCall')}
               </Button>
             </Link>
             <Link href={`/${locale}/pricing`}>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-white/10 border-white/30 text-white hover:bg-white/20">
-                Voir les tarifs
+                {t('buttons.viewPricing')}
               </Button>
             </Link>
           </motion.div>

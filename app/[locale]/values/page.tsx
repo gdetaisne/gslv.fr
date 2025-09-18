@@ -1,13 +1,14 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { Metadata } from 'next'
 import Image from 'next/image'
 import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function ValuesPage() {
   const t = useTranslations('values')
+  const locale = useLocale()
   const [expandedPrinciples, setExpandedPrinciples] = useState<{[key: string]: boolean}>({})
 
   const togglePrinciple = (principleId: string) => {
@@ -170,10 +171,10 @@ export default function ValuesPage() {
             <p className="text-xl text-gray-300 mb-8 leading-relaxed">
               {t('cta.subtitle')}
             </p>
-            <a
-              href="/contact"
-              className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-500 text-white font-semibold rounded-xl hover:from-primary-700 hover:to-accent-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-            >
+          <a
+            href={`/${locale}/contact`}
+            className="inline-flex items-center px-8 py-4 bg-gradient-to-r from-primary-600 to-accent-500 text-white font-semibold rounded-xl hover:from-primary-700 hover:to-accent-600 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+          >
               {t('cta.button')}
             </a>
           </div>
