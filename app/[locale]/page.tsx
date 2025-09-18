@@ -54,29 +54,7 @@ export default function HomePage() {
     }
   ]
 
-  const testimonials = [
-    {
-      name: 'Marie Dubois',
-      company: 'TechStart',
-      role: 'CEO',
-      content: 'Guillaume nous a accompagnés dans notre levée de fonds Series A. Son expertise financière et sa connaissance du marché ont été déterminantes.',
-      rating: 5
-    },
-    {
-      name: 'Jean Martin',
-      company: 'ScaleUp Pro',
-      role: 'Founder',
-      content: 'Grâce à son accompagnement opérationnel, nous avons pu structurer nos processus et passer de 10 à 50 employés en 18 mois.',
-      rating: 5
-    },
-    {
-      name: 'Sophie Chen',
-      company: 'GrowthLab',
-      role: 'COO',
-      content: 'Un partenaire de confiance qui comprend les enjeux des startups en croissance. Très professionnel et réactif.',
-      rating: 5
-    }
-  ]
+  const testimonials = tTestimonials.raw('items')
 
   return (
     <div className="pt-16">
@@ -185,7 +163,7 @@ export default function HomePage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
+            {testimonials.map((testimonial: any, index: number) => (
               <motion.div
                 key={testimonial.name}
                 initial={{ opacity: 0, y: 20 }}
@@ -204,7 +182,7 @@ export default function HomePage() {
                     </p>
                     <div className="border-t pt-4">
                       <p className="font-semibold text-dark-900">{testimonial.name}</p>
-                      <p className="text-sm text-gray-600">{testimonial.role}, {testimonial.company}</p>
+                      <p className="text-sm text-gray-600">{testimonial.position}</p>
                     </div>
                   </CardContent>
                 </Card>
