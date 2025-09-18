@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server'
 
 export async function GET() {
-  const baseUrl = 'https://gslv.cloud'
+  const baseUrl = 'https://gslv.fr'
   const locales = ['fr', 'en', 'th']
   
   const staticPages = [

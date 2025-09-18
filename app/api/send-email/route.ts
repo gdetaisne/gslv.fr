@@ -29,13 +29,13 @@ Message:
 ${message || 'Aucun message'}
 
 ---
-Envoyé depuis le site GSLV.cloud
+Envoyé depuis le site GSLV.fr
     `.trim()
 
     // Envoi de l'email via Resend
     if (process.env.RESEND_API_KEY) {
       const { data, error } = await resend.emails.send({
-        from: 'GSLV.cloud <noreply@gslv.cloud>',
+        from: 'GSLV.fr <noreply@gslv.fr>',
         to: [to],
         subject: subject,
         text: emailContent,
@@ -60,7 +60,7 @@ Envoyé depuis le site GSLV.cloud
             
             <hr style="border: none; border-top: 1px solid #e5e7eb; margin: 30px 0;">
             <p style="color: #6b7280; font-size: 14px;">
-              Envoyé depuis le site GSLV.cloud
+              Envoyé depuis le site GSLV.fr
             </p>
           </div>
         `,

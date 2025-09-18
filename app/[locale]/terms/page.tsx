@@ -100,7 +100,7 @@ export default function TermsPage() {
                 Pour toute question concernant ces conditions d'utilisation, vous pouvez nous contacter à :
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
-                <p className="text-gray-700 mb-2"><strong>Email :</strong> contact@gslv.cloud</p>
+                <p className="text-gray-700 mb-2"><strong>Email :</strong> contact@gslv.fr</p>
                 <p className="text-gray-700"><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
               </div>
             </motion.div>

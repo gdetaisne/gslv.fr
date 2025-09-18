@@ -66,7 +66,7 @@ vercel --prod
 Créez un fichier `.env.local` :
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://gslv.cloud
+NEXT_PUBLIC_SITE_URL=https://gslv.fr
 NEXT_PUBLIC_CALENDLY_URL=your-calendly-url
 ```
 
@@ -147,7 +147,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 📞 Contact
 
-- **Email** : contact@gslv.cloud
-- **Site** : https://gslv.cloud
+- **Email** : contact@gslv.fr
+- **Site** : https://gslv.fr
 - **LinkedIn** : https://linkedin.com/in/guillaume-stehelin
 

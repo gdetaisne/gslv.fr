@@ -21,7 +21,7 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
-      - --certificatesresolvers.letsencrypt.acme.email=contact@gslv.cloud
+      - --certificatesresolvers.letsencrypt.acme.email=contact@gslv.fr
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
     ports:
       - "80:80"
@@ -33,7 +33,7 @@ services:
       - gslv-network
     labels:
       - "traefik.enable=true"
-      - "traefik.http.routers.traefik.rule=Host(`traefik.gslv.cloud`)"
+      - "traefik.http.routers.traefik.rule=Host(`traefik.gslv.fr`)"
       - "traefik.http.routers.traefik.entrypoints=websecure"
       - "traefik.http.routers.traefik.tls.certresolver=letsencrypt"
 
