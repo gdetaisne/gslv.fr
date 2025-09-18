@@ -22,12 +22,10 @@ export default function HomePage() {
   
   // Load carousel images
   useEffect(() => {
-    // For now, we'll use placeholder images. In production, you would load from the carousel folder
+    // Images sélectionnées pour le carrousel
     const images = [
       '/images/carousel/carousel-1.jpg',
       '/images/carousel/carousel-2.jpg',
-      '/images/carousel/carousel-3.jpg',
-      '/images/carousel/carousel-4.jpg',
       '/images/carousel/carousel-5.jpg'
     ]
     setCarouselImages(images)
@@ -220,46 +218,92 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-white">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
-              Nos Services
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Des solutions personnalisées pour chaque stade de votre croissance
-            </p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-bold text-dark-900 mb-4"
+            >
+              {tServices('title')}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-600 max-w-3xl mx-auto"
+            >
+              {tServices('subtitle')}
+            </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.2 }}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                whileHover={{ y: -5, scale: 1.02 }}
+                className="group"
               >
-                <Card hover className="h-full">
-                  <CardHeader>
-                    <div className={`w-16 h-16 rounded-xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4`}>
+                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 bg-white">
+                  <CardHeader className="text-center pb-6">
+                    {/* Icône avec animation */}
+                    <motion.div
+                      whileHover={{ scale: 1.1, rotate: 5 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
                       {service.icon}
-                    </div>
-                    <h3 className="text-2xl font-bold text-dark-900 mb-2">
+                    </motion.div>
+                    
+                    {/* Titre */}
+                    <h3 className="text-2xl font-bold text-dark-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
                       {service.title}
                     </h3>
-                    <p className="text-gray-600">
+                    
+                    {/* Description */}
+                    <p className="text-gray-600 mb-6 leading-relaxed">
                       {service.description}
                     </p>
                   </CardHeader>
-                  <CardContent>
-                    <ul className="space-y-3">
+                  
+                  <CardContent className="pt-0">
+                    {/* Features avec animations */}
+                    <div className="space-y-3 mb-8">
                       {service.features.map((feature, featureIndex) => (
-                        <li key={featureIndex} className="flex items-center space-x-3">
-                          <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
-                          <span className="text-gray-700">{feature}</span>
-                        </li>
+                        <motion.div
+                          key={featureIndex}
+                          initial={{ opacity: 0, x: -20 }}
+                          whileInView={{ opacity: 1, x: 0 }}
+                          transition={{ duration: 0.4, delay: featureIndex * 0.1 }}
+                          className="flex items-center space-x-3 group-hover:translate-x-1 transition-transform duration-300"
+                        >
+                          <div className="w-2 h-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex-shrink-0"></div>
+                          <span className="text-gray-700 text-sm font-medium">
+                            {feature}
+                          </span>
+                        </motion.div>
                       ))}
-                    </ul>
+                    </div>
+                    
+                    {/* CTA */}
+                    <motion.div
+                      whileHover={{ scale: 1.05 }}
+                      whileTap={{ scale: 0.95 }}
+                      className="text-center"
+                    >
+                      <Button
+                        variant="outline"
+                        className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600 transition-all duration-300"
+                      >
+                        En savoir plus
+                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                      </Button>
+                    </motion.div>
                   </CardContent>
                 </Card>
               </motion.div>
@@ -269,7 +313,7 @@ export default function HomePage() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
             <motion.h2
