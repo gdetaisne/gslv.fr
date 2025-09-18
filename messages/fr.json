@@ -132,50 +132,56 @@
   "testimonials": {
     "title": "Témoignages clients",
     "subtitle": "Ils m'ont fait confiance pour leur croissance et leurs défis",
-    "items": [
-      {
-        "name": "Francis D.",
-        "position": "CEO, Jumia",
-        "company": "Jumia",
-        "content": "Guillaume nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
-        "rating": 5
-      },
-      {
-        "name": "Foucauld P.",
-        "position": "CFO, HelloFood",
-        "company": "HelloFood",
-        "content": "Grâce à Guillaume, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise en CFO part-time nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
-        "rating": 5
-      },
-      {
-        "name": "Clément F.",
-        "position": "Fondateur, Ligerio",
-        "company": "Ligerio",
-        "content": "En situation de crise, Guillaume a pris les commandes immédiatement. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise. Un vrai consultant 'coup de poing'.",
-        "rating": 5
-      },
-      {
-        "name": "Caren G.",
-        "position": "CEO, Glossybox",
-        "company": "Glossybox",
-        "content": "L'accompagnement de Guillaume en redressement judiciaire a été déterminant. Il a su négocier avec les créanciers et élaborer un plan de continuation crédible. Nous sommes sortis de la procédure en 18 mois.",
-        "rating": 5
-      },
-      {
-        "name": "Rolland D.",
-        "position": "Fondateur, Kaymu",
-        "company": "Kaymu",
-        "content": "Guillaume a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
-        "rating": 5
-      },
-      {
-        "name": "Jeremy F.",
-        "position": "CEO, Orami Ltd",
-        "company": "Orami Ltd",
-        "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume sait anticiper les défis de croissance et mettre en place les bons outils.",
-        "rating": 5
-      }
-    ]
+        "items": [
+          {
+            "name": "Francis D.",
+            "position": "CEO, Jumia",
+            "company": "Jumia",
+            "logo": "/images/companies/jumia.png",
+            "content": "Guillaume nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
+            "rating": 5
+          },
+          {
+            "name": "Foucauld P.",
+            "position": "CFO, HelloFood",
+            "company": "HelloFood",
+            "logo": "/images/companies/hellofood.png",
+            "content": "Grâce à Guillaume, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise en CFO part-time nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
+            "rating": 5
+          },
+          {
+            "name": "Clément F.",
+            "position": "Fondateur, Ligerio",
+            "company": "Ligerio",
+            "logo": "/images/companies/ligerio.png",
+            "content": "En situation de crise, Guillaume a pris les commandes immédiatement. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise. Un vrai consultant 'coup de poing'.",
+            "rating": 5
+          },
+          {
+            "name": "Caren G.",
+            "position": "CEO, Glossybox",
+            "company": "Glossybox",
+            "logo": "/images/companies/glossybox.png",
+            "content": "L'accompagnement de Guillaume en redressement judiciaire a été déterminant. Il a su négocier avec les créanciers et élaborer un plan de continuation crédible. Nous sommes sortis de la procédure en 18 mois.",
+            "rating": 5
+          },
+          {
+            "name": "Rolland D.",
+            "position": "Fondateur, Kaymu",
+            "company": "Kaymu",
+            "logo": "/images/companies/kaymu.png",
+            "content": "Guillaume a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
+            "rating": 5
+          },
+          {
+            "name": "Jeremy F.",
+            "position": "CEO, Orami Ltd",
+            "company": "Orami Ltd",
+            "logo": "/images/companies/orami.png",
+            "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume sait anticiper les défis de croissance et mettre en place les bons outils.",
+            "rating": 5
+          }
+        ]
   },
   "blog": {
     "title": "Blog - Urgences & Redressement",

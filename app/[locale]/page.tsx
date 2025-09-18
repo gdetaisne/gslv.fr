@@ -390,6 +390,34 @@ export default function HomePage() {
                 <Card className="h-full">
                   <CardContent>
                     <div className="flex items-center mb-4">
+                      <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mr-4 shadow-sm border border-gray-200">
+                        <Image
+                          src={testimonial.logo}
+                          alt={`Logo ${testimonial.company}`}
+                          width={48}
+                          height={48}
+                          className="object-contain max-w-full max-h-full"
+                          onError={(e) => {
+                            // Fallback si l'image n'existe pas
+                            e.currentTarget.style.display = 'none'
+                            const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                            if (nextElement) {
+                              nextElement.style.display = 'flex'
+                            }
+                          }}
+                        />
+                        <div className="w-12 h-12 bg-gradient-to-br from-primary-500 to-accent-500 rounded-full flex items-center justify-center text-white font-bold text-lg hidden">
+                          {testimonial.name.charAt(0)}
+                        </div>
+                      </div>
+                      <div className="flex-1">
+                        <p className="font-semibold text-dark-900">{testimonial.name}</p>
+                        <p className="text-sm text-gray-600">{testimonial.position}</p>
+                        <p className="text-sm text-primary-600 font-medium">{testimonial.company}</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center mb-4">
+                      <span className="text-sm text-gray-500 mr-2">Note :</span>
                       {[...Array(testimonial.rating)].map((_, i) => (
                         <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
                       ))}
@@ -397,10 +425,6 @@ export default function HomePage() {
                     <p className="text-gray-700 mb-6 italic">
                       "{testimonial.content}"
                     </p>
-                    <div className="border-t pt-4">
-                      <p className="font-semibold text-dark-900">{testimonial.name}</p>
-                      <p className="text-sm text-gray-600">{testimonial.position}</p>
-                    </div>
                   </CardContent>
                 </Card>
               </motion.div>
