@@ -319,7 +319,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Stats Section with Rotating Map */}
+      {/* Stats Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
@@ -341,189 +341,28 @@ export default function HomePage() {
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Stats Grid */}
-            <div className="grid grid-cols-2 gap-6">
-              {tStats.raw('items').map((stat: any, index: number) => (
-                <motion.div
-                  key={index}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="text-center group"
-                >
-                  <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-6 hover:shadow-lg transition-all duration-300 group-hover:scale-105">
-                    <div className="text-3xl md:text-4xl font-bold text-primary-600 mb-2">
-                      {stat.number}
-                    </div>
-                    <div className="text-lg font-semibold text-dark-900 mb-2">
-                      {stat.label}
-                    </div>
-                    <div className="text-gray-600 text-sm">
-                      {stat.description}
-                    </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tStats.raw('items').map((stat: any, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                  <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+                    {stat.number}
                   </div>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Rotating Map */}
-            <motion.div
-              initial={{ opacity: 0, scale: 0.8 }}
-              animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="relative"
-            >
-              <div className="w-full h-96 bg-gradient-to-br from-blue-50 to-indigo-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                {/* Animated Globe */}
-                <div className="relative w-80 h-80">
-                  {/* Base Globe */}
-                  <div className="absolute inset-0 rounded-full bg-gradient-to-br from-blue-200 to-indigo-300 opacity-20"></div>
-                  
-                  {/* Rotating Dots */}
-                  <div className="absolute inset-0 rounded-full">
-                    {[...Array(50)].map((_, i) => {
-                      const angle = (i * 360) / 50;
-                      const radius = 120 + Math.sin(i * 0.5) * 20;
-                      const x = Math.cos(angle * Math.PI / 180) * radius;
-                      const y = Math.sin(angle * Math.PI / 180) * radius;
-                      
-                      return (
-                        <motion.div
-                          key={i}
-                          className="absolute w-2 h-2 bg-primary-500 rounded-full"
-                          style={{
-                            left: `50%`,
-                            top: `50%`,
-                            transform: `translate(${x}px, ${y}px)`,
-                          }}
-                          animate={{
-                            scale: [1, 1.5, 1],
-                            opacity: [0.3, 0.8, 0.3],
-                          }}
-                          transition={{
-                            duration: 3,
-                            repeat: Infinity,
-                            delay: i * 0.1,
-                          }}
-                        />
-                      );
-                    })}
+                  <div className="text-xl font-semibold text-dark-900 mb-2">
+                    {stat.label}
                   </div>
-
-                  {/* Country Markers */}
-                  <div className="absolute inset-0">
-                    {/* France */}
-                    <motion.div
-                      className="absolute w-4 h-4 bg-red-500 rounded-full shadow-lg"
-                      style={{ left: '45%', top: '35%' }}
-                      animate={{
-                        scale: [1, 1.3, 1],
-                        boxShadow: ['0 0 0 0 rgba(239, 68, 68, 0.7)', '0 0 0 10px rgba(239, 68, 68, 0)', '0 0 0 0 rgba(239, 68, 68, 0)'],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: 0,
-                      }}
-                    />
-                    <div className="absolute text-xs font-semibold text-red-600" style={{ left: '50%', top: '25%' }}>
-                      France
-                    </div>
-
-                    {/* Dubai */}
-                    <motion.div
-                      className="absolute w-4 h-4 bg-yellow-500 rounded-full shadow-lg"
-                      style={{ left: '60%', top: '45%' }}
-                      animate={{
-                        scale: [1, 1.3, 1],
-                        boxShadow: ['0 0 0 0 rgba(245, 158, 11, 0.7)', '0 0 0 10px rgba(245, 158, 11, 0)', '0 0 0 0 rgba(245, 158, 11, 0)'],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: 0.7,
-                      }}
-                    />
-                    <div className="absolute text-xs font-semibold text-yellow-600" style={{ left: '65%', top: '35%' }}>
-                      Dubai
-                    </div>
-
-                    {/* Thailand */}
-                    <motion.div
-                      className="absolute w-4 h-4 bg-green-500 rounded-full shadow-lg"
-                      style={{ left: '70%', top: '55%' }}
-                      animate={{
-                        scale: [1, 1.3, 1],
-                        boxShadow: ['0 0 0 0 rgba(34, 197, 94, 0.7)', '0 0 0 10px rgba(34, 197, 94, 0)', '0 0 0 0 rgba(34, 197, 94, 0)'],
-                      }}
-                      transition={{
-                        duration: 2,
-                        repeat: Infinity,
-                        delay: 1.4,
-                      }}
-                    />
-                    <div className="absolute text-xs font-semibold text-green-600" style={{ left: '75%', top: '45%' }}>
-                      Thailand
-                    </div>
+                  <div className="text-gray-600 text-sm">
+                    {stat.description}
                   </div>
-
-                  {/* Connection Lines */}
-                  <svg className="absolute inset-0 w-full h-full">
-                    <motion.line
-                      x1="45%"
-                      y1="35%"
-                      x2="60%"
-                      y2="45%"
-                      stroke="url(#gradient1)"
-                      strokeWidth="2"
-                      strokeDasharray="5,5"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 2, delay: 0.5 }}
-                    />
-                    <motion.line
-                      x1="60%"
-                      y1="45%"
-                      x2="70%"
-                      y2="55%"
-                      stroke="url(#gradient2)"
-                      strokeWidth="2"
-                      strokeDasharray="5,5"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 2, delay: 1 }}
-                    />
-                    <motion.line
-                      x1="70%"
-                      y1="55%"
-                      x2="45%"
-                      y2="35%"
-                      stroke="url(#gradient3)"
-                      strokeWidth="2"
-                      strokeDasharray="5,5"
-                      initial={{ pathLength: 0 }}
-                      animate={{ pathLength: 1 }}
-                      transition={{ duration: 2, delay: 1.5 }}
-                    />
-                    <defs>
-                      <linearGradient id="gradient1" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#ef4444" />
-                        <stop offset="100%" stopColor="#eab308" />
-                      </linearGradient>
-                      <linearGradient id="gradient2" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#eab308" />
-                        <stop offset="100%" stopColor="#22c55e" />
-                      </linearGradient>
-                      <linearGradient id="gradient3" x1="0%" y1="0%" x2="100%" y2="0%">
-                        <stop offset="0%" stopColor="#22c55e" />
-                        <stop offset="100%" stopColor="#ef4444" />
-                      </linearGradient>
-                    </defs>
-                  </svg>
                 </div>
-              </div>
-            </motion.div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>

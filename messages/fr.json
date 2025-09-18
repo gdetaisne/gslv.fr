@@ -225,22 +225,22 @@
       },
       "stats": {
         "title": "Nos chiffres",
-        "subtitle": "Une expertise internationale",
+        "subtitle": "Une expertise reconnue",
         "items": [
           {
-            "number": "3",
-            "label": "Pays",
-            "description": "Nous intervenons en France, à Dubaï et en Thaïlande"
-          },
-          {
-            "number": "4",
-            "label": "Langues",
-            "description": "Français, Anglais, Allemand et Russe pour une communication directe"
+            "number": "15+",
+            "label": "Années d'expérience",
+            "description": "En restructuration d'entreprises et gestion de crise"
           },
           {
             "number": "50+",
             "label": "Entreprises sauvées",
             "description": "Startups et scaleups en situation critique"
+          },
+          {
+            "number": "€100M+",
+            "label": "CA géré cumulé",
+            "description": "Dans des contextes de redressement"
           },
           {
             "number": "24h",

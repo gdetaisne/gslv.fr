@@ -234,22 +234,22 @@
   },
   "stats": {
     "title": "Our figures",
-    "subtitle": "International expertise",
+    "subtitle": "Recognized expertise",
     "items": [
       {
-        "number": "3",
-        "label": "Countries",
-        "description": "We operate in France, Dubai and Thailand"
-      },
-      {
-        "number": "4",
-        "label": "Languages",
-        "description": "French, English, German and Russian for direct communication"
+        "number": "15+",
+        "label": "Years of experience",
+        "description": "In business restructuring and crisis management"
       },
       {
         "number": "50+",
         "label": "Companies saved",
         "description": "Startups and scaleups in critical situations"
+      },
+      {
+        "number": "€100M+",
+        "label": "Cumulative revenue managed",
+        "description": "In recovery contexts"
       },
       {
         "number": "24h",
