@@ -3,6 +3,7 @@
 import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { CheckCircle, Award, Users, TrendingUp, Target, Lightbulb } from 'lucide-react'
+import Image from 'next/image'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 
 export default function AboutPage() {
@@ -10,7 +11,7 @@ export default function AboutPage() {
 
   const stats = [
     { number: '15+', label: 'Années d\'expérience' },
-    { number: '50+', label: 'Startups accompagnées' },
+    { number: '8+', label: 'Entreprises accompagnées' },
     { number: '€100M+', label: 'Levées de fonds réalisées' },
     { number: '95%', label: 'Taux de satisfaction' }
   ]
@@ -138,7 +139,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-xl text-gray-600 max-w-3xl mx-auto"
             >
-              Plus de 50 startups et scale-ups m'ont fait confiance pour leur croissance
+              Des entreprises de renom m'ont fait confiance pour leur croissance et leur structuration
             </motion.p>
           </div>
 
@@ -148,20 +149,16 @@ export default function AboutPage() {
             transition={{ duration: 0.8, delay: 0.4 }}
             className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center"
           >
-            {/* Logos des entreprises - vous pouvez remplacer par de vrais logos */}
+            {/* Entreprises accompagnées */}
             {[
-              { name: 'TechStart', logo: '🚀' },
-              { name: 'ScaleUp Pro', logo: '📈' },
-              { name: 'GrowthLab', logo: '🧪' },
-              { name: 'InnovateCorp', logo: '💡' },
-              { name: 'FutureTech', logo: '🔮' },
-              { name: 'StartupHub', logo: '🏢' },
-              { name: 'ScaleForce', logo: '⚡' },
-              { name: 'GrowthEngine', logo: '🔧' },
-              { name: 'TechVenture', logo: '💼' },
-              { name: 'ScaleUp', logo: '📊' },
-              { name: 'InnovationLab', logo: '🔬' },
-              { name: 'GrowthPartners', logo: '🤝' }
+              { name: 'Jumia', logo: '/images/companies/jumia.png', description: 'E-commerce panafricain' },
+              { name: 'HelloFood', logo: '/images/companies/hellofood.png', description: 'Livraison de repas' },
+              { name: 'Ligerio', logo: '/images/companies/ligerio.png', description: 'BTP et construction' },
+              { name: 'Aunis Ramonage', logo: '/images/companies/aunis-ramonage.png', description: 'Services techniques' },
+              { name: 'Kaymu', logo: '/images/companies/kaymu.png', description: 'Marketplace e-commerce' },
+              { name: 'Glossybox', logo: '/images/companies/glossybox.png', description: 'Beauté et cosmétiques' },
+              { name: 'Orami', logo: '/images/companies/orami.png', description: 'Maternité et bébé' },
+              { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Sécurité et clés' }
             ].map((company, index) => (
               <motion.div
                 key={company.name}
@@ -170,11 +167,28 @@ export default function AboutPage() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="flex flex-col items-center justify-center p-4 bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300"
               >
-                <div className="w-16 h-16 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center mb-3 text-2xl">
-                  {company.logo}
+                <div className="w-16 h-16 bg-white rounded-lg flex items-center justify-center mb-3 p-2 shadow-sm border border-gray-200">
+                  <Image
+                    src={company.logo}
+                    alt={`Logo ${company.name}`}
+                    width={48}
+                    height={48}
+                    className="object-contain max-w-full max-h-full"
+                    onError={(e) => {
+                      // Fallback si l'image n'existe pas
+                      e.currentTarget.style.display = 'none'
+                      e.currentTarget.nextElementSibling.style.display = 'flex'
+                    }}
+                  />
+                  <div className="w-12 h-12 bg-gradient-to-br from-primary-100 to-accent-100 rounded-full flex items-center justify-center text-2xl hidden">
+                    🏢
+                  </div>
                 </div>
                 <span className="text-sm font-medium text-gray-700 text-center">
                   {company.name}
+                </span>
+                <span className="text-xs text-gray-500 text-center mt-1">
+                  {company.description}
                 </span>
               </motion.div>
             ))}
@@ -187,11 +201,11 @@ export default function AboutPage() {
             className="text-center mt-12"
           >
             <p className="text-gray-600 mb-4">
-              Et bien d'autres startups et scale-ups...
+              Et bien d'autres entreprises dans différents secteurs...
             </p>
             <div className="inline-flex items-center px-6 py-3 bg-primary-100 text-primary-700 rounded-full font-semibold">
               <Users className="w-5 h-5 mr-2" />
-              50+ entreprises accompagnées
+              8+ entreprises accompagnées
             </div>
           </motion.div>
         </div>
