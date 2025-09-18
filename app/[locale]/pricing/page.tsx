@@ -26,7 +26,7 @@ export default function PricingPage() {
         '🚨 Prise de commande immédiate (24-48h)',
         '👔 Remplacement intérimaire de dirigeant',
         '🔧 Restructuration d\'urgence',
-        '💰 Levées de fonds de dernière chance',
+        '⚖️ Accompagnement en redressement judiciaire',
         '⚡ Stabilisation opérationnelle',
         '🎯 Plan de redressement personnalisé',
         '📞 Disponibilité 24h/24 pendant l\'intervention',

@@ -44,6 +44,18 @@
         "Scale-up (10-50 employees)",
         "Growth (50+ employees)"
       ]
+    },
+    "pompier": {
+      "title": "Emergency Operations Consultant",
+      "description": "Interim executive replacement for critical situations. I take command when the situation becomes uncontrollable.",
+      "features": [
+        "🚨 Immediate takeover (24-48h)",
+        "👔 Interim executive replacement",
+        "🔧 Emergency restructuring",
+        "⚖️ Judicial recovery support",
+        "⚡ Operational stabilization",
+        "🎯 Personalized recovery plan"
+      ]
     }
   },
   "about": {

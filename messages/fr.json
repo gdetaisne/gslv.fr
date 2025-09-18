@@ -36,18 +36,18 @@
         "Formation des équipes"
       ]
     },
-    "pompier": {
-      "title": "Consultant Opérations Coup de Poing",
-      "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
-      "features": [
-        "🚨 Prise de commande immédiate (24-48h)",
-        "👔 Remplacement intérimaire de dirigeant",
-        "🔧 Restructuration d'urgence",
-        "💰 Levées de fonds de dernière chance",
-        "⚡ Stabilisation opérationnelle",
-        "🎯 Plan de redressement personnalisé"
-      ]
-    }
+        "pompier": {
+          "title": "Consultant Opérations Coup de Poing",
+          "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
+          "features": [
+            "🚨 Prise de commande immédiate (24-48h)",
+            "👔 Remplacement intérimaire de dirigeant",
+            "🔧 Restructuration d'urgence",
+            "⚖️ Accompagnement en redressement judiciaire",
+            "⚡ Stabilisation opérationnelle",
+            "🎯 Plan de redressement personnalisé"
+          ]
+        }
   },
   "about": {
     "title": "À propos de Guillaume - Consultant Opérations Coup de Poing",

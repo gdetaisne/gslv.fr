@@ -46,7 +46,7 @@ export default function HomePage() {
       features: [
         '🚨 Diagnostic express (24-48h)',
         '🔧 Restructuration d\'urgence',
-        '💰 Levées de fonds de dernière chance',
+        '⚖️ Accompagnement en redressement judiciaire',
         '⚡ Stabilisation opérationnelle',
         '🎯 Plan de redressement personnalisé'
       ],
