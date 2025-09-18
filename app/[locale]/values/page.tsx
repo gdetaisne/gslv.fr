@@ -8,12 +8,12 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function ValuesPage() {
   const t = useTranslations('values')
-  const [expandedCards, setExpandedCards] = useState<{[key: string]: boolean}>({})
+  const [expandedPrinciples, setExpandedPrinciples] = useState<{[key: string]: boolean}>({})
 
-  const toggleExpanded = (cardId: string) => {
-    setExpandedCards(prev => ({
+  const togglePrinciple = (principleId: string) => {
+    setExpandedPrinciples(prev => ({
       ...prev,
-      [cardId]: !prev[cardId]
+      [principleId]: !prev[principleId]
     }))
   }
 
@@ -76,7 +76,7 @@ export default function ValuesPage() {
                   <div className="absolute bottom-0 left-0 w-24 h-24 bg-white/5 rounded-full translate-y-12 -translate-x-12"></div>
                   
                   <div className="relative z-10">
-                    <div className="flex items-center justify-between mb-6">
+                    <div className="flex items-center mb-6">
                       <div className="w-16 h-16 bg-white/20 rounded-2xl flex items-center justify-center backdrop-blur-sm">
                         <span className="text-2xl">
                           {value.id === 'investment' && '🚀'}
@@ -84,56 +84,56 @@ export default function ValuesPage() {
                           {value.id === 'leadership' && '👑'}
                         </span>
                       </div>
-                      <button
-                        onClick={() => toggleExpanded(value.id)}
-                        className="w-10 h-10 bg-white/20 rounded-full flex items-center justify-center backdrop-blur-sm hover:bg-white/30 transition-colors"
-                      >
-                        {expandedCards[value.id] ? (
-                          <ChevronUp className="w-5 h-5" />
-                        ) : (
-                          <ChevronDown className="w-5 h-5" />
-                        )}
-                      </button>
                     </div>
                     
-                    <h2 className="text-2xl font-bold mb-4">
+                    <h2 className="text-2xl font-bold mb-6">
                       {value.title}
                     </h2>
-                    
-                    <div className="space-y-3">
-                      {value.principles.slice(0, expandedCards[value.id] ? value.principles.length : 2).map((principle: any, principleIndex: number) => (
-                        <div key={principleIndex} className="bg-white/10 rounded-xl p-4 backdrop-blur-sm">
-                          <h3 className="font-semibold text-sm leading-tight">
-                            {principle.title}
-                          </h3>
-                        </div>
-                      ))}
-                    </div>
                   </div>
                 </div>
 
-                {/* Expanded Content */}
-                {expandedCards[value.id] && (
-                  <div className="p-6 bg-gradient-to-br from-gray-50 to-white">
-                    <div className="space-y-4">
-                      {value.principles.map((principle: any, principleIndex: number) => (
-                        <div key={principleIndex} className="border-l-4 border-primary-200 pl-4">
-                          <h4 className="font-semibold text-gray-900 mb-2">
-                            {principle.title}
-                          </h4>
-                          <ul className="space-y-1">
-                            {principle.behaviors.map((behavior: string, behaviorIndex: number) => (
-                              <li key={behaviorIndex} className="text-sm text-gray-600 flex items-start">
-                                <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                                {behavior}
-                              </li>
-                            ))}
-                          </ul>
+                {/* Principles List */}
+                <div className="p-6 bg-white">
+                  <div className="space-y-4">
+                    {value.principles.map((principle: any, principleIndex: number) => {
+                      const principleId = `${value.id}-${principleIndex}`
+                      const isExpanded = expandedPrinciples[principleId]
+                      
+                      return (
+                        <div key={principleIndex} className="border border-gray-200 rounded-xl overflow-hidden">
+                          <button
+                            onClick={() => togglePrinciple(principleId)}
+                            className="w-full p-4 text-left hover:bg-gray-50 transition-colors flex items-center justify-between"
+                          >
+                            <h3 className="font-semibold text-gray-900 pr-4">
+                              {principle.title}
+                            </h3>
+                            <div className="flex-shrink-0">
+                              {isExpanded ? (
+                                <ChevronUp className="w-5 h-5 text-gray-500" />
+                              ) : (
+                                <ChevronDown className="w-5 h-5 text-gray-500" />
+                              )}
+                            </div>
+                          </button>
+                          
+                          {isExpanded && (
+                            <div className="px-4 pb-4 bg-gray-50">
+                              <ul className="space-y-2">
+                                {principle.behaviors.map((behavior: string, behaviorIndex: number) => (
+                                  <li key={behaviorIndex} className="text-sm text-gray-600 flex items-start">
+                                    <span className="w-1.5 h-1.5 bg-primary-400 rounded-full mt-2 mr-3 flex-shrink-0"></span>
+                                    {behavior}
+                                  </li>
+                                ))}
+                              </ul>
+                            </div>
+                          )}
                         </div>
-                      ))}
-                    </div>
+                      )
+                    })}
                   </div>
-                )}
+                </div>
               </div>
             ))}
           </div>
