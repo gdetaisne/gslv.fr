@@ -415,6 +415,26 @@
       "bookCall": "Book a discovery call",
       "requestCustomQuote": "Request a custom quote",
       "emergencyCall": "24/7 emergency call"
+    },
+    "consultant-cfo-la-rochelle": {
+      "title": "CFO & COO Consultant in La Rochelle",
+      "subtitle": "Expert in financial and operational management for startups and SMEs in La Rochelle. Personalized support in the Rochelais entrepreneurial ecosystem.",
+      "services": {
+        "title": "Services adapted to La Rochelle",
+        "subtitle": "A personalized approach for the Rochelais entrepreneurial ecosystem"
+      },
+      "ecosystem": {
+        "title": "The Rochelais entrepreneurial ecosystem",
+        "subtitle": "Discover the key players in innovation in La Rochelle"
+      },
+      "coworking": {
+        "title": "Coworking spaces in La Rochelle",
+        "subtitle": "The best spaces to work and collaborate in La Rochelle"
+      },
+      "cta": {
+        "title": "Ready to accelerate your growth in La Rochelle?",
+        "subtitle": "Discover how our CFO & COO services can transform your Rochelais company"
+      }
     }
   }
 }

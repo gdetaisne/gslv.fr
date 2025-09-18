@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react'
 import { useParams } from 'next/navigation'
-import { useLocale } from 'next-intl'
+import { useLocale, useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Calendar, Clock, Tag, ArrowLeft, Share2, BookOpen } from 'lucide-react'
 import Link from 'next/link'
@@ -15,6 +15,7 @@ export default function BlogPostPage() {
   const [isLoading, setIsLoading] = useState(true)
   const params = useParams()
   const locale = useLocale()
+  const t = useTranslations('buttons')
 
   useEffect(() => {
     const loadArticle = async () => {

@@ -416,5 +416,25 @@
           "requestCustomQuote": "Demander un devis personnalisé",
           "emergencyCall": "Appel d'urgence 24h/24"
         }
+      },
+      "consultant-cfo-la-rochelle": {
+        "title": "Consultant CFO & COO à La Rochelle",
+        "subtitle": "Expert en direction financière et opérationnelle pour startups et PME de La Rochelle. Accompagnement personnalisé dans l'écosystème entrepreneurial rochelais.",
+        "services": {
+          "title": "Services adaptés à La Rochelle",
+          "subtitle": "Une approche personnalisée pour l'écosystème entrepreneurial rochelais"
+        },
+        "ecosystem": {
+          "title": "L'écosystème entrepreneurial rochelais",
+          "subtitle": "Découvrez les acteurs clés de l'innovation à La Rochelle"
+        },
+        "coworking": {
+          "title": "Espaces de coworking à La Rochelle",
+          "subtitle": "Les meilleurs espaces pour travailler et collaborer à La Rochelle"
+        },
+        "cta": {
+          "title": "Prêt à accélérer votre croissance à La Rochelle ?",
+          "subtitle": "Découvrez comment nos services CFO & COO peuvent transformer votre entreprise rochelaise"
+        }
       }
     }

@@ -24,6 +24,7 @@ export default function Header() {
         { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
         { name: 'COO Part-time', href: `/${locale}/services#coo` },
         { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
+        { name: 'CFO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
       ]
     },
     { name: t('values'), href: `/${locale}/values` },
