@@ -108,46 +108,52 @@ export default function ConsultantCFOLaRochellePage() {
 
   const localNews = [
     {
-      title: "La Rochelle : Nouvelle dynamique pour l'innovation tech",
-      summary: "L'écosystème tech rochelais se renforce avec l'ouverture de nouveaux espaces de coworking et l'arrivée de startups innovantes.",
-      date: "15 janvier 2024",
-      category: "Innovation",
-      source: "La Rochelle Info"
-    },
-    {
-      title: "Startups rochelaises : levées de fonds en hausse",
-      summary: "Plusieurs entreprises locales ont réussi leurs levées de fonds cette année, témoignant de la vitalité de l'écosystème entrepreneurial.",
-      date: "10 janvier 2024",
-      category: "Financement",
-      source: "Charente Libre"
-    },
-    {
-      title: "Le Village by CA La Rochelle : 50 startups accompagnées",
-      summary: "L'incubateur du Crédit Agricole célèbre ses 2 ans avec un bilan positif et de nouveaux projets d'accompagnement.",
-      date: "8 janvier 2024",
-      category: "Incubation",
-      source: "Sud Ouest"
-    },
-    {
-      title: "Économie numérique : La Rochelle mise sur l'attractivité",
-      summary: "La ville renforce son positionnement dans le numérique avec de nouveaux investissements et des partenariats stratégiques.",
-      date: "5 janvier 2024",
+      title: "Actualités économiques La Rochelle",
+      summary: "Suivez l'actualité économique et les développements des entreprises à La Rochelle et en Charente-Maritime.",
+      date: "Actualités en continu",
       category: "Économie",
-      source: "France 3 Nouvelle-Aquitaine"
+      source: "La Rochelle Info",
+      link: "https://larochelleinfo.media/"
     },
     {
-      title: "Coworking à La Rochelle : une offre qui se diversifie",
-      summary: "Les espaces de travail partagés se multiplient dans la ville, répondant à la demande croissante des entrepreneurs et freelances.",
-      date: "3 janvier 2024",
-      category: "Coworking",
-      source: "La Rochelle Info"
+      title: "Écosystème startup Nouvelle-Aquitaine",
+      summary: "Découvrez les dernières innovations, levées de fonds et créations d'entreprises dans la région rochelaise.",
+      date: "Actualités en continu",
+      category: "Startups",
+      source: "France 3 Nouvelle-Aquitaine",
+      link: "https://france3-regions.francetvinfo.fr/nouvelle-aquitaine/charente-maritime/la-rochelle"
     },
     {
-      title: "PME rochelaises : accompagnement financier renforcé",
-      summary: "De nouveaux dispositifs d'aide sont mis en place pour soutenir la croissance des entreprises locales.",
-      date: "1er janvier 2024",
-      category: "PME",
-      source: "Charente-Maritime Entreprises"
+      title: "Informations locales La Rochelle",
+      summary: "Toute l'actualité locale : politique, économie, culture, sport et vie quotidienne à La Rochelle.",
+      date: "Actualités en continu",
+      category: "Local",
+      source: "France Bleu La Rochelle",
+      link: "https://www.francebleu.fr/la-rochelle/actu"
+    },
+    {
+      title: "Actualités Charente-Maritime",
+      summary: "Informations régionales sur le développement économique, les entreprises et l'innovation en Charente-Maritime.",
+      date: "Actualités en continu",
+      category: "Région",
+      source: "Sud Ouest",
+      link: "https://www.sudouest.fr/charente-maritime/la-rochelle"
+    },
+    {
+      title: "Innovation et numérique La Rochelle",
+      summary: "Suivez l'évolution du secteur numérique et des nouvelles technologies à La Rochelle et sa région.",
+      date: "Actualités en continu",
+      category: "Tech",
+      source: "AUNISTV",
+      link: "https://www.aunistv.fr/"
+    },
+    {
+      title: "Entreprises et emploi La Rochelle",
+      summary: "Actualités sur le marché de l'emploi, les créations d'entreprises et l'économie locale rochelaise.",
+      date: "Actualités en continu",
+      category: "Emploi",
+      source: "Charente Libre",
+      link: "https://www.charentelibre.fr/la-rochelle"
     }
   ]
 
@@ -429,31 +435,38 @@ export default function ConsultantCFOLaRochellePage() {
                 transition={{ duration: 0.8, delay: index * 0.1 }}
                 className="group"
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <CardContent className="p-6">
-                    <div className="flex items-center justify-between mb-3">
-                      <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
-                        {news.category}
-                      </span>
-                      <span className="text-xs text-gray-500">{news.date}</span>
-                    </div>
-                    
-                    <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
-                      {news.title}
-                    </h3>
-                    
-                    <p className="text-sm text-gray-600 mb-4 leading-relaxed">
-                      {news.summary}
-                    </p>
-                    
-                    <div className="flex items-center justify-between">
-                      <span className="text-xs text-gray-500 font-medium">
-                        {news.source}
-                      </span>
-                      <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-600 transition-colors" />
-                    </div>
-                  </CardContent>
-                </Card>
+                <a 
+                  href={news.link} 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block h-full"
+                >
+                  <Card className="h-full hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1 cursor-pointer">
+                    <CardContent className="p-6">
+                      <div className="flex items-center justify-between mb-3">
+                        <span className="px-3 py-1 bg-primary-100 text-primary-700 text-xs font-medium rounded-full">
+                          {news.category}
+                        </span>
+                        <span className="text-xs text-gray-500">{news.date}</span>
+                      </div>
+                      
+                      <h3 className="text-base sm:text-lg font-bold text-gray-900 mb-3 leading-tight group-hover:text-primary-600 transition-colors">
+                        {news.title}
+                      </h3>
+                      
+                      <p className="text-sm text-gray-600 mb-4 leading-relaxed">
+                        {news.summary}
+                      </p>
+                      
+                      <div className="flex items-center justify-between">
+                        <span className="text-xs text-gray-500 font-medium">
+                          {news.source}
+                        </span>
+                        <ArrowRight className="w-4 h-4 text-gray-400 group-hover:text-primary-600 transition-colors" />
+                      </div>
+                    </CardContent>
+                  </Card>
+                </a>
               </motion.div>
             ))}
           </div>
@@ -467,9 +480,15 @@ export default function ConsultantCFOLaRochellePage() {
               <p className="text-sm text-gray-600 mb-4">
                 Sources : La Rochelle Info, Charente Libre, Sud Ouest, France 3 Nouvelle-Aquitaine
               </p>
-              <Button variant="outline" size="lg" className="text-sm px-6 py-3">
-                Voir toutes les actualités
-              </Button>
+              <a 
+                href="https://larochelleinfo.media/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+              >
+                <Button variant="outline" size="lg" className="text-sm px-6 py-3">
+                  Voir toutes les actualités
+                </Button>
+              </a>
             </motion.div>
           </div>
         </div>
