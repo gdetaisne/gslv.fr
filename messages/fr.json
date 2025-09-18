@@ -10,8 +10,10 @@
   "hero": {
     "title": "Un CFO & COO part-time pour accélérer votre croissance, sans coûts fixes",
     "subtitle": "Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing.",
-    "cta": "Réserver un appel découverte",
-    "ctaSecondary": "Découvrir mes services"
+    "cta": {
+      "primary": "Réserver un appel découverte",
+      "secondary": "Découvrir mes services"
+    }
   },
   "services": {
     "title": "Nos Services",
