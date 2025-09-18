@@ -53,7 +53,11 @@ export default function HomePage() {
 
   const services = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-primary-600" />,
+      icon: (
+        <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <TrendingUp className="w-10 h-10 text-white" />
+        </div>
+      ),
       title: tServices('cfo.title'),
       description: tServices('cfo.description'),
       features: [
@@ -63,10 +67,14 @@ export default function HomePage() {
         'Préparation levées de fonds',
         'Tableaux de bord KPI'
       ],
-      color: 'from-primary-500 to-primary-700'
+      color: 'from-blue-500 to-blue-700'
     },
     {
-      icon: <Zap className="w-8 h-8 text-accent-600" />,
+      icon: (
+        <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <Zap className="w-10 h-10 text-white" />
+        </div>
+      ),
       title: tServices('coo.title'),
       description: tServices('coo.description'),
       features: [
@@ -76,10 +84,14 @@ export default function HomePage() {
         'Mise en place d\'outils',
         'Formation des équipes'
       ],
-      color: 'from-accent-500 to-accent-700'
+      color: 'from-green-500 to-green-700'
     },
     {
-      icon: <AlertTriangle className="w-8 h-8 text-red-600" />,
+      icon: (
+        <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-700 rounded-3xl flex items-center justify-center shadow-xl hover:shadow-2xl transition-all duration-300 hover:scale-105">
+          <AlertTriangle className="w-10 h-10 text-white" />
+        </div>
+      ),
       title: tServices('pompier.title'),
       description: tServices('pompier.description'),
       features: [
