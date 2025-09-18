@@ -8,8 +8,8 @@
     "book": "Réserver un appel"
   },
   "hero": {
-    "title": "CFO & COO 'Pompier' - Je redresse la barre quand la situation se complique",
-    "subtitle": "Interventions d'urgence pour startups et scaleups en difficulté. Structuration, levées de fonds et redressement opérationnel.",
+    "title": "Consultant Opérations Coup de Poing - Remplacement Intérimaire de Dirigeant",
+    "subtitle": "Interventions d'urgence pour startups et scaleups en difficulté. Je prends les commandes quand la situation devient critique.",
     "cta": "Appel d'urgence - 24h",
     "ctaSecondary": "Découvrir mes interventions"
   },
@@ -37,10 +37,11 @@
       ]
     },
     "pompier": {
-      "title": "Pompier - Interventions d'Urgence",
-      "description": "Interventions d'urgence pour redresser des situations critiques. Spécialisé dans le sauvetage de startups en difficulté.",
+      "title": "Consultant Opérations Coup de Poing",
+      "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
       "features": [
-        "🚨 Diagnostic express (24-48h)",
+        "🚨 Prise de commande immédiate (24-48h)",
+        "👔 Remplacement intérimaire de dirigeant",
         "🔧 Restructuration d'urgence",
         "💰 Levées de fonds de dernière chance",
         "⚡ Stabilisation opérationnelle",
@@ -49,14 +50,14 @@
     }
   },
   "about": {
-    "title": "À propos de Guillaume - Le Pompier des Startups",
-    "subtitle": "CFO/COO d'urgence spécialisé dans le redressement de situations critiques",
+    "title": "À propos de Guillaume - Consultant Opérations Coup de Poing",
+    "subtitle": "Spécialiste du remplacement intérimaire de dirigeant pour situations critiques",
     "experience": "15+ années d'expérience en crise",
-    "description": "Spécialiste du redressement, j'interviens quand la situation devient critique. Pragmatique et orienté résultats, je redresse la barre des startups et scaleups en difficulté.",
+    "description": "Consultant opérations coup de poing, je prends les commandes quand la situation devient incontrôlable. Pragmatique et orienté résultats, je redresse la barre des startups et scaleups en difficulté.",
     "expertise": [
-      "Redressement financier d'urgence",
-      "Levées de fonds de dernière chance",
-      "Restructuration opérationnelle",
+      "Remplacement intérimaire de dirigeant",
+      "Prise de commande d'urgence",
+      "Redressement financier express",
       "Gestion de crise et stabilisation"
     ]
   },
@@ -88,7 +89,7 @@
     }
   },
   "footer": {
-    "description": "CFO & COO Pompier - Interventions d'urgence pour startups en difficulté",
+    "description": "Consultant Opérations Coup de Poing - Remplacement intérimaire de dirigeant pour situations critiques",
     "links": {
       "privacy": "Politique de confidentialité",
       "terms": "Conditions d'utilisation",
