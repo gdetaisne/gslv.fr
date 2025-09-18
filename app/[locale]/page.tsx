@@ -13,6 +13,8 @@ export default function HomePage() {
   const t = useTranslations('hero')
   const tServices = useTranslations('services')
   const tTestimonials = useTranslations('testimonials')
+  const tMethodology = useTranslations('methodology')
+  const tStats = useTranslations('stats')
   
   // Carousel state
   const [currentImage, setCurrentImage] = useState(0)
@@ -248,6 +250,117 @@ export default function HomePage() {
                     </ul>
                   </CardContent>
                 </Card>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Methodology Section */}
+      <section className="py-20 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-bold text-dark-900 mb-4"
+            >
+              {tMethodology('title')}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-600 mb-4"
+            >
+              {tMethodology('subtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              className="text-lg text-gray-500 max-w-3xl mx-auto"
+            >
+              {tMethodology('description')}
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tMethodology.raw('steps').map((step: any, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="relative"
+              >
+                <Card hover className="h-full text-center">
+                  <CardHeader>
+                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center mx-auto mb-4 text-2xl font-bold">
+                      {index + 1}
+                    </div>
+                    <h3 className="text-xl font-bold text-dark-900 mb-3">
+                      {step.title}
+                    </h3>
+                    <p className="text-gray-600 leading-relaxed">
+                      {step.description}
+                    </p>
+                  </CardHeader>
+                </Card>
+                
+                {/* Connector line */}
+                {index < 3 && (
+                  <div className="hidden lg:block absolute top-1/2 -right-4 w-8 h-0.5 bg-gradient-to-r from-primary-200 to-transparent transform -translate-y-1/2"></div>
+                )}
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Stats Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-3xl md:text-4xl font-bold text-dark-900 mb-4"
+            >
+              {tStats('title')}
+            </motion.h2>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="text-xl text-gray-600"
+            >
+              {tStats('subtitle')}
+            </motion.p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            {tStats.raw('items').map((stat: any, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, scale: 0.8 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="text-center group"
+              >
+                <div className="bg-gradient-to-br from-primary-50 to-accent-50 rounded-2xl p-8 hover:shadow-lg transition-all duration-300 group-hover:scale-105">
+                  <div className="text-4xl md:text-5xl font-bold text-primary-600 mb-2">
+                    {stat.number}
+                  </div>
+                  <div className="text-xl font-semibold text-dark-900 mb-2">
+                    {stat.label}
+                  </div>
+                  <div className="text-gray-600 text-sm">
+                    {stat.description}
+                  </div>
+                </div>
               </motion.div>
             ))}
           </div>

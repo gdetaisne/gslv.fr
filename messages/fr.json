@@ -200,13 +200,62 @@
       "submit": "Demander une intervention"
     }
   },
-  "footer": {
-    "description": "Consultant Opérations Coup de Poing - Remplacement intérimaire de dirigeant pour situations critiques",
-    "links": {
-      "privacy": "Politique de confidentialité",
-      "terms": "Conditions d'utilisation",
-      "cookies": "Gestion des cookies"
-    },
-    "copyright": "© 2024 GSLV.cloud. Tous droits réservés."
-  }
+      "methodology": {
+        "title": "Notre méthodologie",
+        "subtitle": "La performance au cœur de nos interventions",
+        "description": "Parce que chaque situation critique est unique, nous adaptons notre approche à chaque enjeu spécifique.",
+        "steps": [
+          {
+            "title": "Diagnostic express (24-48h)",
+            "description": "Analyse rapide et précise de la situation financière, opérationnelle et humaine pour identifier les leviers d'action prioritaires."
+          },
+          {
+            "title": "Plan d'action personnalisé",
+            "description": "Élaboration d'une stratégie de redressement sur mesure avec des objectifs clairs et des échéances réalistes."
+          },
+          {
+            "title": "Intervention immédiate",
+            "description": "Prise de commande opérationnelle avec mise en place des processus de contrôle et de reporting en temps réel."
+          },
+          {
+            "title": "Suivi et optimisation",
+            "description": "Accompagnement continu avec ajustements stratégiques basés sur les résultats et l'évolution de la situation."
+          }
+        ]
+      },
+      "stats": {
+        "title": "Nos chiffres",
+        "subtitle": "Une expertise reconnue",
+        "items": [
+          {
+            "number": "15+",
+            "label": "Années d'expérience",
+            "description": "En restructuration d'entreprises et gestion de crise"
+          },
+          {
+            "number": "50+",
+            "label": "Entreprises sauvées",
+            "description": "Startups et scaleups en situation critique"
+          },
+          {
+            "number": "€100M+",
+            "label": "CA géré cumulé",
+            "description": "Dans des contextes de redressement"
+          },
+          {
+            "number": "24h",
+            "label": "Délai d'intervention",
+            "description": "Réponse garantie en situation d'urgence"
+          }
+        ]
+      },
+      "footer": {
+        "description": "Consultant Opérations Coup de Poing - Remplacement intérimaire de dirigeant pour situations critiques",
+        "links": {
+          "privacy": "Politique de confidentialité",
+          "terms": "Conditions d'utilisation",
+          "cookies": "Gestion des cookies"
+        },
+        "copyright": "© 2024 GSLV.cloud. Tous droits réservés."
+      }
 }

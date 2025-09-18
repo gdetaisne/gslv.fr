@@ -209,6 +209,55 @@
       "submit": "Book the call"
     }
   },
+  "methodology": {
+    "title": "Our methodology",
+    "subtitle": "Performance at the heart of our interventions",
+    "description": "Because every critical situation is unique, we adapt our approach to each specific challenge.",
+    "steps": [
+      {
+        "title": "Express diagnosis (24-48h)",
+        "description": "Rapid and precise analysis of the financial, operational and human situation to identify priority action levers."
+      },
+      {
+        "title": "Personalized action plan",
+        "description": "Development of a tailor-made recovery strategy with clear objectives and realistic deadlines."
+      },
+      {
+        "title": "Immediate intervention",
+        "description": "Operational command with implementation of real-time control and reporting processes."
+      },
+      {
+        "title": "Follow-up and optimization",
+        "description": "Continuous support with strategic adjustments based on results and situation evolution."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Our figures",
+    "subtitle": "Recognized expertise",
+    "items": [
+      {
+        "number": "15+",
+        "label": "Years of experience",
+        "description": "In business restructuring and crisis management"
+      },
+      {
+        "number": "50+",
+        "label": "Companies saved",
+        "description": "Startups and scaleups in critical situations"
+      },
+      {
+        "number": "€100M+",
+        "label": "Cumulative revenue managed",
+        "description": "In recovery contexts"
+      },
+      {
+        "number": "24h",
+        "label": "Intervention time",
+        "description": "Guaranteed response in emergency situations"
+      }
+    ]
+  },
   "footer": {
     "description": "Part-time CFO & COO for startups and scaleups",
     "links": {
