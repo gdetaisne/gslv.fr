@@ -218,90 +218,143 @@ export default function HomePage() {
       </section>
 
       {/* Services Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
+          <div className="text-center mb-20">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl md:text-4xl font-bold text-dark-900 mb-4"
+              transition={{ duration: 0.8, type: "spring", bounce: 0.4 }}
+              className="relative"
             >
-              {tServices('title')}
-            </motion.h2>
+              <h2 className="text-4xl md:text-6xl font-black text-transparent bg-clip-text bg-gradient-to-r from-primary-600 via-accent-600 to-primary-800 mb-6">
+                Nos Services
+              </h2>
+              <div className="absolute -top-2 -right-2 w-4 h-4 bg-accent-500 rounded-full animate-pulse"></div>
+              <div className="absolute -bottom-2 -left-2 w-3 h-3 bg-primary-500 rounded-full animate-bounce"></div>
+            </motion.div>
+            
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 max-w-3xl mx-auto"
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-xl md:text-2xl text-gray-700 max-w-4xl mx-auto font-medium"
             >
-              {tServices('subtitle')}
+              Des solutions personnalisées pour chaque stade de votre croissance
             </motion.p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {services.map((service, index) => (
               <motion.div
                 key={service.title}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                whileHover={{ y: -5, scale: 1.02 }}
-                className="group"
+                initial={{ opacity: 0, y: 50, scale: 0.8 }}
+                whileInView={{ opacity: 1, y: 0, scale: 1 }}
+                transition={{ 
+                  duration: 0.8, 
+                  delay: index * 0.2,
+                  type: "spring",
+                  bounce: 0.3
+                }}
+                whileHover={{ 
+                  y: -15, 
+                  scale: 1.05,
+                  rotateY: 5,
+                  rotateX: 5
+                }}
+                className="group perspective-1000"
               >
-                <Card className="h-full hover:shadow-2xl transition-all duration-300 border-0 bg-white">
-                  <CardHeader className="text-center pb-6">
-                    {/* Icône avec animation */}
+                <Card className="h-full hover:shadow-2xl transition-all duration-500 border-0 bg-white relative overflow-hidden">
+                  {/* Effet de brillance au hover */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
+                  
+                  <CardHeader className="text-center pb-6 relative z-10">
+                    {/* Icône avec animation ultra-punchy */}
                     <motion.div
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ duration: 0.3 }}
-                      className="mb-6"
+                      whileHover={{ 
+                        scale: 1.3, 
+                        rotate: 15,
+                        y: -10
+                      }}
+                      whileTap={{ scale: 0.9 }}
+                      transition={{ 
+                        duration: 0.4,
+                        type: "spring",
+                        bounce: 0.6
+                      }}
+                      className="mb-8 relative"
                     >
                       {service.icon}
+                      {/* Effet de particules */}
+                      <div className="absolute -top-2 -right-2 w-2 h-2 bg-accent-400 rounded-full animate-ping"></div>
+                      <div className="absolute -bottom-2 -left-2 w-1.5 h-1.5 bg-primary-400 rounded-full animate-pulse"></div>
                     </motion.div>
                     
-                    {/* Titre */}
-                    <h3 className="text-2xl font-bold text-dark-900 mb-4 group-hover:text-primary-600 transition-colors duration-300">
+                    {/* Titre avec effet de brillance */}
+                    <motion.h3 
+                      className="text-2xl md:text-3xl font-black text-dark-900 mb-4 group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 transition-all duration-500"
+                      whileHover={{ scale: 1.05 }}
+                    >
                       {service.title}
-                    </h3>
+                    </motion.h3>
                     
-                    {/* Description */}
-                    <p className="text-gray-600 mb-6 leading-relaxed">
+                    {/* Description avec animation */}
+                    <motion.p 
+                      className="text-gray-600 mb-8 leading-relaxed text-lg"
+                      whileHover={{ scale: 1.02 }}
+                      transition={{ duration: 0.3 }}
+                    >
                       {service.description}
-                    </p>
+                    </motion.p>
                   </CardHeader>
                   
-                  <CardContent className="pt-0">
-                    {/* Features avec animations */}
-                    <div className="space-y-3 mb-8">
+                  <CardContent className="pt-0 relative z-10">
+                    {/* Features avec animations ultra-dynamiques */}
+                    <div className="space-y-4 mb-10">
                       {service.features.map((feature, featureIndex) => (
                         <motion.div
                           key={featureIndex}
-                          initial={{ opacity: 0, x: -20 }}
+                          initial={{ opacity: 0, x: -30 }}
                           whileInView={{ opacity: 1, x: 0 }}
-                          transition={{ duration: 0.4, delay: featureIndex * 0.1 }}
-                          className="flex items-center space-x-3 group-hover:translate-x-1 transition-transform duration-300"
+                          transition={{ 
+                            duration: 0.6, 
+                            delay: featureIndex * 0.1,
+                            type: "spring",
+                            bounce: 0.4
+                          }}
+                          whileHover={{ 
+                            x: 10, 
+                            scale: 1.02,
+                            backgroundColor: "rgba(59, 130, 246, 0.05)"
+                          }}
+                          className="flex items-center space-x-4 p-3 rounded-lg transition-all duration-300 group-hover:bg-primary-50"
                         >
-                          <div className="w-2 h-2 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex-shrink-0"></div>
-                          <span className="text-gray-700 text-sm font-medium">
+                          <motion.div 
+                            className="w-3 h-3 bg-gradient-to-r from-primary-500 to-accent-500 rounded-full flex-shrink-0"
+                            whileHover={{ scale: 1.5, rotate: 180 }}
+                            transition={{ duration: 0.3 }}
+                          ></motion.div>
+                          <span className="text-gray-700 font-medium text-base">
                             {feature}
                           </span>
                         </motion.div>
                       ))}
                     </div>
                     
-                    {/* CTA */}
+                    {/* CTA ultra-punchy */}
                     <motion.div
-                      whileHover={{ scale: 1.05 }}
+                      whileHover={{ scale: 1.08, y: -2 }}
                       whileTap={{ scale: 0.95 }}
                       className="text-center"
                     >
                       <Button
                         variant="outline"
-                        className="w-full group-hover:bg-primary-600 group-hover:text-white group-hover:border-primary-600 transition-all duration-300"
+                        className="w-full group-hover:bg-gradient-to-r group-hover:from-primary-600 group-hover:to-accent-600 group-hover:text-white group-hover:border-transparent group-hover:shadow-lg transition-all duration-500 font-bold text-lg py-4 relative overflow-hidden"
                       >
-                        En savoir plus
-                        <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+                        <span className="relative z-10">En savoir plus</span>
+                        <ArrowRight className="w-5 h-5 ml-3 group-hover:translate-x-2 transition-transform duration-300" />
+                        {/* Effet de brillance sur le bouton */}
+                        <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/30 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700"></div>
                       </Button>
                     </motion.div>
                   </CardContent>
