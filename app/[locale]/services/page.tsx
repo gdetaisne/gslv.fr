@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { CheckCircle, TrendingUp, Zap, AlertTriangle, ArrowRight } from 'lucide-react'
 import Link from 'next/link'
@@ -8,6 +8,7 @@ import { Card, CardContent, CardHeader } from '../../components/Card'
 import Button from '../../components/Button'
 
 export default function ServicesPage() {
+  const locale = useLocale()
   const t = useTranslations('services')
   const tHero = useTranslations('hero')
 
@@ -16,7 +17,7 @@ export default function ServicesPage() {
       icon: <TrendingUp className="w-8 h-8 text-primary-600" />,
       title: t('cfo.title'),
       description: t('cfo.description'),
-      features: t('cfo.features'),
+      features: t.raw('cfo.features'),
       color: 'from-primary-500 to-primary-700',
       id: 'cfo'
     },
@@ -24,7 +25,7 @@ export default function ServicesPage() {
       icon: <Zap className="w-8 h-8 text-accent-600" />,
       title: t('coo.title'),
       description: t('coo.description'),
-      features: t('coo.features'),
+      features: t.raw('coo.features'),
       color: 'from-accent-500 to-accent-700',
       id: 'coo'
     },
@@ -32,7 +33,7 @@ export default function ServicesPage() {
       icon: <AlertTriangle className="w-8 h-8 text-red-600" />,
       title: t('pompier.title'),
       description: t('pompier.description'),
-      features: t('pompier.features'),
+      features: t.raw('pompier.features'),
       color: 'from-red-500 to-red-700',
       id: 'pompier'
     }
@@ -127,7 +128,7 @@ export default function ServicesPage() {
                   </CardHeader>
                   <CardContent className="p-6 pt-0 flex-grow">
                     <ul className="space-y-3">
-                      {service.features.map((feature, featureIndex) => (
+                      {service.features.map((feature: string, featureIndex: number) => (
                         <li key={featureIndex} className="flex items-center space-x-3">
                           <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
                           <span className="text-gray-700">{feature}</span>
