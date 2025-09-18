@@ -239,7 +239,10 @@ export default function AboutPage() {
                          onError={(e) => {
                            // Fallback si l'image n'existe pas
                            e.currentTarget.style.display = 'none'
-                           e.currentTarget.nextElementSibling.style.display = 'flex'
+                           const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                           if (nextElement) {
+                             nextElement.style.display = 'flex'
+                           }
                          }}
                        />
                        <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
