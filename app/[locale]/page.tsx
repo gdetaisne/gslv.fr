@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react'
 import Link from 'next/link'
@@ -10,6 +10,7 @@ import Button from '../components/Button'
 import { Card, CardContent, CardHeader } from '../components/Card'
 
 export default function HomePage() {
+  const locale = useLocale()
   const t = useTranslations('hero')
   const tServices = useTranslations('services')
   const tTestimonials = useTranslations('testimonials')
