@@ -16,7 +16,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Configuration par défaut
-    const to = 'contact@gslv.fr'
+    const to = 'gdetaisne@gmail.com'
     const subject = 'Nouvelle demande de contact - Site GSLV.fr'
 
     // Construction du contenu de l'email

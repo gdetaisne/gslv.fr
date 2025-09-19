@@ -147,7 +147,7 @@ Ce projet est sous licence MIT. Voir le fichier `LICENSE` pour plus de détails.
 
 ## 📞 Contact
 
-- **Email** : contact@gslv.fr
+- **Email** : gdetaisne@gmail.com
 - **Site** : https://gslv.fr
 - **LinkedIn** : https://linkedin.com/in/guillaume-stehelin
 

@@ -21,7 +21,7 @@ services:
       - --entrypoints.web.address=:80
       - --entrypoints.websecure.address=:443
       - --certificatesresolvers.letsencrypt.acme.tlschallenge=true
-      - --certificatesresolvers.letsencrypt.acme.email=contact@gslv.fr
+      - --certificatesresolvers.letsencrypt.acme.email=gdetaisne@gmail.com
       - --certificatesresolvers.letsencrypt.acme.storage=/letsencrypt/acme.json
     ports:
       - "80:80"

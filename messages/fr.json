@@ -14,6 +14,9 @@
     "cta": {
       "primary": "Réserver un appel découverte",
       "secondary": "Découvrir mes services"
+    },
+    "buttons": {
+      "bookCall": "Réserver un appel découverte"
     }
   },
   "services": {
