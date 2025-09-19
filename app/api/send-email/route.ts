@@ -5,25 +5,29 @@ const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key')
 
 export async function POST(request: NextRequest) {
   try {
-    const { to, subject, name, email, company, stage, message } = await request.json()
+    const { name, email, company, stage, message } = await request.json()
 
     // Validation des données
-    if (!to || !subject || !name || !email) {
+    if (!name || !email) {
       return NextResponse.json(
         { error: 'Données manquantes' },
         { status: 400 }
       )
     }
 
+    // Configuration par défaut
+    const to = 'contact@gslv.fr'
+    const subject = 'Nouvelle demande de contact - Site GSLV.fr'
+
     // Construction du contenu de l'email
     const emailContent = `
-Nouvelle demande d'intervention d'urgence
+Nouvelle demande de contact
 
 Informations du contact:
 - Nom: ${name}
 - Email: ${email}
 - Entreprise: ${company || 'Non renseigné'}
-- Situation: ${stage || 'Non renseigné'}
+- Service: ${stage || 'Non renseigné'}
 
 Message:
 ${message || 'Aucun message'}
@@ -41,7 +45,7 @@ Envoyé depuis le site GSLV.fr
         text: emailContent,
         html: `
           <div style="font-family: Arial, sans-serif; max-width: 600px; margin: 0 auto;">
-            <h2 style="color: #dc2626;">🚨 Nouvelle demande d'intervention d'urgence</h2>
+            <h2 style="color: #059669;">📧 Nouvelle demande de contact</h2>
             
             <div style="background: #f3f4f6; padding: 20px; border-radius: 8px; margin: 20px 0;">
               <h3 style="color: #374151; margin-top: 0;">Informations du contact:</h3>
@@ -49,12 +53,12 @@ Envoyé depuis le site GSLV.fr
                 <li><strong>Nom:</strong> ${name}</li>
                 <li><strong>Email:</strong> ${email}</li>
                 <li><strong>Entreprise:</strong> ${company || 'Non renseigné'}</li>
-                <li><strong>Situation:</strong> ${stage || 'Non renseigné'}</li>
+                <li><strong>Service:</strong> ${stage || 'Non renseigné'}</li>
               </ul>
             </div>
             
-            <div style="background: #fef2f2; padding: 20px; border-radius: 8px; margin: 20px 0;">
-              <h3 style="color: #dc2626; margin-top: 0;">Message:</h3>
+            <div style="background: #f0fdf4; padding: 20px; border-radius: 8px; margin: 20px 0;">
+              <h3 style="color: #059669; margin-top: 0;">Message:</h3>
               <p style="white-space: pre-line;">${message || 'Aucun message'}</p>
             </div>
             
