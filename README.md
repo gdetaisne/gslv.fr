@@ -1,6 +1,6 @@
-# GSLV.cloud - Site Vitrine
+# GSLV.fr - Site Vitrine
 
-Site vitrine professionnel pour GSLV.cloud, spécialisé dans les services CFO & COO part-time pour startups et scaleups.
+Site vitrine professionnel pour GSLV.fr, spécialisé dans les services CFO & COO part-time pour startups et scaleups.
 
 ## 🚀 Fonctionnalités
 
@@ -24,8 +24,8 @@ Site vitrine professionnel pour GSLV.cloud, spécialisé dans les services CFO &
 
 ```bash
 # Cloner le repository
-git clone https://github.com/your-username/gslv-cloud.git
-cd gslv-cloud
+git clone https://github.com/your-username/gslv.fr.git
+cd gslv.fr
 
 # Installer les dépendances
 npm install
@@ -46,7 +46,7 @@ npm run dev
 docker-compose up -d
 
 # Vérifier les logs
-docker-compose logs -f gslv-cloud
+docker-compose logs -f gslv.fr
 ```
 
 ### Avec Vercel
@@ -75,7 +75,7 @@ NEXT_PUBLIC_CALENDLY_URL=your-calendly-url
 Le fichier `docker-compose.yml` inclut la configuration Traefik pour :
 - HTTPS automatique avec Let's Encrypt
 - Redirection HTTP vers HTTPS
-- Dashboard Traefik sur `traefik.gslv.cloud`
+- Dashboard Traefik sur `traefik.gslv.fr`
 
 ## 📝 Contenu
 

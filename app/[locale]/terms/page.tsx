@@ -55,7 +55,7 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">2. Description du service</h2>
               <p className="text-gray-700 mb-6">
-                GSLV.cloud fournit des services de CFO et COO part-time pour les startups et scale-ups. Nos services incluent :
+                GSLV.fr fournit des services de CFO et COO part-time pour les startups et scale-ups. Nos services incluent :
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
                 <li>Direction financière externalisée</li>
@@ -77,12 +77,12 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">4. Propriété intellectuelle</h2>
               <p className="text-gray-700 mb-6">
-                Le contenu de ce site, incluant les textes, images, logos et logiciels, est protégé par les droits de propriété intellectuelle et appartient à GSLV.cloud ou à ses concédants de licence.
+                Le contenu de ce site, incluant les textes, images, logos et logiciels, est protégé par les droits de propriété intellectuelle et appartient à GSLV.fr ou à ses concédants de licence.
               </p>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">5. Limitation de responsabilité</h2>
               <p className="text-gray-700 mb-6">
-                Dans la mesure permise par la loi, GSLV.cloud ne sera pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation de ce site.
+                Dans la mesure permise par la loi, GSLV.fr ne sera pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation de ce site.
               </p>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">6. Modification des conditions</h2>

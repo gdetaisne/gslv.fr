@@ -39,8 +39,23 @@ export default function Header() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">G</span>
+            <div className="w-8 h-8 flex items-center justify-center">
+              <img 
+                src="/images/logo/logo.png" 
+                alt="GSLV Logo" 
+                className="w-full h-full object-contain"
+                onError={(e) => {
+                  // Fallback vers l'ancien logo si l'image n'existe pas
+                  e.currentTarget.style.display = 'none'
+                  const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                  if (nextElement) {
+                    nextElement.style.display = 'flex'
+                  }
+                }}
+              />
+              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center hidden">
+                <span className="text-white font-bold text-sm">G</span>
+              </div>
             </div>
             <span className="text-xl font-bold text-dark-900">GSLV</span>
           </Link>

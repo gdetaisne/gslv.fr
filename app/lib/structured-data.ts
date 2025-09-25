@@ -43,7 +43,7 @@ export function generateStructuredData({
         alternateName: 'Guillaume Stehelin de Taisne',
         description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
         url: baseUrl,
-        logo: `${baseUrl}/images/logo.png`,
+        logo: `${baseUrl}/images/logo/logo.png`,
         image: `${baseUrl}/images/og-image.jpg`,
         founder: {
           '@type': 'Person',
@@ -227,7 +227,7 @@ export function generateStructuredData({
           url: baseUrl,
           logo: {
             '@type': 'ImageObject',
-            url: `${baseUrl}/images/logo.png`
+            url: `${baseUrl}/images/logo/logo.png`
           }
         },
         datePublished: publishedTime,

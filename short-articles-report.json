@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "totalArticles": 504,
+    "shortArticles": 0,
+    "percentage": "0.0"
+  },
+  "articlesByLength": {
+    "0-100": 0,
+    "100-200": 0,
+    "200-300": 0,
+    "300-500": 488,
+    "500+": 16
+  },
+  "shortArticles": []
+}

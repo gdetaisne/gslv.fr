@@ -111,7 +111,7 @@ export function generateMetadata({
       },
     },
     verification: {
-      google: 'google-site-verification-code', // À remplacer par le vrai code
+      google: 'VOTRE_CODE_GOOGLE_ICI', // Remplacez par votre code Google Search Console
     },
   }
 }

@@ -2,7 +2,7 @@
 
 ## Prérequis
 - Compte Captain configuré
-- Accès à votre VPN Captain : https://captain.captain.gslv.cloud/#/apps
+- Accès à votre VPN Captain : https://captain.captain.gslv.fr/#/apps
 - Git configuré avec votre repository
 
 ## Étapes de déploiement
@@ -16,11 +16,11 @@ git push origin main
 ```
 
 ### 2. Configuration Captain
-1. Connectez-vous à votre dashboard Captain : https://captain.captain.gslv.cloud/#/apps
+1. Connectez-vous à votre dashboard Captain : https://captain.captain.gslv.fr/#/apps
 2. Cliquez sur "Create New App"
 3. Choisissez "Deploy from Git Repository"
 4. Configurez :
-   - **App Name**: `gslv-cloud`
+   - **App Name**: `gslv.fr`
    - **Repository URL**: URL de votre repository Git
    - **Branch**: `main`
    - **Root Directory**: `/` (racine du projet)
@@ -36,7 +36,7 @@ PORT=3000
 ### 4. Configuration du domaine
 1. Dans Captain, allez dans "App Configs"
 2. Ajoutez votre domaine personnalisé :
-   - **Domain**: `gslv.cloud` (ou votre domaine)
+   - **Domain**: `gslv.fr` (ou votre domaine)
    - **Enable HTTPS**: ✅ Activé
    - **Force HTTPS**: ✅ Activé
 
@@ -50,13 +50,13 @@ PORT=3000
 
 ### 6. Vérification
 Une fois déployé, votre site sera accessible sur :
-- `https://gslv.cloud` (votre domaine)
-- `https://gslv-cloud.captain.gslv.cloud` (URL Captain par défaut)
+- `https://gslv.fr` (votre domaine)
+- `https://gslv.fr.captain.gslv.fr` (URL Captain par défaut)
 
 ## Structure des fichiers pour Captain
 
 ```
-gslv-cloud/
+gslv.fr/
 ├── captain-definition    # Configuration Captain
 ├── Dockerfile           # Image Docker optimisée
 ├── .dockerignore        # Fichiers à ignorer
@@ -78,5 +78,5 @@ Pour mettre à jour l'application :
 4. Un nouveau déploiement sera lancé automatiquement
 
 ## Support
-- Documentation Captain : https://captain.captain.gslv.cloud/docs
+- Documentation Captain : https://captain.captain.gslv.fr/docs
 - Logs d'erreur : Captain Dashboard > App > Logs

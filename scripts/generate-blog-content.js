@@ -190,7 +190,7 @@ function generateArticle(category, topic, index, locale) {
     tags: seoKeywords[category].slice(0, 5),
     locale,
     seo: {
-      title: `${title} | GSLV.cloud`,
+      title: `${title} | GSLV.fr`,
       description: excerpt,
       keywords: seoKeywords[category]
     }
