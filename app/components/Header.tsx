@@ -34,12 +34,12 @@ export default function Header() {
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-200">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-gradient-to-r from-slate-800 to-slate-900 backdrop-blur-sm border-b border-slate-700">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
-          <Link href={`/${locale}`} className="flex items-center space-x-2">
-            <div className="w-8 h-8 flex items-center justify-center">
+          <Link href={`/${locale}`} className="flex items-center">
+            <div className="w-12 h-12 flex items-center justify-center">
               <img 
                 src="/images/logo/logo.png" 
                 alt="GSLV Logo" 
@@ -53,11 +53,10 @@ export default function Header() {
                   }
                 }}
               />
-              <div className="w-8 h-8 bg-gradient-to-br from-primary-600 to-accent-500 rounded-lg flex items-center justify-center hidden">
-                <span className="text-white font-bold text-sm">G</span>
+              <div className="w-12 h-12 bg-gradient-to-br from-slate-600 to-slate-800 rounded-lg flex items-center justify-center hidden">
+                <span className="text-white font-bold text-lg">G</span>
               </div>
             </div>
-            <span className="text-xl font-bold text-dark-900">GSLV</span>
           </Link>
 
           {/* Desktop Navigation */}
@@ -68,18 +67,18 @@ export default function Header() {
                   <div className="relative group">
                     <button
                       onClick={() => setIsServicesOpen(!isServicesOpen)}
-                      className="flex items-center space-x-1 text-gray-700 hover:text-primary-600 transition-colors"
+                      className="flex items-center space-x-1 text-slate-200 hover:text-white transition-colors"
                     >
                       <span>{item.name}</span>
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     {isServicesOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2">
+                      <div className="absolute top-full left-0 mt-2 w-48 bg-slate-800 rounded-lg shadow-lg border border-slate-700 py-2">
                         {item.dropdownItems?.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
                             href={dropdownItem.href}
-                            className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600 transition-colors"
+                            className="block px-4 py-2 text-sm text-slate-200 hover:bg-slate-700 hover:text-white transition-colors"
                             onClick={() => setIsServicesOpen(false)}
                           >
                             {dropdownItem.name}
@@ -91,7 +90,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    className="text-gray-700 hover:text-primary-600 transition-colors"
+                    className="text-slate-200 hover:text-white transition-colors"
                   >
                     {item.name}
                   </Link>
@@ -105,7 +104,7 @@ export default function Header() {
             <LanguageSwitcher />
             <Link
               href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors btn-hover"
+              className="hidden sm:inline-flex items-center px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all btn-hover shadow-lg"
             >
               {t('book')}
             </Link>
@@ -113,7 +112,7 @@ export default function Header() {
             {/* Mobile menu button */}
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-gray-700 hover:bg-gray-100"
+              className="md:hidden p-2 rounded-lg text-slate-200 hover:bg-slate-700 hover:text-white transition-colors"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>
@@ -122,7 +121,7 @@ export default function Header() {
 
         {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden border-t border-gray-200 py-4">
+          <div className="md:hidden border-t border-slate-700 py-4 bg-slate-800">
             <nav className="flex flex-col space-y-4">
               {navigation.map((item) => (
                 <div key={item.name}>
@@ -130,7 +129,7 @@ export default function Header() {
                     <div>
                       <button
                         onClick={() => setIsServicesOpen(!isServicesOpen)}
-                        className="flex items-center justify-between w-full text-left text-gray-700 hover:text-primary-600 py-2"
+                        className="flex items-center justify-between w-full text-left text-slate-200 hover:text-white py-2"
                       >
                         <span>{item.name}</span>
                         <ChevronDown className={cn("w-4 h-4 transition-transform", isServicesOpen && "rotate-180")} />
@@ -141,7 +140,7 @@ export default function Header() {
                             <Link
                               key={dropdownItem.name}
                               href={dropdownItem.href}
-                              className="block text-sm text-gray-600 hover:text-primary-600 py-1"
+                              className="block text-sm text-slate-300 hover:text-white py-1"
                               onClick={() => {
                                 setIsServicesOpen(false)
                                 setIsMenuOpen(false)
@@ -156,7 +155,7 @@ export default function Header() {
                   ) : (
                     <Link
                       href={item.href}
-                      className="block text-gray-700 hover:text-primary-600 py-2"
+                      className="block text-slate-200 hover:text-white py-2"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       {item.name}
@@ -166,7 +165,7 @@ export default function Header() {
               ))}
               <Link
                 href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors mt-4"
+                className="inline-flex items-center justify-center px-4 py-2 bg-gradient-to-r from-blue-600 to-blue-700 text-white rounded-lg hover:from-blue-700 hover:to-blue-800 transition-all mt-4 shadow-lg"
                 onClick={() => setIsMenuOpen(false)}
               >
                 {t('book')}
