@@ -1,0 +1,28 @@
+<svg width="500" height="250" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad3" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#dc2626;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#ef4444;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="500" height="250" fill="#fef2f2"/>
+  
+  <!-- Title -->
+  <text x="250" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#991b1b">
+    Échecs de levées de fonds
+  </text>
+  
+  <!-- Bar chart -->
+  <rect x="50" y="80" width="340" height="50" fill="url(#grad3)" rx="5"/>
+  <text x="400" y="110" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#dc2626">85%</text>
+  <text x="50" y="70" font-family="Arial, sans-serif" font-size="14" fill="#374151">Échouent sans préparation financière</text>
+  
+  <rect x="50" y="150" width="60" height="50" fill="#e5e7eb" rx="5"/>
+  <text x="120" y="180" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#6b7280">15%</text>
+  <text x="50" y="140" font-family="Arial, sans-serif" font-size="14" fill="#374151">Réussissent avec préparation</text>
+  
+  <!-- Source -->
+  <text x="20" y="230" font-family="Arial, sans-serif" font-size="11" fill="#9ca3af">Source : Ernst & Young Venture Capital Report</text>
+</svg>

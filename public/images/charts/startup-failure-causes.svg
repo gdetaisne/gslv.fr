@@ -1,0 +1,32 @@
+<svg width="600" height="300" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="grad1" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#1e40af;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#3b82f6;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="600" height="300" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="300" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#1e293b">
+    Causes d'échec des startups
+  </text>
+  
+  <!-- Chart bars -->
+  <rect x="50" y="80" width="400" height="40" fill="url(#grad1)" rx="5"/>
+  <text x="460" y="105" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#1e40af">73%</text>
+  <text x="50" y="70" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Problèmes financiers</text>
+  
+  <rect x="50" y="140" width="280" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="340" y="165" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">20%</text>
+  <text x="50" y="130" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Problèmes de marché</text>
+  
+  <rect x="50" y="200" width="120" height="40" fill="#e2e8f0" rx="5"/>
+  <text x="180" y="225" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#64748b">7%</text>
+  <text x="50" y="190" font-family="Arial, sans-serif" font-size="14" fill="#64748b">Autres causes</text>
+  
+  <!-- Source -->
+  <text x="50" y="280" font-family="Arial, sans-serif" font-size="12" fill="#94a3b8">Source : CB Insights 2024</text>
+</svg>
