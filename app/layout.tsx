@@ -78,12 +78,12 @@ export const metadata: Metadata = {
   },
   icons: {
     icon: [
-      { url: '/favicon.ico', sizes: 'any' },
-      { url: '/icon-192x192.png', type: 'image/png', sizes: '192x192' },
-      { url: '/icon-512x512.png', type: 'image/png', sizes: '512x512' },
+      { url: '/favicon_io/favicon.ico', sizes: 'any' },
+      { url: '/favicon_io/android-chrome-192x192.png', type: 'image/png', sizes: '192x192' },
+      { url: '/favicon_io/android-chrome-512x512.png', type: 'image/png', sizes: '512x512' },
     ],
     apple: [
-      { url: '/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }
+      { url: '/favicon_io/apple-touch-icon.png', type: 'image/png', sizes: '180x180' }
     ],
   },
 }
