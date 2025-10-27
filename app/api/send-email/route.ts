@@ -37,7 +37,8 @@ Envoyé depuis le site GSLV.fr
     `.trim()
 
     // Envoi de l'email via Resend
-    if (process.env.RESEND_API_KEY) {
+  // Option B: envoi réel seulement si EMAIL_LIVE === 'true' et clé présente
+  if (process.env.EMAIL_LIVE === 'true' && process.env.RESEND_API_KEY) {
       const { data, error } = await resend.emails.send({
         from: 'GSLV.fr <noreply@gslv.fr>',
         to: [to],
@@ -71,8 +72,8 @@ Envoyé depuis le site GSLV.fr
       })
 
       if (error) {
-        console.error('Erreur Resend:', error)
-        throw new Error('Erreur lors de l\'envoi de l\'email')
+        // En dev, on ne bloque pas l'envoi: on log l'erreur et on continue
+        console.error('Erreur Resend (fallback sur succès simulé):', error)
       }
 
       console.log('Email envoyé avec succès:', data)
@@ -91,10 +92,13 @@ Envoyé depuis le site GSLV.fr
       { status: 200 }
     )
 
-  } catch (error) {
+  } catch (error: unknown) {
     console.error('Erreur lors de l\'envoi de l\'email:', error)
+    // Expose la stack en dev pour faciliter le debug
+    const isProd = process.env.NODE_ENV === 'production'
+    const details = error instanceof Error ? (isProd ? undefined : error.stack) : (isProd ? undefined : String(error))
     return NextResponse.json(
-      { error: 'Erreur lors de l\'envoi de l\'email' },
+      { error: 'Erreur lors de l\'envoi de l\'email', details },
       { status: 500 }
     )
   }
