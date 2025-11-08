@@ -16,8 +16,8 @@ WORKDIR /app
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Generate blog content
-RUN node scripts/generate-blog-content.js
+# Blog content is committed to git (no auto-generation)
+# RUN node scripts/generate-blog-content.js
 
 # Build the application
 RUN npm run build
