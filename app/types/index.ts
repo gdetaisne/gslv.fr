@@ -8,7 +8,7 @@ export interface BlogPost {
   publishedAt: Date
   readTime: number
   tags: string[]
-  locale: 'fr' | 'en' | 'th'
+  locale: 'fr' | 'en'
   seo: {
     title: string
     description: string
@@ -24,7 +24,7 @@ export interface Testimonial {
   content: string
   avatar?: string
   rating: number
-  locale: 'fr' | 'en' | 'th'
+  locale: 'fr' | 'en'
 }
 
 export interface Service {
@@ -45,7 +45,7 @@ export interface ContactForm {
 }
 
 export interface Locale {
-  code: 'fr' | 'en' | 'th'
+  code: 'fr' | 'en'
   name: string
   flag: string
 }

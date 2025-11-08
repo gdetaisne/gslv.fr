@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 
-const locales = ['fr', 'en', 'th']
+const locales = ['fr', 'en']
 
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }))

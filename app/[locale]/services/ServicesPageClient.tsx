@@ -156,7 +156,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8 }}
             className="text-4xl font-bold text-white mb-6"
           >
-            Prêt à transformer votre entreprise ?
+            {t('cta.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -164,7 +164,7 @@ export default function ServicesPageClient() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl text-white/90 mb-8"
           >
-            Contactez-moi pour une consultation gratuite et découvrez comment je peux vous aider
+            {t('cta.subtitle')}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -462,7 +462,7 @@ Le redressement judiciaire peut réussir avec le bon accompagnement. Un DAF exp�
 
 // Fonction pour générer les articles dans les fichiers JSON
 function generateArticles() {
-  const locales = ['fr', 'en', 'th'];
+  const locales = ['fr', 'en'];
   
   locales.forEach(locale => {
     const filePath = path.join(__dirname, '..', 'data', 'blog', `${locale}.json`);
@@ -478,10 +478,8 @@ function generateArticles() {
     const newArticles = articles.map(article => ({
       ...article,
       // Adapter le contenu selon la langue
-      title: locale === 'en' ? article.title.replace('DAF', 'CFO') : 
-             locale === 'th' ? article.title.replace('DAF', 'CFO') : article.title,
-      content: locale === 'en' ? article.content.replace(/DAF/g, 'CFO') :
-               locale === 'th' ? article.content.replace(/DAF/g, 'CFO') : article.content
+      title: locale === 'en' ? article.title.replace('DAF', 'CFO') : article.title,
+      content: locale === 'en' ? article.content.replace(/DAF/g, 'CFO') : article.content
     }));
     
     // Fusionner avec les articles existants

@@ -9,7 +9,6 @@ import { cn } from '@/app/lib/utils'
 const locales = [
   { code: 'fr', name: 'Français', flag: '🇫🇷' },
   { code: 'en', name: 'English', flag: '🇺🇸' },
-  { code: 'th', name: 'ไทย', flag: '🇹🇭' },
 ]
 
 export default function LanguageSwitcher() {

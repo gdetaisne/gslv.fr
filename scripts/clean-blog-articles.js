@@ -31,7 +31,7 @@ console.log('   - Conservation de 0 articles existants');
 fs.writeFileSync(allJsonPath, JSON.stringify(qualityArticles, null, 2));
 
 // Mettre à jour les autres fichiers
-const locales = ['fr', 'en', 'th'];
+const locales = ['fr', 'en'];
 locales.forEach(locale => {
   const localePath = path.join(__dirname, `../data/blog/${locale}.json`);
   const publicLocalePath = path.join(__dirname, `../public/data/blog/${locale}.json`);

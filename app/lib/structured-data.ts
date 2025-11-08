@@ -31,7 +31,7 @@ export function generateStructuredData({
     name: title || 'GSLV.fr',
     description: description || 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
     image: image || `${baseUrl}/images/og-image.jpg`,
-    inLanguage: locale === 'fr' ? 'fr-FR' : locale === 'en' ? 'en-US' : 'th-TH',
+    inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US',
   }
 
   switch (type) {
@@ -76,7 +76,7 @@ export function generateStructuredData({
           '@type': 'ContactPoint',
           telephone: '+33 6 33 04 60 59',
           contactType: 'customer service',
-          availableLanguage: ['French', 'English', 'Thai']
+          availableLanguage: ['French', 'English']
         },
         sameAs: [
           'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/'
@@ -205,7 +205,7 @@ export function generateStructuredData({
             name: 'Thailand'
           }
         ],
-        availableLanguage: ['French', 'English', 'Thai'],
+        availableLanguage: ['French', 'English'],
         serviceType: 'Business Consulting',
         category: 'Financial and Operational Consulting'
       }
@@ -245,7 +245,7 @@ export function generateStructuredData({
         name: 'GSLV.fr',
         url: baseUrl,
         description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
-        inLanguage: ['fr-FR', 'en-US', 'th-TH'],
+        inLanguage: ['fr-FR', 'en-US'],
         potentialAction: {
           '@type': 'SearchAction',
           target: {
@@ -275,12 +275,6 @@ export const structuredDataConfig = {
       title: 'GSLV.fr | Part-time CFO & COO | Emergency Operations Consultant',
       description: 'Expert in structuring, fundraising and scaling for startups and scaleups. Specialized in emergency operations and interim management.',
       url: 'https://gslv.fr/en'
-    },
-    th: {
-      type: 'Organization' as const,
-      title: 'GSLV.fr | CFO & COO Part-time | ที่ปรึกษาด้านการดำเนินงานฉุกเฉิน',
-      description: 'ผู้เชี่ยวชาญด้านการจัดโครงสร้าง การระดมทุน และการขยายตัวสำหรับสตาร์ทอัพและสเกลอัพ',
-      url: 'https://gslv.fr/th'
     }
   },
   about: {
@@ -295,12 +289,6 @@ export const structuredDataConfig = {
       title: 'About | Guillaume Stehelin de Taisne',
       description: 'Discover Guillaume\'s journey, business restructuring expert with 15+ years of experience.',
       url: 'https://gslv.fr/en/about'
-    },
-    th: {
-      type: 'Person' as const,
-      title: 'เกี่ยวกับ | Guillaume Stehelin de Taisne',
-      description: 'ค้นพบเส้นทางของ Guillaume ผู้เชี่ยวชาญด้านการปรับโครงสร้างธุรกิจที่มีประสบการณ์มากกว่า 15 ปี',
-      url: 'https://gslv.fr/th/about'
     }
   },
   services: {
@@ -315,12 +303,6 @@ export const structuredDataConfig = {
       title: 'CFO, COO and Emergency Consultant Services',
       description: 'Financial management, operational management and emergency interventions for companies in difficulty.',
       url: 'https://gslv.fr/en/services'
-    },
-    th: {
-      type: 'Service' as const,
-      title: 'บริการ CFO, COO และที่ปรึกษาฉุกเฉิน',
-      description: 'การจัดการทางการเงิน การจัดการด้านการดำเนินงาน และการแทรกแซงฉุกเฉินสำหรับบริษัทที่มีปัญหา',
-      url: 'https://gslv.fr/th/services'
     }
   }
 }

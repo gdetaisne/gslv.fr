@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://gslv.fr'
-  const locales = ['fr', 'en', 'th']
+  const locales = ['fr', 'en']
   
   const staticPages = [
     '',

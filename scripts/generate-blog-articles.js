@@ -126,7 +126,7 @@ function generateVariations(template, index) {
 }
 
 // Générer les articles pour chaque langue
-const locales = ['fr', 'en', 'th'];
+const locales = ['fr', 'en'];
 
 locales.forEach(locale => {
   const articles = generateArticles(locale, 100);

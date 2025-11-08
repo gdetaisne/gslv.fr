@@ -135,36 +135,6 @@ function generateArticle(category, topic, index, locale) {
         `Preparing ${topic.toLowerCase()}: complete checklist`,
         `Mastering ${topic.toLowerCase()}: expert advice`
       ]
-    },
-    th: {
-      scaling: [
-        `วิธี${topic.toLowerCase()}เพื่อเร่งการเติบโต`,
-        `5 กุญแจสำคัญของ${topic.toLowerCase()}ในสตาร์ทอัพ`,
-        `${topic}: คู่มือฉบับสมบูรณ์สำหรับผู้ประกอบการ`,
-        `การเพิ่มประสิทธิภาพ${topic.toLowerCase()}: วิธีปฏิบัติที่ดีที่สุด`,
-        `${topic}และการเติบโตอย่างรวดเร็ว: สิ่งที่คุณต้องรู้`
-      ],
-      finance: [
-        `การจัดการทางการเงิน: ${topic.toLowerCase()}สำหรับสตาร์ทอัพ`,
-        `พื้นฐานของ${topic.toLowerCase()}ในธุรกิจ`,
-        `วิธีเชี่ยวชาญ${topic.toLowerCase()}ในสตาร์ทอัพ`,
-        `${topic}: คู่มือปฏิบัติสำหรับผู้ประกอบการ`,
-        `การเพิ่มประสิทธิภาพ${topic.toLowerCase()}: คำแนะนำจากผู้เชี่ยวชาญ`
-      ],
-      tools: [
-        `10 อันดับเครื่องมือสำหรับ${topic.toLowerCase()}`,
-        `วิธีเลือกเครื่องมือที่เหมาะสมสำหรับ${topic.toLowerCase()}`,
-        `${topic}: การเปรียบเทียบโซลูชันที่ดีที่สุด`,
-        `เครื่องมือจำเป็นสำหรับ${topic.toLowerCase()}`,
-        `การทำให้${topic.toLowerCase()}เป็นอัตโนมัติ: เครื่องมือที่ดีที่สุด`
-      ],
-      fundraising: [
-        `คู่มือฉบับสมบูรณ์: ${topic.toLowerCase()}สำหรับสตาร์ทอัพ`,
-        `วิธีประสบความสำเร็จใน${topic.toLowerCase()}สำหรับสตาร์ทอัพ`,
-        `${topic}: ข้อผิดพลาดที่ควรหลีกเลี่ยง`,
-        `การเตรียม${topic.toLowerCase()}: รายการตรวจสอบที่สมบูรณ์`,
-        `การเชี่ยวชาญ${topic.toLowerCase()}: คำแนะนำจากผู้เชี่ยวชาญ`
-      ]
     }
   };
 
@@ -212,13 +182,6 @@ function generateContent(topic, category, locale) {
       `This article presents the best practices and pitfalls to avoid.`,
       `We will also cover the most effective tools and methods.`,
       `In conclusion, ${topic.toLowerCase()} requires a structured approach adapted to your context.`
-    ],
-    th: [
-      `ในโลกของสตาร์ทอัพ ${topic.toLowerCase()}เป็นความท้าทายสำคัญในการรับประกันการเติบโตที่ยั่งยืน`,
-      `ผู้ประกอบการต้องเชี่ยวชาญทั้งด้านเทคนิคและกลยุทธ์ของ${topic.toLowerCase()}เพื่อความสำเร็จ`,
-      `บทความนี้จะนำเสนอแนวทางปฏิบัติที่ดีที่สุดและข้อผิดพลาดที่ควรหลีกเลี่ยง`,
-      `เราจะพูดถึงเครื่องมือและวิธีการที่มีประสิทธิภาพมากที่สุดด้วย`,
-      `สรุปแล้ว ${topic.toLowerCase()}ต้องการแนวทางที่มีโครงสร้างและปรับให้เหมาะกับบริบทของคุณ`
     ]
   };
 
@@ -228,7 +191,7 @@ function generateContent(topic, category, locale) {
 // Generate all articles
 function generateAllArticles() {
   const articles = [];
-  const locales = ['fr', 'en', 'th'];
+  const locales = ['fr', 'en'];
   const articlesPerCategory = Math.ceil(500 / (Object.keys(categories).length * locales.length));
 
   locales.forEach(locale => {

@@ -80,6 +80,18 @@ export default function HomePageClient() {
 
   // Testimonials data
   const testimonials = tTestimonials.raw('items')
+  const nameIntroServices =
+    locale === 'fr'
+      ? 'Guillaume Stehelin de Taisne, Part-time CFO & COO, pilote personnellement chaque mission pour sécuriser votre croissance.'
+      : locale === 'en'
+        ? 'Guillaume Stehelin de Taisne, Part-time CFO & COO, personally leads every engagement to secure your growth.'
+        : 'Guillaume Stehelin de Taisne, Part-time CFO & COO, personally leads every engagement.'
+  const nameIntroTestimonials =
+    locale === 'fr'
+      ? 'Les fondateurs et investisseurs témoignent de l’impact direct de Guillaume Stehelin de Taisne, Part-time CFO & COO.'
+      : locale === 'en'
+        ? 'Founders and investors share the direct impact of Guillaume Stehelin de Taisne, Part-time CFO & COO.'
+        : 'Clients highlight the impact of Guillaume Stehelin de Taisne, Part-time CFO & COO.'
 
   return (
     <div className="min-h-screen">
@@ -154,6 +166,14 @@ export default function HomePageClient() {
             >
               {t('subtitle')}
             </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.35 }}
+              className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+            >
+              {t('summary')}
+            </motion.p>
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -190,10 +210,26 @@ export default function HomePageClient() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-wide mb-3"
+            >
+              Guillaume Stehelin de Taisne – Part-time CFO & COO
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tServices('subtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed"
+            >
+              {nameIntroServices}
             </motion.p>
           </div>
 
@@ -229,7 +265,7 @@ export default function HomePageClient() {
                     </ul>
                     <Link href={`/${locale}/services#${service.id}`}>
                       <Button className="w-full">
-                        En savoir plus
+                        {tServices('buttons.learnMore')}
                       </Button>
                     </Link>
                   </CardContent>
@@ -302,10 +338,26 @@ export default function HomePageClient() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.1 }}
+              className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-wide mb-3"
+            >
+              Guillaume Stehelin de Taisne – Part-time CFO & COO
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tTestimonials('subtitle')}
+            </motion.p>
+            <motion.p
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.3 }}
+              className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed"
+            >
+              {nameIntroTestimonials}
             </motion.p>
           </div>
 
@@ -357,7 +409,7 @@ export default function HomePageClient() {
             transition={{ duration: 0.8 }}
             className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-6 leading-tight"
           >
-            Prêt à accélérer votre croissance ?
+            {t('ctaSection.title')}
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 30 }}
@@ -365,7 +417,7 @@ export default function HomePageClient() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-base sm:text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
           >
-            Réservez un appel découverte gratuit pour discuter de vos besoins
+            {t('ctaSection.subtitle')}
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 30 }}

@@ -58,6 +58,10 @@ export default function Header() {
               </div>
             </div>
           </Link>
+          <div className="hidden md:flex flex-col ml-3 text-slate-100 leading-tight">
+            <span className="text-sm font-semibold">Guillaume Stehelin de Taisne</span>
+            <span className="text-xs text-slate-300">Part-time CFO & COO</span>
+          </div>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
@@ -123,6 +127,10 @@ export default function Header() {
         {isMenuOpen && (
           <div className="md:hidden border-t border-slate-700 py-4 bg-slate-800">
             <nav className="flex flex-col space-y-4">
+              <div className="flex flex-col space-y-1 text-slate-200">
+                <span className="text-sm font-semibold">Guillaume Stehelin de Taisne</span>
+                <span className="text-xs text-slate-400">Part-time CFO & COO</span>
+              </div>
               {navigation.map((item) => (
                 <div key={item.name}>
                   {item.hasDropdown ? (

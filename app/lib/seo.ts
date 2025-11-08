@@ -43,7 +43,7 @@ export function generateMetadata({
     'direction financière',
     'direction opérationnelle',
     'crise entreprise',
-    'Guillaume Stehelin',
+    'Guillaume Stehelin de Taisne',
     'GSLV'
   ]
 
@@ -65,9 +65,8 @@ export function generateMetadata({
     alternates: {
       canonical: fullUrl,
       languages: {
-        'fr-FR': fullUrl.replace('/en/', '/fr/').replace('/th/', '/fr/'),
-        'en-US': fullUrl.replace('/fr/', '/en/').replace('/th/', '/en/'),
-        'th-TH': fullUrl.replace('/fr/', '/th/').replace('/en/', '/th/'),
+        'fr-FR': fullUrl.replace('/en/', '/fr/'),
+        'en-US': fullUrl.replace('/fr/', '/en/'),
       },
     },
     openGraph: {
@@ -83,7 +82,7 @@ export function generateMetadata({
           alt: title,
         },
       ],
-      locale: locale === 'fr' ? 'fr_FR' : locale === 'en' ? 'en_US' : 'th_TH',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
       type,
       publishedTime,
       modifiedTime,
@@ -120,19 +119,14 @@ export function generateMetadata({
 export const seoConfig = {
   home: {
     fr: {
-      title: 'CFO & COO Part-time | Consultant Opérations Coup de Poing',
-      description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+      title: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
+      description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Structuration financière, opérations et restructuration pour startups et scale-ups.',
       keywords: ['CFO part-time', 'COO part-time', 'consultant opérations coup de poing', 'restructuration entreprise', 'redressement judiciaire', 'levée de fonds', 'scaling startup']
     },
     en: {
-      title: 'Part-time CFO & COO | Emergency Operations Consultant',
-      description: 'Expert in structuring, fundraising and scaling for startups and scaleups. Specialized in emergency operations and interim management.',
+      title: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
+      description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Financial structuring, operations and turnaround support for startups and scale-ups.',
       keywords: ['part-time CFO', 'part-time COO', 'emergency operations consultant', 'business restructuring', 'judicial recovery', 'fundraising', 'startup scaling']
-    },
-    th: {
-      title: 'CFO & COO Part-time | ที่ปรึกษาด้านการดำเนินงานฉุกเฉิน',
-      description: 'ผู้เชี่ยวชาญด้านการจัดโครงสร้าง การระดมทุน และการขยายตัวสำหรับสตาร์ทอัพและสเกลอัพ  специализированный в операциях экстренного реагирования',
-      keywords: ['CFO part-time', 'COO part-time', 'ที่ปรึกษาด้านการดำเนินงานฉุกเฉิน', 'การปรับโครงสร้างธุรกิจ', 'การฟื้นฟูทางกฎหมาย', 'การระดมทุน', 'การขยายตัวสตาร์ทอัพ']
     }
   },
   services: {
@@ -145,28 +139,18 @@ export const seoConfig = {
       title: 'CFO, COO and Emergency Consultant Services',
       description: 'Financial management, operational management and emergency interventions for companies in difficulty. Personalized solutions for each growth stage.',
       keywords: ['CFO services', 'COO services', 'emergency consultant', 'financial management', 'operational management', 'emergency intervention']
-    },
-    th: {
-      title: 'บริการ CFO, COO และที่ปรึกษาฉุกเฉิน',
-      description: 'การจัดการทางการเงิน การจัดการด้านการดำเนินงาน และการแทรกแซงฉุกเฉินสำหรับบริษัทที่มีปัญหา โซลูชันที่ปรับแต่งได้สำหรับแต่ละขั้นตอนการเติบโต',
-      keywords: ['บริการ CFO', 'บริการ COO', 'ที่ปรึกษาฉุกเฉิน', 'การจัดการทางการเงิน', 'การจัดการด้านการดำเนินงาน', 'การแทรกแซงฉุกเฉิน']
     }
   },
   about: {
     fr: {
-      title: 'À propos | Guillaume Stehelin de Taisne',
-      description: 'Découvrez le parcours de Guillaume, expert en restructuration d\'entreprises avec 15+ années d\'expérience. Témoignages clients et réalisations.',
-      keywords: ['Guillaume Stehelin', 'à propos', 'parcours professionnel', 'témoignages clients', 'expertise restructuration']
+      title: 'À propos de Guillaume Stehelin de Taisne | GSLV',
+      description: 'Découvrez le parcours de Guillaume Stehelin de Taisne, Part-time CFO & COO avec 15+ années d\'expérience en restructuration et hypercroissance.',
+      keywords: ['Guillaume Stehelin de Taisne', 'à propos', 'parcours professionnel', 'témoignages clients', 'expertise restructuration']
     },
     en: {
-      title: 'About | Guillaume Stehelin de Taisne',
-      description: 'Discover Guillaume\'s journey, business restructuring expert with 15+ years of experience. Client testimonials and achievements.',
-      keywords: ['Guillaume Stehelin', 'about', 'professional journey', 'client testimonials', 'restructuring expertise']
-    },
-    th: {
-      title: 'เกี่ยวกับ | Guillaume Stehelin de Taisne',
-      description: 'ค้นพบเส้นทางของ Guillaume ผู้เชี่ยวชาญด้านการปรับโครงสร้างธุรกิจที่มีประสบการณ์มากกว่า 15 ปี คำรับรองจากลูกค้าและผลงาน',
-      keywords: ['Guillaume Stehelin', 'เกี่ยวกับ', 'เส้นทางอาชีพ', 'คำรับรองจากลูกค้า', 'ความเชี่ยวชาญการปรับโครงสร้าง']
+      title: 'About Guillaume Stehelin de Taisne | GSLV',
+      description: 'Discover the journey of Guillaume Stehelin de Taisne, Part-time CFO & COO with 15+ years in restructuring and hypergrowth contexts.',
+      keywords: ['Guillaume Stehelin de Taisne', 'about', 'professional journey', 'client testimonials', 'restructuring expertise']
     }
   },
   blog: {
@@ -179,11 +163,6 @@ export const seoConfig = {
       title: 'Blog | CFO, COO and Emergency Operations Tips',
       description: 'Expert articles and advice on financial management, operational management and emergency business interventions.',
       keywords: ['CFO blog', 'COO blog', 'business advice', 'financial management', 'emergency operations', 'expert articles']
-    },
-    th: {
-      title: 'บล็อก | คำแนะนำ CFO, COO และการดำเนินงานฉุกเฉิน',
-      description: 'บทความและคำแนะนำจากผู้เชี่ยวชาญเกี่ยวกับการจัดการทางการเงิน การจัดการด้านการดำเนินงาน และการแทรกแซงฉุกเฉินในธุรกิจ',
-      keywords: ['บล็อก CFO', 'บล็อก COO', 'คำแนะนำธุรกิจ', 'การจัดการทางการเงิน', 'การดำเนินงานฉุกเฉิน', 'บทความผู้เชี่ยวชาญ']
     }
   },
   contact: {
@@ -196,11 +175,6 @@ export const seoConfig = {
       title: 'Contact | Book your discovery call',
       description: 'Contact Guillaume for a free consultation. Guaranteed response within 24h. Paris, Bangkok. Email and phone.',
       keywords: ['contact Guillaume', 'free consultation', 'discovery call', 'Paris Bangkok', '24h response']
-    },
-    th: {
-      title: 'ติดต่อ | จองการโทรศัพท์ค้นพบ',
-      description: 'ติดต่อ Guillaume เพื่อขอคำปรึกษาฟรี การตอบกลับรับประกันภายใน 24 ชั่วโมง ปารีส กรุงเทพฯ อีเมลและโทรศัพท์',
-      keywords: ['ติดต่อ Guillaume', 'คำปรึกษาฟรี', 'การโทรศัพท์ค้นพบ', 'ปารีส กรุงเทพฯ', 'การตอบกลับ 24 ชั่วโมง']
     }
   }
 }

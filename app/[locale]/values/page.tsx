@@ -42,6 +42,12 @@ export default function ValuesPage() {
     }
   ]
 
+  const stats = t.raw('stats.items') as Array<{
+    number: string
+    label: string
+    description: string
+  }>
+
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-50 via-white to-gray-100">
       {/* Hero Section */}
@@ -144,19 +150,28 @@ export default function ValuesPage() {
       {/* Stats Section */}
       <section className="py-12 sm:py-20 bg-gradient-to-r from-primary-600 via-accent-500 to-primary-600">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 sm:gap-8">
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">15+</div>
-              <div className="text-white/90 text-sm sm:text-base">Années d'expertise</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">50+</div>
-              <div className="text-white/90 text-sm sm:text-base">Entreprises accompagnées</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl sm:text-4xl font-bold text-white mb-2">100%</div>
-              <div className="text-white/90 text-sm sm:text-base">Engagement valeurs</div>
-            </div>
+          <div className="text-center mb-12">
+            <h2 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+              {t('stats.title')}
+            </h2>
+            <p className="text-white/80 text-base sm:text-lg max-w-3xl mx-auto">
+              {t('stats.subtitle')}
+            </p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+            {stats.map((stat, index) => (
+              <div key={index} className="text-center bg-white/5 rounded-2xl p-6 border border-white/10 backdrop-blur">
+                <div className="text-3xl sm:text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-white/90 text-sm sm:text-base font-medium">
+                  {stat.label}
+                </div>
+                <p className="text-white/70 text-sm mt-3">
+                  {stat.description}
+                </p>
+              </div>
+            ))}
           </div>
         </div>
       </section>

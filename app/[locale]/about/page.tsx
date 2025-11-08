@@ -450,7 +450,7 @@ export default function AboutPage() {
                      <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
                        <Image
                          src="/images/guillaume/guillaume-stehelin.jpg"
-                         alt="Guillaume Stehelin - Consultant Opérations Coup de Poing"
+                         alt="Guillaume Stehelin de Taisne – Part-time CFO & COO"
                          fill
                          className="object-cover"
                          onError={(e) => {
@@ -480,8 +480,8 @@ export default function AboutPage() {
                    
                    {/* Informations sous la photo */}
                    <div className="text-center mt-6">
-                     <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin</h3>
-                     <p className="text-lg text-gray-600 mb-3">Consultant Opérations Coup de Poing</p>
+                     <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin de Taisne</h3>
+                     <p className="text-lg text-gray-600 mb-3">Part-time CFO & COO – Consultant Opérations Coup de Poing</p>
                      <Link
                        href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
                        target="_blank"

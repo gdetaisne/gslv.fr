@@ -7,10 +7,10 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://gslv.fr'),
   title: {
-    default: 'GSLV.fr | CFO & COO Part-time | Consultant Opérations Coup de Poing',
-    template: '%s | GSLV.fr'
+    default: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
+    template: '%s | GSLV'
   },
-  description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+  description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Structuration financière, opérations et restructuration pour startups et scale-ups.',
   keywords: [
     'CFO part-time',
     'COO part-time', 
@@ -22,7 +22,7 @@ export const metadata: Metadata = {
     'direction financière',
     'direction opérationnelle',
     'crise entreprise',
-    'Guillaume Stehelin',
+    'Guillaume Stehelin de Taisne',
     'GSLV'
   ],
   authors: [{ name: 'Guillaume Stehelin de Taisne' }],

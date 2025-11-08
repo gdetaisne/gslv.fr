@@ -211,22 +211,17 @@ fs.writeFileSync(path.join(__dirname, '../data/blog/all.json'), JSON.stringify(q
 // Filtrer par locale et créer les fichiers séparés
 const frArticles = qualityArticles.filter(article => article.locale === 'fr');
 const enArticles = qualityArticles.filter(article => article.locale === 'en');
-const thArticles = qualityArticles.filter(article => article.locale === 'th');
-
 // Mettre à jour les fichiers par locale
 fs.writeFileSync(path.join(__dirname, '../data/blog/fr.json'), JSON.stringify(frArticles, null, 2));
 fs.writeFileSync(path.join(__dirname, '../data/blog/en.json'), JSON.stringify(enArticles, null, 2));
-fs.writeFileSync(path.join(__dirname, '../data/blog/th.json'), JSON.stringify(thArticles, null, 2));
 
 // Mettre à jour les fichiers publics
 fs.writeFileSync(path.join(__dirname, '../public/data/blog/all.json'), JSON.stringify(qualityArticles, null, 2));
 fs.writeFileSync(path.join(__dirname, '../public/data/blog/fr.json'), JSON.stringify(frArticles, null, 2));
 fs.writeFileSync(path.join(__dirname, '../public/data/blog/en.json'), JSON.stringify(enArticles, null, 2));
-fs.writeFileSync(path.join(__dirname, '../public/data/blog/th.json'), JSON.stringify(thArticles, null, 2));
 
 console.log('✅ Articles créés avec succès !');
 console.log(`📊 Répartition :`);
 console.log(`   - Français : ${frArticles.length} articles`);
 console.log(`   - Anglais : ${enArticles.length} articles`);
-console.log(`   - Thaï : ${thArticles.length} articles`);
 console.log('\n🚀 Prêt pour le maillage interne !');

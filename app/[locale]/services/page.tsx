@@ -14,7 +14,7 @@ export async function generateMetadata({ params }: { params: { locale: string } 
       title: config.title,
       description: config.description,
       url: `https://gslv.fr/${locale}/services`,
-      locale: locale === 'fr' ? 'fr_FR' : locale === 'en' ? 'en_US' : 'th_TH',
+      locale: locale === 'fr' ? 'fr_FR' : 'en_US',
     },
     twitter: {
       title: config.title,

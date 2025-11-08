@@ -401,17 +401,13 @@ fs.writeFileSync(allJsonPath, JSON.stringify(allArticles, null, 2));
 // Filtrer par locale
 const frArticles = allArticles.filter(article => article.locale === 'fr');
 const enArticles = allArticles.filter(article => article.locale === 'en');
-const thArticles = allArticles.filter(article => article.locale === 'th');
-
 // Mettre à jour tous les fichiers
 const files = [
   { path: '../data/blog/fr.json', content: frArticles },
   { path: '../data/blog/en.json', content: enArticles },
-  { path: '../data/blog/th.json', content: thArticles },
   { path: '../public/data/blog/all.json', content: allArticles },
   { path: '../public/data/blog/fr.json', content: frArticles },
-  { path: '../public/data/blog/en.json', content: enArticles },
-  { path: '../public/data/blog/th.json', content: thArticles }
+  { path: '../public/data/blog/en.json', content: enArticles }
 ];
 
 files.forEach(file => {
@@ -422,4 +418,3 @@ console.log('✅ Articles supplémentaires créés !');
 console.log(`📊 Total : ${allArticles.length} articles`);
 console.log(`   - Français : ${frArticles.length} articles`);
 console.log(`   - Anglais : ${enArticles.length} articles`);
-console.log(`   - Thaï : ${thArticles.length} articles`);
