@@ -9,6 +9,20 @@ import Link from 'next/link'
 import { Card, CardContent } from '../../../components/Card'
 import { BlogPost } from '../../../types'
 
+function linkify(text: string): string {
+  // Transform markdown links [text](https://...) into anchor tags
+  let html = text.replace(
+    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">$1</a>'
+  )
+  // Transform raw URLs into anchor tags
+  html = html.replace(
+    /(https?:\/\/[^\s)]+)/g,
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">$1</a>'
+  )
+  return html
+}
+
 export default function BlogPostPage() {
   const [article, setArticle] = useState<BlogPost | null>(null)
   const [relatedArticles, setRelatedArticles] = useState<BlogPost[]>([])
@@ -179,9 +193,11 @@ export default function BlogPostPage() {
           >
             <div className="text-gray-700 leading-relaxed">
               {article.content.split('\n').map((paragraph, index) => (
-                <p key={index} className="mb-6">
-                  {paragraph}
-                </p>
+                <p
+                  key={index}
+                  className="mb-6"
+                  dangerouslySetInnerHTML={{ __html: linkify(paragraph) }}
+                />
               ))}
             </div>
           </motion.div>
