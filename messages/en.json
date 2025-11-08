@@ -432,12 +432,33 @@
         }
       ]
     },
-    "cta": {
-      "title": "Ready to work with these values?",
-      "subtitle": "Discover how these principles can transform your company",
-      "button": "Contact us"
-    },
-    "buttons": {
+        "cta": {
+          "title": "Ready to work with these values?",
+          "subtitle": "Discover how these principles can transform your company",
+          "button": "Contact us"
+        },
+        "stats": {
+          "title": "Measurable impact",
+          "subtitle": "The concrete results of our approach",
+          "items": [
+            {
+              "number": "€10M",
+              "label": "Revenue",
+              "description": "Revenue generated at Ligerio in 2024"
+            },
+            {
+              "number": "45",
+              "label": "Team members",
+              "description": "Team built at peak activity"
+            },
+            {
+              "number": "€3.9M",
+              "label": "Funding",
+              "description": "Amount raised in financing"
+            }
+          ]
+        },
+        "buttons": {
       "discussService": "Discuss this service",
       "requestQuote": "Request a quote",
       "viewPricing": "View pricing",

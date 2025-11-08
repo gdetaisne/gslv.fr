@@ -87,6 +87,10 @@
       "bookCall": "Réserver un appel découverte",
       "requestCustomQuote": "Demander un devis personnalisé",
       "emergencyCall": "Appel d'urgence 24h/24"
+    },
+    "cta": {
+      "title": "Prêt à accélérer votre croissance ?",
+      "subtitle": "Discutons de vos enjeux et trouvons la solution adaptée"
     }
   },
   "about": {
@@ -432,6 +436,27 @@
           "title": "Prêt à travailler avec ces valeurs ?",
           "subtitle": "Découvrez comment ces principes peuvent transformer votre entreprise",
           "button": "Nous contacter"
+        },
+        "stats": {
+          "title": "Impact mesurable",
+          "subtitle": "Les résultats concrets de notre approche",
+          "items": [
+            {
+              "number": "10M€",
+              "label": "CA atteint",
+              "description": "Chiffre d'affaires généré chez Ligerio en 2024"
+            },
+            {
+              "number": "45",
+              "label": "Collaborateurs",
+              "description": "Équipe constituée au pic d'activité"
+            },
+            {
+              "number": "3,9M€",
+              "label": "Levée",
+              "description": "Montant levé en financement"
+            }
+          ]
         },
         "buttons": {
           "discussService": "Discuter de ce service",
