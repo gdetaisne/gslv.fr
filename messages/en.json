@@ -9,16 +9,24 @@
     "book": "Book a call"
   },
   "hero": {
-    "title": "CFO & COO with impact. 15 years of scale-ups experience",
-    "subtitle": "Expert in structuring, fundraising and scaling for startups and scaleups. Specialized in emergency operations.",
+    "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
+    "subtitle": "Financial structuring, fundraising and emergency operations for startups and scale-ups.",
+    "summary": "Guillaume Stehelin de Taisne supports founders and investors as a Part-time CFO & COO, with 15+ years of interventions and up to €10M revenues supervised across digital companies.",
     "cta": {
       "primary": "Book a discovery call",
       "secondary": "Discover my services"
+    },
+    "ctaSection": {
+      "title": "Ready to accelerate your growth?",
+      "subtitle": "Book a free discovery call to discuss your needs"
+    },
+    "buttons": {
+      "bookCall": "Book a discovery call"
     }
   },
   "services": {
-    "title": "Our Services",
-    "subtitle": "Personalized solutions for every stage of your growth",
+    "title": "Services by Guillaume Stehelin de Taisne",
+    "subtitle": "Guillaume Stehelin de Taisne designs personalized solutions for every stage of your growth",
     "cfo": {
       "title": "Part-time CFO",
       "description": "Externalized financial management to optimize your operations and prepare your fundraising",
@@ -70,13 +78,26 @@
         "description": "Emergency intervention - Task-based billing",
         "note": "Framing phase billed according to situation complexity"
       }
+    },
+    "buttons": {
+      "learnMore": "Learn more",
+      "discussService": "Discuss this service",
+      "requestQuote": "Request a quote",
+      "viewPricing": "View pricing",
+      "bookCall": "Book a discovery call",
+      "requestCustomQuote": "Request a custom quote",
+      "emergencyCall": "24/7 emergency call"
+    },
+    "cta": {
+      "title": "Ready to transform your company?",
+      "subtitle": "Contact Guillaume Stehelin de Taisne for a free consultation and discover how he can help"
     }
   },
   "about": {
-    "title": "About Guillaume - Emergency Operations Consultant",
-    "subtitle": "Specialist in interim executive replacement for critical situations",
+    "title": "About Guillaume Stehelin de Taisne – Emergency Operations Consultant",
+    "subtitle": "Guillaume Stehelin de Taisne, specialist in interim executive replacement for critical situations",
     "experience": "15+ years of crisis experience",
-    "description": "Emergency operations consultant, I take command when the situation becomes uncontrollable. Pragmatic and results-oriented, I turn around struggling startups and scaleups.",
+    "description": "Guillaume Stehelin de Taisne, emergency operations consultant, takes command when the situation becomes uncontrollable. Pragmatic and results-oriented, he turns around struggling startups and scale-ups.",
     "expertise": [
       "Interim executive replacement",
       "Emergency takeover",
@@ -153,15 +174,15 @@
     ]
   },
   "testimonials": {
-    "title": "Client testimonials",
-    "subtitle": "They trust us for their growth and challenges",
+    "title": "Testimonials about Guillaume Stehelin de Taisne",
+    "subtitle": "They trust Guillaume Stehelin de Taisne for their growth and challenges",
     "items": [
       {
         "name": "Francis D.",
         "position": "CEO, Jumia",
         "company": "Jumia",
         "logo": "/images/companies/jumia.png",
-        "content": "Guillaume has supported us through many complex situations (tax audits, sudden executive departures, management embezzlement suspicions, etc.). He is very effective, knows how to dive deep into details while maintaining a holistic view. I highly recommend him.",
+        "content": "Guillaume Stehelin de Taisne has supported us through many complex situations (tax audits, sudden executive departures, management embezzlement suspicions, etc.). He is very effective, knows how to dive deep into details while maintaining a holistic view. I highly recommend him.",
         "rating": 5
       },
       {
@@ -169,7 +190,7 @@
         "position": "CFO, HelloFood",
         "company": "HelloFood",
         "logo": "/images/companies/hellofood.png",
-        "content": "Thanks to Guillaume, we structured our finance in 3 months and raised €2M. His part-time CFO expertise allowed us to maintain control while accelerating our growth. A trusted partner.",
+        "content": "Thanks to Guillaume Stehelin de Taisne, we structured our finance in 3 months and raised €2M. His Part-time CFO expertise allowed us to maintain control while accelerating our growth. A trusted partner.",
         "rating": 5
       },
       {
@@ -177,7 +198,7 @@
         "position": "Founder, Ligerio",
         "company": "Ligerio",
         "logo": "/images/companies/ligerio.png",
-        "content": "In crisis situation, Guillaume took command immediately. He implemented ZOHO CRM and restructured our processes. His ability to stabilize operations and reassure teams saved our company. A true 'emergency' consultant.",
+        "content": "In crisis situation, Guillaume Stehelin de Taisne took command immediately. He implemented ZOHO CRM and restructured our processes. His ability to stabilize operations and reassure teams saved our company. A true \"emergency\" consultant.",
         "rating": 5
       },
       {
@@ -185,7 +206,7 @@
         "position": "CEO, Glossybox",
         "company": "Glossybox",
         "logo": "/images/companies/glossybox.png",
-        "content": "We mandated Guillaume during the sale of our company Glossybox (€70M revenue). The sale was blocked due to the quality of our financial data. Guillaume restructured the entire group (5 countries), brought everything into compliance with IFRS standards. He also supported us during a tax audit on our holding company. The sale was finalized 8 months after his arrival.",
+        "content": "We mandated Guillaume Stehelin de Taisne during the sale of our company Glossybox (€70M revenue). The sale was blocked due to the quality of our financial data. Guillaume Stehelin de Taisne restructured the entire group (5 countries), brought everything into compliance with IFRS standards, and supported us during a tax audit on our holding company. The sale was finalized 8 months after his arrival.",
         "rating": 5
       },
       {
@@ -193,7 +214,7 @@
         "position": "Founder, Kaymu",
         "company": "Kaymu",
         "logo": "/images/companies/kaymu.png",
-        "content": "Guillaume completely restructured our operations. From cash management to process optimization, he transformed our company. An exceptional professional.",
+        "content": "Guillaume Stehelin de Taisne completely restructured our operations. From cash management to process optimization, he transformed our company. An exceptional professional.",
         "rating": 5
       },
       {
@@ -201,7 +222,7 @@
         "position": "CEO, Orami Ltd",
         "company": "Orami Ltd",
         "logo": "/images/companies/orami.png",
-        "content": "His scaling expertise allowed us to grow from 10 to 100 employees without losing control. Guillaume knows how to anticipate growth challenges and implement the right tools.",
+        "content": "His scaling expertise allowed us to grow from 10 to 100 employees without losing control. Guillaume Stehelin de Taisne knows how to anticipate growth challenges and implement the right tools.",
         "rating": 5
       }
     ]
@@ -219,7 +240,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Need information? Contact me to discuss your project",
+    "subtitle": "Need information? Contact Guillaume Stehelin de Taisne to discuss your project",
     "form": {
       "name": "Name",
       "email": "Email",
@@ -230,8 +251,8 @@
     }
   },
   "methodology": {
-    "title": "Our methodology",
-    "subtitle": "Performance at the heart of our interventions",
+    "title": "Guillaume Stehelin de Taisne's methodology",
+    "subtitle": "The performance of Guillaume Stehelin de Taisne at the heart of every intervention",
     "description": "Because every critical situation is unique, we adapt our approach to each specific challenge.",
     "steps": [
       {
@@ -253,8 +274,8 @@
     ]
   },
   "stats": {
-    "title": "Our figures",
-    "subtitle": "Recognized expertise",
+    "title": "Numbers from Guillaume Stehelin de Taisne",
+    "subtitle": "The recognized expertise of Guillaume Stehelin de Taisne",
     "items": [
       {
         "number": "15+",
@@ -279,11 +300,19 @@
     ]
   },
   "footer": {
-    "description": "Emergency Operations Consultant - Interim executive replacement for critical situations",
+    "description": "Guillaume Stehelin de Taisne – Part-time CFO & COO, emergency operations consultant for critical situations",
+    "sectionTitles": {
+      "services": "Services",
+      "local": "Local pages",
+      "legal": "Legal information",
+      "blog": "Blog",
+      "contact": "Emergency contact"
+    },
     "links": {
       "privacy": "Privacy policy",
       "terms": "Terms of use",
-      "cookies": "Cookie management"
+      "cookies": "Cookie management",
+      "legal": "Legal notice"
     },
     "copyright": "© 2018 GSLV.fr. All rights reserved."
   },

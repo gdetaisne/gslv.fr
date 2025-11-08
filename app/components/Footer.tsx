@@ -8,6 +8,14 @@ export default function Footer() {
   const t = useTranslations('footer')
   const locale = useLocale()
 
+  const sectionTitles = {
+    services: t('sectionTitles.services'),
+    local: t('sectionTitles.local'),
+    legal: t('sectionTitles.legal'),
+    blog: t('sectionTitles.blog'),
+    contact: t('sectionTitles.contact'),
+  }
+
   const footerLinks = {
     services: [
       { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
@@ -18,10 +26,11 @@ export default function Footer() {
     local: [
       { name: 'CFO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
     ],
-    company: [
+    legal: [
       { name: t('links.privacy'), href: `/${locale}/privacy` },
       { name: t('links.terms'), href: `/${locale}/terms` },
       { name: t('links.cookies'), href: `/${locale}/cookies` },
+      { name: t('links.legal'), href: `/${locale}/mentions-legales` },
     ],
     blog: [
       { name: 'Scaling & Opérations', href: `/${locale}/blog?category=scaling` },
@@ -46,9 +55,12 @@ export default function Footer() {
             <p className="text-gray-300 mb-6 max-w-sm">
               {t('description')}
             </p>
+            <p className="text-sm text-primary-200 mb-6">
+              Guillaume Stehelin de Taisne – Part-time CFO & COO
+            </p>
             <div className="flex space-x-4">
               <a
-                href="https://linkedin.com/in/guillaume-stehelin"
+                href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"
@@ -68,7 +80,7 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Services</h3>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.services}</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
                 <li key={link.name}>
@@ -85,7 +97,7 @@ export default function Footer() {
 
           {/* Local Pages */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Pages locales</h3>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.local}</h3>
             <ul className="space-y-2">
               {footerLinks.local.map((link) => (
                 <li key={link.name}>
@@ -100,9 +112,26 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Legal Links */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.legal}</h3>
+            <ul className="space-y-2">
+              {footerLinks.legal.map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
           {/* Blog Categories */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Blog</h3>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.blog}</h3>
             <ul className="space-y-2">
               {footerLinks.blog.map((link) => (
                 <li key={link.name}>
@@ -119,7 +148,7 @@ export default function Footer() {
 
           {/* Contact Info */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Contact d'urgence</h3>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.contact}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-primary-400" />
@@ -163,7 +192,7 @@ export default function Footer() {
               {t('copyright')}
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              {footerLinks.company.map((link) => (
+              {footerLinks.legal.map((link) => (
                 <Link
                   key={link.name}
                   href={link.href}

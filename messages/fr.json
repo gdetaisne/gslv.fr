@@ -9,77 +9,91 @@
     "book": "Réserver un appel"
   },
   "hero": {
-    "title": "CFO & COO à impact. 15 ans d'expérience scale-ups",
-    "subtitle": "Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing.",
+    "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
+    "subtitle": "Structuration financière, levées de fonds et opérations coup de poing pour startups et scale-ups.",
+    "summary": "Guillaume Stehelin de Taisne accompagne fondateurs et investisseurs en tant que Part-time CFO & COO, avec plus de 15 ans d'interventions et jusqu'à 10 M€ de revenus supervisés sur des entreprises digitales.",
     "cta": {
       "primary": "Réserver un appel découverte",
       "secondary": "Découvrir mes services"
+    },
+    "ctaSection": {
+      "title": "Prêt à accélérer votre croissance ?",
+      "subtitle": "Réservez un appel découverte gratuit pour discuter de vos besoins"
     },
     "buttons": {
       "bookCall": "Réserver un appel découverte"
     }
   },
   "services": {
-    "title": "Nos Services",
-    "subtitle": "Des solutions personnalisées pour chaque stade de votre croissance",
-        "cfo": {
-          "title": "CFO Part-time",
-          "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
-          "features": [
-            "Reporting financier mensuel",
-            "Gestion de trésorerie et cashflow",
-            "Prévisions et budgets",
-            "Préparation levées de fonds",
-            "Tableaux de bord KPI"
-          ],
-          "budget": {
-            "title": "Budget indicatif",
-            "price": "750€ HT/jour",
-            "description": "Facturation à la tâche avec liste détaillée en fin de mois",
-            "note": "Phase de cadrage facturée selon complexité du projet"
-          }
-        },
-        "coo": {
-          "title": "COO Part-time",
-          "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
-          "features": [
-            "Structuration des processus",
-            "Optimisation opérationnelle",
-            "Gestion de l'hypercroissance",
-            "Mise en place d'outils",
-            "Formation des équipes"
-          ],
-          "budget": {
-            "title": "Budget indicatif",
-            "price": "750€ HT/jour",
-            "description": "Facturation à la tâche avec liste détaillée en fin de mois",
-            "note": "Phase de cadrage facturée selon complexité du projet"
-          }
-        },
-        "pompier": {
-          "title": "Consultant Opérations Coup de Poing",
-          "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
-          "features": [
-            "🚨 Prise de commande immédiate (24-48h)",
-            "👔 Remplacement intérimaire de dirigeant",
-            "🔧 Restructuration d'urgence",
-            "⚖️ Accompagnement en redressement judiciaire",
-            "⚡ Stabilisation opérationnelle",
-            "🎯 Plan de redressement personnalisé"
-          ],
-          "budget": {
-            "title": "Budget indicatif",
-            "price": "1000€ HT/jour",
-            "description": "Intervention d'urgence - Facturation à la tâche",
-            "note": "Phase de cadrage facturée selon complexité de la situation"
-          }
-        }
+    "title": "Services de Guillaume Stehelin de Taisne",
+    "subtitle": "Guillaume Stehelin de Taisne conçoit des solutions personnalisées pour chaque stade de votre croissance",
+    "cfo": {
+      "title": "CFO Part-time",
+      "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
+      "features": [
+        "Reporting financier mensuel",
+        "Gestion de trésorerie et cashflow",
+        "Prévisions et budgets",
+        "Préparation levées de fonds",
+        "Tableaux de bord KPI"
+      ],
+      "budget": {
+        "title": "Budget indicatif",
+        "price": "750€ HT/jour",
+        "description": "Facturation à la tâche avec liste détaillée en fin de mois",
+        "note": "Phase de cadrage facturée selon complexité du projet"
+      }
+    },
+    "coo": {
+      "title": "COO Part-time",
+      "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
+      "features": [
+        "Structuration des processus",
+        "Optimisation opérationnelle",
+        "Gestion de l'hypercroissance",
+        "Mise en place d'outils",
+        "Formation des équipes"
+      ],
+      "budget": {
+        "title": "Budget indicatif",
+        "price": "750€ HT/jour",
+        "description": "Facturation à la tâche avec liste détaillée en fin de mois",
+        "note": "Phase de cadrage facturée selon complexité du projet"
+      }
+    },
+    "pompier": {
+      "title": "Consultant Opérations Coup de Poing",
+      "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
+      "features": [
+        "🚨 Prise de commande immédiate (24-48h)",
+        "👔 Remplacement intérimaire de dirigeant",
+        "🔧 Restructuration d'urgence",
+        "⚖️ Accompagnement en redressement judiciaire",
+        "⚡ Stabilisation opérationnelle",
+        "🎯 Plan de redressement personnalisé"
+      ],
+      "budget": {
+        "title": "Budget indicatif",
+        "price": "1000€ HT/jour",
+        "description": "Intervention d'urgence - Facturation à la tâche",
+        "note": "Phase de cadrage facturée selon complexité de la situation"
+      }
+    },
+    "buttons": {
+      "learnMore": "En savoir plus",
+      "discussService": "Discuter de ce service",
+      "requestQuote": "Demander un devis",
+      "viewPricing": "Voir les tarifs",
+      "bookCall": "Réserver un appel découverte",
+      "requestCustomQuote": "Demander un devis personnalisé",
+      "emergencyCall": "Appel d'urgence 24h/24"
+    }
   },
   "about": {
-    "title": "À propos de Guillaume - Consultant Opérations Coup de Poing",
-    "subtitle": "Spécialiste du remplacement intérimaire de dirigeant pour situations critiques",
+    "title": "À propos de Guillaume Stehelin de Taisne – Consultant Opérations Coup de Poing",
+    "subtitle": "Guillaume Stehelin de Taisne, spécialiste du remplacement intérimaire de dirigeant pour situations critiques",
     "experience": "15+ années d'expérience en crise",
-    "description": "Consultant opérations coup de poing, je prends les commandes quand la situation devient incontrôlable. Pragmatique et orienté résultats, je redresse la barre des startups et scaleups en difficulté.",
+    "description": "Guillaume Stehelin de Taisne, consultant opérations coup de poing, prend les commandes quand la situation devient incontrôlable. Pragmatique et orienté résultats, il redresse la barre des startups et scale-ups en difficulté.",
     "expertise": [
       "Remplacement intérimaire de dirigeant",
       "Prise de commande d'urgence",
@@ -156,15 +170,15 @@
     ]
   },
   "testimonials": {
-    "title": "Témoignages clients",
-    "subtitle": "Ils m'ont fait confiance pour leur croissance et leurs défis",
+    "title": "Témoignages sur Guillaume Stehelin de Taisne",
+    "subtitle": "Ils font confiance à Guillaume Stehelin de Taisne pour leur croissance et leurs défis",
         "items": [
           {
             "name": "Francis D.",
             "position": "CEO, Jumia",
             "company": "Jumia",
             "logo": "/images/companies/jumia.png",
-            "content": "Guillaume nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
+            "content": "Guillaume Stehelin de Taisne nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
             "rating": 5
           },
           {
@@ -172,7 +186,7 @@
             "position": "CFO, HelloFood",
             "company": "HelloFood",
             "logo": "/images/companies/hellofood.png",
-            "content": "Grâce à Guillaume, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise en CFO part-time nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
+            "content": "Grâce à Guillaume Stehelin de Taisne, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise en Part-time CFO nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
             "rating": 5
           },
           {
@@ -180,7 +194,7 @@
             "position": "Fondateur, Ligerio",
             "company": "Ligerio",
             "logo": "/images/companies/ligerio.png",
-            "content": "En situation de crise, Guillaume a pris les commandes immédiatement. Il a implémenté ZOHO CRM et restructuré nos processus. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise. Un vrai consultant 'coup de poing'.",
+            "content": "En situation de crise, Guillaume Stehelin de Taisne a pris les commandes immédiatement. Il a implémenté ZOHO CRM et restructuré nos processus. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise. Un vrai consultant \"coup de poing\".",
             "rating": 5
           },
           {
@@ -188,7 +202,7 @@
             "position": "CEO, Glossybox",
             "company": "Glossybox",
             "logo": "/images/companies/glossybox.png",
-            "content": "Nous avons mandaté Guillaume durant la cession de notre entreprise Glossybox (70M d'€ de CA). La cession était alors bloquée à cause de la qualité de notre donnée financière. Guillaume a re-structuré l'ensemble du groupe (5 pays), mis l'ensemble en conformité avec les normes IFRS. A accompagné durant ce temps un contrôle fiscal sur notre holding. La cession a été finalisée 8 mois après son arrivée.",
+            "content": "Nous avons mandaté Guillaume Stehelin de Taisne durant la cession de notre entreprise Glossybox (70M€ de CA). La cession était alors bloquée à cause de la qualité de notre donnée financière. Guillaume Stehelin de Taisne a re-structuré l'ensemble du groupe (5 pays), mis l'ensemble en conformité avec les normes IFRS et piloté un contrôle fiscal sur notre holding. La cession a été finalisée 8 mois après son arrivée.",
             "rating": 5
           },
           {
@@ -196,7 +210,7 @@
             "position": "Fondateur, Kaymu",
             "company": "Kaymu",
             "logo": "/images/companies/kaymu.png",
-            "content": "Guillaume a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
+            "content": "Guillaume Stehelin de Taisne a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
             "rating": 5
           },
           {
@@ -204,7 +218,7 @@
             "position": "CEO, Orami Ltd",
             "company": "Orami Ltd",
             "logo": "/images/companies/orami.png",
-            "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume sait anticiper les défis de croissance et mettre en place les bons outils.",
+            "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume Stehelin de Taisne sait anticiper les défis de croissance et mettre en place les bons outils.",
             "rating": 5
           }
         ]
@@ -222,7 +236,7 @@
   },
   "contact": {
     "title": "Contact",
-    "subtitle": "Besoin d'informations ? Contactez-moi pour discuter de votre projet",
+    "subtitle": "Besoin d'informations ? Contactez Guillaume Stehelin de Taisne pour discuter de votre projet",
     "form": {
       "name": "Nom",
       "email": "Email",
@@ -233,8 +247,8 @@
     }
   },
       "methodology": {
-        "title": "Notre méthodologie",
-        "subtitle": "La performance au cœur de nos interventions",
+      "title": "La méthodologie de Guillaume Stehelin de Taisne",
+    "subtitle": "La performance de Guillaume Stehelin de Taisne au cœur de chaque intervention",
         "description": "Parce que chaque situation critique est unique, nous adaptons notre approche à chaque enjeu spécifique.",
         "steps": [
           {
@@ -256,8 +270,8 @@
         ]
       },
       "stats": {
-        "title": "Nos chiffres",
-        "subtitle": "Une expertise reconnue",
+      "title": "Les chiffres de Guillaume Stehelin de Taisne",
+    "subtitle": "L'expertise reconnue de Guillaume Stehelin de Taisne",
         "items": [
           {
             "number": "15+",
@@ -282,11 +296,19 @@
         ]
       },
       "footer": {
-        "description": "Consultant Opérations Coup de Poing - Remplacement intérimaire de dirigeant pour situations critiques",
+        "description": "Guillaume Stehelin de Taisne – Part-time CFO & COO, consultant opérations coup de poing pour situations critiques",
+        "sectionTitles": {
+          "services": "Services",
+          "local": "Pages locales",
+          "legal": "Informations légales",
+          "blog": "Blog",
+          "contact": "Contact d'urgence"
+        },
         "links": {
           "privacy": "Politique de confidentialité",
           "terms": "Conditions d'utilisation",
-          "cookies": "Gestion des cookies"
+          "cookies": "Gestion des cookies",
+          "legal": "Mentions légales"
         },
         "copyright": "© 2018 GSLV.fr. Tous droits réservés."
       },
