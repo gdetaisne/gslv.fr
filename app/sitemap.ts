@@ -1,4 +1,11 @@
 import { MetadataRoute } from 'next'
+import fs from 'fs'
+import path from 'path'
+
+type BlogPost = {
+  slug: string
+  publishedAt: string
+}
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://gslv.fr'
@@ -8,8 +15,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     '',
     '/about',
     '/services',
+    '/values',
     '/blog',
-    '/contact'
+    '/contact',
+    '/consultant-cfo-la-rochelle',
+    '/pricing',
+    '/privacy',
+    '/terms',
+    '/cookies',
+    '/mentions-legales'
   ]
 
   const sitemap: MetadataRoute.Sitemap = []
@@ -26,19 +40,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     })
   })
 
-  // Add blog articles (simplified - in production, you'd load from your data)
-  const blogCategories = ['scaling', 'finance', 'tools', 'fundraising']
+  // Add REAL blog articles from JSON files
   locales.forEach(locale => {
-    blogCategories.forEach(category => {
-      for (let i = 1; i <= 50; i++) {
+    try {
+      const filePath = path.join(process.cwd(), 'public', 'data', 'blog', `${locale}.json`)
+      const fileContents = fs.readFileSync(filePath, 'utf8')
+      const articles: BlogPost[] = JSON.parse(fileContents)
+      
+      articles.forEach(article => {
         sitemap.push({
-          url: `${baseUrl}/${locale}/blog/${category}-article-${i}`,
-          lastModified: new Date(),
+          url: `${baseUrl}/${locale}/blog/${article.slug}`,
+          lastModified: new Date(article.publishedAt),
           changeFrequency: 'monthly',
-          priority: 0.6,
+          priority: 0.7,
         })
-      }
-    })
+      })
+    } catch (error) {
+      console.error(`Error loading blog articles for ${locale}:`, error)
+    }
   })
 
   return sitemap
