@@ -1,5 +1,150 @@
 [
   {
+    "id": "fr-couple-entrepreneur-equilibre-rituels-1762617977",
+    "title": "Être entrepreneur en couple : rituels, frontières et vérité",
+    "slug": "couple-entrepreneur-equilibre-rituels",
+    "excerpt": "L’entrepreneuriat consomme tout l’espace disponible si tu ne le limites pas. Le couple n’a pas besoin de plus de temps : il a besoin de temps de qualité, non négociable.  Un rituel...",
+    "content": "L’entrepreneuriat consomme tout l’espace disponible si tu ne le limites pas. Le couple n’a pas besoin de plus de temps : il a besoin de temps de qualité, non négociable.\n\nUn rituel simple change tout : j’étais en télétravail chaque vendredi et je déjeunais longuement avec ma femme. C’était notre checkpoint : on refaisait le plan, on ajustait les attentes, on se disait les vérités qui protègent.\n\nFixe des frontières explicites (heures off, zones sans téléphone), écris ce que tu priorises, et accepte que certaines semaines, la boîte passe avant — mais pas tous les mois. Grandir sans se perdre, c’est un travail d’architecture, pas d’héroïsme.",
+    "category": "scaling",
+    "publishedAt": "2025-11-08T16:06:17Z",
+    "readTime": 2,
+    "tags": [
+      "équilibre",
+      "santé mentale",
+      "rituels",
+      "priorités",
+      "famille"
+    ],
+    "locale": "fr",
+    "seo": {
+      "title": "Être entrepreneur en couple : rituels, frontières et vérité | GSLV.fr",
+      "description": "L’entrepreneuriat consomme tout l’espace disponible si tu ne le limites pas. Le couple n’a pas besoin de plus de temps : il a besoin de temps de qualité, non négociable.  Un rituel...",
+      "keywords": [
+        "équilibre",
+        "santé mentale",
+        "rituels",
+        "priorités",
+        "famille"
+      ]
+    }
+  },
+  {
+    "id": "fr-gestion-partenaires-financiers-best-practices-1762617977",
+    "title": "Gérer ses partenaires financiers : transparence, rythme, alignement",
+    "slug": "gestion-partenaires-financiers-best-practices",
+    "excerpt": "Un partenaire financier n’est ni un ami ni un ennemi : c’est une contrepartie rationnelle. Reste en contact quand tout va bien, embarque‑les dans le récit sans masquer la réalité. ...",
+    "content": "Un partenaire financier n’est ni un ami ni un ennemi : c’est une contrepartie rationnelle. Reste en contact quand tout va bien, embarque‑les dans le récit sans masquer la réalité. Si la première nouvelle arrive le jour où ça va mal, tu n’as aucune chance.\n\nRègles simples : rythme mensuel (métriques + narration), signaux faibles partagés (pipeline, recrutements clés, risques), demandes précises et datées. Souviens‑toi : il peut y avoir un monde entre ce qu’un partenaire te dit et ce qu’il présente en comité. Sa sympathie est un call option sur ton succès ; en cas d’échec, elle disparaît.\n\nTa crédibilité vient de la cohérence dans le temps : même format, mêmes KPI, mêmes engagements tenus.",
+    "category": "finance",
+    "publishedAt": "2025-11-08T16:06:17Z",
+    "readTime": 2,
+    "tags": [
+      "investisseurs",
+      "banques",
+      "reporting",
+      "gouvernance",
+      "relations"
+    ],
+    "locale": "fr",
+    "seo": {
+      "title": "Gérer ses partenaires financiers : transparence, rythme, alignement | GSLV.fr",
+      "description": "Un partenaire financier n’est ni un ami ni un ennemi : c’est une contrepartie rationnelle. Reste en contact quand tout va bien, embarque‑les dans le récit sans masquer la réalité. ...",
+      "keywords": [
+        "investisseurs",
+        "banques",
+        "reporting",
+        "gouvernance",
+        "relations"
+      ]
+    }
+  },
+  {
+    "id": "fr-outils-pilotage-excel-crm-zoho-bonnes-pratiques-1762617977",
+    "title": "Outils de pilotage : Excel d’abord, CRM quand il sert vraiment (Zoho)",
+    "slug": "outils-pilotage-excel-crm-zoho-bonnes-pratiques",
+    "excerpt": "Ce n’est pas ‘cool’ de le dire, mais l’écrasante majorité des grands groupes pilotent encore l’essentiel sur Excel. Parce qu’Excel est universel, flexible et interopérable. Le prob...",
+    "content": "Ce n’est pas ‘cool’ de le dire, mais l’écrasante majorité des grands groupes pilotent encore l’essentiel sur Excel. Parce qu’Excel est universel, flexible et interopérable. Le problème, ce n’est pas l’outil : c’est l’absence de conventions.\n\nUn CRM n’aide que s’il est conçu pour piloter. Zoho peut devenir un vrai cockpit s’il reflète la vérité opérationnelle : propriétaires clairs des champs, process d’update hebdo, règles de complétude, vues par équipe, et synchronisation avec la facturation. Le bon ordre : 1) standards Excel (naming, versions, single source of truth), 2) automatisations légères (imports, checks), 3) CRM ciblé et documenté.\n\nUn bon pilotage, c’est moins d’outils et plus de décisions qui s’améliorent.",
+    "category": "tools",
+    "publishedAt": "2025-11-08T16:06:17Z",
+    "readTime": 2,
+    "tags": [
+      "pilotage",
+      "Excel",
+      "CRM",
+      "Zoho",
+      "tableaux de bord"
+    ],
+    "locale": "fr",
+    "seo": {
+      "title": "Outils de pilotage : Excel d’abord, CRM quand il sert vraiment (Zoho) | GSLV.fr",
+      "description": "Ce n’est pas ‘cool’ de le dire, mais l’écrasante majorité des grands groupes pilotent encore l’essentiel sur Excel. Parce qu’Excel est universel, flexible et interopérable. Le prob...",
+      "keywords": [
+        "pilotage",
+        "Excel",
+        "CRM",
+        "Zoho",
+        "tableaux de bord"
+      ]
+    }
+  },
+  {
+    "id": "fr-lever-fonds-ou-bootstraper-comparatif-1762617977",
+    "title": "Lever des fonds ou bootstraper : choisir sa trajectoire",
+    "slug": "lever-fonds-ou-bootstraper-comparatif",
+    "excerpt": "La question n’est pas morale : elle est stratégique. Lever des fonds achète du temps et de la vitesse ; bootstraper achète de la liberté et de la discipline. Le bon choix dépend de...",
+    "content": "La question n’est pas morale : elle est stratégique. Lever des fonds achète du temps et de la vitesse ; bootstraper achète de la liberté et de la discipline. Le bon choix dépend de la nature du marché, du cycle de vente, des besoins en BFR et de ton seuil de douleur.\n\nLe VC convient aux marchés winner‑takes‑most, aux effets de réseau, aux cycles d’acquisition coûteux. Il impose gouvernance, cadence et trajectoire d’hypercroissance. Le bootstrapping fonctionne pour les modèles à cashflow tôt, pricing clair, acquisition ciblée. Il impose frugalité, itérations et focus client.\n\nDécide avec une matrice simple : taille de marché exploitable, intensité capitalistique, coût d’acquisition, délai avant marge, ambition personnelle. Il n’y a pas de bonne réponse universelle — seulement un design de contraintes assumé.",
+    "category": "finance",
+    "publishedAt": "2025-11-08T16:06:17Z",
+    "readTime": 2,
+    "tags": [
+      "bootstrapping",
+      "VC",
+      "rentabilité",
+      "croissance",
+      "capitaux"
+    ],
+    "locale": "fr",
+    "seo": {
+      "title": "Lever des fonds ou bootstraper : choisir sa trajectoire | GSLV.fr",
+      "description": "La question n’est pas morale : elle est stratégique. Lever des fonds achète du temps et de la vitesse ; bootstraper achète de la liberté et de la discipline. Le bon choix dépend de...",
+      "keywords": [
+        "bootstrapping",
+        "VC",
+        "rentabilité",
+        "croissance",
+        "capitaux"
+      ]
+    }
+  },
+  {
+    "id": "fr-levee-fonds-reseau-questions-investisseurs-preparation-1762617977",
+    "title": "Comment réussir une levée de fonds : réseau, questions et préparation",
+    "slug": "levee-fonds-reseau-questions-investisseurs-preparation",
+    "excerpt": "Lever des fonds n’est pas qu’une histoire de slides : c’est un travail de réseau, de timing et de préparation mentale. La règle d’or : prépare les 100 questions qu’un investisseur ...",
+    "content": "Lever des fonds n’est pas qu’une histoire de slides : c’est un travail de réseau, de timing et de préparation mentale. La règle d’or : prépare les 100 questions qu’un investisseur peut poser, puis structure ton pitch pour qu’elles deviennent prévisibles. Un bon pitch n’informe pas seulement : il oriente les questions vers ton terrain de jeu.\n\nQuand tu entres dans une salle, un investisseur pose par défaut trois questions. S’il les pose parce que tu as volontairement présenté des éléments générateurs de questions, alors tu es prêt : tu cadres l’échange, tu montres la maîtrise. La vraie différence vient du réseau : la chaleur d’une introduction, la confiance transférée, la qualité du suivi. Une levée, c’est 70% relations, 30% dossier.\n\nMéthode concrète : cartographie des fonds et des partners (thèse, chèques, tours menés), préparation d’un Q&A exhaustif (marché, unit economics, conformité, GTM, risques), dry runs avec entrepreneurs financés par les mêmes fonds, et suivi millimétré post-rendez-vous (compte-rendu, next steps, livrables datés). Tu ne vends pas un rêve, tu vends une démonstration de maîtrise sous contrainte.",
+    "category": "fundraising",
+    "publishedAt": "2025-11-08T16:06:17Z",
+    "readTime": 2,
+    "tags": [
+      "levée de fonds",
+      "investisseurs",
+      "pitch",
+      "réseau",
+      "due diligence"
+    ],
+    "locale": "fr",
+    "seo": {
+      "title": "Comment réussir une levée de fonds : réseau, questions et préparation | GSLV.fr",
+      "description": "Lever des fonds n’est pas qu’une histoire de slides : c’est un travail de réseau, de timing et de préparation mentale. La règle d’or : prépare les 100 questions qu’un investisseur ...",
+      "keywords": [
+        "levée de fonds",
+        "investisseurs",
+        "pitch",
+        "réseau",
+        "due diligence"
+      ]
+    }
+  },
+  {
     "id": "fr-ligerio-2025-parcours",
     "title": "Mon parcours chez Ligerio : de la création à la transmission",
     "slug": "mon-parcours-chez-ligerio-creation-transmission",
