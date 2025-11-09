@@ -117,6 +117,50 @@ export default function BlogPostPage() {
 
   return (
     <div className="pt-16">
+      {/* Schema.org Article Structured Data */}
+      {article && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              '@context': 'https://schema.org',
+              '@type': 'Article',
+              headline: article.seo?.title || article.title,
+              description: article.seo?.description || article.excerpt,
+              author: {
+                '@type': 'Person',
+                name: 'Guillaume Stehelin de Taisne',
+                url: 'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/',
+                jobTitle: 'Part-time CFO & COO',
+                worksFor: {
+                  '@type': 'Organization',
+                  name: 'GSLV'
+                }
+              },
+              publisher: {
+                '@type': 'Organization',
+                name: 'GSLV.fr',
+                url: 'https://gslv.fr',
+                logo: {
+                  '@type': 'ImageObject',
+                  url: 'https://gslv.fr/images/logo/logo.png'
+                }
+              },
+              datePublished: article.publishedAt,
+              dateModified: article.publishedAt,
+              mainEntityOfPage: {
+                '@type': 'WebPage',
+                '@id': typeof window !== 'undefined' ? window.location.href : `https://gslv.fr/${locale}/blog/${article.slug}`
+              },
+              keywords: article.seo?.keywords?.join(', ') || article.tags.join(', '),
+              articleSection: article.category,
+              wordCount: article.content.split(' ').length,
+              inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US'
+            }, null, 2)
+          }}
+        />
+      )}
+      
       {/* Article Header */}
       <section className="py-12 bg-white border-b border-gray-200">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
