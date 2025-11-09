@@ -8,11 +8,12 @@
 
 | Statut | Nombre | % Total |
 |--------|--------|---------|
-| 📝 To Start | 9 | 69% |
+| 📝 To Start | 9 | 64% |
 | 🟡 En cours | 0 | 0% |
-| ✅ Terminées | 4 | 31% |
+| ⏸️ Stand-by | 1 | 7% |
+| ✅ Terminées | 4 | 29% |
 | ❌ Abandonnées | 0 | 0% |
-| **TOTAL** | **13** | **100%** |
+| **TOTAL** | **14** | **100%** |
 
 ---
 
@@ -68,6 +69,8 @@
 | ID | Tâche | Statut | Priorité | Effort | Impact | Deadline |
 |----|-------|--------|----------|--------|--------|----------|
 | [13](./13-analyse-articles-blog/) | Analyse SEO/UX articles de blog | ✅ Terminée | P1 | 3h | ⭐⭐⭐⭐ | 12 nov |
+| [14](./14-quick-wins-phase-1/) | Quick Wins Phase 1 (7 articles) | ✅ Terminée | P1 | 3h | ⭐⭐⭐⭐ | 12 nov |
+| [15](./15-phase-2-schema-infographies/) | Schema Article + Infographies Canva | ⏸️ Stand-by | P2 | 12h | ⭐⭐⭐⭐ | - |
 
 **KPI cible** : 8/10 min SEO score par article + engagement rate +30%.
 
@@ -153,5 +156,13 @@
 
 ---
 
-**Dernière action** : Structure créée, prêt à démarrer tâche 09 (Google Search Console).
+## ⏸️ Tâches en Stand-by
+
+| ID | Tâche | Raison | État actuel | Prochaine action |
+|----|-------|--------|-------------|------------------|
+| [15](./15-phase-2-schema-infographies/) | Schema Article + Infographies | Production manuelle requise | Schema ✅, Specs infographies ✅ | Créer 5 infographies dans Canva (3h) + 3 lead magnets (3h) |
+
+---
+
+**Dernière action** : Phase 2 Schema + Specs infographies terminées, mise en stand-by pour production Canva.
 

@@ -1,8 +1,8 @@
 # ✅ Phase 2 : Schema Article + Infographies
 
 **Date** : 9 novembre 2025  
-**Durée** : 30 min (partiel)  
-**Statut** : 🟡 En cours (1/4 terminé)
+**Durée** : 3h30 (partiel)  
+**Statut** : ⏸️ Stand-by (2/5 terminés : Schema + Specs)
 
 ---
 
