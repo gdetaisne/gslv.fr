@@ -42,26 +42,74 @@ Enrichir les articles piliers avec Schema Article et créer des infographies vis
 
 ---
 
-## 📋 Actions restantes (Phase 2)
+### 2. Specs Infographies Canva ✅
 
-### 2. Créer 5 infographies Canva 🔲
+**Durée** : 3h  
+**Fichier** : `.cursor/tasks/15-phase-2-schema-infographies/infographies-specs.md`
 
-**Durée estimée** : 3h  
-**Articles cibles** : 7, 8, 9, 10, 5
+**5 infographies spécifiées** :
 
-| Article | Infographie | Format | Outils |
-|---------|-------------|--------|--------|
-| #7 - Association cofondateurs | Les 4 piliers d'une association réussie | Vertical 800×1200 | Canva |
-| #8 - Rocket Internet | Plan des 100 jours (timeline) | Horizontal 1200×800 | Canva |
-| #9 - Ratios financiers | Benchmarks SaaS vs e-commerce (tableau) | Horizontal 1200×800 | Canva |
-| #10 - Board startup | Composition board par stade (organigramme) | Vertical 800×1200 | Canva |
-| #5 - Levée fonds | Timeline 6 mois levée de fonds | Horizontal 1200×800 | Canva |
+1. **📊 Les 5 Causes d'Échec des Startups** (article #1)
+   - Format : Barres horizontales avec % et icônes (CB Insights data)
+   - Slug : `5-causes-echec-startups.png`
+   - Contenu : 5 causes principales avec % + barre graphique
 
-**Intégration** : `/public/images/blog/[slug]-infographie.png`
+2. **📈 Processus Levée de Fonds en 10 Étapes** (article #5)
+   - Format : Timeline verticale 6-12 mois
+   - Slug : `processus-levee-fonds-10-etapes.png`
+   - Contenu : 10 étapes avec durée et sous-actions
+
+3. **🛠️ Comparatif Outils Pilotage Financier** (article #3)
+   - Format : Tableau 8 critères × 4 outils
+   - Slug : `comparatif-outils-pilotage-financier.png`
+   - Contenu : Excel vs Zoho vs Pennylane vs Fygr
+
+4. **📅 Timeline Idéale Board Startup** (article #10)
+   - Format : Timeline horizontale année 1 en 4 phases
+   - Slug : `timeline-board-startup.png`
+   - Contenu : Constitution → Onboarding → Routine → Optimisation
+
+5. **⚙️ Les 4 Piliers Méthodologie Rocket Internet** (article #8)
+   - Format : Grille 2×2 colorée
+   - Slug : `4-piliers-rocket-internet.png`
+   - Contenu : Plan 100j, KPI, Recrutement, Process
+
+**Caractéristiques techniques** :
+- Format : 800×1200px (Pinterest-friendly)
+- Palette GSLV : Bleu marine #1E3A8A, orange #F97316
+- Police : Inter ou Montserrat
+- Export : PNG (<500Ko) + PDF
+- Destination : `/public/images/infographies/`
+
+**Impact SEO/UX attendu** :
+- Alt text optimisés → ranking Google Images
+- +30-45% temps sur page
+- +50-100% partages sociaux
 
 ---
 
-### 3. Créer 3 lead magnets (templates) 🔲
+## 📋 Actions restantes (Phase 2)
+
+### 3. Créer les 5 infographies dans Canva 🔲
+
+**Durée estimée** : 3h (production manuelle)  
+**Prérequis** : Specs détaillées ✅ (voir `infographies-specs.md`)
+
+**Checklist production** :
+- [ ] Créer compte Canva / ouvrir Canva
+- [ ] Créer infographie #1 (5 causes échec)
+- [ ] Créer infographie #2 (levée fonds 10 étapes)
+- [ ] Créer infographie #3 (comparatif outils)
+- [ ] Créer infographie #4 (timeline board)
+- [ ] Créer infographie #5 (4 piliers Rocket Internet)
+- [ ] Exporter PNG + PDF pour chaque
+- [ ] Déposer dans `/public/images/infographies/`
+- [ ] Intégrer dans articles avec alt text optimisé
+- [ ] Partager sur LinkedIn
+
+---
+
+### 4. Créer 3 lead magnets (templates) 🔲
 
 **Durée estimée** : 3h  
 **Objectif** : conversion leads qualifiés
@@ -78,7 +126,7 @@ Enrichir les articles piliers avec Schema Article et créer des infographies vis
 
 ---
 
-### 4. Ajouter Schema FAQPage (optionnel) 🔲
+### 5. Ajouter Schema FAQPage (optionnel) 🔲
 
 **Durée estimée** : 2h  
 **Articles cibles** : articles avec FAQ implicites
@@ -132,7 +180,8 @@ Exemple article #5 (Levée fonds) :
 
 **Priorité 1** (à faire maintenant) :
 - [x] Schema Article TOUS les articles
-- [ ] Créer 5 infographies Canva (3h)
+- [x] Specs détaillées 5 infographies
+- [ ] Créer 5 infographies dans Canva (3h production manuelle)
 - [ ] Créer 3 lead magnets (3h)
 
 **Priorité 2** (optionnel) :
@@ -154,8 +203,8 @@ Exemple article #5 (Levée fonds) :
 
 ---
 
-**Temps passé Phase 2** : 30 min / 12h  
-**Avancement** : 4% (Schema terminé, infographies + lead magnets restants)
+**Temps passé Phase 2** : 3h30 / 12h  
+**Avancement** : 29% (Schema terminé ✅, Specs infographies ✅, création Canva + lead magnets restants)
 
 **Complété par** : Guillaume Stehelin (avec support AI)  
 **Review** : Vérifier rich snippets dans Google Search Console à partir du 16 nov
