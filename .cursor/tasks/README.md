@@ -8,11 +8,11 @@
 
 | Statut | Nombre | % Total |
 |--------|--------|---------|
-| 📝 To Start | 9 | 75% |
+| 📝 To Start | 9 | 69% |
 | 🟡 En cours | 0 | 0% |
-| ✅ Terminées | 3 | 25% |
+| ✅ Terminées | 4 | 31% |
 | ❌ Abandonnées | 0 | 0% |
-| **TOTAL** | **12** | **100%** |
+| **TOTAL** | **13** | **100%** |
 
 ---
 
@@ -58,6 +58,18 @@
 | [12](./12-audit-core-web-vitals/) | Audit Core Web Vitals + corrections | 📝 To Start | P2 | 4h | ⭐⭐⭐⭐ | 5 déc |
 
 **KPI cible** : Score SEO 85+ (SEMrush) + Core Web Vitals "Good".
+
+---
+
+## 📝 PRIORITÉ 3 : Optimisation Contenu
+
+**Objectif** : Améliorer qualité SEO/UX des articles existants
+
+| ID | Tâche | Statut | Priorité | Effort | Impact | Deadline |
+|----|-------|--------|----------|--------|--------|----------|
+| [13](./13-analyse-articles-blog/) | Analyse SEO/UX articles de blog | ✅ Terminée | P1 | 3h | ⭐⭐⭐⭐ | 12 nov |
+
+**KPI cible** : 8/10 min SEO score par article + engagement rate +30%.
 
 ---
 
