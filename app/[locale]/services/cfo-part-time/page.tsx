@@ -76,7 +76,7 @@ export default function CFOPartTimePage() {
       },
       {
         '@type': 'Question',
-        name': 'Combien coûte un CFO part-time ?',
+        name: 'Combien coûte un CFO part-time ?',
         acceptedAnswer: {
           '@type': 'Answer',
           text: 'Un CFO part-time coûte entre 6000€ et 15000€ par mois selon le temps d\'intervention (1-3 jours/semaine) et l\'expertise. C\'est 3 à 5 fois moins cher qu\'un CFO full-time (100-150k€/an + equity + charges) tout en bénéficiant d\'un expert senior immédiatement opérationnel.'
