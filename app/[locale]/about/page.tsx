@@ -260,13 +260,13 @@ export default function AboutPage() {
                   >
                     <div className="flex items-start space-x-6">
                       <div className="flex-shrink-0">
-                        <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                        <div className="w-12 h-12 bg-slate-900 text-sky-400 rounded-full flex items-center justify-center font-semibold text-base">
                           {index + 3}
                         </div>
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-4 mb-2">
-                          <div className="text-xs font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                          <div className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">
                             {item.year}
                           </div>
                           <div className="text-xs text-gray-500">
@@ -284,9 +284,9 @@ export default function AboutPage() {
                             {item.achievements.map((achievement: string, achievementIndex: number) => (
                               <div
                                 key={achievementIndex}
-                                className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
+                                className="flex items-center space-x-2 bg-slate-50 px-3 py-2 rounded-lg"
                               >
-                                <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                                <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                                 <span className="text-sm text-gray-700 font-medium">
                                   {achievement}
                                 </span>
@@ -297,7 +297,7 @@ export default function AboutPage() {
                       </div>
                     </div>
                     {index < timeline.slice(2).length - 1 && (
-                      <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
+                      <div className="absolute left-8 top-16 w-0.5 h-12 bg-slate-200"></div>
                     )}
                   </motion.div>
                 ))}
@@ -306,7 +306,7 @@ export default function AboutPage() {
                 <div className="text-center pt-8">
                   <button
                     onClick={() => setIsTimelineExpanded(false)}
-                    className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors duration-300 font-medium shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors durée-300 font-medium shadow-lg hover:shadow-xl"
                   >
                     <ChevronUp className="w-5 h-5 mr-2" />
                     Voir moins
