@@ -1,11 +1,11 @@
+ 'use client'
+
 import { useState } from 'react'
 import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { cn } from '@/app/lib/utils'
 import LanguageSwitcher from './LanguageSwitcher'
-
-'use client'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
