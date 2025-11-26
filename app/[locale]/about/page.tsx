@@ -306,7 +306,7 @@ export default function AboutPage() {
                 <div className="text-center pt-8">
                   <button
                     onClick={() => setIsTimelineExpanded(false)}
-                    className="inline-flex items-center px-6 py-3 bg-gray-600 text-white rounded-lg hover:bg-gray-700 transition-colors durée-300 font-medium shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors duration-300 font-medium shadow-lg hover:shadow-xl"
                   >
                     <ChevronUp className="w-5 h-5 mr-2" />
                     Voir moins
