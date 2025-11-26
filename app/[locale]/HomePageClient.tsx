@@ -54,27 +54,27 @@ export default function HomePageClient() {
       title: tServices('cfo.title'),
       description: tServices('cfo.description'),
       features: tServices.raw('cfo.features'),
-      icon: '💰',
-      color: 'from-blue-500 to-blue-600',
-      hoverColor: 'hover:from-blue-600 hover:to-blue-700'
+      icon: TrendingUp,
+      color: 'from-sky-500 to-sky-600',
+      hoverColor: 'hover:from-sky-600 hover:to-sky-700'
     },
     {
       id: 'coo',
       title: tServices('coo.title'),
       description: tServices('coo.description'),
       features: tServices.raw('coo.features'),
-      icon: '⚙️',
-      color: 'from-green-500 to-green-600',
-      hoverColor: 'hover:from-green-600 hover:to-green-700'
+      icon: Zap,
+      color: 'from-emerald-500 to-emerald-600',
+      hoverColor: 'hover:from-emerald-600 hover:to-emerald-700'
     },
     {
       id: 'pompier',
       title: tServices('pompier.title'),
       description: tServices('pompier.description'),
       features: tServices.raw('pompier.features'),
-      icon: '🚨',
-      color: 'from-red-500 to-red-600',
-      hoverColor: 'hover:from-red-600 hover:to-red-700'
+      icon: AlertTriangle,
+      color: 'from-rose-500 to-rose-600',
+      hoverColor: 'hover:from-rose-600 hover:to-rose-700'
     }
   ]
 
@@ -236,7 +236,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Services Section */}
-      <section className="py-12 sm:py-20 bg-gradient-to-br from-gray-50 to-white">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2
@@ -284,8 +284,8 @@ export default function HomePageClient() {
               >
                 <Card className="h-full hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                   <CardHeader className="text-center pb-4">
-                    <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${service.color} ${service.hoverColor} flex items-center justify-center text-3xl transition-all duration-300 group-hover:scale-110`}>
-                      {service.icon}
+                    <div className={`w-14 h-14 mx-auto mb-4 rounded-2xl bg-gradient-to-br ${service.color} ${service.hoverColor} flex items-center justify-center text-3xl transition-all duration-300 group-hover:scale-110`}>
+                      <service.icon className="w-7 h-7 text-white" />
                     </div>
                     <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-gray-900 mb-2 leading-tight">
                       {service.title}
