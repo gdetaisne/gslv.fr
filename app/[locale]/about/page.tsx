@@ -8,6 +8,30 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 import { useState } from 'react'
 
+const MOVERZ_URL = 'https://moverz.fr/'
+
+function linkifyMoverz(text: string) {
+  if (!text) return text
+
+  const parts = text.split(/(Moverz)/g)
+
+  return parts.map((part, index) =>
+    part === 'Moverz' ? (
+      <Link
+        key={index}
+        href={MOVERZ_URL}
+        target="_blank"
+        rel="noopener noreferrer nofollow"
+        className="underline decoration-dotted underline-offset-2 hover:text-sky-600"
+      >
+        Moverz
+      </Link>
+    ) : (
+      part
+    )
+  )
+}
+
 export default function AboutPage() {
   const t = useTranslations('about')
   const [isTimelineExpanded, setIsTimelineExpanded] = useState(false)
@@ -156,10 +180,10 @@ export default function AboutPage() {
                       </div>
                     </div>
                     <h3 className="text-xl font-bold text-dark-900 mb-3">
-                      {item.title}
+                      {linkifyMoverz(item.title)}
                     </h3>
                     <p className="text-gray-700 mb-4 leading-relaxed">
-                      {item.description}
+                      {linkifyMoverz(item.description)}
                     </p>
                     {item.achievements && (
                       <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -170,7 +194,7 @@ export default function AboutPage() {
                           >
                             <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                             <span className="text-sm text-gray-700 font-medium">
-                              {achievement}
+                              {linkifyMoverz(achievement)}
                             </span>
                           </div>
                         ))}
@@ -250,10 +274,10 @@ export default function AboutPage() {
                           </div>
                         </div>
                         <h3 className="text-xl font-bold text-dark-900 mb-3">
-                          {item.title}
+                          {linkifyMoverz(item.title)}
                         </h3>
                         <p className="text-gray-700 mb-4 leading-relaxed">
-                          {item.description}
+                          {linkifyMoverz(item.description)}
                         </p>
                         {item.achievements && (
                           <div className="grid grid-cols-2 md:grid-cols-4 gap-2">
@@ -537,12 +561,12 @@ export default function AboutPage() {
               <Card key={item.title}>
                 <CardHeader>
                   <h3 className="text-2xl font-bold text-dark-900 mb-2">
-                    {item.title}
+                    {linkifyMoverz(item.title)}
                   </h3>
                 </CardHeader>
                 <CardContent>
                   <p className="text-gray-700 text-lg leading-relaxed">
-                    {item.description}
+                    {linkifyMoverz(item.description)}
                   </p>
                 </CardContent>
               </Card>
