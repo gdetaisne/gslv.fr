@@ -94,9 +94,9 @@ export default function HomePageClient() {
         : 'Clients highlight the impact of Guillaume Stehelin de Taisne, Part-time CFO & COO.'
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-white">
       {/* Hero Section with Carousel */}
-      <section className="relative h-[60vh] overflow-hidden">
+      <section className="relative overflow-hidden bg-slate-950 text-white">
         {/* Carousel Background */}
         <div className="absolute inset-0 z-0">
           {carouselImages.map((image, index) => (
@@ -113,7 +113,7 @@ export default function HomePageClient() {
                 className="object-cover"
                 priority={index === 0}
               />
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-600 via-primary-700 to-accent-600 opacity-80" />
+              <div className="absolute inset-0 bg-gradient-to-br from-slate-950/90 via-slate-900/85 to-sky-900/80" />
             </div>
           ))}
         </div>
@@ -148,13 +148,15 @@ export default function HomePageClient() {
         </div>
 
         {/* Hero Content */}
-        <div className="relative z-10 h-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto text-center">
+        <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
+          <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-10 items-center">
+            {/* Texte principal */}
+            <div className="text-center lg:text-left">
             <motion.h1
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6 leading-tight"
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6 leading-tight"
             >
               {t('title')}
             </motion.h1>
@@ -162,7 +164,7 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-xl md:text-2xl text-white mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-base sm:text-lg md:text-xl text-slate-100/90 mb-6 max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 leading-relaxed"
             >
               {t('subtitle')}
             </motion.p>
@@ -170,7 +172,7 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.35 }}
-              className="text-sm sm:text-lg md:text-xl text-white/90 mb-8 max-w-3xl mx-auto leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-slate-200/90 mb-8 max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 leading-relaxed"
             >
               {t('summary')}
             </motion.p>
@@ -178,7 +180,7 @@ export default function HomePageClient() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center"
+              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
             >
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
@@ -190,6 +192,44 @@ export default function HomePageClient() {
                   {t('cta.secondary')}
                 </Button>
               </Link>
+            </motion.div>
+            </div>
+
+            {/* Carte systèmes / crédibilité */}
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.9, delay: 0.4 }}
+              className="hidden lg:block"
+            >
+              <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-md text-slate-100 shadow-2xl">
+                <CardHeader className="pb-4">
+                  <p className="text-xs font-semibold tracking-wide text-sky-400 uppercase">
+                    Finance · Ops · Tech & IA
+                  </p>
+                  <h3 className="mt-2 text-lg font-semibold text-slate-50">
+                    Un seul C-level pour la crise et la construction des systèmes
+                  </h3>
+                </CardHeader>
+                <CardContent className="space-y-3 text-sm text-slate-200/90">
+                  <div className="flex items-center gap-2">
+                    <TrendingUp className="w-4 h-4 text-sky-400" />
+                    <span>0 → ~10 M€ de CA chez Ligerio, opérateur chez Jumia, Glossybox, Orami.</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Zap className="w-4 h-4 text-emerald-400" />
+                    <span>Outils internes et automatisations (TypeScript, IA) pour remplacer le travail manuel.</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <AlertTriangle className="w-4 h-4 text-rose-400" />
+                    <span>Interventions pompier en 24–48h pour sécuriser cash, opérations et gouvernance.</span>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <Users className="w-4 h-4 text-indigo-300" />
+                    <span>Étudiant en Computer Science à Harvard pour aller encore plus loin sur la tech & l’IA.</span>
+                  </div>
+                </CardContent>
+              </Card>
             </motion.div>
           </div>
         </div>
