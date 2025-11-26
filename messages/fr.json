@@ -106,6 +106,17 @@
     ],
     "timeline": [
       {
+        "year": "2025-",
+        "title": "Fondateur - Moverz",
+        "description": "Fondateur de Moverz, un outil d’estimation de déménagement à partir de photos. L’objectif : automatiser la préparation de devis et la planification logistique, avec un service opéré presque entièrement par des systèmes (IA, automatisations) plutôt que par des équipes nombreuses.",
+        "achievements": [
+          "Outil d’estimation de déménagement à partir de photos",
+          "Parcours client largement automatisé",
+          "Architecture finance/ops pensée dès le MVP",
+          "Produit développé en parallèle des missions CFO/COO"
+        ]
+      },
+      {
         "year": "2021-2025",
         "title": "Co-CEO & Co-Fondateur - Ligerio",
         "description": "Leader de la vente en ligne de revêtements de sols et murs de caractère en France. De 0€ à 10M€ de CA en 4 ans. Croissance exceptionnelle : 50% à 100% par an pendant 3 ans consécutifs. Efficacité opérationnelle : flux logistiques x20 en 3 ans sans augmenter les effectifs.",

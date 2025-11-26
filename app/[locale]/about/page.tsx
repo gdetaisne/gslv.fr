@@ -21,22 +21,22 @@ export default function AboutPage() {
 
   const expertise = [
     {
-      icon: <TrendingUp className="w-8 h-8 text-primary-600" />,
+      icon: <TrendingUp className="w-7 h-7 text-sky-500" />,
       title: 'Structuration financière',
       description: 'Mise en place de tableaux de bord, reporting et processus financiers adaptés à votre croissance.'
     },
     {
-      icon: <Target className="w-8 h-8 text-accent-600" />,
+      icon: <Target className="w-7 h-7 text-sky-500" />,
       title: 'Levées de fonds',
       description: 'Accompagnement complet de la préparation à la négociation, de Seed à Series B.'
     },
     {
-      icon: <Users className="w-8 h-8 text-purple-600" />,
+      icon: <Users className="w-7 h-7 text-sky-500" />,
       title: 'Optimisation opérationnelle',
       description: 'Structuration des processus et des équipes pour gérer l\'hypercroissance.'
     },
     {
-      icon: <Lightbulb className="w-8 h-8 text-yellow-600" />,
+      icon: <Lightbulb className="w-7 h-7 text-sky-500" />,
       title: 'Scaling et hypercroissance',
       description: 'Stratégies et outils pour maintenir la performance lors de la croissance rapide.'
     }
@@ -47,7 +47,7 @@ export default function AboutPage() {
   return (
     <div className="pt-16">
       {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+      <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <motion.h1
@@ -80,7 +80,7 @@ export default function AboutPage() {
       </section>
 
       {/* Expertise Section - 1. Domaines d'expertise */}
-      <section className="py-12 sm:py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-dark-900 mb-4 leading-tight">
@@ -99,9 +99,9 @@ export default function AboutPage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
               >
-                <Card hover className="h-full">
+                <Card hover className="h-full border border-slate-100">
                   <CardHeader>
-                    <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
+                    <div className="w-12 h-12 bg-slate-900/90 rounded-xl flex items-center justify-center mb-4">
                       {item.icon}
                     </div>
                     <h3 className="text-xl font-bold text-dark-900 mb-2">
@@ -142,16 +142,16 @@ export default function AboutPage() {
               >
                 <div className="flex items-start space-x-6">
                   <div className="flex-shrink-0">
-                    <div className="w-16 h-16 bg-gradient-to-br from-primary-600 to-accent-600 text-white rounded-full flex items-center justify-center font-bold text-lg">
+                    <div className="w-12 h-12 bg-slate-900 text-sky-400 rounded-full flex items-center justify-center font-semibold text-base">
                       {index + 1}
                     </div>
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center space-x-4 mb-2">
-                      <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                      <div className="text-xs font-semibold text-slate-700 bg-slate-100 px-3 py-1 rounded-full">
                         {item.year}
                       </div>
-                      <div className="text-sm text-gray-500">
+                      <div className="text-xs text-gray-500">
                         {item.achievements?.length || 0} réalisations clés
                       </div>
                     </div>
@@ -166,9 +166,9 @@ export default function AboutPage() {
                         {item.achievements.map((achievement: string, achievementIndex: number) => (
                           <div
                             key={achievementIndex}
-                            className="flex items-center space-x-2 bg-gray-50 px-3 py-2 rounded-lg"
+                            className="flex items-center space-x-2 bg-slate-50 px-3 py-2 rounded-lg"
                           >
-                            <CheckCircle className="w-4 h-4 text-green-500 flex-shrink-0" />
+                            <CheckCircle className="w-4 h-4 text-emerald-500 flex-shrink-0" />
                             <span className="text-sm text-gray-700 font-medium">
                               {achievement}
                             </span>
@@ -179,7 +179,7 @@ export default function AboutPage() {
                   </div>
                 </div>
                 {index < 1 && (
-                  <div className="absolute left-8 top-16 w-0.5 h-12 bg-gradient-to-b from-primary-200 to-transparent"></div>
+                  <div className="absolute left-8 top-16 w-0.5 h-12 bg-slate-200"></div>
                 )}
               </motion.div>
             ))}
@@ -187,16 +187,16 @@ export default function AboutPage() {
             {/* Indicateur visuel + Bouton d'expansion */}
             <div className="relative">
               {/* Ligne de continuation */}
-              <div className="absolute left-8 top-0 w-0.5 h-8 bg-gradient-to-b from-primary-200 to-primary-300"></div>
+              <div className="absolute left-8 top-0 w-0.5 h-8 bg-slate-200"></div>
               
               {/* Point de continuation */}
               <div className="flex items-center justify-center pt-8 pb-4">
-                <div className="flex items-center space-x-4">
-                  <div className="w-4 h-4 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full"></div>
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-primary-300 to-primary-200"></div>
-                  <div className="w-4 h-4 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full"></div>
-                  <div className="w-8 h-0.5 bg-gradient-to-r from-primary-300 to-primary-200"></div>
-                  <div className="w-4 h-4 bg-gradient-to-br from-primary-400 to-primary-500 rounded-full"></div>
+                <div className="flex items-center space-x-3 text-slate-400 text-xs uppercase tracking-wide">
+                  <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
+                  <div className="w-16 h-0.5 bg-slate-200"></div>
+                  <span>Suite du parcours</span>
+                  <div className="w-16 h-0.5 bg-slate-200"></div>
+                  <div className="w-2 h-2 bg-slate-300 rounded-full"></div>
                 </div>
               </div>
               
@@ -208,7 +208,7 @@ export default function AboutPage() {
                 {!isTimelineExpanded && (
                   <button
                     onClick={() => setIsTimelineExpanded(!isTimelineExpanded)}
-                    className="inline-flex items-center px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors duration-300 font-medium shadow-lg hover:shadow-xl"
+                    className="inline-flex items-center px-6 py-3 bg-slate-900 text-white rounded-lg hover:bg-slate-800 transition-colors duration-300 font-medium shadow-lg hover:shadow-xl"
                   >
                     <ChevronDown className="w-5 h-5 mr-2" />
                     Voir le parcours complet
@@ -242,10 +242,10 @@ export default function AboutPage() {
                       </div>
                       <div className="flex-1">
                         <div className="flex items-center space-x-4 mb-2">
-                          <div className="text-sm font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
+                          <div className="text-xs font-semibold text-primary-600 bg-primary-100 px-3 py-1 rounded-full">
                             {item.year}
                           </div>
-                          <div className="text-sm text-gray-500">
+                          <div className="text-xs text-gray-500">
                             {item.achievements?.length || 0} réalisations clés
                           </div>
                         </div>
