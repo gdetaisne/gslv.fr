@@ -10,8 +10,8 @@
   },
   "hero": {
     "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "Structuration financière, levées de fonds et opérations coup de poing pour startups et scale-ups.",
-    "summary": "Guillaume Stehelin de Taisne accompagne fondateurs et investisseurs en tant que Part-time CFO & COO, avec plus de 15 ans d'interventions et jusqu'à 10 M€ de revenus supervisés sur des entreprises digitales.",
+    "subtitle": "CFO/COO fractional pour scale-ups financées et family offices. J’interviens en situation critique et je construis des systèmes finance/ops augmentés par la technologie et l’IA.",
+    "summary": "Opérateur depuis plus de 15 ans (Jumia, Glossybox, Orami, Ligerio ~10 M€ de CA), développeur (TypeScript, IA, automatisation) et aujourd’hui étudiant en Computer Science à Harvard, j’aide les fondateurs et les family offices à reprendre le contrôle : cash, opérations et systèmes internes qui remplacent le travail d’équipes entières.",
     "cta": {
       "primary": "Réserver un appel découverte",
       "secondary": "Découvrir mes services"
@@ -25,11 +25,11 @@
     }
   },
   "services": {
-    "title": "Services de Guillaume Stehelin de Taisne",
-    "subtitle": "Guillaume Stehelin de Taisne conçoit des solutions personnalisées pour chaque stade de votre croissance",
+    "title": "Services pour scale-ups financées et family offices",
+    "subtitle": "J’interviens comme CFO/COO fractional pour des scale-ups déjà financées et pour des family offices qui ont besoin d’un operator de confiance sur leurs participations, en combinant structuration financière, exécution opérationnelle et construction de systèmes internes (outils, automatisations, IA).",
     "cfo": {
       "title": "CFO Part-time",
-      "description": "Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds",
+      "description": "Direction financière fractional pour scale-ups financées : reporting fiable, visibilité cash et runway, préparation de levées de fonds et conception d’outils internes (dashboards, alertes, automatisations) qui réduisent le travail manuel de contrôle de gestion et de reporting.",
       "features": [
         "Reporting financier mensuel",
         "Gestion de trésorerie et cashflow",
@@ -46,7 +46,7 @@
     },
     "coo": {
       "title": "COO Part-time",
-      "description": "Direction opérationnelle pour structurer et optimiser vos processus de croissance",
+      "description": "Direction opérationnelle fractional : cartographie et simplification des processus, mise sous contrôle des flux (commandes, stocks, litiges, SAV) et mise en place d’outils internes et d’automatisations (workflows, IA) pour faire plus avec moins, sans perdre en visibilité.",
       "features": [
         "Structuration des processus",
         "Optimisation opérationnelle",
@@ -63,7 +63,7 @@
     },
     "pompier": {
       "title": "Consultant Opérations Coup de Poing",
-      "description": "Remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes quand la situation devient incontrôlable.",
+      "description": "Intervention d’urgence et remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes en 24–48h, je sécurise le cash, je stabilise les opérations et je reconstruis une gouvernance minimale, puis je conçois les systèmes qui évitent de revivre la même crise.",
       "features": [
         "🚨 Prise de commande immédiate (24-48h)",
         "👔 Remplacement intérimaire de dirigeant",
@@ -94,10 +94,10 @@
     }
   },
   "about": {
-    "title": "À propos de Guillaume Stehelin de Taisne – Consultant Opérations Coup de Poing",
-    "subtitle": "Guillaume Stehelin de Taisne, spécialiste du remplacement intérimaire de dirigeant pour situations critiques",
-    "experience": "15+ années d'expérience en crise",
-    "description": "Guillaume Stehelin de Taisne, consultant opérations coup de poing, prend les commandes quand la situation devient incontrôlable. Pragmatique et orienté résultats, il redresse la barre des startups et scale-ups en difficulté.",
+    "title": "À propos de Guillaume Stehelin de Taisne – Part-time CFO & COO",
+    "subtitle": "CFO/COO fractional et entrepreneur pour scale-ups financées et family offices, avec une forte expérience de terrain en situations critiques.",
+    "experience": "15+ années d'expérience en financement, hypercroissance et crise",
+    "description": "Je suis CFO/COO fractional et entrepreneur. Depuis plus de 15 ans, j’interviens là où la situation est complexe : hypercroissance, restructuration, opérations bloquées, gouvernance défaillante. J’ai piloté des contextes exigeants chez Jumia, Glossybox, Orami et co-fondé Ligerio (de 0 à ~10 M€ de chiffre d’affaires en 4 ans).\n\nMa particularité : je ne me limite pas aux tableaux Excel et aux comités. Je conçois et je fais déployer des systèmes – finance, opérations, data – en utilisant la technologie et l’intelligence artificielle. Je développe moi-même des outils internes (TypeScript, IA, automatisations) et je travaille au quotidien avec les équipes produits et tech.\n\nPour aller plus loin, je suis aujourd’hui étudiant en Computer Science à Harvard (depuis 2025), afin de renforcer ma compréhension des systèmes modernes, de la donnée et de l’IA. Mon rôle : être le C-Level qui parle à la fois P&L, produit, data et architecture technique.",
     "expertise": [
       "Remplacement intérimaire de dirigeant",
       "Prise de commande d'urgence",
@@ -171,7 +171,43 @@
           "Lutte contre la fraude"
         ]
       }
-    ]
+    ],
+    "techSection": {
+      "title": "Ma vision de la tech en tant que CFO/COO",
+      "paragraphs": [
+        "Dans beaucoup d’entreprises, la tech est encore traitée comme un silo : un département à part, qui “reçoit des demandes” du business et livre des projets plus ou moins alignés.",
+        "Ma conviction est différente : pour être performant aujourd’hui, un C-Level doit comprendre la tech dans le détail. Pas pour tout coder lui-même, mais pour penser en systèmes : flux de données, automatisations, contraintes produits, coûts d’architecture.",
+        "En tant que CFO/COO, je ne me contente pas de demander des dashboards ou des « outils ». Je conçois avec les équipes un véritable système d’exploitation de l’entreprise : finance pilotée en temps réel (cash, marges, runway), opérations visibles de bout en bout (commande → encaissement → réclamation), outils internes qui automatisent tout ce qui n’apporte pas de valeur humaine.",
+        "C’est pour ça que je construis moi-même des outils (TypeScript, IA, automatisations) et que je me forme aujourd’hui en Computer Science à Harvard : pour parler le langage des devs, des data scientists et des fondateurs produits, tout en gardant une obsession pour le P&L et la trésorerie."
+      ]
+    },
+    "buildSection": {
+      "title": "Ce que je construis concrètement",
+      "paragraphs": [
+        "Mon travail ne s’arrête pas aux slides et aux plans d’action. Je construis, avec les équipes, des outils concrets qui tournent tous les jours dans les entreprises que j’accompagne.",
+        "Sur la finance : systèmes de reporting consolidé, projections de trésorerie temps réel, alertes automatiques sur les dérives de marge ou de cash, prévisions de runway connectées au pipe commercial.",
+        "Sur les opérations : unification des flux commandes / stocks / litiges / SAV, suivi de la performance par équipe, pays, canal, automatisations des tâches répétitives (relances, contrôles, validations).",
+        "Sur l’IA et l’automatisation : assistants internes pour répondre à des questions finance/ops en langage naturel, scores de risque ou de priorité pour concentrer les équipes sur les cas à fort impact, routines IA qui nettoient la donnée et fiabilisent le reporting."
+      ]
+    },
+    "portfolioSection": {
+      "title": "Projets récents (version non confidentielle)",
+      "intro": "Voici quelques exemples de projets récents, décrits volontairement à un niveau générique pour préserver la confidentialité : le but est de montrer les types de problèmes que je traite et les systèmes que je mets en place.",
+      "items": [
+        {
+          "title": "Moverz – Un service opéré presque entièrement par l’IA",
+          "description": "Moverz est un projet qui vient concurrencer des « vaches à lait » créées autour de 2015 dans son secteur, mais repensé en full IA et automatisation. L’ambition : offrir un service équivalent – voire meilleur – qu’une entreprise rentable d’une cinquantaine de personnes, sans aucun salarié, grâce à des systèmes internes et des automatisations avancées. Mon rôle : conception du modèle économique, architecture des systèmes finance/ops, définition et supervision de la construction des outils internes et des automatisations IA."
+        },
+        {
+          "title": "Outils internes finance pour une scale-up B2C",
+          "description": "Contexte : scale-up financée avec reporting lent, vision partielle du cash et dépendance forte à des fichiers Excel locaux. Actions : mise en place d’un système unique de reporting et de cashflow, automatisation de la collecte de données (comptabilité, banque, CRM), création d’alertes sur les dérives de marge et de trésorerie. Résultat : visibilité quotidienne sur la trésorerie et le runway, réduction drastique du temps passé à consolider les chiffres, meilleure préparation des échanges avec les investisseurs."
+        },
+        {
+          "title": "Système d’exploitation ops pour une entreprise de services",
+          "description": "Contexte : entreprise de services avec flux opérationnels éparpillés (CRM, outil métier, tickets support) et absence de vue globale sur la qualité de service. Actions : cartographie complète des flux (du premier contact au paiement final), design d’un « OS interne » centralisant commandes, interventions, litiges et encaissements, automatisations de relances, notifications et contrôles qualité. Résultat : réduction des frictions pour les équipes, moins de dépendance à des profils clés, meilleure qualité de service mesurée et pilotée."
+        }
+      ]
+    }
   },
   "testimonials": {
     "title": "Témoignages sur Guillaume Stehelin de Taisne",

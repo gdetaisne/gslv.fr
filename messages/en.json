@@ -10,8 +10,8 @@
   },
   "hero": {
     "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "Financial structuring, fundraising and emergency operations for startups and scale-ups.",
-    "summary": "Guillaume Stehelin de Taisne supports founders and investors as a Part-time CFO & COO, with 15+ years of interventions and up to €10M revenues supervised across digital companies.",
+    "subtitle": "Fractional CFO/COO for funded scale-ups and family offices. I step in during critical situations and build tech & AI-augmented finance and operations systems.",
+    "summary": "With 15+ years as an operator (Jumia, Glossybox, Orami, Ligerio ~€10M revenue), a developer background (TypeScript, AI, automation) and current Computer Science studies at Harvard, I help founders and family offices regain control: cash, operations and internal systems that replace the work of entire teams.",
     "cta": {
       "primary": "Book a discovery call",
       "secondary": "Discover my services"
@@ -25,11 +25,11 @@
     }
   },
   "services": {
-    "title": "Services by Guillaume Stehelin de Taisne",
-    "subtitle": "Guillaume Stehelin de Taisne designs personalized solutions for every stage of your growth",
+    "title": "Services for funded scale-ups and family offices",
+    "subtitle": "I work as a fractional CFO/COO for funded scale-ups and family offices looking for a trusted operator on their portfolio companies, combining financial structuring, operational execution and building internal systems (tools, automation, AI).",
     "cfo": {
       "title": "Part-time CFO",
-      "description": "Externalized financial management to optimize your operations and prepare your fundraising",
+      "description": "Fractional finance leadership for funded scale-ups: reliable reporting, cash and runway visibility, fundraising preparation and design of internal tools (dashboards, alerts, automations) that reduce manual FP&A and reporting work.",
       "features": [
         "Monthly financial reporting",
         "Cash flow management",
@@ -46,7 +46,7 @@
     },
     "coo": {
       "title": "Part-time COO",
-      "description": "Operational management to structure and optimize your growth processes",
+      "description": "Fractional operational leadership: mapping and simplifying processes, controlling flows (orders, inventory, disputes, support) and setting up internal tools and automations (workflows, AI) to do more with fewer people without losing visibility.",
       "features": [
         "Process structuring",
         "Operational optimization",
@@ -63,7 +63,7 @@
     },
     "pompier": {
       "title": "Emergency Operations Consultant",
-      "description": "Interim executive replacement for critical situations. I take command when the situation becomes uncontrollable.",
+      "description": "Emergency intervention and interim executive replacement for critical situations. I take control within 24–48 hours, secure cash, stabilize operations and rebuild minimum governance, then design systems to prevent the same crisis from happening again.",
       "features": [
         "🚨 Immediate takeover (24-48h)",
         "👔 Interim executive replacement",
@@ -94,10 +94,10 @@
     }
   },
   "about": {
-    "title": "About Guillaume Stehelin de Taisne – Emergency Operations Consultant",
-    "subtitle": "Guillaume Stehelin de Taisne, specialist in interim executive replacement for critical situations",
-    "experience": "15+ years of crisis experience",
-    "description": "Guillaume Stehelin de Taisne, emergency operations consultant, takes command when the situation becomes uncontrollable. Pragmatic and results-oriented, he turns around struggling startups and scale-ups.",
+    "title": "About Guillaume Stehelin de Taisne – Part-time CFO & COO",
+    "subtitle": "Fractional CFO/COO and entrepreneur for funded scale-ups and family offices, with deep hands-on experience in critical situations.",
+    "experience": "15+ years of experience in financing, hypergrowth and crisis",
+    "description": "I am a fractional CFO/COO and entrepreneur. For the past 15+ years, I have stepped into complex situations: hypergrowth, restructuring, blocked operations, weak governance. I have operated in demanding environments at Jumia, Glossybox, Orami and co-founded Ligerio (from 0 to ~€10M in revenue in 4 years).\n\nMy edge: I don’t stop at spreadsheets and board decks. I design and implement systems – finance, operations, data – using technology and artificial intelligence. I personally build internal tools (TypeScript, AI, automation) and work daily with product and tech teams.\n\nTo deepen this further, I am currently studying Computer Science at Harvard (since 2025), strengthening my understanding of modern systems, data and AI. My role: a C-level who fluently speaks P&L, product, data and technical architecture.",
     "expertise": [
       "Interim executive replacement",
       "Emergency takeover",
@@ -171,7 +171,43 @@
           "Fraud prevention"
         ]
       }
-    ]
+    ],
+    "techSection": {
+      "title": "My view on technology as a CFO/COO",
+      "paragraphs": [
+        "In many companies, tech is still treated as a silo: a separate department that “receives requests” from the business and ships projects with varying alignment.",
+        "My view is different: to perform today, a C-level must deeply understand technology. Not to code everything, but to think in systems: data flows, automation, product constraints, architectural costs.",
+        "As a CFO/COO, I don’t just ask for dashboards or “tools”. I co-design, with the teams, a real operating system for the company: finance in real time (cash, margins, runway), end-to-end visibility on operations (order → collection → disputes), internal tools that automate everything that does not require human judgment.",
+        "This is why I build tools myself (TypeScript, AI, automation) and why I’m currently studying Computer Science at Harvard: to speak the language of developers, data scientists and product founders, while staying fully accountable for P&L and cash."
+      ]
+    },
+    "buildSection": {
+      "title": "What I actually build",
+      "paragraphs": [
+        "My work doesn’t stop at slides and action plans. Together with the teams, I build concrete tools that run every day inside the companies I support.",
+        "On the finance side: consolidated reporting systems, real-time cash projections, automatic alerts on margin or cash deviations, runway forecasts connected to the commercial pipeline.",
+        "On the operations side: unified flows for orders / inventory / disputes / support, performance tracking by team, country, channel, and automation of repetitive tasks (follow-ups, checks, approvals).",
+        "On AI and automation: internal assistants answering finance/ops questions in natural language, risk or priority scores to focus teams on high-impact cases, AI routines cleaning data and stabilizing reporting."
+      ]
+    },
+    "portfolioSection": {
+      "title": "Recent projects (non-confidential version)",
+      "intro": "Below are a few examples of recent projects, described at a generic level to protect confidentiality. The goal is to show the types of problems I work on and the systems I design.",
+      "items": [
+        {
+          "title": "Moverz – A service operated almost entirely by AI",
+          "description": "Moverz is a project designed to compete with highly profitable incumbents born around 2015 in its space, rebuilt from scratch with full AI and automation. The ambition: deliver the same – or better – service than a profitable 50-people company, with no employees, powered only by internal systems and advanced automation. My role: economic model design, finance/ops systems architecture, and definition and supervision of internal tools and AI automations."
+        },
+        {
+          "title": "Internal finance tools for a B2C scale-up",
+          "description": "Context: funded B2C scale-up with slow reporting, partial cash visibility and heavy dependence on local Excel files. Actions: implementation of a single reporting and cashflow system, automation of data collection (accounting, bank, CRM), creation of alerts on margin and cash deviations. Result: daily visibility on cash and runway, drastic reduction of time spent consolidating numbers, better preparation for investor discussions."
+        },
+        {
+          "title": "Operating system for a services company",
+          "description": "Context: services company with fragmented operational flows (CRM, industry-specific tool, support tickets) and no global view on service quality. Actions: full mapping of flows (from first contact to final payment), design of an internal “OS” centralizing orders, interventions, disputes and collections, automation of follow-ups, notifications and quality checks. Result: fewer frictions for teams, less dependence on key individuals, measurable and controllable service quality."
+        }
+      ]
+    }
   },
   "testimonials": {
     "title": "Testimonials about Guillaume Stehelin de Taisne",

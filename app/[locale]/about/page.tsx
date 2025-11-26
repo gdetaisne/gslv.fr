@@ -415,7 +415,7 @@ export default function AboutPage() {
         </div>
       </section>
 
-      {/* About Guillaume */}
+      {/* About Guillaume + photo */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -430,14 +430,6 @@ export default function AboutPage() {
               <p className="text-lg text-gray-600 mb-6">
                 {t('description')}
               </p>
-              <div className="space-y-4">
-                {['Structuration financière', 'Levées de fonds (Seed à Series B)', 'Optimisation opérationnelle', 'Scaling et hypercroissance'].map((item, index) => (
-                  <div key={index} className="flex items-center space-x-3">
-                    <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0" />
-                    <span className="text-gray-700">{item}</span>
-                  </div>
-                ))}
-              </div>
             </motion.div>
             <motion.div
               initial={{ opacity: 0, x: 20 }}
@@ -445,92 +437,115 @@ export default function AboutPage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="relative"
             >
-                   <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
-                     {/* Photo de Guillaume */}
-                     <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
-                       <Image
-                         src="/images/guillaume/guillaume-stehelin.jpg"
-                         alt="Guillaume Stehelin de Taisne – Part-time CFO & COO"
-                         fill
-                         className="object-cover"
-                         onError={(e) => {
-                           // Fallback si l'image n'existe pas
-                           e.currentTarget.style.display = 'none'
-                           const nextElement = e.currentTarget.nextElementSibling as HTMLElement
-                           if (nextElement) {
-                             nextElement.style.display = 'flex'
-                           }
-                         }}
-                       />
-                       <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
-                         G
+              <div className="w-full h-96 bg-gradient-to-br from-primary-100 to-accent-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                {/* Photo de Guillaume */}
+                <div className="relative w-48 h-48 rounded-full overflow-hidden shadow-2xl border-4 border-white">
+                  <Image
+                    src="/images/guillaume/guillaume-stehelin.jpg"
+                    alt="Guillaume Stehelin de Taisne – Part-time CFO & COO"
+                    fill
+                    className="object-cover"
+                    onError={(e) => {
+                      // Fallback si l'image n'existe pas
+                      e.currentTarget.style.display = 'none'
+                      const nextElement = e.currentTarget.nextElementSibling as HTMLElement
+                      if (nextElement) {
+                        nextElement.style.display = 'flex'
+                      }
+                    }}
+                  />
+                  <div className="w-full h-full bg-gradient-to-br from-primary-600 to-accent-600 flex items-center justify-center text-white text-6xl font-bold">
+                    G
+                  </div>
                 </div>
-                     </div>
-                     
-                     {/* Lien LinkedIn */}
-                     <Link
-                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="absolute bottom-4 right-4 bg-white hover:bg-blue-50 text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
-                     >
-                       <Linkedin className="w-6 h-6" />
-                     </Link>
-                   </div>
-                   
-                   {/* Informations sous la photo */}
-                   <div className="text-center mt-6">
-                     <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin de Taisne</h3>
-                     <p className="text-lg text-gray-600 mb-3">Part-time CFO & COO – Consultant Opérations Coup de Poing</p>
-                     <Link
-                       href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
-                       target="_blank"
-                       rel="noopener noreferrer"
-                       className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors duration-300"
-                     >
-                       <Linkedin className="w-5 h-5 mr-2" />
-                       Voir le profil LinkedIn
-                     </Link>
+
+                {/* Lien LinkedIn */}
+                <Link
+                  href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 right-4 bg-white hover:bg-blue-50 text-blue-600 p-3 rounded-full shadow-lg transition-all duration-300 hover:scale-110"
+                >
+                  <Linkedin className="w-6 h-6" />
+                </Link>
+              </div>
+
+              {/* Informations sous la photo */}
+              <div className="text-center mt-6">
+                <h3 className="text-2xl font-bold text-dark-900 mb-2">Guillaume Stehelin de Taisne</h3>
+                <p className="text-lg text-gray-600 mb-3">Part-time CFO & COO – Consultant Opérations Coup de Poing</p>
+                <Link
+                  href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium transition-colors durée-300"
+                >
+                  <Linkedin className="w-5 h-5 mr-2" />
+                  Voir le profil LinkedIn
+                </Link>
               </div>
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Expertise Section */}
+      {/* Tech & IA Section */}
       <section className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
             <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
-              Domaines d'expertise
+              {t('techSection.title')}
             </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Une approche complète pour accompagner votre croissance
+          </div>
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            {t.raw('techSection.paragraphs').map((paragraph: string, index: number) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* What I build Section */}
+      <section className="py-16 bg-gray-50">
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+              {t('buildSection.title')}
+            </h2>
+          </div>
+          <div className="space-y-6 text-lg text-gray-700 leading-relaxed">
+            {t.raw('buildSection.paragraphs').map((paragraph: string, index: number) => (
+              <p key={index}>{paragraph}</p>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Portfolio / Recent projects Section */}
+      <section className="py-20 bg-white">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <h2 className="text-3xl md:text-4xl font-bold text-dark-900 mb-4">
+              {t('portfolioSection.title')}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+              {t('portfolioSection.intro')}
             </p>
           </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {expertise.map((item, index) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-              >
-                <Card hover className="h-full">
-                  <CardHeader>
-                    <div className="w-16 h-16 bg-gray-100 rounded-xl flex items-center justify-center mb-4">
-                      {item.icon}
-                    </div>
-                    <h3 className="text-xl font-bold text-dark-900 mb-2">
-                      {item.title}
-                    </h3>
-                    <p className="text-gray-600">
-                      {item.description}
-                    </p>
-                  </CardHeader>
-                </Card>
-              </motion.div>
+          <div className="space-y-8">
+            {t.raw('portfolioSection.items').map((item: any, index: number) => (
+              <Card key={item.title}>
+                <CardHeader>
+                  <h3 className="text-2xl font-bold text-dark-900 mb-2">
+                    {item.title}
+                  </h3>
+                </CardHeader>
+                <CardContent>
+                  <p className="text-gray-700 text-lg leading-relaxed">
+                    {item.description}
+                  </p>
+                </CardContent>
+              </Card>
             ))}
           </div>
         </div>
