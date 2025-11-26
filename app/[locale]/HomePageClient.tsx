@@ -64,8 +64,8 @@ export default function HomePageClient() {
       description: tServices('coo.description'),
       features: tServices.raw('coo.features'),
       icon: Zap,
-      color: 'from-emerald-500 to-emerald-600',
-      hoverColor: 'hover:from-emerald-600 hover:to-emerald-700'
+      color: 'from-sky-500 to-sky-600',
+      hoverColor: 'hover:from-sky-600 hover:to-sky-700'
     },
     {
       id: 'pompier',
@@ -317,7 +317,7 @@ export default function HomePageClient() {
       </section>
 
       {/* Methodology Section */}
-      <section className="py-12 sm:py-20 bg-white">
+      <section className="py-12 sm:py-20 bg-slate-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2
@@ -347,7 +347,7 @@ export default function HomePageClient() {
                 transition={{ duration: 0.8, delay: index * 0.2 }}
                 className="text-center"
               >
-                <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-2xl font-bold text-white">
+                <div className="w-14 h-14 mx-auto mb-6 rounded-full bg-slate-900 text-sky-400 flex items-center justify-center text-lg font-semibold">
                   {index + 1}
                 </div>
                 <h3 className="text-base sm:text-lg md:text-xl font-bold text-gray-900 mb-4 leading-tight">
@@ -364,7 +364,7 @@ export default function HomePageClient() {
 
 
       {/* Testimonials Section */}
-      <section className="py-12 sm:py-20 bg-gray-50">
+      <section className="py-12 sm:py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 sm:mb-16">
             <motion.h2
@@ -409,18 +409,18 @@ export default function HomePageClient() {
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.2 }}
               >
-                <Card className="h-full hover:shadow-xl transition-all duration-300">
+                <Card className="h-full border border-slate-100 hover:shadow-lg transition-all duration-300">
                   <CardContent className="p-6">
                     <div className="flex items-center mb-4">
                       {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="w-5 h-5 text-yellow-400 fill-current" />
+                        <Star key={i} className="w-5 h-5 text-amber-400 fill-current" />
                       ))}
                     </div>
                     <blockquote className="text-sm sm:text-base text-gray-700 mb-6 italic leading-relaxed">
                       "{testimonial.content}"
                     </blockquote>
                     <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-br from-primary-500 to-accent-500 flex items-center justify-center text-white font-bold text-lg mr-4">
+                      <div className="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-sky-400 font-bold text-lg mr-4">
                         {testimonial.name.charAt(0)}
                       </div>
                       <div>
@@ -441,7 +441,7 @@ export default function HomePageClient() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-12 sm:py-20 bg-gradient-to-br from-primary-600 to-accent-600">
+      <section className="py-12 sm:py-20 bg-slate-950">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -455,7 +455,7 @@ export default function HomePageClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="text-base sm:text-lg md:text-xl text-white/90 mb-8 leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-slate-200/90 mb-8 leading-relaxed"
           >
             {t('ctaSection.subtitle')}
           </motion.p>
@@ -465,7 +465,7 @@ export default function HomePageClient() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
               <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white text-primary-600 hover:bg-gray-100 w-full sm:w-auto">
+                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-sky-500 hover:bg-sky-400 text-white w-full sm:w-auto">
                   {t('buttons.bookCall')}
                 </Button>
               </Link>
