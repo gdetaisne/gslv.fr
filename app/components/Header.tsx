@@ -125,7 +125,7 @@ export default function Header() {
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              className="md:hidden p-2 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-white transition-colors"
+              className="md:hidden p-2.5 rounded-lg text-slate-200 hover:bg-slate-800 hover:text-white transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
             >
               {isMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
             </button>

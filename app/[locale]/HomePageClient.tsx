@@ -323,18 +323,18 @@ export default function HomePageClient() {
             </p>
             <p className="text-slate-400 text-sm">{tTrackRecord('subtitle')}</p>
           </div>
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-8">
             {trackRecordItems.map((item: any, index: number) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.5, delay: index * 0.08 }}
-                className="text-center"
+                className="text-center px-2"
               >
                 <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{item.metric}</div>
                 <div className="text-xs sm:text-sm font-semibold text-sky-400 mb-1">{item.label}</div>
-                <div className="text-xs text-slate-400 leading-snug">{item.description}</div>
+                <div className="hidden sm:block text-xs text-slate-400 leading-snug">{item.description}</div>
               </motion.div>
             ))}
           </div>

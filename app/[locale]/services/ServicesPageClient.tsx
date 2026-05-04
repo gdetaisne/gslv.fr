@@ -114,10 +114,10 @@ export default function ServicesPageClient() {
                         <div className={`w-24 h-24 mx-auto rounded-3xl bg-slate-900 flex items-center justify-center text-sky-400 mb-6`}>
                           <service.icon className="w-12 h-12" />
                         </div>
-                        <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                        <h3 className="hidden lg:block text-2xl font-bold text-gray-900 mb-4">
                           {service.title}
                         </h3>
-                        <p className="text-gray-600 leading-relaxed mb-6">
+                        <p className="hidden lg:block text-gray-600 leading-relaxed mb-6">
                           {service.description}
                         </p>
                         

@@ -153,7 +153,7 @@ export default function ContactPage() {
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <form onSubmit={handleSubmit} className="space-y-6">
+                  <form onSubmit={handleSubmit} className="space-y-5">
                     <div>
                       <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
                         {t('form.name')} *
@@ -165,7 +165,7 @@ export default function ContactPage() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
                         placeholder={isFr ? 'Votre nom complet' : 'Your full name'}
                       />
                     </div>
@@ -181,7 +181,7 @@ export default function ContactPage() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
                         placeholder="your@email.com"
                       />
                     </div>
@@ -196,7 +196,7 @@ export default function ContactPage() {
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
                         placeholder={isFr ? 'Votre entreprise' : 'Your company'}
                       />
                     </div>
@@ -211,7 +211,7 @@ export default function ContactPage() {
                         value={formData.stage}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
                       >
                         <option value="">
                           {isFr ? 'Sélectionnez votre besoin principal' : 'Select your primary need'}
@@ -233,8 +233,8 @@ export default function ContactPage() {
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        rows={5}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        rows={6}
+                        className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base resize-none"
                         placeholder={
                           isFr
                             ? 'Décris ta situation : ce qui bloque, ce que tu veux construire, à quelle vitesse.'
