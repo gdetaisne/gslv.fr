@@ -1,9 +1,9 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations } from 'next-intl'
+import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { Mail, Phone, MapPin, Clock, CheckCircle, ArrowRight, Shield } from 'lucide-react'
+import { Mail, MapPin, Clock, CheckCircle, ArrowRight, Linkedin } from 'lucide-react'
 import Button from '../../components/Button'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 
@@ -19,123 +19,79 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const t = useTranslations('contact')
+  const locale = useLocale()
+  const isFr = locale === 'fr'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsSubmitting(true)
-    
+
     try {
-      // Envoi de l'email via l'API
       const response = await fetch('/api/send-email', {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          company: formData.company,
-          stage: formData.stage,
-          message: formData.message,
-        }),
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
       })
 
       if (response.ok) {
         setIsSubmitted(true)
       } else {
-        throw new Error('Erreur lors de l\'envoi')
+        throw new Error('Send failed')
       }
-    } catch (error) {
-      console.error('Erreur:', error)
-      // Fallback: redirection vers mailto
-      const subject = encodeURIComponent(`Demande de contact - ${formData.company || 'Particulier'}`)
-      const body = encodeURIComponent(`
-Nom: ${formData.name}
-Email: ${formData.email}
-Entreprise: ${formData.company}
-Situation: ${formData.stage}
-
-Message:
-${formData.message}
-      `)
+    } catch {
+      const subject = encodeURIComponent(`Strategy call request — ${formData.company || formData.name}`)
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\nNeed: ${formData.stage}\n\n${formData.message}`
+      )
       window.location.href = `mailto:gdetaisne@gmail.com?subject=${subject}&body=${body}`
     }
-    
+
     setIsSubmitting(false)
   }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    })
+    setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const contactInfo = [
-    {
-      icon: <Mail className="w-6 h-6 text-primary-600" />,
-      title: 'Email',
-      value: 'gdetaisne@gmail.com',
-      link: 'mailto:gdetaisne@gmail.com'
-    },
-    {
-      icon: <Phone className="w-6 h-6 text-primary-600" />,
-      title: 'Téléphone France',
-      value: '+33 6 33 04 60 59',
-      link: 'tel:+33633046059'
-    },
-    {
-      icon: <Phone className="w-6 h-6 text-primary-600" />,
-      title: 'Téléphone Thaïlande',
-      value: '+66 6 47 58 20 32',
-      link: 'tel:+66647582032'
-    },
-    {
-      icon: <MapPin className="w-6 h-6 text-primary-600" />,
-      title: 'Localisation',
-      value: 'Paris, France & Bangkok, Thailand',
-      link: null
-    },
-    {
-      icon: <Clock className="w-6 h-6 text-primary-600" />,
-      title: 'Disponibilité',
-      value: 'Réponse sous 24h garantie',
-      link: null
-    }
-  ]
-
-  const stages = [
-    '💼 CFO Part-time',
-    '⚙️ COO Part-time',
-    '🚀 Consultant Coup de Poing',
-    '📊 Audit préventif',
-    '💡 Conseil stratégique',
-    'Autre'
-  ]
+  const stages = isFr
+    ? [
+        'Construire un système opérationnel',
+        'Structurer la croissance',
+        'Intervention de crise / SWAT',
+        'Sprint systèmes (outils, automatisation)',
+        'COO Fractionnel (mission continue)',
+        'Autre',
+      ]
+    : [
+        'Build an operating system',
+        'Structure growth from chaos',
+        'Crisis / SWAT intervention',
+        'Systems build sprint (tools, automation)',
+        'Fractional COO (ongoing)',
+        'Other',
+      ]
 
   if (isSubmitted) {
     return (
-      <div className="pt-16 min-h-screen flex items-center justify-center bg-gray-50">
+      <div className="pt-16 min-h-screen flex items-center justify-center bg-slate-950">
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
+          className="max-w-md mx-auto text-center px-4"
         >
-          <Card className="max-w-md mx-auto text-center">
-            <CardContent className="p-8">
-              <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
-              <h2 className="text-2xl font-bold text-dark-900 mb-4">
-                Message envoyé !
-              </h2>
-              <p className="text-gray-600 mb-6">
-                Votre demande de contact a été transmise à gdetaisne@gmail.com. 
-                Je vous réponds sous 24h maximum.
-              </p>
-              <Button onClick={() => setIsSubmitted(false)}>
-                Envoyer un autre message
-              </Button>
-            </CardContent>
-          </Card>
+          <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
+          <h2 className="text-2xl font-bold text-white mb-4">
+            {isFr ? 'Message envoyé !' : 'Message sent!'}
+          </h2>
+          <p className="text-slate-300 mb-6">
+            {isFr
+              ? 'Votre demande a été transmise. Je reviens vers vous rapidement avec un premier retour.'
+              : 'Your request has been sent. I will come back to you quickly with a first angle of attack.'}
+          </p>
+          <Button onClick={() => setIsSubmitted(false)}>
+            {isFr ? 'Envoyer une autre demande' : 'Send another request'}
+          </Button>
         </motion.div>
       </div>
     )
@@ -143,15 +99,23 @@ ${formData.message}
 
   return (
     <div className="pt-16">
-      {/* Hero Section */}
-      <section className="py-20 bg-gradient-to-br from-primary-50 via-white to-accent-50">
+      {/* Hero */}
+      <section className="py-20 bg-slate-950 text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <motion.p
+              initial={{ opacity: 0, y: 10 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5 }}
+              className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-4"
+            >
+              {isFr ? 'Contact' : 'Contact'}
+            </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
-              className="text-4xl md:text-5xl font-bold text-dark-900 mb-6"
+              className="text-4xl md:text-5xl font-bold text-white mb-6"
             >
               {t('title')}
             </motion.h1>
@@ -159,7 +123,7 @@ ${formData.message}
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-xl text-gray-600 mb-8 max-w-3xl mx-auto"
+              className="text-xl text-slate-300 mb-8 max-w-3xl mx-auto"
             >
               {t('subtitle')}
             </motion.p>
@@ -167,33 +131,11 @@ ${formData.message}
         </div>
       </section>
 
-      {/* Garantie de réponse */}
-      <section className="py-12 bg-red-50 border-b border-red-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex items-center justify-center space-x-4"
-          >
-            <Shield className="w-8 h-8 text-red-600" />
-            <div className="text-center">
-              <h3 className="text-xl font-bold text-primary-800 mb-2">
-                Garantie de réponse sous 24h
-              </h3>
-              <p className="text-primary-700">
-                Toute demande de contact reçoit une réponse dans les 24h maximum
-              </p>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Contact Form & Info */}
+      {/* Form + info */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+            {/* Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               animate={{ opacity: 1, x: 0 }}
@@ -201,11 +143,13 @@ ${formData.message}
             >
               <Card>
                 <CardHeader>
-                  <h2 className="text-2xl font-bold text-dark-900 mb-2">
-                    Demande d'information / contact
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                    {isFr ? 'Demande de contact' : 'Request a conversation'}
                   </h2>
                   <p className="text-gray-600">
-                    Besoin d'informations ? Envoyez-moi un message
+                    {isFr
+                      ? 'Quelques lignes suffisent pour cadrer un premier retour utile.'
+                      : 'A few lines are enough to frame a useful first response.'}
                   </p>
                 </CardHeader>
                 <CardContent>
@@ -221,8 +165,8 @@ ${formData.message}
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="Votre nom complet"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        placeholder={isFr ? 'Votre nom complet' : 'Your full name'}
                       />
                     </div>
 
@@ -237,8 +181,8 @@ ${formData.message}
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="votre@email.com"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        placeholder="your@email.com"
                       />
                     </div>
 
@@ -252,8 +196,8 @@ ${formData.message}
                         name="company"
                         value={formData.company}
                         onChange={handleChange}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="Nom de votre entreprise"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        placeholder={isFr ? 'Votre entreprise' : 'Your company'}
                       />
                     </div>
 
@@ -267,9 +211,11 @@ ${formData.message}
                         value={formData.stage}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
                       >
-                        <option value="">Sélectionnez votre stade</option>
+                        <option value="">
+                          {isFr ? 'Sélectionnez votre besoin principal' : 'Select your primary need'}
+                        </option>
                         {stages.map((stage) => (
                           <option key={stage} value={stage}>
                             {stage}
@@ -287,19 +233,25 @@ ${formData.message}
                         name="message"
                         value={formData.message}
                         onChange={handleChange}
-                        rows={4}
-                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary-500 focus:border-transparent"
-                        placeholder="Décrivez brièvement votre projet ou vos besoins..."
+                        rows={5}
+                        className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent"
+                        placeholder={
+                          isFr
+                            ? 'Décris ta situation : ce qui bloque, ce que tu veux construire, à quelle vitesse.'
+                            : 'Describe your situation: what is breaking, what you want to build, how fast you need to move.'
+                        }
                       />
                     </div>
 
                     <Button
                       type="submit"
                       size="lg"
-                      className="w-full btn-hover"
+                      className="w-full"
                       isLoading={isSubmitting}
                     >
-                      {isSubmitting ? 'Envoi en cours...' : 'Envoyer le message'}
+                      {isSubmitting
+                        ? (isFr ? 'Envoi...' : 'Sending...')
+                        : t('form.submit')}
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
@@ -307,50 +259,100 @@ ${formData.message}
               </Card>
             </motion.div>
 
-            {/* Contact Info */}
+            {/* Contact info */}
             <motion.div
               initial={{ opacity: 0, x: 20 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
+              className="space-y-6"
             >
               <Card>
                 <CardHeader>
-                  <h2 className="text-2xl font-bold text-dark-900 mb-2">
-                    Contact
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">
+                    {isFr ? 'Contact direct' : 'Direct contact'}
                   </h2>
                   <p className="text-gray-600">
-                    Besoin de me contacter ? Voici mes coordonnées
+                    {isFr
+                      ? 'Préfères un échange direct ? Voici comment me joindre.'
+                      : 'Prefer a direct conversation? Here is how to reach me.'}
                   </p>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-6">
-                    {contactInfo.map((info, index) => (
-                      <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -20 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.6, delay: index * 0.1 }}
-                        className="flex items-center space-x-4"
-                      >
-                        <div className="flex-shrink-0">
-                          {info.icon}
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-dark-900">{info.title}</h3>
-                          {info.link ? (
-                            <a
-                              href={info.link}
-                              className="text-primary-600 hover:text-primary-700 transition-colors"
-                            >
-                              {info.value}
-                            </a>
-                          ) : (
-                            <p className="text-gray-600">{info.value}</p>
-                          )}
-                        </div>
-                      </motion.div>
-                    ))}
+                  <div className="space-y-5">
+                    <div className="flex items-center gap-4">
+                      <Mail className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Email</p>
+                        <a href="mailto:gdetaisne@gmail.com" className="text-sky-600 hover:text-sky-700">
+                          gdetaisne@gmail.com
+                        </a>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <MapPin className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">
+                          {isFr ? 'Localisation' : 'Location'}
+                        </p>
+                        <p className="text-gray-600">Bahrain / Remote-first</p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <Clock className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">
+                          {isFr ? 'Délai de réponse' : 'Response time'}
+                        </p>
+                        <p className="text-gray-600">
+                          {isFr ? 'Réponse sous 24h' : 'Within 24h'}
+                        </p>
+                      </div>
+                    </div>
+                    <div className="flex items-center gap-4">
+                      <Linkedin className="w-5 h-5 text-sky-500 flex-shrink-0" />
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">LinkedIn</p>
+                        <a
+                          href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-sky-600 hover:text-sky-700 text-sm"
+                        >
+                          guillaume-stehelin-de-taisne
+                        </a>
+                      </div>
+                    </div>
                   </div>
+                </CardContent>
+              </Card>
+
+              {/* What to expect */}
+              <Card className="bg-slate-950 border-slate-800">
+                <CardContent className="p-6">
+                  <h3 className="text-lg font-bold text-white mb-4">
+                    {isFr ? 'Ce que vous recevrez' : 'What you will get'}
+                  </h3>
+                  <ul className="space-y-3">
+                    {(isFr
+                      ? [
+                          'Un premier retour avec un angle d\'attaque clair',
+                          'Une évaluation rapide de votre situation',
+                          'Un format d\'engagement adapté à votre besoin',
+                          'Pas de pitch générique, pas de devis à l\'aveugle',
+                        ]
+                      : [
+                          'A first response with a clear angle of attack',
+                          'A fast assessment of your situation',
+                          'An engagement format matched to your need',
+                          'No generic pitch, no blind proposal',
+                        ]
+                    ).map((item, i) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
+                        <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                        {item}
+                      </li>
+                    ))}
+                  </ul>
                 </CardContent>
               </Card>
             </motion.div>

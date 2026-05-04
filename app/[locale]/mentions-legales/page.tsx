@@ -6,17 +6,12 @@ const content = {
       {
         heading: 'Éditeur du site',
         items: [
-          'Dénomination sociale : GSLV',
-          'Forme juridique : EURL (Entreprise unipersonnelle à responsabilité limitée)',
-          'Capital social : 1 €',
+          'Dénomination sociale : TENEO W.L.L',
+          'Forme juridique : W.L.L (With Limited Liability Company)',
           'Dirigeant et responsable de la publication : Guillaume Stehelin de Taisne',
-          'Création : 27 mai 2022',
-          'Adresse du siège social : 5 rue Jean Coyttar, 17290 Thairé, France',
-          'SIREN : 914 499 876',
-          'SIRET (siège) : 914 499 876 00011',
-          'RCS : La Rochelle',
-          'Code APE : 66.30Z (Gestion de fonds)',
-          'Numéro de TVA intracommunautaire : FR43914499876',
+          'Numéro d’immatriculation commerciale (CR) : 193977 - 1',
+          'Statut du registre : Active without license',
+          'Adresse : Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain',
           'Contact : gdetaisne@gmail.com | +33 6 33 04 60 59'
         ]
       },
@@ -50,17 +45,12 @@ const content = {
       {
         heading: 'Site publisher',
         items: [
-          'Company name: GSLV',
-          'Legal form: EURL (single-member limited liability company)',
-          'Share capital: €1',
+          'Company name: TENEO W.L.L',
+          'Legal form: W.L.L (With Limited Liability Company)',
           'Managing director and publication director: Guillaume Stehelin de Taisne',
-          'Incorporation date: 27 May 2022',
-          'Registered office: 5 rue Jean Coyttar, 17290 Thairé, France',
-          'SIREN: 914 499 876',
-          'SIRET (main office): 914 499 876 00011',
-          'Trade register: RCS La Rochelle',
-          'NACE code: 66.30Z (Fund management)',
-          'EU VAT number: FR43914499876',
+          'Commercial registration number (CR): 193977 - 1',
+          'Registration status: Active without license',
+          'Registered address: Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain',
           'Contact: gdetaisne@gmail.com | +33 6 33 04 60 59'
         ]
       },
@@ -94,17 +84,12 @@ const content = {
       {
         heading: 'ผู้จัดทำเว็บไซต์',
         items: [
-          'ชื่อบริษัท: GSLV',
-          'รูปแบบนิติบุคคล: EURL (บริษัทจำกัดผู้ถือหุ้นคนเดียวในฝรั่งเศส)',
-          'ทุนจดทะเบียน: 1 ยูโร',
+          'ชื่อบริษัท: TENEO W.L.L',
+          'รูปแบบนิติบุคคล: W.L.L (บริษัทจำกัด)',
           'กรรมการผู้จัดการและผู้รับผิดชอบการเผยแพร่: Guillaume Stehelin de Taisne',
-          'วันที่ก่อตั้ง: 27 พฤษภาคม 2022',
-          'ที่อยู่สำนักงานใหญ่: 5 rue Jean Coyttar, 17290 Thairé, ฝรั่งเศส',
-          'หมายเลข SIREN: 914 499 876',
-          'หมายเลข SIRET (สำนักงานใหญ่): 914 499 876 00011',
-          'ทะเบียนการค้า: RCS La Rochelle',
-          'รหัสกิจกรรม NAF: 66.30Z (การจัดการกองทุน)',
-          'หมายเลข VAT ภายในสหภาพยุโรป: FR43914499876',
+          'หมายเลขทะเบียนการค้า (CR): 193977 - 1',
+          'สถานะทะเบียน: Active without license',
+          'ที่อยู่จดทะเบียน: Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain',
           'ติดต่อ: gdetaisne@gmail.com | +33 6 33 04 60 59'
         ]
       },

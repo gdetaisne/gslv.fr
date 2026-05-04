@@ -33,7 +33,7 @@ export default function CookiesPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-600 mb-8"
             >
-              Dernière mise à jour : 17 septembre 2024
+              Dernière mise à jour : 31 mars 2026
             </motion.p>
           </div>
         </div>
@@ -150,8 +150,10 @@ export default function CookiesPage() {
                 Pour toute question concernant notre utilisation des cookies, vous pouvez nous contacter à :
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-700 mb-2"><strong>Société :</strong> TENEO W.L.L</p>
                 <p className="text-gray-700 mb-2"><strong>Email :</strong> gdetaisne@gmail.com</p>
-                <p className="text-gray-700"><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p className="text-gray-700 mb-2"><strong>Téléphone :</strong> +33 6 33 04 60 59</p>
+                <p className="text-gray-700"><strong>Adresse :</strong> Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain</p>
               </div>
             </motion.div>
           </div>

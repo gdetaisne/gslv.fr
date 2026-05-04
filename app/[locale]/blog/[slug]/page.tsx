@@ -131,7 +131,7 @@ export default function BlogPostPage() {
                 '@type': 'Person',
                 name: 'Guillaume Stehelin de Taisne',
                 url: 'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/',
-                jobTitle: 'Part-time CFO & COO',
+                jobTitle: 'Operator building systems that scale companies',
                 worksFor: {
                   '@type': 'Organization',
                   name: 'GSLV'

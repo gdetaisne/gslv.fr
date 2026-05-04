@@ -177,7 +177,7 @@ export default function ServicesPageClient() {
                 {t('buttons.bookCall')}
               </Button>
             </Link>
-            <Link href={`/${locale}/pricing`}>
+            <Link href={`/${locale}/about`}>
               <Button variant="outline" size="lg" className="text-lg px-8 py-4 bg-transparent border-slate-700 text-slate-200 hover:bg-slate-900/60">
                 {t('buttons.viewPricing')}
               </Button>

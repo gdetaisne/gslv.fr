@@ -4,7 +4,7 @@ import ServicesPageClient from './ServicesPageClient'
 
 export async function generateMetadata({ params }: { params: { locale: string } }): Promise<Metadata> {
   const { locale } = params
-  const config = seoConfig.services[locale as keyof typeof seoConfig.services] || seoConfig.services.fr
+  const config = seoConfig.services[locale as keyof typeof seoConfig.services] || seoConfig.services.en
   
   return {
     title: config.title,

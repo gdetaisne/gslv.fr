@@ -9,128 +9,129 @@
     "book": "Book a call"
   },
   "hero": {
-    "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "Fractional CFO/COO for funded scale-ups and family offices. I step in during critical situations and build tech & AI-augmented finance and operations systems.",
-    "summary": "With 15+ years as an operator (Jumia, Glossybox, Orami, Ligerio ~€10M revenue), a developer background (TypeScript, AI, automation) and current Computer Science studies at Harvard, I help founders and family offices regain control: cash, operations and internal systems that replace the work of entire teams.",
+    "title": "Operator building systems that scale companies",
+    "subtitle": "I design and scale operational, pricing and automation systems for fast-growing companies operating in messy, complex environments.",
+    "summary": "Operations • Systems • AI • Finance",
+    "proof": [
+      "Scaled Ligerio from €0 to €10M+ revenue in 4 years",
+      "Built AI-driven pricing & operations systems at Moverz",
+      "ex Rocket Internet / Jumia — 20+ entities, 550+ FTE"
+    ],
     "cta": {
-      "primary": "Book a discovery call",
-      "secondary": "Discover my services"
+      "primary": "Book a strategy call",
+      "secondary": "See how I work"
     },
     "ctaSection": {
-      "title": "Ready to accelerate your growth?",
-      "subtitle": "Book a free discovery call to discuss your needs"
+      "title": "Ready to build systems that scale?",
+      "subtitle": "Let's start with a conversation about your operations, your constraints and the highest-leverage actions."
     },
     "buttons": {
-      "bookCall": "Book a discovery call"
+      "bookCall": "Book a strategy call"
     }
   },
   "services": {
-    "title": "Services for funded scale-ups and family offices",
-    "subtitle": "I work as a fractional CFO/COO for funded scale-ups and family offices looking for a trusted operator on their portfolio companies, combining financial structuring, operational execution and building internal systems (tools, automation, AI).",
+    "title": "What I do",
+    "subtitle": "I step in when operations are breaking under growth. Scattered workflows, manual chaos, weak visibility, no systems. My role is to build the operating infrastructure that makes scale manageable.",
     "cfo": {
-      "title": "Part-time CFO",
-      "description": "Fractional finance leadership for funded scale-ups: reliable reporting, cash and runway visibility, fundraising preparation and design of internal tools (dashboards, alerts, automations) that reduce manual FP&A and reporting work.",
+      "title": "Build scalable operating systems",
+      "description": "I design workflows, internal tools, dashboards and automation layers that replace manual coordination and make growth manageable.",
       "features": [
-        "Monthly financial reporting",
-        "Cash flow management",
-        "Forecasts and budgets",
-        "Fundraising preparation",
-        "KPI dashboards"
+        "Process design & simplification",
+        "Internal tools and automation",
+        "AI-enabled workflows",
+        "KPI dashboards and operating cadence"
       ],
       "budget": {
-        "title": "Indicative budget",
-        "price": "€750 ex VAT/day",
-        "description": "Task-based billing with detailed list at month-end",
-        "note": "Framing phase billed according to project complexity"
+        "title": "Format",
+        "price": "From €750 ex VAT/day",
+        "description": "Scoped engagement with a prioritized deliverable",
+        "note": "Scope defined during initial framing session"
       }
     },
     "coo": {
-      "title": "Part-time COO",
-      "description": "Fractional operational leadership: mapping and simplifying processes, controlling flows (orders, inventory, disputes, support) and setting up internal tools and automations (workflows, AI) to do more with fewer people without losing visibility.",
+      "title": "Structure growth from chaos",
+      "description": "I help founders turn fast growth into repeatable execution: roles, processes, reporting, decision-making and team accountability.",
       "features": [
-        "Process structuring",
-        "Operational optimization",
-        "Hypergrowth management",
-        "Tool implementation",
-        "Team training"
+        "Operating model design",
+        "Team structure and execution rhythm",
+        "Supply / demand operations",
+        "Growth bottleneck resolution"
       ],
       "budget": {
-        "title": "Indicative budget",
-        "price": "€750 ex VAT/day",
-        "description": "Task-based billing with detailed list at month-end",
-        "note": "Framing phase billed according to project complexity"
+        "title": "Format",
+        "price": "From €750 ex VAT/day",
+        "description": "Fractional engagement with hands-on execution",
+        "note": "Ongoing or project-based, defined at kickoff"
       }
     },
     "pompier": {
-      "title": "Emergency Operations Consultant",
-      "description": "Emergency intervention and interim executive replacement for critical situations. I take control within 24–48 hours, secure cash, stabilize operations and rebuild minimum governance, then design systems to prevent the same crisis from happening again.",
+      "title": "Fix critical situations fast",
+      "description": "When cash, operations or governance are breaking, I step in quickly, diagnose the problem and stabilize the business.",
       "features": [
-        "🚨 Immediate takeover (24-48h)",
-        "👔 Interim executive replacement",
-        "🔧 Emergency restructuring",
-        "⚖️ Judicial recovery support",
-        "⚡ Operational stabilization",
-        "🎯 Personalized recovery plan"
+        "24–48h diagnostic",
+        "Cash and runway visibility",
+        "Operational stabilization",
+        "Interim executive support"
       ],
       "budget": {
-        "title": "Indicative budget",
-        "price": "€1000 ex VAT/day",
-        "description": "Emergency intervention - Task-based billing",
-        "note": "Framing phase billed according to situation complexity"
+        "title": "Format",
+        "price": "€1,000 ex VAT/day",
+        "description": "Priority intervention on critical bottlenecks",
+        "note": "Fast mobilization depending on urgency and availability"
       }
     },
     "buttons": {
       "learnMore": "Learn more",
-      "discussService": "Discuss this service",
-      "requestQuote": "Request a quote",
-      "viewPricing": "View pricing",
-      "bookCall": "Book a discovery call",
-      "requestCustomQuote": "Request a custom quote",
-      "emergencyCall": "24/7 emergency call"
+      "discussService": "Discuss this need",
+      "requestQuote": "Request a conversation",
+      "viewPricing": "View terms",
+      "bookCall": "Book a strategy call",
+      "requestCustomQuote": "Request a framing session",
+      "emergencyCall": "Request rapid intervention"
     },
     "cta": {
-      "title": "Ready to transform your company?",
-      "subtitle": "Contact Guillaume Stehelin de Taisne for a free consultation and discover how he can help"
+      "title": "Ready to build systems that scale?",
+      "subtitle": "Let's talk about your operations, constraints and the concrete actions you can take now."
     }
   },
   "about": {
-    "title": "About Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "Fractional CFO/COO and entrepreneur for funded scale-ups and family offices, with deep hands-on experience in critical situations.",
-    "experience": "15+ years of experience in financing, hypergrowth and crisis",
-    "description": "I am a fractional CFO/COO and entrepreneur. For the past 15+ years, I have stepped into complex situations: hypergrowth, restructuring, blocked operations, weak governance. I have operated in demanding environments at Jumia, Glossybox, Orami and co-founded Ligerio (from 0 to ~€10M in revenue in 4 years).\n\nMy edge: I don’t stop at spreadsheets and board decks. I design and implement systems – finance, operations, data – using technology and artificial intelligence. I personally build internal tools (TypeScript, AI, automation) and work daily with product and tech teams.\n\nTo deepen this further, I am currently studying Computer Science at Harvard (since 2025), strengthening my understanding of modern systems, data and AI. My role: a C-level who fluently speaks P&L, product, data and technical architecture.",
+    "title": "About Guillaume",
+    "subtitle": "Operator with 10+ years of experience across e-commerce, marketplaces and international scale-ups.",
+    "experience": "10+ years operating in complex, high-growth environments",
+    "description": "I am an operator with 10+ years of experience across e-commerce, marketplaces and international scale-ups. My background combines finance, operations and systems design, with a focus on turning messy growth into structured, scalable execution.\n\nI have operated across Rocket Internet, Jumia, Orami, Ligerio and Moverz, from multi-country restructurings to AI-driven pricing systems and logistics-heavy e-commerce scale-ups.\n\nI am currently building Moverz and studying Computer Science / AI at Harvard to deepen the technical layer behind the systems I build.",
     "expertise": [
-      "Interim executive replacement",
-      "Emergency takeover",
-      "Express financial recovery",
-      "Crisis management and stabilization"
+      "Fast operational diagnostic",
+      "Operating system design",
+      "AI-driven pricing & automation",
+      "Crisis stabilization & SWAT execution"
     ],
     "timeline": [
       {
-        "year": "2025-",
-        "title": "Founder - Moverz",
-        "description": "Founder of Moverz, a photo-based moving estimation tool. The goal: automate quotes and logistics planning with a service operated almost entirely by systems (AI, automation) rather than large teams.",
+        "year": "2024–",
+        "title": "Founder & CEO — Moverz",
+        "description": "Building an AI-driven pricing and operations engine for the European moving market (€10Bn total, €2Bn in France). Designing the full stack: dynamic pricing, computer vision, supply-side back-office and end-to-end booking workflow.",
         "achievements": [
-          "Photo-based moving estimation",
-          "Largely automated customer journey",
-          "Finance/ops architecture built into the MVP",
-          "Product built alongside fractional CFO/COO work"
+          "Dynamic pricing system — 100+ variables",
+          "Computer vision: photo → inventory → price",
+          "€1M+ in quote requests within 3 months",
+          "Supply-side back-office — 20+ parameters"
         ]
       },
       {
-        "year": "2021-2025",
-        "title": "Co-CEO & Co-Founder - Ligerio",
-        "description": "Leader in online sales of distinctive floor and wall coverings in France. From €0 to €10M turnover in 4 years. Exceptional growth: 50% to 100% per year for 3 consecutive years. Operational efficiency: logistics flow x20 in 3 years without increasing staff.",
+        "year": "2021–2025",
+        "title": "Co-Founder & Co-CEO — Ligerio",
+        "description": "Co-founded and scaled a premium flooring and wall-covering e-commerce to €10M+ revenue in 4 years. Built the operating infrastructure that absorbed 50–100% YoY growth without proportional headcount growth.",
         "achievements": [
-          "From €0 to €10M in 4 years",
-          "50-100% annual growth",
-          "Logistics flow x20",
-          "AAA team recruited and trained"
+          "€0 to €10M+ revenue in 4 years",
+          "50–100% YoY growth over 3 years",
+          "Logistics throughput x20 — same ops headcount",
+          "Team of 40+"
         ]
       },
       {
-        "year": "2019-2021",
-        "title": "CFO - SecurClés",
-        "description": "Financial management of a tech company specialized in remote key reproduction with patented technology. Complete restructuring of financial processes and implementation of robust internal controls.",
+        "year": "2019–2021",
+        "title": "CFO — SecurClés",
+        "description": "Financial restructuring of a tech company specialized in remote key reproduction. Complete overhaul of financial processes and internal controls.",
         "achievements": [
           "Patented remote key tech",
           "Financial restructuring",
@@ -139,9 +140,9 @@
         ]
       },
       {
-        "year": "2017-2018",
-        "title": "VP Finance - Orami (WhatsNew Group)",
-        "description": "Financial management of the e-commerce group based in Thailand, parent company of several brands (Petloft, Orami, Sanoga, Lafema, MOXY).",
+        "year": "2017–2018",
+        "title": "VP Finance — Orami (WhatsNew Group)",
+        "description": "Financial management of a multi-brand e-commerce group based in Thailand, operating across Petloft, Orami, Sanoga, Lafema and MOXY.",
         "achievements": [
           "Multi-brand consolidation",
           "Treasury management",
@@ -150,31 +151,31 @@
         ]
       },
       {
-        "year": "2016-2017",
-        "title": "Group CFO - Glossybox (Rocket Internet)",
-        "description": "Financial management of a Rocket Internet success story. Consolidated turnover: €70M, active in 8 countries. Management of due diligence and acquisition by The Hut Group.",
+        "year": "2016–2017",
+        "title": "Group CFO — Glossybox (Rocket Internet)",
+        "description": "Financial management of a Rocket Internet success story. Consolidated revenue: €70M across 8 countries. Managed the due diligence and acquisition by The Hut Group.",
         "achievements": [
-          "€70M consolidated turnover",
+          "€70M consolidated revenue",
           "Acquisition due diligence",
           "IFRS controls",
-          "Process standardization"
+          "5-country restructuring"
         ]
       },
       {
-        "year": "2013-2016",
-        "title": "Senior Executive Finance Manager - Jumia",
-        "description": "SWAT missions in high-risk African countries. Financial restructuring, legal compliance and AAA team training. 22 companies, 550 employees under supervision.",
+        "year": "2013–2016",
+        "title": "Senior Executive Finance Manager — Jumia (Rocket Internet)",
+        "description": "SWAT operator in high-risk African markets. Financial restructuring, legal compliance, team building. 22 entities, 550+ employees under supervision, 60+ direct reports.",
         "achievements": [
-          "22 companies restructured",
-          "550 employees supervised",
-          "Optimized processes",
-          "Impeccable compliance"
+          "22 entities restructured",
+          "550+ employees supervised",
+          "60+ direct reports",
+          "Multi-country audit & stabilization"
         ]
       },
       {
-        "year": "2011-2013",
-        "title": "Head of Finance - Groupe Lactalis Kazakhstan",
-        "description": "Modernization of kolkhoz finances. 9 divisions, 380 employees, financial division of 25 people. Complete restructuring and restoration of governance.",
+        "year": "2011–2013",
+        "title": "Head of Finance — Groupe Lactalis Kazakhstan",
+        "description": "Modernization of farm finances. 9 divisions, 380 employees. Complete restructuring and governance restoration.",
         "achievements": [
           "Complete modernization",
           "8-year investment plan",
@@ -184,52 +185,52 @@
       }
     ],
     "techSection": {
-      "title": "My view on technology as a CFO/COO",
+      "title": "My view on technology in operations",
       "paragraphs": [
-        "In many companies, tech is still treated as a silo: a separate department that “receives requests” from the business and ships projects with varying alignment.",
-        "My view is different: to perform today, a C-level must deeply understand technology. Not to code everything, but to think in systems: data flows, automation, product constraints, architectural costs.",
-        "As a CFO/COO, I don’t just ask for dashboards or “tools”. I co-design, with the teams, a real operating system for the company: finance in real time (cash, margins, runway), end-to-end visibility on operations (order → collection → disputes), internal tools that automate everything that does not require human judgment.",
-        "This is why I build tools myself (TypeScript, AI, automation) and why I’m currently studying Computer Science at Harvard: to speak the language of developers, data scientists and product founders, while staying fully accountable for P&L and cash."
+        "In most high-growth companies, the real problem is not strategy. It is execution: slow processes, scattered information, repetitive manual work, weak visibility on what is actually happening.",
+        "My view is simple: to scale durably, you need to think in systems. Where does data get lost? Which handoffs create friction? What should be automated, controlled or made visible?",
+        "I do not just recommend tools or dashboards. I design with teams a practical operating system: workflow tracking, control points, AI-enabled automation and management routines that reduce manual work and stabilize execution.",
+        "That is why I build tools myself (TypeScript, AI, automation) and study Computer Science / AI at Harvard: to connect business goals, field execution and the technical layer that truly simplifies the company."
       ]
     },
     "buildSection": {
       "title": "What I actually build",
       "paragraphs": [
-        "My work doesn’t stop at slides and action plans. Together with the teams, I build concrete tools that run every day inside the companies I support.",
-        "On the finance side: consolidated reporting systems, real-time cash projections, automatic alerts on margin or cash deviations, runway forecasts connected to the commercial pipeline.",
-        "On the operations side: unified flows for orders / inventory / disputes / support, performance tracking by team, country, channel, and automation of repetitive tasks (follow-ups, checks, approvals).",
-        "On AI and automation: internal assistants answering finance/ops questions in natural language, risk or priority scores to focus teams on high-impact cases, AI routines cleaning data and stabilizing reporting."
+        "My work does not stop at recommendations. Together with teams, I build systems that run every day and make the company more reliable and measurable.",
+        "On the systems side: pricing engines, workflow automation, internal tools, KPI dashboards and operating cadences that replace manual coordination.",
+        "On the operations side: process mapping, role clarity, execution rhythms, supply/demand management and bottleneck resolution.",
+        "On AI and automation: dynamic pricing logic, computer vision pipelines, internal assistants and routines that remove manual work without adding complexity."
       ]
     },
     "portfolioSection": {
-      "title": "Recent projects (non-confidential version)",
-      "intro": "Below are a few examples of recent projects, described at a generic level to protect confidentiality. The goal is to show the types of problems I work on and the systems I design.",
+      "title": "Case studies",
+      "intro": "A few examples of what I have built, described at a non-confidential level. Context, system built, result.",
       "items": [
         {
-          "title": "Moverz – A service operated almost entirely by AI",
-          "description": "Moverz is a project designed to compete with highly profitable incumbents born around 2015 in its space, rebuilt from scratch with full AI and automation. The ambition: deliver the same – or better – service than a profitable 50-people company, with no employees, powered only by internal systems and advanced automation. My role: economic model design, finance/ops systems architecture, and definition and supervision of internal tools and AI automations."
+          "title": "Moverz — AI-driven pricing infrastructure for a €10Bn market",
+          "description": "Built a dynamic pricing and operations engine for the fragmented European moving market. System includes: 100+ variable pricing model, computer vision (photo → inventory → price), supply-side back-office with 20+ parameters, and end-to-end workflow from qualification to booking. Result: €1M+ in customer quote requests within 3 months of launch."
         },
         {
-          "title": "Internal finance tools for a B2C scale-up",
-          "description": "Context: funded B2C scale-up with slow reporting, partial cash visibility and heavy dependence on local Excel files. Actions: implementation of a single reporting and cashflow system, automation of data collection (accounting, bank, CRM), creation of alerts on margin and cash deviations. Result: daily visibility on cash and runway, drastic reduction of time spent consolidating numbers, better preparation for investor discussions."
+          "title": "Ligerio — Scaling a logistics-heavy e-commerce to €10M+",
+          "description": "Co-founded and scaled Ligerio to €10M+ revenue in 4 years. Built the operating infrastructure that absorbed 50–100% YoY growth: logistics throughput x20, team of 40+, transition from dropshipping to consignment + warehouse model, 200k+ monthly visitors."
         },
         {
-          "title": "Operating system for a services company",
-          "description": "Context: services company with fragmented operational flows (CRM, industry-specific tool, support tickets) and no global view on service quality. Actions: full mapping of flows (from first contact to final payment), design of an internal “OS” centralizing orders, interventions, disputes and collections, automation of follow-ups, notifications and quality checks. Result: fewer frictions for teams, less dependence on key individuals, measurable and controllable service quality."
+          "title": "Rocket Internet / Jumia — Operating across 20+ entities and 550+ FTE",
+          "description": "SWAT operator in high-risk African markets. Built finance and control functions from scratch. Led audits, restructurings and stabilizations. 22 entities, 550+ employees, 60+ direct reports across multiple countries."
         }
       ]
     }
   },
   "testimonials": {
-    "title": "Testimonials about Guillaume Stehelin de Taisne",
-    "subtitle": "They trust Guillaume Stehelin de Taisne for their growth and challenges",
+    "title": "Trusted by founders and operators",
+    "subtitle": "Direct feedback from the people I have worked with",
     "items": [
       {
         "name": "Francis D.",
         "position": "CEO, Jumia",
         "company": "Jumia",
         "logo": "/images/companies/jumia.png",
-        "content": "Guillaume Stehelin de Taisne has supported us through many complex situations (tax audits, sudden executive departures, management embezzlement suspicions, etc.). He is very effective, knows how to dive deep into details while maintaining a holistic view. I highly recommend him.",
+        "content": "Guillaume supported us through many complex situations: tax audits, sudden executive departures, management embezzlement suspicions. He is very effective, knows how to dive deep into details while maintaining a holistic view. I highly recommend him.",
         "rating": 5
       },
       {
@@ -237,7 +238,7 @@
         "position": "CFO, HelloFood",
         "company": "HelloFood",
         "logo": "/images/companies/hellofood.png",
-        "content": "Thanks to Guillaume Stehelin de Taisne, we structured our finance in 3 months and raised €2M. His Part-time CFO expertise allowed us to maintain control while accelerating our growth. A trusted partner.",
+        "content": "Thanks to Guillaume, we structured our finance in 3 months and raised €2M. His expertise allowed us to maintain control while accelerating our growth. A trusted partner.",
         "rating": 5
       },
       {
@@ -245,7 +246,7 @@
         "position": "Founder, Ligerio",
         "company": "Ligerio",
         "logo": "/images/companies/ligerio.png",
-        "content": "In crisis situation, Guillaume Stehelin de Taisne took command immediately. He implemented ZOHO CRM and restructured our processes. His ability to stabilize operations and reassure teams saved our company. A true \"emergency\" consultant.",
+        "content": "In a crisis situation, Guillaume took command immediately. He implemented our CRM and restructured our processes. His ability to stabilize operations and reassure teams saved our company.",
         "rating": 5
       },
       {
@@ -253,7 +254,7 @@
         "position": "CEO, Glossybox",
         "company": "Glossybox",
         "logo": "/images/companies/glossybox.png",
-        "content": "We mandated Guillaume Stehelin de Taisne during the sale of our company Glossybox (€70M revenue). The sale was blocked due to the quality of our financial data. Guillaume Stehelin de Taisne restructured the entire group (5 countries), brought everything into compliance with IFRS standards, and supported us during a tax audit on our holding company. The sale was finalized 8 months after his arrival.",
+        "content": "We mandated Guillaume during the sale of Glossybox (€70M revenue). The sale was blocked due to data quality. Guillaume restructured the entire group across 5 countries, brought everything into IFRS compliance and managed a tax audit on our holding. The sale was finalized 8 months after his arrival.",
         "rating": 5
       },
       {
@@ -261,7 +262,7 @@
         "position": "Founder, Kaymu",
         "company": "Kaymu",
         "logo": "/images/companies/kaymu.png",
-        "content": "Guillaume Stehelin de Taisne completely restructured our operations. From cash management to process optimization, he transformed our company. An exceptional professional.",
+        "content": "Guillaume completely restructured our operations. From cash management to process optimization, he transformed our company. An exceptional professional.",
         "rating": 5
       },
       {
@@ -269,99 +270,137 @@
         "position": "CEO, Orami Ltd",
         "company": "Orami Ltd",
         "logo": "/images/companies/orami.png",
-        "content": "His scaling expertise allowed us to grow from 10 to 100 employees without losing control. Guillaume Stehelin de Taisne knows how to anticipate growth challenges and implement the right tools.",
+        "content": "His scaling expertise allowed us to grow from 10 to 100 employees without losing control. Guillaume knows how to anticipate growth challenges and implement the right systems.",
         "rating": 5
       }
     ]
   },
   "blog": {
-    "title": "Blog - Emergency & Recovery",
-    "subtitle": "Emergency tips and recovery strategies for struggling startups",
+    "title": "Blog — Operations, systems & AI",
+    "subtitle": "Practical thinking on operations, pricing systems, automation and scaling execution in complex environments.",
     "readMore": "Read more",
     "categories": {
-      "scaling": "Operational Recovery",
-      "finance": "Financial Emergencies",
-      "tools": "Crisis Tools",
-      "fundraising": "Last Chance Fundraising"
+      "scaling": "Execution & Workflows",
+      "finance": "Control & Margin",
+      "tools": "Tools & Automation",
+      "fundraising": "Growth & Structuring"
     }
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Need information? Contact Guillaume Stehelin de Taisne to discuss your project",
+    "title": "Book a strategy call",
+    "subtitle": "Describe your situation, your constraints and what is breaking. I will come back with a clear angle of attack.",
     "form": {
       "name": "Name",
       "email": "Email",
       "company": "Company",
-      "stage": "Type of service",
-      "message": "Description of your project",
-      "submit": "Send message"
+      "stage": "Primary need",
+      "message": "Situation overview",
+      "submit": "Send request"
     }
   },
   "methodology": {
-    "title": "Guillaume Stehelin de Taisne's methodology",
-    "subtitle": "The performance of Guillaume Stehelin de Taisne at the heart of every intervention",
-    "description": "Because every critical situation is unique, we adapt our approach to each specific challenge.",
+    "title": "How I work",
+    "subtitle": "Fast diagnostic. Focused plan. Hands-on execution. Durable systems.",
+    "description": "Every engagement starts with a fast diagnostic of the financial, operational and organizational constraints to identify the highest-leverage actions.",
     "steps": [
       {
-        "title": "Express diagnosis (24-48h)",
-        "description": "Rapid and precise analysis of the financial, operational and human situation to identify priority action levers."
+        "title": "Fast diagnostic",
+        "description": "Within 24–48h, I map the financial, operational and organizational constraints to identify the highest-leverage actions."
       },
       {
-        "title": "Personalized action plan",
-        "description": "Development of a tailor-made recovery strategy with clear objectives and realistic deadlines."
+        "title": "Operating plan",
+        "description": "I define a focused action plan with clear owners, priorities, metrics and deadlines."
       },
       {
-        "title": "Immediate intervention",
-        "description": "Operational command with implementation of real-time control and reporting processes."
+        "title": "Hands-on execution",
+        "description": "I take direct ownership where needed: systems, reporting, processes, team structure, crisis stabilization."
       },
       {
-        "title": "Follow-up and optimization",
-        "description": "Continuous support with strategic adjustments based on results and situation evolution."
+        "title": "Scale & optimize",
+        "description": "I turn emergency fixes into durable systems that scale beyond my intervention."
       }
     ]
   },
   "stats": {
-    "title": "Numbers from Guillaume Stehelin de Taisne",
-    "subtitle": "The recognized expertise of Guillaume Stehelin de Taisne",
+    "title": "Track record",
+    "subtitle": "Numbers from the field. No vanity metrics.",
     "items": [
       {
-        "number": "15+",
-        "label": "Years of experience",
-        "description": "In business restructuring and crisis management"
+        "number": "€10M+",
+        "label": "Revenue scaled",
+        "description": "Co-founded and scaled Ligerio to €10M+ revenue in 4 years"
       },
       {
-        "number": "50+",
-        "label": "Companies saved",
-        "description": "Startups and scaleups in critical situations"
+        "number": "x20",
+        "label": "Logistics throughput",
+        "description": "Without increasing operational headcount"
       },
       {
-        "number": "€100M+",
-        "label": "Cumulative revenue managed",
-        "description": "In recovery contexts"
+        "number": "€1M+",
+        "label": "Quote requests",
+        "description": "Generated at Moverz within 3 months of launch"
       },
       {
-        "number": "24h",
-        "label": "Intervention time",
-        "description": "Guaranteed response in emergency situations"
+        "number": "550+",
+        "label": "FTE managed",
+        "description": "Across 20+ entities at Rocket Internet / Jumia"
       }
     ]
   },
   "footer": {
-    "description": "Guillaume Stehelin de Taisne – Part-time CFO & COO, emergency operations consultant for critical situations",
+    "description": "Guillaume Stehelin de Taisne — Operator building systems that scale companies",
     "sectionTitles": {
       "services": "Services",
       "local": "Local pages",
       "legal": "Legal information",
       "blog": "Blog",
-      "contact": "Emergency contact"
+      "contact": "Contact"
     },
     "links": {
       "privacy": "Privacy policy",
       "terms": "Terms of use",
       "cookies": "Cookie management",
-      "legal": "Legal notice"
+      "legal": "Legal notice",
+      "operatingDiagnostic": "Operating Diagnostic",
+      "localPage": "Fractional COO · La Rochelle"
     },
     "copyright": "© 2018 GSLV.fr. All rights reserved."
+  },
+  "trackRecord": {
+    "title": "Track record",
+    "subtitle": "Built in the field. Measured in real numbers.",
+    "items": [
+      {
+        "metric": "€0 → €10M+",
+        "label": "Revenue",
+        "description": "Co-founded and scaled Ligerio to €10M+ revenue in 4 years."
+      },
+      {
+        "metric": "50–100%",
+        "label": "YoY growth",
+        "description": "Delivered 50–100% annual growth over 3 consecutive years."
+      },
+      {
+        "metric": "x20",
+        "label": "Logistics throughput",
+        "description": "Increased logistics throughput x20 without increasing operational headcount."
+      },
+      {
+        "metric": "€1M+",
+        "label": "Quote requests",
+        "description": "Generated €1M+ in customer quote requests within 3 months at Moverz."
+      },
+      {
+        "metric": "20+ / 550+",
+        "label": "Entities / FTE",
+        "description": "Led operations across 20+ entities and 550+ FTE at Rocket Internet / Jumia."
+      },
+      {
+        "metric": "100+",
+        "label": "Pricing variables",
+        "description": "Designed a pricing and operations system based on 100+ variables at Moverz."
+      }
+    ]
   },
   "values": {
     "title": "Our Values, My Commitments",
@@ -479,46 +518,46 @@
         }
       ]
     },
-        "cta": {
-          "title": "Ready to work with these values?",
-          "subtitle": "Discover how these principles can transform your company",
-          "button": "Contact us"
+    "cta": {
+      "title": "Ready to work with these values?",
+      "subtitle": "Discover how these principles can transform your company",
+      "button": "Contact us"
+    },
+    "stats": {
+      "title": "Measurable impact",
+      "subtitle": "The concrete results of our approach",
+      "items": [
+        {
+          "number": "€10M",
+          "label": "Revenue",
+          "description": "Revenue generated at Ligerio in 2024"
         },
-        "stats": {
-          "title": "Measurable impact",
-          "subtitle": "The concrete results of our approach",
-          "items": [
-            {
-              "number": "€10M",
-              "label": "Revenue",
-              "description": "Revenue generated at Ligerio in 2024"
-            },
-            {
-              "number": "45",
-              "label": "Team members",
-              "description": "Team built at peak activity"
-            },
-            {
-              "number": "€3.9M",
-              "label": "Funding",
-              "description": "Amount raised in financing"
-            }
-          ]
+        {
+          "number": "45",
+          "label": "Team members",
+          "description": "Team built at peak activity"
         },
-        "buttons": {
-      "discussService": "Discuss this service",
-      "requestQuote": "Request a quote",
-      "viewPricing": "View pricing",
-      "bookCall": "Book a discovery call",
-      "requestCustomQuote": "Request a custom quote",
-      "emergencyCall": "24/7 emergency call"
+        {
+          "number": "€3.9M",
+          "label": "Funding",
+          "description": "Amount raised in financing"
+        }
+      ]
+    },
+    "buttons": {
+      "discussService": "Discuss this need",
+      "requestQuote": "Request a conversation",
+      "viewPricing": "View terms",
+      "bookCall": "Book a strategy call",
+      "requestCustomQuote": "Request a framing session",
+      "emergencyCall": "Request rapid intervention"
     },
     "consultant-cfo-la-rochelle": {
-      "title": "CFO & COO Consultant in La Rochelle",
-      "subtitle": "Expert in financial and operational management for startups and SMEs in La Rochelle. Personalized support in the Rochelais entrepreneurial ecosystem.",
+      "title": "Fractional COO & Operator in La Rochelle",
+      "subtitle": "Systems builder and fractional operator for scale-ups and founders in La Rochelle. Hands-on execution in the Rochelais entrepreneurial ecosystem.",
       "services": {
         "title": "Services adapted to La Rochelle",
-        "subtitle": "A personalized approach for the Rochelais entrepreneurial ecosystem"
+        "subtitle": "A hands-on approach for the Rochelais entrepreneurial ecosystem"
       },
       "ecosystem": {
         "title": "The Rochelais entrepreneurial ecosystem",
@@ -530,7 +569,7 @@
       },
       "cta": {
         "title": "Ready to accelerate your growth in La Rochelle?",
-        "subtitle": "Discover how our CFO & COO services can transform your Rochelais company"
+        "subtitle": "Discover how fractional operator services can transform your company"
       }
     }
   }

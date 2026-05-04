@@ -33,7 +33,7 @@ export default function TermsPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-600 mb-8"
             >
-              Dernière mise à jour : 17 septembre 2024
+              Dernière mise à jour : 31 mars 2026
             </motion.p>
           </div>
         </div>
@@ -55,7 +55,7 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">2. Description du service</h2>
               <p className="text-gray-700 mb-6">
-                GSLV.fr fournit des services de CFO et COO part-time pour les startups et scale-ups. Nos services incluent :
+                gslv.fr est exploité par TENEO W.L.L et présente des services de CFO et COO part-time pour les startups et scale-ups. Nos services incluent :
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
                 <li>Direction financière externalisée</li>
@@ -77,12 +77,12 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">4. Propriété intellectuelle</h2>
               <p className="text-gray-700 mb-6">
-                Le contenu de ce site, incluant les textes, images, logos et logiciels, est protégé par les droits de propriété intellectuelle et appartient à GSLV.fr ou à ses concédants de licence.
+                Le contenu de ce site, incluant les textes, images, logos et logiciels, est protégé par les droits de propriété intellectuelle et appartient à TENEO W.L.L ou à ses concédants de licence.
               </p>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">5. Limitation de responsabilité</h2>
               <p className="text-gray-700 mb-6">
-                Dans la mesure permise par la loi, GSLV.fr ne sera pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l'utilisation de ce site.
+                Dans la mesure permise par la loi applicable, TENEO W.L.L ne sera pas responsable des dommages directs, indirects, accessoires ou consécutifs résultant de l&apos;utilisation de ce site.
               </p>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">6. Modification des conditions</h2>
@@ -92,7 +92,7 @@ export default function TermsPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">7. Droit applicable</h2>
               <p className="text-gray-700 mb-6">
-                Ces conditions sont régies par le droit français. Tout litige sera soumis à la compétence exclusive des tribunaux français.
+                Ces conditions sont régies par les lois applicables dans le Kingdom of Bahrain. Tout litige sera soumis à la compétence des juridictions compétentes du Bahrain, sauf disposition impérative contraire applicable à l&apos;utilisateur.
               </p>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">8. Contact</h2>
@@ -100,8 +100,10 @@ export default function TermsPage() {
                 Pour toute question concernant ces conditions d'utilisation, vous pouvez nous contacter à :
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-700 mb-2"><strong>Société :</strong> TENEO W.L.L</p>
                 <p className="text-gray-700 mb-2"><strong>Email :</strong> gdetaisne@gmail.com</p>
-                <p className="text-gray-700"><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p className="text-gray-700 mb-2"><strong>Téléphone :</strong> +33 6 33 04 60 59</p>
+                <p className="text-gray-700"><strong>Adresse :</strong> Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain</p>
               </div>
             </motion.div>
           </div>

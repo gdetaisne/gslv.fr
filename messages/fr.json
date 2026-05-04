@@ -9,128 +9,129 @@
     "book": "Réserver un appel"
   },
   "hero": {
-    "title": "Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "CFO/COO fractional pour scale-ups financées et family offices. J’interviens en situation critique et je construis des systèmes finance/ops augmentés par la technologie et l’IA.",
-    "summary": "Opérateur depuis plus de 15 ans (Jumia, Glossybox, Orami, Ligerio ~10 M€ de CA), développeur (TypeScript, IA, automatisation) et aujourd’hui étudiant en Computer Science à Harvard, j’aide les fondateurs et les family offices à reprendre le contrôle : cash, opérations et systèmes internes qui remplacent le travail d’équipes entières.",
+    "title": "Operator building systems that scale companies",
+    "subtitle": "Je conçois et scale des systèmes opérationnels, pricing et automatisation pour des entreprises en forte croissance dans des environnements complexes.",
+    "summary": "Finance • Opérations • Systèmes • IA",
+    "proof": [
+      "Scalé Ligerio de €0 à €10M+ de CA en 4 ans",
+      "Construit un moteur de pricing IA pour Moverz",
+      "ex Rocket Internet / Jumia — 20+ entités, 550+ ETP"
+    ],
     "cta": {
-      "primary": "Réserver un appel découverte",
-      "secondary": "Découvrir mes services"
+      "primary": "Réserver un appel stratégique",
+      "secondary": "Voir comment je travaille"
     },
     "ctaSection": {
-      "title": "Prêt à accélérer votre croissance ?",
-      "subtitle": "Réservez un appel découverte gratuit pour discuter de vos besoins"
+      "title": "Prêt à construire des systèmes qui scalent ?",
+      "subtitle": "Commençons par un échange sur vos opérations, vos contraintes et les actions à plus fort impact."
     },
     "buttons": {
-      "bookCall": "Réserver un appel découverte"
+      "bookCall": "Réserver un appel stratégique"
     }
   },
   "services": {
-    "title": "Services pour scale-ups financées et family offices",
-    "subtitle": "J’interviens comme CFO/COO fractional pour des scale-ups déjà financées et pour des family offices qui ont besoin d’un operator de confiance sur leurs participations, en combinant structuration financière, exécution opérationnelle et construction de systèmes internes (outils, automatisations, IA).",
+    "title": "Ce que je fais",
+    "subtitle": "J'interviens quand les opérations cèdent sous la croissance : flux éparpillés, chaos manuel, manque de visibilité, absence de systèmes. Mon rôle : construire l'infrastructure opérationnelle qui rend la scale manageable.",
     "cfo": {
-      "title": "CFO Part-time",
-      "description": "Direction financière fractional pour scale-ups financées : reporting fiable, visibilité cash et runway, préparation de levées de fonds et conception d’outils internes (dashboards, alertes, automatisations) qui réduisent le travail manuel de contrôle de gestion et de reporting.",
+      "title": "Construire des systèmes opérationnels scalables",
+      "description": "Je conçois des workflows, des outils internes, des dashboards et des couches d'automatisation qui remplacent la coordination manuelle et rendent la croissance gérable.",
       "features": [
-        "Reporting financier mensuel",
-        "Gestion de trésorerie et cashflow",
-        "Prévisions et budgets",
-        "Préparation levées de fonds",
-        "Tableaux de bord KPI"
+        "Conception et simplification des process",
+        "Outils internes et automatisation",
+        "Workflows IA-enabled",
+        "Dashboards KPI et cadence opérationnelle"
       ],
       "budget": {
-        "title": "Budget indicatif",
-        "price": "750€ HT/jour",
-        "description": "Facturation à la tâche avec liste détaillée en fin de mois",
-        "note": "Phase de cadrage facturée selon complexité du projet"
+        "title": "Format",
+        "price": "À partir de 750€ HT/jour",
+        "description": "Mission cadrée avec livrable priorisé",
+        "note": "Périmètre défini lors de la session de cadrage initiale"
       }
     },
     "coo": {
-      "title": "COO Part-time",
-      "description": "Direction opérationnelle fractional : cartographie et simplification des processus, mise sous contrôle des flux (commandes, stocks, litiges, SAV) et mise en place d’outils internes et d’automatisations (workflows, IA) pour faire plus avec moins, sans perdre en visibilité.",
+      "title": "Structurer la croissance depuis le chaos",
+      "description": "J'aide les fondateurs à transformer une croissance rapide en exécution reproductible : rôles, process, reporting, décisions et responsabilisation des équipes.",
       "features": [
-        "Structuration des processus",
-        "Optimisation opérationnelle",
-        "Gestion de l'hypercroissance",
-        "Mise en place d'outils",
-        "Formation des équipes"
+        "Design du modèle opérationnel",
+        "Structure d'équipe et rythme d'exécution",
+        "Opérations offre / demande",
+        "Résolution des goulets d'étranglement"
       ],
       "budget": {
-        "title": "Budget indicatif",
-        "price": "750€ HT/jour",
-        "description": "Facturation à la tâche avec liste détaillée en fin de mois",
-        "note": "Phase de cadrage facturée selon complexité du projet"
+        "title": "Format",
+        "price": "À partir de 750€ HT/jour",
+        "description": "Mission fractionnée avec exécution terrain",
+        "note": "Continue ou projet, défini au démarrage"
       }
     },
     "pompier": {
-      "title": "Consultant Opérations Coup de Poing",
-      "description": "Intervention d’urgence et remplacement intérimaire de dirigeant pour situations critiques. Je prends les commandes en 24–48h, je sécurise le cash, je stabilise les opérations et je reconstruis une gouvernance minimale, puis je conçois les systèmes qui évitent de revivre la même crise.",
+      "title": "Résoudre les situations critiques rapidement",
+      "description": "Quand la trésorerie, les opérations ou la gouvernance craquent, j'interviens vite, je diagnostique le problème et je stabilise l'activité.",
       "features": [
-        "🚨 Prise de commande immédiate (24-48h)",
-        "👔 Remplacement intérimaire de dirigeant",
-        "🔧 Restructuration d'urgence",
-        "⚖️ Accompagnement en redressement judiciaire",
-        "⚡ Stabilisation opérationnelle",
-        "🎯 Plan de redressement personnalisé"
+        "Diagnostic en 24–48h",
+        "Visibilité cash et runway",
+        "Stabilisation opérationnelle",
+        "Support dirigeant intérimaire"
       ],
       "budget": {
-        "title": "Budget indicatif",
-        "price": "1000€ HT/jour",
-        "description": "Intervention d'urgence - Facturation à la tâche",
-        "note": "Phase de cadrage facturée selon complexité de la situation"
+        "title": "Format",
+        "price": "1 000€ HT/jour",
+        "description": "Intervention prioritaire sur les points critiques",
+        "note": "Mobilisation rapide selon urgence et disponibilité"
       }
     },
     "buttons": {
       "learnMore": "En savoir plus",
-      "discussService": "Discuter de ce service",
-      "requestQuote": "Demander un devis",
-      "viewPricing": "Voir les tarifs",
-      "bookCall": "Réserver un appel découverte",
-      "requestCustomQuote": "Demander un devis personnalisé",
-      "emergencyCall": "Appel d'urgence 24h/24"
+      "discussService": "Parler de ce besoin",
+      "requestQuote": "Demander un échange",
+      "viewPricing": "Voir les modalités",
+      "bookCall": "Réserver un appel stratégique",
+      "requestCustomQuote": "Demander un cadrage",
+      "emergencyCall": "Demander une intervention rapide"
     },
     "cta": {
-      "title": "Prêt à accélérer votre croissance ?",
-      "subtitle": "Discutons de vos enjeux et trouvons la solution adaptée"
+      "title": "Prêt à construire des systèmes qui scalent ?",
+      "subtitle": "Parlons de vos opérations, de vos contraintes et des actions concrètes à enclencher maintenant."
     }
   },
   "about": {
-    "title": "À propos de Guillaume Stehelin de Taisne – Part-time CFO & COO",
-    "subtitle": "CFO/COO fractional et entrepreneur pour scale-ups financées et family offices, avec une forte expérience de terrain en situations critiques.",
-    "experience": "15+ années d'expérience en financement, hypercroissance et crise",
-    "description": "Je suis CFO/COO fractional et entrepreneur. Depuis plus de 15 ans, j’interviens là où la situation est complexe : hypercroissance, restructuration, opérations bloquées, gouvernance défaillante. J’ai piloté des contextes exigeants chez Jumia, Glossybox, Orami et co-fondé Ligerio (de 0 à ~10 M€ de chiffre d’affaires en 4 ans).\n\nMa particularité : je ne me limite pas aux tableaux Excel et aux comités. Je conçois et je fais déployer des systèmes – finance, opérations, data – en utilisant la technologie et l’intelligence artificielle. Je développe moi-même des outils internes (TypeScript, IA, automatisations) et je travaille au quotidien avec les équipes produits et tech.\n\nPour aller plus loin, je suis aujourd’hui étudiant en Computer Science à Harvard (depuis 2025), afin de renforcer ma compréhension des systèmes modernes, de la donnée et de l’IA. Mon rôle : être le C-Level qui parle à la fois P&L, produit, data et architecture technique.",
+    "title": "À propos de Guillaume",
+    "subtitle": "Operator avec 10+ ans d'expérience dans l'e-commerce, les marketplaces et les scale-ups internationaux.",
+    "experience": "10+ ans d'opération dans des environnements complexes à forte croissance",
+    "description": "Je suis un operator avec 10+ ans d'expérience dans l'e-commerce, les marketplaces et les scale-ups internationaux. Mon background combine finance, opérations et design de systèmes, avec un focus sur la transformation d'une croissance chaotique en exécution structurée et scalable.\n\nJ'ai opéré chez Rocket Internet, Jumia, Orami, Ligerio et Moverz, des restructurations multi-pays aux systèmes de pricing IA en passant par des scale-ups e-commerce logistique-intensifs.\n\nJe construis actuellement Moverz et j'étudie l'informatique / IA à Harvard pour approfondir la couche technique derrière les systèmes que je conçois.",
     "expertise": [
-      "Remplacement intérimaire de dirigeant",
-      "Prise de commande d'urgence",
-      "Redressement financier express",
-      "Gestion de crise et stabilisation"
+      "Diagnostic opérationnel rapide",
+      "Design de système opérationnel",
+      "Pricing IA & automatisation",
+      "Stabilisation de crise & exécution SWAT"
     ],
     "timeline": [
       {
-        "year": "2025-",
-        "title": "Fondateur - Moverz",
-        "description": "Fondateur de Moverz, un outil d’estimation de déménagement à partir de photos. L’objectif : automatiser la préparation de devis et la planification logistique, avec un service opéré presque entièrement par des systèmes (IA, automatisations) plutôt que par des équipes nombreuses.",
+        "year": "2024–",
+        "title": "Founder & CEO — Moverz",
+        "description": "Construction d'un moteur de pricing et d'opérations IA pour le marché européen du déménagement (€10Bn total, €2Bn en France). Conception de la stack complète : pricing dynamique, computer vision, back-office supply-side et workflow de réservation end-to-end.",
         "achievements": [
-          "Outil d’estimation de déménagement à partir de photos",
-          "Parcours client largement automatisé",
-          "Architecture finance/ops pensée dès le MVP",
-          "Produit développé en parallèle des missions CFO/COO"
+          "Système de pricing dynamique — 100+ variables",
+          "Computer vision : photo → inventaire → prix",
+          "€1M+ de demandes de devis en 3 mois",
+          "Back-office supply-side — 20+ paramètres"
         ]
       },
       {
-        "year": "2021-2025",
-        "title": "Co-CEO & Co-Fondateur - Ligerio",
-        "description": "Leader de la vente en ligne de revêtements de sols et murs de caractère en France. De 0€ à 10M€ de CA en 4 ans. Croissance exceptionnelle : 50% à 100% par an pendant 3 ans consécutifs. Efficacité opérationnelle : flux logistiques x20 en 3 ans sans augmenter les effectifs.",
+        "year": "2021–2025",
+        "title": "Co-fondateur & Co-CEO — Ligerio",
+        "description": "Co-fondé et scalé un e-commerce premium de revêtements de sol et muraux à €10M+ de CA en 4 ans. Construit l'infrastructure opérationnelle qui a absorbé 50–100% de croissance annuelle sans augmenter proportionnellement les effectifs.",
         "achievements": [
-          "De 0€ à 10M€ en 4 ans",
-          "Croissance 50-100% annuelle",
-          "Flux logistiques x20",
-          "Équipe AAA recrutée et formée"
+          "€0 à €10M+ de CA en 4 ans",
+          "50–100% de croissance annuelle sur 3 ans",
+          "Débit logistique x20 — mêmes effectifs ops",
+          "Équipe de 40+"
         ]
       },
       {
-        "year": "2019-2021",
-        "title": "CFO - SecurClés",
-        "description": "Direction financière d'une société tech spécialisée dans la reproduction de clés à distance avec technologie brevetée. Restructuration complète des processus financiers et mise en place de contrôles internes robustes.",
+        "year": "2019–2021",
+        "title": "CFO — SecurClés",
+        "description": "Restructuration financière d'une société tech spécialisée dans la reproduction de clés à distance. Refonte complète des processus financiers et des contrôles internes.",
         "achievements": [
           "Tech brevetée clés à distance",
           "Restructuration financière",
@@ -139,9 +140,9 @@
         ]
       },
       {
-        "year": "2017-2018",
-        "title": "VP Finance - Orami (WhatsNew Group)",
-        "description": "Direction financière du groupe e-commerce basé en Thaïlande, maison-mère de plusieurs marques (Petloft, Orami, Sanoga, Lafema, MOXY).",
+        "year": "2017–2018",
+        "title": "VP Finance — Orami (WhatsNew Group)",
+        "description": "Direction financière d'un groupe e-commerce multi-marques basé en Thaïlande, opérant sur Petloft, Orami, Sanoga, Lafema et MOXY.",
         "achievements": [
           "Consolidation multi-marques",
           "Gestion de trésorerie",
@@ -150,31 +151,31 @@
         ]
       },
       {
-        "year": "2016-2017",
-        "title": "Group CFO - Glossybox (Rocket Internet)",
-        "description": "Direction financière d'une success story de Rocket Internet. CA consolidé : 70M€, actif dans 8 pays. Gestion de la due diligence et de l'acquisition par The Hut Group.",
+        "year": "2016–2017",
+        "title": "Group CFO — Glossybox (Rocket Internet)",
+        "description": "Direction financière d'une success story de Rocket Internet. CA consolidé : 70M€ dans 8 pays. Gestion de la due diligence et de l'acquisition par The Hut Group.",
         "achievements": [
           "CA consolidé 70M€",
           "Due diligence acquisition",
           "Contrôles IFRS",
-          "Standardisation des processus"
+          "Restructuration sur 5 pays"
         ]
       },
       {
-        "year": "2013-2016",
-        "title": "Senior Executive Finance Manager - Jumia",
-        "description": "Missions SWAT dans des pays africains à haut risque. Restructuration financière, conformité légale et formation d'équipes AAA. 22 entreprises, 550 employés sous supervision.",
+        "year": "2013–2016",
+        "title": "Senior Executive Finance Manager — Jumia (Rocket Internet)",
+        "description": "Opérateur SWAT dans des marchés africains à haut risque. Restructuration financière, conformité légale, construction d'équipes. 22 entités, 550+ employés sous supervision, 60+ directs.",
         "achievements": [
-          "22 entreprises restructurées",
-          "550 employés supervisés",
-          "Processus optimisés",
-          "Conformité irréprochable"
+          "22 entités restructurées",
+          "550+ employés supervisés",
+          "60+ rapports directs",
+          "Audit & stabilisation multi-pays"
         ]
       },
       {
-        "year": "2011-2013",
-        "title": "Head of Finance - Groupe Lactalis Kazakhstan",
-        "description": "Modernisation des finances d'un kolkhoze. 9 divisions, 380 employés, division financière de 25 personnes. Restructuration complète et rétablissement de la gouvernance.",
+        "year": "2011–2013",
+        "title": "Head of Finance — Groupe Lactalis Kazakhstan",
+        "description": "Modernisation des finances d'un kolkhoze. 9 divisions, 380 employés. Restructuration complète et rétablissement de la gouvernance.",
         "achievements": [
           "Modernisation complète",
           "Plan d'investissement 8 ans",
@@ -184,354 +185,392 @@
       }
     ],
     "techSection": {
-      "title": "Ma vision de la tech en tant que CFO/COO",
+      "title": "Ma vision de la technologie dans les opérations",
       "paragraphs": [
-        "Dans beaucoup d’entreprises, la tech est encore traitée comme un silo : un département à part, qui “reçoit des demandes” du business et livre des projets plus ou moins alignés.",
-        "Ma conviction est différente : pour être performant aujourd’hui, un C-Level doit comprendre la tech dans le détail. Pas pour tout coder lui-même, mais pour penser en systèmes : flux de données, automatisations, contraintes produits, coûts d’architecture.",
-        "En tant que CFO/COO, je ne me contente pas de demander des dashboards ou des « outils ». Je conçois avec les équipes un véritable système d’exploitation de l’entreprise : finance pilotée en temps réel (cash, marges, runway), opérations visibles de bout en bout (commande → encaissement → réclamation), outils internes qui automatisent tout ce qui n’apporte pas de valeur humaine.",
-        "C’est pour ça que je construis moi-même des outils (TypeScript, IA, automatisations) et que je me forme aujourd’hui en Computer Science à Harvard : pour parler le langage des devs, des data scientists et des fondateurs produits, tout en gardant une obsession pour le P&L et la trésorerie."
+        "Dans la plupart des entreprises à forte croissance, le vrai problème n'est pas la stratégie. C'est l'exécution : process lents, informations éparpillées, travail manuel répétitif, manque de visibilité sur ce qui se passe réellement.",
+        "Ma conviction est simple : pour scaler durablement, il faut penser en systèmes. Où la donnée se perd-elle ? Quels handoffs créent de la friction ? Qu'est-ce qui doit être automatisé, contrôlé ou rendu visible ?",
+        "Je ne me contente pas de recommander des outils ou des dashboards. Je conçois avec les équipes un système d'exploitation concret : suivi des flux, points de contrôle, automatisation IA-enabled et routines de pilotage qui réduisent le travail manuel et stabilisent l'exécution.",
+        "C'est pour cela que je développe moi-même des outils (TypeScript, IA, automatisation) et que j'étudie l'informatique / IA à Harvard : pour faire le lien entre les enjeux business, l'exécution terrain et la technique qui simplifie réellement l'entreprise."
       ]
     },
     "buildSection": {
       "title": "Ce que je construis concrètement",
       "paragraphs": [
-        "Mon travail ne s’arrête pas aux slides et aux plans d’action. Je construis, avec les équipes, des outils concrets qui tournent tous les jours dans les entreprises que j’accompagne.",
-        "Sur la finance : systèmes de reporting consolidé, projections de trésorerie temps réel, alertes automatiques sur les dérives de marge ou de cash, prévisions de runway connectées au pipe commercial.",
-        "Sur les opérations : unification des flux commandes / stocks / litiges / SAV, suivi de la performance par équipe, pays, canal, automatisations des tâches répétitives (relances, contrôles, validations).",
-        "Sur l’IA et l’automatisation : assistants internes pour répondre à des questions finance/ops en langage naturel, scores de risque ou de priorité pour concentrer les équipes sur les cas à fort impact, routines IA qui nettoient la donnée et fiabilisent le reporting."
+        "Mon travail ne s'arrête pas aux recommandations. Je construis avec les équipes des systèmes qui tournent tous les jours et qui rendent l'entreprise plus fiable et plus mesurable.",
+        "Côté systèmes : moteurs de pricing, automatisation des workflows, outils internes, dashboards KPI et cadences opérationnelles qui remplacent la coordination manuelle.",
+        "Côté opérations : cartographie des process, clarification des rôles, rythmes d'exécution, gestion offre/demande et résolution des goulets.",
+        "Côté IA et automatisation : logique de pricing dynamique, pipelines de computer vision, assistants internes et routines qui enlèvent le travail manuel sans ajouter de complexité."
       ]
     },
     "portfolioSection": {
-      "title": "Projets récents (version non confidentielle)",
-      "intro": "Voici quelques exemples de projets récents, décrits volontairement à un niveau générique pour préserver la confidentialité : le but est de montrer les types de problèmes que je traite et les systèmes que je mets en place.",
+      "title": "Études de cas",
+      "intro": "Quelques exemples de ce que j'ai construit, décrits à un niveau non confidentiel. Contexte, système construit, résultat.",
       "items": [
         {
-          "title": "Moverz – Un service opéré presque entièrement par l’IA",
-          "description": "Moverz est un projet qui vient concurrencer des « vaches à lait » créées autour de 2015 dans son secteur, mais repensé en full IA et automatisation. L’ambition : offrir un service équivalent – voire meilleur – qu’une entreprise rentable d’une cinquantaine de personnes, sans aucun salarié, grâce à des systèmes internes et des automatisations avancées. Mon rôle : conception du modèle économique, architecture des systèmes finance/ops, définition et supervision de la construction des outils internes et des automatisations IA."
+          "title": "Moverz — Infrastructure de pricing IA pour un marché de €10Bn",
+          "description": "Construction d'un moteur de pricing et d'opérations dynamique pour le marché européen fragmenté du déménagement. Système : modèle de pricing 100+ variables, computer vision (photo → inventaire → prix), back-office supply-side 20+ paramètres, workflow end-to-end de la qualification à la réservation. Résultat : €1M+ de demandes de devis en 3 mois de lancement."
         },
         {
-          "title": "Outils internes finance pour une scale-up B2C",
-          "description": "Contexte : scale-up financée avec reporting lent, vision partielle du cash et dépendance forte à des fichiers Excel locaux. Actions : mise en place d’un système unique de reporting et de cashflow, automatisation de la collecte de données (comptabilité, banque, CRM), création d’alertes sur les dérives de marge et de trésorerie. Résultat : visibilité quotidienne sur la trésorerie et le runway, réduction drastique du temps passé à consolider les chiffres, meilleure préparation des échanges avec les investisseurs."
+          "title": "Ligerio — Scaler un e-commerce logistique-intensif à €10M+",
+          "description": "Co-fondé et scalé Ligerio à €10M+ de CA en 4 ans. Construction de l'infrastructure opérationnelle qui a absorbé 50–100% de croissance annuelle : débit logistique x20, équipe de 40+, transition du dropshipping vers le consignement + entrepôt, 200k+ visiteurs mensuels."
         },
         {
-          "title": "Système d’exploitation ops pour une entreprise de services",
-          "description": "Contexte : entreprise de services avec flux opérationnels éparpillés (CRM, outil métier, tickets support) et absence de vue globale sur la qualité de service. Actions : cartographie complète des flux (du premier contact au paiement final), design d’un « OS interne » centralisant commandes, interventions, litiges et encaissements, automatisations de relances, notifications et contrôles qualité. Résultat : réduction des frictions pour les équipes, moins de dépendance à des profils clés, meilleure qualité de service mesurée et pilotée."
+          "title": "Rocket Internet / Jumia — Opérer sur 20+ entités et 550+ ETP",
+          "description": "Opérateur SWAT sur des marchés africains à haut risque. Construction des fonctions finance et contrôle from scratch. Pilotage d'audits, restructurations et stabilisations. 22 entités, 550+ employés, 60+ directs dans plusieurs pays."
         }
       ]
     }
   },
   "testimonials": {
-    "title": "Témoignages sur Guillaume Stehelin de Taisne",
-    "subtitle": "Ils font confiance à Guillaume Stehelin de Taisne pour leur croissance et leurs défis",
-        "items": [
-          {
-            "name": "Francis D.",
-            "position": "CEO, Jumia",
-            "company": "Jumia",
-            "logo": "/images/companies/jumia.png",
-            "content": "Guillaume Stehelin de Taisne nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
-            "rating": 5
-          },
-          {
-            "name": "Foucauld P.",
-            "position": "CFO, HelloFood",
-            "company": "HelloFood",
-            "logo": "/images/companies/hellofood.png",
-            "content": "Grâce à Guillaume Stehelin de Taisne, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise en Part-time CFO nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
-            "rating": 5
-          },
-          {
-            "name": "Clément F.",
-            "position": "Fondateur, Ligerio",
-            "company": "Ligerio",
-            "logo": "/images/companies/ligerio.png",
-            "content": "En situation de crise, Guillaume Stehelin de Taisne a pris les commandes immédiatement. Il a implémenté ZOHO CRM et restructuré nos processus. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise. Un vrai consultant \"coup de poing\".",
-            "rating": 5
-          },
-          {
-            "name": "Caren G.",
-            "position": "CEO, Glossybox",
-            "company": "Glossybox",
-            "logo": "/images/companies/glossybox.png",
-            "content": "Nous avons mandaté Guillaume Stehelin de Taisne durant la cession de notre entreprise Glossybox (70M€ de CA). La cession était alors bloquée à cause de la qualité de notre donnée financière. Guillaume Stehelin de Taisne a re-structuré l'ensemble du groupe (5 pays), mis l'ensemble en conformité avec les normes IFRS et piloté un contrôle fiscal sur notre holding. La cession a été finalisée 8 mois après son arrivée.",
-            "rating": 5
-          },
-          {
-            "name": "Rolland D.",
-            "position": "Fondateur, Kaymu",
-            "company": "Kaymu",
-            "logo": "/images/companies/kaymu.png",
-            "content": "Guillaume Stehelin de Taisne a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
-            "rating": 5
-          },
-          {
-            "name": "Jeremy F.",
-            "position": "CEO, Orami Ltd",
-            "company": "Orami Ltd",
-            "logo": "/images/companies/orami.png",
-            "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume Stehelin de Taisne sait anticiper les défis de croissance et mettre en place les bons outils.",
-            "rating": 5
-          }
-        ]
+    "title": "Trusted by founders and operators",
+    "subtitle": "Retours directs des personnes avec qui j'ai travaillé",
+    "items": [
+      {
+        "name": "Francis D.",
+        "position": "CEO, Jumia",
+        "company": "Jumia",
+        "logo": "/images/companies/jumia.png",
+        "content": "Guillaume Stehelin de Taisne nous a accompagné sur de nombreuses situations complexes (contrôle fiscal, départ impromptu de dirigeant, soupçons de détournement du management, etc.). Il est très efficace, sait rentrer en profondeur dans les détails et garde une lecture holistique. Je recommande fortement.",
+        "rating": 5
+      },
+      {
+        "name": "Foucauld P.",
+        "position": "CFO, HelloFood",
+        "company": "HelloFood",
+        "logo": "/images/companies/hellofood.png",
+        "content": "Grâce à Guillaume Stehelin de Taisne, nous avons structuré notre finance en 3 mois et levé 2M€. Son expertise nous a permis de garder le contrôle tout en accélérant notre croissance. Un partenaire de confiance.",
+        "rating": 5
+      },
+      {
+        "name": "Clément F.",
+        "position": "Fondateur, Ligerio",
+        "company": "Ligerio",
+        "logo": "/images/companies/ligerio.png",
+        "content": "En situation de crise, Guillaume Stehelin de Taisne a pris les commandes immédiatement. Il a implémenté notre CRM et restructuré nos processus. Sa capacité à stabiliser les opérations et à rassurer les équipes a sauvé notre entreprise.",
+        "rating": 5
+      },
+      {
+        "name": "Caren G.",
+        "position": "CEO, Glossybox",
+        "company": "Glossybox",
+        "logo": "/images/companies/glossybox.png",
+        "content": "Nous avons mandaté Guillaume Stehelin de Taisne durant la cession de notre entreprise Glossybox (70M€ de CA). La cession était alors bloquée à cause de la qualité de notre donnée financière. Guillaume Stehelin de Taisne a re-structuré l'ensemble du groupe (5 pays), mis l'ensemble en conformité avec les normes IFRS et piloté un contrôle fiscal sur notre holding. La cession a été finalisée 8 mois après son arrivée.",
+        "rating": 5
+      },
+      {
+        "name": "Rolland D.",
+        "position": "Fondateur, Kaymu",
+        "company": "Kaymu",
+        "logo": "/images/companies/kaymu.png",
+        "content": "Guillaume Stehelin de Taisne a restructuré complètement nos opérations. De la gestion de trésorerie à l'optimisation des processus, il a transformé notre entreprise. Un professionnel exceptionnel.",
+        "rating": 5
+      },
+      {
+        "name": "Jeremy F.",
+        "position": "CEO, Orami Ltd",
+        "company": "Orami Ltd",
+        "logo": "/images/companies/orami.png",
+        "content": "Son expertise en scaling nous a permis de passer de 10 à 100 employés sans perdre le contrôle. Guillaume Stehelin de Taisne sait anticiper les défis de croissance et mettre en place les bons systèmes.",
+        "rating": 5
+      }
+    ]
   },
   "blog": {
-    "title": "Blog - Urgences & Redressement",
-    "subtitle": "Conseils d'urgence et stratégies de redressement pour startups en difficulté",
+    "title": "Blog — Opérations, systèmes & IA",
+    "subtitle": "Réflexions concrètes sur les opérations, les systèmes de pricing, l'automatisation et l'exécution en environnements complexes.",
     "readMore": "Lire la suite",
     "categories": {
-      "scaling": "Redressement Opérationnel",
-      "finance": "Urgences Financières",
-      "tools": "Outils de Crise",
-      "fundraising": "Levées de Dernière Chance"
+      "scaling": "Exécution & Flux",
+      "finance": "Pilotage & Marge",
+      "tools": "Outils & Automatisation",
+      "fundraising": "Croissance & Structuration"
     }
   },
   "contact": {
-    "title": "Contact",
-    "subtitle": "Besoin d'informations ? Contactez Guillaume Stehelin de Taisne pour discuter de votre projet",
+    "title": "Réserver un appel stratégique",
+    "subtitle": "Décris ta situation, tes contraintes et ce qui craque. Je reviens avec un angle d'attaque clair.",
     "form": {
       "name": "Nom",
       "email": "Email",
       "company": "Entreprise",
-      "stage": "Type de service",
-      "message": "Description de votre projet",
-      "submit": "Envoyer le message"
+      "stage": "Besoin principal",
+      "message": "Description de la situation",
+      "submit": "Envoyer la demande"
     }
   },
-      "methodology": {
-      "title": "La méthodologie de Guillaume Stehelin de Taisne",
-    "subtitle": "La performance de Guillaume Stehelin de Taisne au cœur de chaque intervention",
-        "description": "Parce que chaque situation critique est unique, nous adaptons notre approche à chaque enjeu spécifique.",
-        "steps": [
-          {
-            "title": "Diagnostic express (24-48h)",
-            "description": "Analyse rapide et précise de la situation financière, opérationnelle et humaine pour identifier les leviers d'action prioritaires."
-          },
-          {
-            "title": "Plan d'action personnalisé",
-            "description": "Élaboration d'une stratégie de redressement sur mesure avec des objectifs clairs et des échéances réalistes."
-          },
-          {
-            "title": "Intervention immédiate",
-            "description": "Prise de commande opérationnelle avec mise en place des processus de contrôle et de reporting en temps réel."
-          },
-          {
-            "title": "Suivi et optimisation",
-            "description": "Accompagnement continu avec ajustements stratégiques basés sur les résultats et l'évolution de la situation."
-          }
-        ]
+  "methodology": {
+    "title": "Comment je travaille",
+    "subtitle": "Diagnostic rapide. Plan focalisé. Exécution terrain. Systèmes durables.",
+    "description": "Chaque mission commence par un diagnostic rapide des contraintes financières, opérationnelles et organisationnelles pour identifier les actions à plus fort levier.",
+    "steps": [
+      {
+        "title": "Diagnostic rapide",
+        "description": "En 24–48h, je cartographie les contraintes financières, opérationnelles et organisationnelles pour identifier les actions à plus fort levier."
       },
-      "stats": {
-      "title": "Les chiffres de Guillaume Stehelin de Taisne",
-    "subtitle": "L'expertise reconnue de Guillaume Stehelin de Taisne",
-        "items": [
-          {
-            "number": "15+",
-            "label": "Années d'expérience",
-            "description": "En restructuration d'entreprises et gestion de crise"
-          },
-          {
-            "number": "50+",
-            "label": "Entreprises sauvées",
-            "description": "Startups et scaleups en situation critique"
-          },
-          {
-            "number": "€100M+",
-            "label": "CA géré cumulé",
-            "description": "Dans des contextes de redressement"
-          },
-          {
-            "number": "24h",
-            "label": "Délai d'intervention",
-            "description": "Réponse garantie en situation d'urgence"
-          }
-        ]
+      {
+        "title": "Plan opérationnel",
+        "description": "Je définis un plan d'action focalisé avec des owners clairs, des priorités, des métriques et des deadlines."
       },
-      "footer": {
-        "description": "Guillaume Stehelin de Taisne – Part-time CFO & COO, consultant opérations coup de poing pour situations critiques",
-        "sectionTitles": {
-          "services": "Services",
-          "local": "Pages locales",
-          "legal": "Informations légales",
-          "blog": "Blog",
-          "contact": "Contact d'urgence"
-        },
-        "links": {
-          "privacy": "Politique de confidentialité",
-          "terms": "Conditions d'utilisation",
-          "cookies": "Gestion des cookies",
-          "legal": "Mentions légales"
-        },
-        "copyright": "© 2018 GSLV.fr. Tous droits réservés."
+      {
+        "title": "Exécution terrain",
+        "description": "Je prends une ownership directe là où c'est nécessaire : systèmes, reporting, process, structure d'équipe, stabilisation de crise."
       },
-      "values": {
-        "title": "Nos valeurs, mes engagements",
-        "subtitle": "Les principes qui guident notre approche et définissent notre engagement envers l'excellence",
-        "investment": {
-          "title": "Investissement",
-          "principles": [
-            {
-              "title": "Se lever chaque matin pour un objectif commun",
-              "behaviors": [
-                "Faire preuve d'investissement",
-                "Ne pas ménager ses efforts"
-              ]
-            },
-            {
-              "title": "Voir grand, agir vite",
-              "behaviors": [
-                "S'approprier et être disposé à prendre des décisions",
-                "Anticiper les problèmes avant qu'ils ne surviennent",
-                "Se montrer davantage proactif que réactif"
-              ]
-            },
-            {
-              "title": "Pas besoin d'un titre pour être un leader",
-              "behaviors": [
-                "Être énergique et motiver les membres de l'équipe",
-                "Contribuer activement à la réalisation des objectifs des équipes",
-                "Aider ses pairs à assurer l'efficacité de l'équipe avec confiance et humilité"
-              ]
-            },
-            {
-              "title": "Quand on veut, on peut",
-              "behaviors": [
-                "Croire que tout peut être fait",
-                "Chercher des solutions aux problèmes",
-                "Être capable de convaincre quand il y a légitimité"
-              ]
-            }
+      {
+        "title": "Scale & optimisation",
+        "description": "Je transforme les correctifs d'urgence en systèmes durables qui scalent au-delà de mon intervention."
+      }
+    ]
+  },
+  "stats": {
+    "title": "Track record",
+    "subtitle": "Des chiffres du terrain. Pas de vanity metrics.",
+    "items": [
+      {
+        "number": "€10M+",
+        "label": "CA scalé",
+        "description": "Co-fondé et scalé Ligerio à €10M+ de CA en 4 ans"
+      },
+      {
+        "number": "x20",
+        "label": "Débit logistique",
+        "description": "Sans augmenter les effectifs opérationnels"
+      },
+      {
+        "number": "€1M+",
+        "label": "Demandes de devis",
+        "description": "Générés chez Moverz en 3 mois de lancement"
+      },
+      {
+        "number": "550+",
+        "label": "ETP managés",
+        "description": "Sur 20+ entités chez Rocket Internet / Jumia"
+      }
+    ]
+  },
+  "footer": {
+    "description": "Guillaume Stehelin de Taisne — Operator building systems that scale companies",
+    "sectionTitles": {
+      "services": "Services",
+      "local": "Pages locales",
+      "legal": "Informations légales",
+      "blog": "Blog",
+      "contact": "Contact"
+    },
+    "links": {
+      "privacy": "Politique de confidentialité",
+      "terms": "Conditions d'utilisation",
+      "cookies": "Gestion des cookies",
+      "legal": "Mentions légales",
+      "operatingDiagnostic": "Diagnostic opérations",
+      "localPage": "COO Fractionnel · La Rochelle"
+    },
+    "copyright": "© 2018 GSLV.fr. Tous droits réservés."
+  },
+  "trackRecord": {
+    "title": "Track record",
+    "subtitle": "Construit sur le terrain. Mesuré en vrais chiffres.",
+    "items": [
+      {
+        "metric": "€0 → €10M+",
+        "label": "CA",
+        "description": "Co-fondé et scalé Ligerio à €10M+ de CA en 4 ans."
+      },
+      {
+        "metric": "50–100%",
+        "label": "Croissance annuelle",
+        "description": "50–100% de croissance annuelle sur 3 années consécutives."
+      },
+      {
+        "metric": "x20",
+        "label": "Débit logistique",
+        "description": "Débit logistique multiplié par 20 sans augmenter les effectifs opérationnels."
+      },
+      {
+        "metric": "€1M+",
+        "label": "Demandes de devis",
+        "description": "€1M+ de demandes de devis clients en 3 mois chez Moverz."
+      },
+      {
+        "metric": "20+ / 550+",
+        "label": "Entités / ETP",
+        "description": "Opérations sur 20+ entités et 550+ ETP chez Rocket Internet / Jumia."
+      },
+      {
+        "metric": "100+",
+        "label": "Variables de pricing",
+        "description": "Système de pricing et d'opérations basé sur 100+ variables chez Moverz."
+      }
+    ]
+  },
+  "values": {
+    "title": "Nos valeurs, mes engagements",
+    "subtitle": "Les principes qui guident notre approche et définissent notre engagement envers l'excellence",
+    "investment": {
+      "title": "Investissement",
+      "principles": [
+        {
+          "title": "Se lever chaque matin pour un objectif commun",
+          "behaviors": [
+            "Faire preuve d'investissement",
+            "Ne pas ménager ses efforts"
           ]
         },
-        "impact": {
-          "title": "Impact",
-          "principles": [
-            {
-              "title": "Voler haut, plonger profond",
-              "behaviors": [
-                "Faire preuve de précision et de rigueur",
-                "Atteindre un haut niveau de qualité dans ses tâches et ses résultats",
-                "Avoir recours au retour d'information sur la qualité du travail",
-                "Être capable de décomposer des problèmes complexes en plusieurs parties",
-                "Utiliser des compétences quantitatives pour tirer des conclusions"
-              ]
-            },
-            {
-              "title": "Faire simple pour agir intelligemment",
-              "behaviors": [
-                "Être capable de structurer les problèmes pour trouver des solutions claires",
-                "S'appuyer sur des faits pour tirer des conclusions",
-                "Communiquer efficacement"
-              ]
-            },
-            {
-              "title": "Réfléchit, décide et exécute les choses avec souplesse",
-              "behaviors": [
-                "Faire preuve de ponctualité vis-à-vis des heures de travail",
-                "Respecter les délais en fournissant un travail complet dans les délais impartis",
-                "Rechercher activement de nouvelles façons d'améliorer la vitesse d'exécution des tâches",
-                "Participer à des formations pertinentes pour améliorer son efficacité",
-                "Partager les nouvelles méthodes avec l'équipe"
-              ]
-            },
-            {
-              "title": "Innover avec parcimonie",
-              "behaviors": [
-                "Poser des questions et faire preuve de curiosité",
-                "Faire preuve d'innovation"
-              ]
-            }
+        {
+          "title": "Voir grand, agir vite",
+          "behaviors": [
+            "S'approprier et être disposé à prendre des décisions",
+            "Anticiper les problèmes avant qu'ils ne surviennent",
+            "Se montrer davantage proactif que réactif"
           ]
         },
-        "leadership": {
-          "title": "Leadership",
-          "principles": [
-            {
-              "title": "Laisser se développer les meilleurs éléments et les meilleures idées",
-              "behaviors": [
-                "Travailler avec les membres juniors de l'équipe pour les aider à améliorer leurs compétences",
-                "Mettre en place des retours d'information constructifs"
-              ]
-            },
-            {
-              "title": "Jouer pour l'équipe",
-              "behaviors": [
-                "Être capable de structurer le travail des membres de l'équipe",
-                "Être capable de mobiliser et d'inspirer l'équipe pour qu'elle exécute collectivement une tâche",
-                "Être capable d'identifier les éléments peu performants et de les encadrer pour améliorer leur efficacité"
-              ]
-            },
-            {
-              "title": "Faire ce qu'il faut, non ce qui est facile",
-              "behaviors": [
-                "Être une personne de confiance et éthique",
-                "Assurer un équilibre efficace entre opinion et prise de décision",
-                "Agir comme un modèle pour les équipes"
-              ]
-            },
-            {
-              "title": "Travailler dur et avec plaisir",
-              "behaviors": [
-                "Réfléchir de manière positive",
-                "Égayer l'atmosphère",
-                "Promouvoir l'hygiène de vie",
-                "Contribuer en interne au développement de l'entreprise"
-              ]
-            }
+        {
+          "title": "Pas besoin d'un titre pour être un leader",
+          "behaviors": [
+            "Être énergique et motiver les membres de l'équipe",
+            "Contribuer activement à la réalisation des objectifs des équipes",
+            "Aider ses pairs à assurer l'efficacité de l'équipe avec confiance et humilité"
           ]
         },
-        "cta": {
-          "title": "Prêt à travailler avec ces valeurs ?",
-          "subtitle": "Découvrez comment ces principes peuvent transformer votre entreprise",
-          "button": "Nous contacter"
-        },
-        "stats": {
-          "title": "Impact mesurable",
-          "subtitle": "Les résultats concrets de notre approche",
-          "items": [
-            {
-              "number": "10M€",
-              "label": "CA atteint",
-              "description": "Chiffre d'affaires généré chez Ligerio en 2024"
-            },
-            {
-              "number": "45",
-              "label": "Collaborateurs",
-              "description": "Équipe constituée au pic d'activité"
-            },
-            {
-              "number": "3,9M€",
-              "label": "Levée",
-              "description": "Montant levé en financement"
-            }
+        {
+          "title": "Quand on veut, on peut",
+          "behaviors": [
+            "Croire que tout peut être fait",
+            "Chercher des solutions aux problèmes",
+            "Être capable de convaincre quand il y a légitimité"
           ]
-        },
-        "buttons": {
-          "discussService": "Discuter de ce service",
-          "requestQuote": "Demander un devis",
-          "viewPricing": "Voir les tarifs",
-          "bookCall": "Réserver un appel découverte",
-          "requestCustomQuote": "Demander un devis personnalisé",
-          "emergencyCall": "Appel d'urgence 24h/24"
         }
-      },
-      "consultant-cfo-la-rochelle": {
-        "title": "Consultant CFO & COO à La Rochelle",
-        "subtitle": "Expert en direction financière et opérationnelle pour startups et PME de La Rochelle. Accompagnement personnalisé dans l'écosystème entrepreneurial rochelais.",
-        "services": {
-          "title": "Services adaptés à La Rochelle",
-          "subtitle": "Une approche personnalisée pour l'écosystème entrepreneurial rochelais"
+      ]
+    },
+    "impact": {
+      "title": "Impact",
+      "principles": [
+        {
+          "title": "Voler haut, plonger profond",
+          "behaviors": [
+            "Faire preuve de précision et de rigueur",
+            "Atteindre un haut niveau de qualité dans ses tâches et ses résultats",
+            "Avoir recours au retour d'information sur la qualité du travail",
+            "Être capable de décomposer des problèmes complexes en plusieurs parties",
+            "Utiliser des compétences quantitatives pour tirer des conclusions"
+          ]
         },
-        "ecosystem": {
-          "title": "L'écosystème entrepreneurial rochelais",
-          "subtitle": "Découvrez les acteurs clés de l'innovation à La Rochelle"
+        {
+          "title": "Faire simple pour agir intelligemment",
+          "behaviors": [
+            "Être capable de structurer les problèmes pour trouver des solutions claires",
+            "S'appuyer sur des faits pour tirer des conclusions",
+            "Communiquer efficacement"
+          ]
         },
-        "coworking": {
-          "title": "Espaces de coworking à La Rochelle",
-          "subtitle": "Les meilleurs espaces pour travailler et collaborer à La Rochelle"
+        {
+          "title": "Réfléchit, décide et exécute les choses avec souplesse",
+          "behaviors": [
+            "Faire preuve de ponctualité vis-à-vis des heures de travail",
+            "Respecter les délais en fournissant un travail complet dans les délais impartis",
+            "Rechercher activement de nouvelles façons d'améliorer la vitesse d'exécution des tâches",
+            "Participer à des formations pertinentes pour améliorer son efficacité",
+            "Partager les nouvelles méthodes avec l'équipe"
+          ]
         },
-        "cta": {
-          "title": "Prêt à accélérer votre croissance à La Rochelle ?",
-          "subtitle": "Découvrez comment nos services CFO & COO peuvent transformer votre entreprise rochelaise"
+        {
+          "title": "Innover avec parcimonie",
+          "behaviors": [
+            "Poser des questions et faire preuve de curiosité",
+            "Faire preuve d'innovation"
+          ]
         }
+      ]
+    },
+    "leadership": {
+      "title": "Leadership",
+      "principles": [
+        {
+          "title": "Laisser se développer les meilleurs éléments et les meilleures idées",
+          "behaviors": [
+            "Travailler avec les membres juniors de l'équipe pour les aider à améliorer leurs compétences",
+            "Mettre en place des retours d'information constructifs"
+          ]
+        },
+        {
+          "title": "Jouer pour l'équipe",
+          "behaviors": [
+            "Être capable de structurer le travail des membres de l'équipe",
+            "Être capable de mobiliser et d'inspirer l'équipe pour qu'elle exécute collectivement une tâche",
+            "Être capable d'identifier les éléments peu performants et de les encadrer pour améliorer leur efficacité"
+          ]
+        },
+        {
+          "title": "Faire ce qu'il faut, non ce qui est facile",
+          "behaviors": [
+            "Être une personne de confiance et éthique",
+            "Assurer un équilibre efficace entre opinion et prise de décision",
+            "Agir comme un modèle pour les équipes"
+          ]
+        },
+        {
+          "title": "Travailler dur et avec plaisir",
+          "behaviors": [
+            "Réfléchir de manière positive",
+            "Égayer l'atmosphère",
+            "Promouvoir l'hygiène de vie",
+            "Contribuer en interne au développement de l'entreprise"
+          ]
+        }
+      ]
+    },
+    "cta": {
+      "title": "Prêt à travailler avec ces valeurs ?",
+      "subtitle": "Découvrez comment ces principes peuvent transformer votre entreprise",
+      "button": "Nous contacter"
+    },
+    "stats": {
+      "title": "Impact mesurable",
+      "subtitle": "Les résultats concrets de notre approche",
+      "items": [
+        {
+          "number": "10M€",
+          "label": "CA atteint",
+          "description": "Chiffre d'affaires généré chez Ligerio en 2024"
+        },
+        {
+          "number": "45",
+          "label": "Collaborateurs",
+          "description": "Équipe constituée au pic d'activité"
+        },
+        {
+          "number": "3,9M€",
+          "label": "Levée",
+          "description": "Montant levé en financement"
+        }
+      ]
+    },
+    "buttons": {
+      "discussService": "Discuter de ce service",
+      "requestQuote": "Demander un échange",
+      "viewPricing": "Voir les modalités",
+      "bookCall": "Réserver un appel stratégique",
+      "requestCustomQuote": "Demander un cadrage",
+      "emergencyCall": "Demander une intervention rapide"
+    },
+    "consultant-cfo-la-rochelle": {
+      "title": "COO Fractionnel & Operator à La Rochelle",
+      "subtitle": "Systems builder et operator fractionnel pour scale-ups et fondateurs à La Rochelle. Exécution terrain dans l'écosystème entrepreneurial rochelais.",
+      "services": {
+        "title": "Services adaptés à La Rochelle",
+        "subtitle": "Une approche terrain pour l'écosystème entrepreneurial rochelais"
+      },
+      "ecosystem": {
+        "title": "L'écosystème entrepreneurial rochelais",
+        "subtitle": "Découvrez les acteurs clés de l'innovation à La Rochelle"
+      },
+      "coworking": {
+        "title": "Espaces de coworking à La Rochelle",
+        "subtitle": "Les meilleurs espaces pour travailler et collaborer à La Rochelle"
+      },
+      "cta": {
+        "title": "Prêt à accélérer votre croissance à La Rochelle ?",
+        "subtitle": "Découvrez comment les services d'operator fractionnel peuvent transformer votre entreprise"
       }
     }
+  }
+}

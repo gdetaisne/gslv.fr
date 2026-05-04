@@ -12,7 +12,7 @@ export interface StructuredDataProps {
 
 export function generateStructuredData({
   type,
-  locale = 'fr',
+  locale = 'en',
   url = 'https://gslv.fr',
   title,
   description,
@@ -29,7 +29,7 @@ export function generateStructuredData({
     '@type': type,
     url: currentUrl,
     name: title || 'GSLV.fr',
-    description: description || 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+    description: description || 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
     image: image || `${baseUrl}/images/og-image.jpg`,
     inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US',
   }
@@ -41,37 +41,20 @@ export function generateStructuredData({
         '@type': 'Organization',
         name: 'GSLV.fr',
         alternateName: 'Guillaume Stehelin de Taisne',
-        description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+        description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
         url: baseUrl,
         logo: `${baseUrl}/images/logo/logo.png`,
         image: `${baseUrl}/images/og-image.jpg`,
         founder: {
           '@type': 'Person',
           name: 'Guillaume Stehelin de Taisne',
-          jobTitle: 'CFO & COO Part-time | Consultant Opérations Coup de Poing',
+          jobTitle: 'Operator building systems that scale companies',
           email: 'gdetaisne@gmail.com',
-          telephone: ['+33 6 33 04 60 59', '+66 6 47 58 20 32'],
-          address: {
-            '@type': 'PostalAddress',
-            addressLocality: 'Paris',
-            addressCountry: 'FR'
-          },
+          telephone: ['+33 6 33 04 60 59'],
           sameAs: [
             'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/'
           ]
         },
-        address: [
-          {
-            '@type': 'PostalAddress',
-            addressLocality: 'Paris',
-            addressCountry: 'FR'
-          },
-          {
-            '@type': 'PostalAddress',
-            addressLocality: 'Bangkok',
-            addressCountry: 'TH'
-          }
-        ],
         contactPoint: {
           '@type': 'ContactPoint',
           telephone: '+33 6 33 04 60 59',
@@ -81,53 +64,35 @@ export function generateStructuredData({
         sameAs: [
           'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/'
         ],
-        serviceArea: {
-          '@type': 'GeoCircle',
-          geoMidpoint: {
-            '@type': 'GeoCoordinates',
-            latitude: 48.8566,
-            longitude: 2.3522
-          },
-          geoRadius: '1000000'
-        },
         hasOfferCatalog: {
           '@type': 'OfferCatalog',
-          name: 'Services GSLV',
+          name: 'GSLV Services',
           itemListElement: [
             {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'CFO Part-time',
-                description: 'Direction financière externalisée pour optimiser votre gestion et préparer vos levées de fonds',
-                provider: {
-                  '@type': 'Organization',
-                  name: 'GSLV.fr'
-                }
+                name: 'Build scalable operating systems',
+                description: 'Design workflows, internal tools, dashboards and automation layers that replace manual coordination.',
+                provider: { '@type': 'Organization', name: 'GSLV.fr' }
               }
             },
             {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'COO Part-time',
-                description: 'Direction opérationnelle pour structurer et optimiser vos processus de croissance',
-                provider: {
-                  '@type': 'Organization',
-                  name: 'GSLV.fr'
-                }
+                name: 'Structure growth from chaos',
+                description: 'Turn fast growth into repeatable execution: roles, processes, reporting and team accountability.',
+                provider: { '@type': 'Organization', name: 'GSLV.fr' }
               }
             },
             {
               '@type': 'Offer',
               itemOffered: {
                 '@type': 'Service',
-                name: 'Consultant Opérations Coup de Poing',
-                description: 'Remplacement intérimaire de dirigeant pour situations critiques',
-                provider: {
-                  '@type': 'Organization',
-                  name: 'GSLV.fr'
-                }
+                name: 'Fix critical situations fast',
+                description: 'When cash, operations or governance are breaking, step in quickly, diagnose and stabilize.',
+                provider: { '@type': 'Organization', name: 'GSLV.fr' }
               }
             }
           ]
@@ -139,47 +104,34 @@ export function generateStructuredData({
         ...commonData,
         '@type': 'Person',
         name: 'Guillaume Stehelin de Taisne',
-        jobTitle: 'CFO & COO Part-time | Consultant Opérations Coup de Poing',
-        description: 'Expert en restructuration d\'entreprises avec 15+ années d\'expérience. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+        jobTitle: 'Operator building systems that scale companies',
+        description: 'Operator with 10+ years across e-commerce, marketplaces and international scale-ups. Specializes in operating systems, pricing automation and crisis stabilization.',
         email: 'gdetaisne@gmail.com',
-        telephone: ['+33 6 33 04 60 59', '+66 6 47 58 20 32'],
-        address: [
-          {
-            '@type': 'PostalAddress',
-            addressLocality: 'Paris',
-            addressCountry: 'FR'
-          },
-          {
-            '@type': 'PostalAddress',
-            addressLocality: 'Bangkok',
-            addressCountry: 'TH'
-          }
-        ],
+        telephone: ['+33 6 33 04 60 59'],
         sameAs: [
           'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/'
         ],
         knowsAbout: [
-          'CFO Part-time',
-          'COO Part-time',
-          'Consultant Opérations Coup de Poing',
-          'Restructuration entreprise',
-          'Redressement judiciaire',
-          'Levée de fonds',
-          'Scaling startup',
-          'Direction financière',
-          'Direction opérationnelle'
+          'Operating systems design',
+          'Scaling operations',
+          'AI-driven pricing',
+          'Process automation',
+          'Crisis stabilization',
+          'Fractional COO',
+          'E-commerce operations',
+          'Marketplace operations'
         ],
         hasOccupation: {
           '@type': 'Occupation',
-          name: 'CFO & COO Part-time | Consultant Opérations Coup de Poing',
-          description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups',
+          name: 'Operator building systems that scale companies',
+          description: 'Build scalable operating systems, structure growth and fix critical situations for founders and investors.',
           skills: [
-            'Direction financière',
-            'Direction opérationnelle',
-            'Restructuration entreprise',
-            'Redressement judiciaire',
-            'Levée de fonds',
-            'Scaling startup'
+            'Operating system design',
+            'AI automation',
+            'Pricing systems',
+            'Workflow engineering',
+            'Crisis management',
+            'Fractional COO'
           ]
         }
       }
@@ -188,8 +140,8 @@ export function generateStructuredData({
       return {
         ...commonData,
         '@type': 'Service',
-        name: title || 'Services GSLV',
-        description: description || 'Expert en structuration, levées de fonds et scaling pour startups et scaleups',
+        name: title || 'GSLV Services',
+        description: description || 'Build scalable operating systems, structure growth and fix critical situations for founders and investors.',
         provider: {
           '@type': 'Organization',
           name: 'GSLV.fr',
@@ -202,7 +154,7 @@ export function generateStructuredData({
           },
           {
             '@type': 'Country',
-            name: 'Thailand'
+            name: 'Bahrain'
           }
         ],
         availableLanguage: ['French', 'English'],
@@ -244,7 +196,7 @@ export function generateStructuredData({
         '@type': 'WebSite',
         name: 'GSLV.fr',
         url: baseUrl,
-        description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+        description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
         inLanguage: ['fr-FR', 'en-US'],
         potentialAction: {
           '@type': 'SearchAction',
@@ -266,42 +218,42 @@ export const structuredDataConfig = {
   home: {
     fr: {
       type: 'Organization' as const,
-      title: 'GSLV.fr | CFO & COO Part-time | Consultant Opérations Coup de Poing',
-      description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+      title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies | GSLV',
+      description: 'Operator et systems builder aidant les fondateurs, scale-ups et investisseurs à structurer leurs opérations, pricing, automatisation et exécution en environnements à forte croissance.',
       url: 'https://gslv.fr/fr'
     },
     en: {
       type: 'Organization' as const,
-      title: 'GSLV.fr | Part-time CFO & COO | Emergency Operations Consultant',
-      description: 'Expert in structuring, fundraising and scaling for startups and scaleups. Specialized in emergency operations and interim management.',
+      title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies | GSLV',
+      description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
       url: 'https://gslv.fr/en'
     }
   },
   about: {
     fr: {
       type: 'Person' as const,
-      title: 'À propos | Guillaume Stehelin de Taisne',
-      description: 'Découvrez le parcours de Guillaume, expert en restructuration d\'entreprises avec 15+ années d\'expérience.',
+      title: 'À propos | Guillaume Stehelin de Taisne — Opérateur & Systems Builder',
+      description: 'Operator avec 10+ ans d\'expérience dans l\'e-commerce, les marketplaces et les scale-ups internationaux. Rocket Internet, Jumia, Ligerio, Moverz.',
       url: 'https://gslv.fr/fr/about'
     },
     en: {
       type: 'Person' as const,
-      title: 'About | Guillaume Stehelin de Taisne',
-      description: 'Discover Guillaume\'s journey, business restructuring expert with 15+ years of experience.',
+      title: 'About | Guillaume Stehelin de Taisne — Operator & Systems Builder',
+      description: 'Operator with 10+ years across e-commerce, marketplaces and international scale-ups. Rocket Internet, Jumia, Ligerio, Moverz. Now building AI-driven systems.',
       url: 'https://gslv.fr/en/about'
     }
   },
   services: {
     fr: {
       type: 'Service' as const,
-      title: 'Services CFO, COO et Consultant Coup de Poing',
-      description: 'Direction financière, opérationnelle et interventions d\'urgence pour entreprises en difficulté.',
+      title: 'Services — Systèmes opérationnels, structuration et intervention de crise | GSLV',
+      description: 'Construction de systèmes opérationnels scalables, structuration de la croissance et intervention rapide en situations critiques.',
       url: 'https://gslv.fr/fr/services'
     },
     en: {
       type: 'Service' as const,
-      title: 'CFO, COO and Emergency Consultant Services',
-      description: 'Financial management, operational management and emergency interventions for companies in difficulty.',
+      title: 'Services — Operating systems, scaling and crisis intervention | GSLV',
+      description: 'Build scalable operating systems, structure growth from chaos and fix critical situations fast.',
       url: 'https://gslv.fr/en/services'
     }
   }

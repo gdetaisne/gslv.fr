@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Users, Zap, AlertTriangle, ChevronLeft, ChevronRight } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, AlertTriangle, ChevronLeft, ChevronRight, Settings, BarChart3, Target } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -15,6 +15,7 @@ export default function HomePageClient() {
   const tServices = useTranslations('services')
   const tTestimonials = useTranslations('testimonials')
   const tMethodology = useTranslations('methodology')
+  const tTrackRecord = useTranslations('trackRecord')
   
   // Carousel state
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
@@ -54,7 +55,7 @@ export default function HomePageClient() {
       title: tServices('cfo.title'),
       description: tServices('cfo.description'),
       features: tServices.raw('cfo.features'),
-      icon: TrendingUp,
+      icon: Settings,
       color: 'from-sky-500 to-sky-600',
       hoverColor: 'hover:from-sky-600 hover:to-sky-700'
     },
@@ -63,7 +64,7 @@ export default function HomePageClient() {
       title: tServices('coo.title'),
       description: tServices('coo.description'),
       features: tServices.raw('coo.features'),
-      icon: Zap,
+      icon: BarChart3,
       color: 'from-sky-500 to-sky-600',
       hoverColor: 'hover:from-sky-600 hover:to-sky-700'
     },
@@ -80,18 +81,82 @@ export default function HomePageClient() {
 
   // Testimonials data
   const testimonials = tTestimonials.raw('items')
-  const nameIntroServices =
-    locale === 'fr'
-      ? 'Guillaume Stehelin de Taisne, Part-time CFO & COO, pilote personnellement chaque mission pour sécuriser votre croissance.'
-      : locale === 'en'
-        ? 'Guillaume Stehelin de Taisne, Part-time CFO & COO, personally leads every engagement to secure your growth.'
-        : 'Guillaume Stehelin de Taisne, Part-time CFO & COO, personally leads every engagement.'
-  const nameIntroTestimonials =
-    locale === 'fr'
-      ? 'Les fondateurs et investisseurs témoignent de l’impact direct de Guillaume Stehelin de Taisne, Part-time CFO & COO.'
-      : locale === 'en'
-        ? 'Founders and investors share the direct impact of Guillaume Stehelin de Taisne, Part-time CFO & COO.'
-        : 'Clients highlight the impact of Guillaume Stehelin de Taisne, Part-time CFO & COO.'
+
+  // Track record data
+  const trackRecordItems = tTrackRecord.raw('items')
+
+  // Case studies
+  const caseStudies = [
+    {
+      label: 'Moverz',
+      tag: locale === 'fr' ? 'En cours · 2024' : 'Ongoing · 2024',
+      title: locale === 'fr'
+        ? 'Infrastructure de pricing IA pour un marché de €10Bn'
+        : 'AI pricing infrastructure for a €10Bn market',
+      bullets: locale === 'fr'
+        ? [
+            'Système de pricing dynamique — 100+ variables',
+            'Computer vision : photo → inventaire → prix',
+            '€1M+ de demandes de devis en 3 mois',
+            'Back-office supply-side — 20+ paramètres',
+          ]
+        : [
+            'Dynamic pricing system — 100+ variables',
+            'Computer vision: photo → inventory → price',
+            '€1M+ in quote requests within 3 months',
+            'Supply-side back-office — 20+ parameters',
+          ],
+      accent: 'sky',
+    },
+    {
+      label: 'Ligerio',
+      tag: '2021–2025',
+      title: locale === 'fr'
+        ? 'Scaler un e-commerce logistique-intensif à €10M+'
+        : 'Scaling a logistics-heavy e-commerce to €10M+',
+      bullets: locale === 'fr'
+        ? [
+            '€0 à €10M+ de CA en 4 ans',
+            '50–100% de croissance annuelle sur 3 ans',
+            'Débit logistique x20 — mêmes effectifs ops',
+            'Équipe de 40+, 200k+ visiteurs/mois',
+          ]
+        : [
+            '€0 to €10M+ revenue in 4 years',
+            '50–100% YoY growth over 3 years',
+            'Logistics throughput x20 — same ops headcount',
+            'Team of 40+, 200k+ monthly visitors',
+          ],
+      accent: 'emerald',
+    },
+    {
+      label: 'Rocket Internet / Jumia',
+      tag: '2013–2016',
+      title: locale === 'fr'
+        ? 'Opérer sur 20+ entités et 550+ ETP'
+        : 'Operating across 20+ entities and 550+ FTE',
+      bullets: locale === 'fr'
+        ? [
+            '20+ entités à travers l\'Afrique et l\'Europe',
+            '550+ ETP, 60+ rapports directs',
+            'Missions SWAT : audit, restructuration, stabilisation',
+            'Construction des fonctions finance from scratch',
+          ]
+        : [
+            '20+ entities across Africa and Europe',
+            '550+ FTE, 60+ direct reports',
+            'SWAT missions: audit, restructuring, stabilization',
+            'Built finance and control functions from scratch',
+          ],
+      accent: 'indigo',
+    },
+  ]
+
+  const accentMap: Record<string, { bg: string; text: string; border: string; dot: string }> = {
+    sky:     { bg: 'bg-sky-500/10',     text: 'text-sky-400',     border: 'border-sky-500/30',     dot: 'bg-sky-400' },
+    emerald: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', border: 'border-emerald-500/30', dot: 'bg-emerald-400' },
+    indigo:  { bg: 'bg-indigo-500/10',  text: 'text-indigo-400',  border: 'border-indigo-500/30',  dot: 'bg-indigo-400' },
+  }
 
   return (
     <div className="min-h-screen bg-white">
@@ -150,52 +215,70 @@ export default function HomePageClient() {
         {/* Hero Content */}
         <div className="relative z-10 flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-24">
           <div className="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-10 items-center">
-            {/* Texte principal */}
+            {/* Main text */}
             <div className="text-center lg:text-left">
-            <motion.h1
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6 leading-tight"
-            >
-              {t('title')}
-            </motion.h1>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              className="text-base sm:text-lg md:text-xl text-slate-100/90 mb-6 max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 leading-relaxed"
-            >
-              {t('subtitle')}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.35 }}
-              className="text-sm sm:text-base md:text-lg text-slate-200/90 mb-8 max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 leading-relaxed"
-            >
-              {t('summary')}
-            </motion.p>
-            <motion.div
-              initial={{ opacity: 0, y: 30 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
-            >
-              <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-                  {t('cta.primary')}
-                </Button>
-              </Link>
-              <Link href={`/${locale}/services`}>
-                <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 w-full sm:w-auto">
-                  {t('cta.secondary')}
-                </Button>
-              </Link>
-            </motion.div>
+              {/* Micro-label */}
+              <motion.p
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6 }}
+                className="inline-block text-xs sm:text-sm font-semibold tracking-widest text-sky-400 uppercase mb-4"
+              >
+                {t('summary')}
+              </motion.p>
+
+              <motion.h1
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.1 }}
+                className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white drop-shadow-2xl mb-6 leading-tight"
+              >
+                {t('title')}
+              </motion.h1>
+              <motion.p
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                className="text-base sm:text-lg md:text-xl text-slate-100/90 mb-6 max-w-2xl lg:max-w-3xl mx-auto lg:mx-0 leading-relaxed"
+              >
+                {t('subtitle')}
+              </motion.p>
+
+              {/* Proof bullets */}
+              <motion.ul
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.3 }}
+                className="space-y-2 mb-8 text-left max-w-2xl mx-auto lg:mx-0"
+              >
+                {t.raw('proof').map((item: string, i: number) => (
+                  <li key={i} className="flex items-start gap-2 text-sm sm:text-base text-slate-200/90">
+                    <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-sky-400 flex-shrink-0" />
+                    {item}
+                  </li>
+                ))}
+              </motion.ul>
+
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start"
+              >
+                <Link href={`/${locale}/contact`}>
+                  <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
+                    {t('cta.primary')}
+                  </Button>
+                </Link>
+                <Link href={`/${locale}/services`}>
+                  <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-white/10 border-white/30 text-white hover:bg-white/20 w-full sm:w-auto">
+                    {t('cta.secondary')}
+                  </Button>
+                </Link>
+              </motion.div>
             </div>
 
-            {/* Carte systèmes / crédibilité */}
+            {/* Credibility card */}
             <motion.div
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
@@ -205,32 +288,55 @@ export default function HomePageClient() {
               <Card className="bg-slate-900/80 border-slate-800 backdrop-blur-md text-slate-100 shadow-2xl">
                 <CardHeader className="pb-4">
                   <p className="text-xs font-semibold tracking-wide text-sky-400 uppercase">
-                    Finance · Ops · Tech & IA
+                    Operator · Systems Builder · Founder
                   </p>
                   <h3 className="mt-2 text-lg font-semibold text-slate-50">
-                    Un seul C-level pour la crise et la construction des systèmes
+                    Building operational, pricing and automation systems for fast-growing companies
                   </h3>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm text-slate-200/90">
-                  <div className="flex items-center gap-2">
-                    <TrendingUp className="w-4 h-4 text-sky-400" />
-                    <span>0 → ~10 M€ de CA chez Ligerio, opérateur chez Jumia, Glossybox, Orami.</span>
+                  <div className="flex items-start gap-2">
+                    <TrendingUp className="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0" />
+                    <span>Scaled Ligerio from €0 to €10M+ revenue in 4 years — logistics throughput x20.</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Zap className="w-4 h-4 text-emerald-400" />
-                    <span>Outils internes et automatisations (TypeScript, IA) pour remplacer le travail manuel.</span>
+                  <div className="flex items-start gap-2">
+                    <Zap className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
+                    <span>Building AI-driven pricing engine at Moverz — €1M+ in quote requests in 3 months.</span>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <AlertTriangle className="w-4 h-4 text-rose-400" />
-                    <span>Interventions pompier en 24–48h pour sécuriser cash, opérations et gouvernance.</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-indigo-300" />
-                    <span>Étudiant en Computer Science à Harvard pour aller encore plus loin sur la tech & l’IA.</span>
+                  <div className="flex items-start gap-2">
+                    <Target className="w-4 h-4 text-rose-400 mt-0.5 flex-shrink-0" />
+                    <span>ex Rocket Internet / Jumia — 20+ entities, 550+ FTE, SWAT operator in complex environments.</span>
                   </div>
                 </CardContent>
               </Card>
             </motion.div>
+          </div>
+        </div>
+      </section>
+
+      {/* Track Record Section */}
+      <section className="py-12 sm:py-16 bg-slate-950 border-t border-slate-800">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-10">
+            <p className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-2">
+              {tTrackRecord('title')}
+            </p>
+            <p className="text-slate-400 text-sm">{tTrackRecord('subtitle')}</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 sm:gap-6">
+            {trackRecordItems.map((item: any, index: number) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="text-center"
+              >
+                <div className="text-2xl sm:text-3xl font-bold text-white mb-1">{item.metric}</div>
+                <div className="text-xs sm:text-sm font-semibold text-sky-400 mb-1">{item.label}</div>
+                <div className="text-xs text-slate-400 leading-snug">{item.description}</div>
+              </motion.div>
+            ))}
           </div>
         </div>
       </section>
@@ -250,26 +356,10 @@ export default function HomePageClient() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-wide mb-3"
-            >
-              Guillaume Stehelin de Taisne – Part-time CFO & COO
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tServices('subtitle')}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed"
-            >
-              {nameIntroServices}
             </motion.p>
           </div>
 
@@ -362,6 +452,61 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Case Studies Section */}
+      <section className="py-12 sm:py-20 bg-slate-950">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-12">
+            <motion.p
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-3"
+            >
+              {locale === 'fr' ? 'Expériences' : 'Case studies'}
+            </motion.p>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight"
+            >
+              {locale === 'fr' ? 'Ce que j\'ai construit' : 'What I have built'}
+            </motion.h2>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {caseStudies.map((cs, index) => {
+              const colors = accentMap[cs.accent]
+              return (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.15 }}
+                  className={`rounded-2xl border ${colors.border} bg-slate-900/60 p-6 flex flex-col gap-4`}
+                >
+                  <div className="flex items-center justify-between">
+                    <span className={`text-xs font-bold tracking-widest uppercase ${colors.text}`}>
+                      {cs.label}
+                    </span>
+                    <span className="text-xs text-slate-500">{cs.tag}</span>
+                  </div>
+                  <h3 className="text-base sm:text-lg font-bold text-white leading-snug">
+                    {cs.title}
+                  </h3>
+                  <ul className="space-y-2">
+                    {cs.bullets.map((b: string, i: number) => (
+                      <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
+                        <span className={`mt-1.5 w-1.5 h-1.5 rounded-full ${colors.dot} flex-shrink-0`} />
+                        {b}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )
+            })}
+          </div>
+        </div>
+      </section>
 
       {/* Testimonials Section */}
       <section className="py-12 sm:py-20 bg-white">
@@ -378,26 +523,10 @@ export default function HomePageClient() {
             <motion.p
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.1 }}
-              className="text-sm sm:text-base md:text-lg text-gray-500 uppercase tracking-wide mb-3"
-            >
-              Guillaume Stehelin de Taisne – Part-time CFO & COO
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
               {tTestimonials('subtitle')}
-            </motion.p>
-            <motion.p
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.3 }}
-              className="text-sm sm:text-base text-gray-500 max-w-3xl mx-auto leading-relaxed"
-            >
-              {nameIntroTestimonials}
             </motion.p>
           </div>
 
@@ -417,7 +546,7 @@ export default function HomePageClient() {
                       ))}
                     </div>
                     <blockquote className="text-sm sm:text-base text-gray-700 mb-6 italic leading-relaxed">
-                      "{testimonial.content}"
+                      &quot;{testimonial.content}&quot;
                     </blockquote>
                     <div className="flex items-center">
                       <div className="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-sky-400 font-bold text-lg mr-4">
@@ -463,12 +592,19 @@ export default function HomePageClient() {
             initial={{ opacity: 0, y: 30 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
+            className="flex flex-col sm:flex-row gap-4 justify-center"
           >
-              <Link href={`/${locale}/contact`}>
-                <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-sky-500 hover:bg-sky-400 text-white w-full sm:w-auto">
-                  {t('buttons.bookCall')}
-                </Button>
-              </Link>
+            <Link href={`/${locale}/contact`}>
+              <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-sky-500 hover:bg-sky-400 text-white w-full sm:w-auto">
+                {t('buttons.bookCall')}
+              </Button>
+            </Link>
+            <Link href={`/${locale}/about`}>
+              <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-slate-700 text-slate-200 hover:bg-slate-900/60 w-full sm:w-auto">
+                <ArrowRight className="w-5 h-5 mr-2" />
+                {locale === 'fr' ? 'Mon parcours' : 'My background'}
+              </Button>
+            </Link>
           </motion.div>
         </div>
       </section>

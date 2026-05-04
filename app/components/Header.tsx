@@ -13,6 +13,22 @@ export default function Header() {
   const t = useTranslations('navigation')
   const locale = useLocale()
 
+  const isFr = locale === 'fr'
+
+  const dropdownItems = isFr
+    ? [
+        { name: 'Construire des systèmes opérationnels', href: `/${locale}/services#cfo` },
+        { name: 'Structurer la croissance', href: `/${locale}/services#coo` },
+        { name: 'Intervention de crise', href: `/${locale}/services#pompier` },
+        { name: 'COO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
+      ]
+    : [
+        { name: 'Build scalable operating systems', href: `/${locale}/services#cfo` },
+        { name: 'Structure growth from chaos', href: `/${locale}/services#coo` },
+        { name: 'Fix critical situations fast', href: `/${locale}/services#pompier` },
+        { name: 'Fractional COO · La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
+      ]
+
   const navigation = [
     { name: t('home'), href: `/${locale}` },
     { name: t('about'), href: `/${locale}/about` },
@@ -20,23 +36,20 @@ export default function Header() {
       name: t('services'),
       href: `/${locale}/services`,
       hasDropdown: true,
-      dropdownItems: [
-        { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
-        { name: 'COO Part-time', href: `/${locale}/services#coo` },
-        { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
-        { name: 'CFO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` }
-      ]
+      dropdownItems,
     },
-    { name: t('values'), href: `/${locale}/values` },
-    { name: 'Tarifs', href: `/${locale}/pricing` },
-    { name: t('blog'), href: `/${locale}/blog` }
+    { name: isFr ? 'Tarifs' : 'Pricing', href: `/${locale}/pricing` },
+    { name: t('blog'), href: `/${locale}/blog` },
   ]
+
+  const bookLabel = isFr ? 'Réserver un appel' : 'Book a call'
+  const brandTagline = isFr ? 'Operator · Systèmes · IA' : 'Operator · Systems · AI'
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-14">
-          {/* Logo + nom */}
+          {/* Logo + name */}
           <Link href={`/${locale}`} className="flex items-center">
             <div className="w-9 h-9 flex items-center justify-center">
               <img
@@ -54,11 +67,12 @@ export default function Header() {
               </div>
             </div>
             <span className="hidden md:inline-block ml-3 text-sm font-semibold text-slate-100">
-              Guillaume Stehelin de Taisne · CFO & COO
+              Guillaume Stehelin de Taisne
+              <span className="text-slate-400 font-normal ml-1">· {brandTagline}</span>
             </span>
           </Link>
 
-          {/* Nav desktop */}
+          {/* Desktop nav */}
           <nav className="hidden md:flex items-center space-x-6">
             {navigation.map((item) => (
               <div key={item.name} className="relative">
@@ -72,7 +86,7 @@ export default function Header() {
                       <ChevronDown className="w-4 h-4" />
                     </button>
                     {isServicesOpen && (
-                      <div className="absolute top-full left-0 mt-2 w-52 bg-slate-900 rounded-lg shadow-lg border border-slate-800 py-2">
+                      <div className="absolute top-full left-0 mt-2 w-56 bg-slate-900 rounded-lg shadow-lg border border-slate-800 py-2">
                         {item.dropdownItems?.map((dropdownItem) => (
                           <Link
                             key={dropdownItem.name}
@@ -98,16 +112,16 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Langue + CTA + menu mobile */}
+          {/* Language switcher + CTA + mobile menu */}
           <div className="flex items-center space-x-3">
             <div className="hidden sm:block">
               <LanguageSwitcher />
             </div>
             <Link
               href={`/${locale}/contact`}
-              className="hidden sm:inline-flex items-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md"
+              className="hidden sm:inline-flex items-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md text-sm font-medium"
             >
-              {t('book')}
+              {bookLabel}
             </Link>
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
@@ -118,7 +132,7 @@ export default function Header() {
           </div>
         </div>
 
-        {/* Nav mobile */}
+        {/* Mobile nav */}
         {isMenuOpen && (
           <div className="md:hidden border-t border-slate-800 py-4 bg-slate-950/95">
             <nav className="flex flex-col space-y-3">
@@ -167,13 +181,16 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <Link
-                href={`/${locale}/contact`}
-                className="inline-flex items-center justify-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors mt-2 shadow-md"
-                onClick={() => setIsMenuOpen(false)}
-              >
-                {t('book')}
-              </Link>
+              <div className="flex items-center justify-between pt-2 border-t border-slate-800">
+                <LanguageSwitcher />
+                <Link
+                  href={`/${locale}/contact`}
+                  className="inline-flex items-center justify-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md text-sm font-medium"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {bookLabel}
+                </Link>
+              </div>
             </nav>
           </div>
         )}
@@ -181,4 +198,3 @@ export default function Header() {
     </header>
   )
 }
-

@@ -5,7 +5,7 @@ const resend = new Resend(process.env.RESEND_API_KEY || 'dummy-key')
 
 export async function POST(request: NextRequest) {
   try {
-    const { name, email, company, stage, message } = await request.json()
+    const { name, email, company, activity, operationsVolume, currentTools, stage, message } = await request.json()
 
     // Validation des données
     if (!name || !email) {
@@ -27,7 +27,10 @@ Informations du contact:
 - Nom: ${name}
 - Email: ${email}
 - Entreprise: ${company || 'Non renseigné'}
-- Service: ${stage || 'Non renseigné'}
+- Activité: ${activity || 'Non renseigné'}
+- Volume d'opérations: ${operationsVolume || 'Non renseigné'}
+- Outils en place: ${currentTools || 'Non renseigné'}
+- Besoin principal: ${stage || 'Non renseigné'}
 
 Message:
 ${message || 'Aucun message'}
@@ -54,7 +57,10 @@ Envoyé depuis le site GSLV.fr
                 <li><strong>Nom:</strong> ${name}</li>
                 <li><strong>Email:</strong> ${email}</li>
                 <li><strong>Entreprise:</strong> ${company || 'Non renseigné'}</li>
-                <li><strong>Service:</strong> ${stage || 'Non renseigné'}</li>
+                <li><strong>Activité:</strong> ${activity || 'Non renseigné'}</li>
+                <li><strong>Volume d'opérations:</strong> ${operationsVolume || 'Non renseigné'}</li>
+                <li><strong>Outils en place:</strong> ${currentTools || 'Non renseigné'}</li>
+                <li><strong>Besoin principal:</strong> ${stage || 'Non renseigné'}</li>
               </ul>
             </div>
             

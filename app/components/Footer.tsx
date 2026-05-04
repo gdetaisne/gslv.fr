@@ -6,6 +6,8 @@ import { Mail, Phone, MapPin, Linkedin, Twitter } from 'lucide-react'
 
 export default function Footer() {
   const t = useTranslations('footer')
+  const tServices = useTranslations('services')
+  const tBlog = useTranslations('blog')
   const locale = useLocale()
 
   const sectionTitles = {
@@ -18,13 +20,13 @@ export default function Footer() {
 
   const footerLinks = {
     services: [
-      { name: 'CFO Part-time', href: `/${locale}/services#cfo` },
-      { name: 'COO Part-time', href: `/${locale}/services#coo` },
-      { name: 'Consultant Coup de Poing', href: `/${locale}/services#pompier` },
-      { name: 'Tarifs', href: `/${locale}/pricing` },
+      { name: tServices('cfo.title'), href: `/${locale}/services#cfo` },
+      { name: tServices('coo.title'), href: `/${locale}/services#coo` },
+      { name: tServices('pompier.title'), href: `/${locale}/services#pompier` },
+      { name: t('links.operatingDiagnostic'), href: `/${locale}/services/cfo-part-time` },
     ],
     local: [
-      { name: 'CFO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
+      { name: t('links.localPage'), href: `/${locale}/consultant-cfo-la-rochelle` },
     ],
     legal: [
       { name: t('links.privacy'), href: `/${locale}/privacy` },
@@ -33,10 +35,10 @@ export default function Footer() {
       { name: t('links.legal'), href: `/${locale}/mentions-legales` },
     ],
     blog: [
-      { name: 'Scaling & Opérations', href: `/${locale}/blog?category=scaling` },
-      { name: 'Finance pour startups', href: `/${locale}/blog?category=finance` },
-      { name: 'Outils & Processus', href: `/${locale}/blog?category=tools` },
-      { name: 'Levées de fonds', href: `/${locale}/blog?category=fundraising` },
+      { name: tBlog('categories.scaling'), href: `/${locale}/blog?category=scaling` },
+      { name: tBlog('categories.finance'), href: `/${locale}/blog?category=finance` },
+      { name: tBlog('categories.tools'), href: `/${locale}/blog?category=tools` },
+      { name: tBlog('categories.fundraising'), href: `/${locale}/blog?category=fundraising` },
     ],
   }
 
@@ -54,9 +56,6 @@ export default function Footer() {
             </Link>
             <p className="text-gray-300 mb-6 max-w-sm">
               {t('description')}
-            </p>
-            <p className="text-sm text-primary-200 mb-6">
-              Guillaume Stehelin de Taisne – Part-time CFO & COO
             </p>
             <div className="flex space-x-4">
               <a
@@ -83,7 +82,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{sectionTitles.services}</h3>
             <ul className="space-y-2">
               {footerLinks.services.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
@@ -100,7 +99,7 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">{sectionTitles.local}</h3>
             <ul className="space-y-2">
               {footerLinks.local.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
@@ -110,31 +109,11 @@ export default function Footer() {
                 </li>
               ))}
             </ul>
-          </div>
 
-          {/* Legal Links */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{sectionTitles.legal}</h3>
-            <ul className="space-y-2">
-              {footerLinks.legal.map((link) => (
-                <li key={link.name}>
-                  <Link
-                    href={link.href}
-                    className="text-gray-300 hover:text-white transition-colors"
-                  >
-                    {link.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Blog Categories */}
-          <div>
-            <h3 className="text-lg font-semibold mb-4">{sectionTitles.blog}</h3>
+            <h3 className="text-lg font-semibold mt-8 mb-4">{sectionTitles.blog}</h3>
             <ul className="space-y-2">
               {footerLinks.blog.map((link) => (
-                <li key={link.name}>
+                <li key={link.href}>
                   <Link
                     href={link.href}
                     className="text-gray-300 hover:text-white transition-colors"
@@ -146,8 +125,22 @@ export default function Footer() {
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Legal + Contact */}
           <div>
+            <h3 className="text-lg font-semibold mb-4">{sectionTitles.legal}</h3>
+            <ul className="space-y-2 mb-8">
+              {footerLinks.legal.map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-gray-300 hover:text-white transition-colors"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+
             <h3 className="text-lg font-semibold mb-4">{sectionTitles.contact}</h3>
             <div className="space-y-3">
               <div className="flex items-center space-x-3">
@@ -169,17 +162,8 @@ export default function Footer() {
                 </a>
               </div>
               <div className="flex items-center space-x-3">
-                <Phone className="w-5 h-5 text-primary-400" />
-                <a
-                  href="tel:+66647582032"
-                  className="text-gray-300 hover:text-white transition-colors"
-                >
-                  +66 6 47 58 20 32
-                </a>
-              </div>
-              <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-primary-400" />
-                <span className="text-gray-300">Paris, France & Bangkok, Thailand</span>
+                <span className="text-gray-300">La Rochelle · Bangkok</span>
               </div>
             </div>
           </div>
@@ -194,7 +178,7 @@ export default function Footer() {
             <div className="flex space-x-6 mt-4 md:mt-0">
               {footerLinks.legal.map((link) => (
                 <Link
-                  key={link.name}
+                  key={link.href}
                   href={link.href}
                   className="text-gray-400 hover:text-white text-sm transition-colors"
                 >

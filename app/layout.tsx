@@ -7,21 +7,19 @@ const inter = Inter({ subsets: ['latin'] })
 export const metadata: Metadata = {
   metadataBase: new URL('https://gslv.fr'),
   title: {
-    default: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
+    default: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies | GSLV',
     template: '%s | GSLV'
   },
-  description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Structuration financière, opérations et restructuration pour startups et scale-ups.',
+  description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
   keywords: [
-    'CFO part-time',
-    'COO part-time', 
-    'consultant opérations coup de poing',
-    'restructuration entreprise',
-    'redressement judiciaire',
-    'levée de fonds',
-    'scaling startup',
-    'direction financière',
-    'direction opérationnelle',
-    'crise entreprise',
+    'operator',
+    'fractional COO',
+    'systems builder',
+    'scaling operations',
+    'AI operations',
+    'pricing systems',
+    'operational systems',
+    'startup operations',
     'Guillaume Stehelin de Taisne',
     'GSLV'
   ],
@@ -35,24 +33,24 @@ export const metadata: Metadata = {
   },
   openGraph: {
     type: 'website',
-    locale: 'fr_FR',
+    locale: 'en_US',
     url: 'https://gslv.fr',
     siteName: 'GSLV.fr',
-    title: 'GSLV.fr | CFO & COO Part-time | Consultant Opérations Coup de Poing',
-    description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+    title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies',
+    description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
     images: [
       {
         url: 'https://gslv.fr/images/og-image.jpg',
         width: 1200,
         height: 630,
-        alt: 'GSLV.fr - CFO & COO Part-time',
+        alt: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'GSLV.fr | CFO & COO Part-time | Consultant Opérations Coup de Poing',
-    description: 'Expert en structuration, levées de fonds et scaling pour startups et scaleups. Spécialisé en opérations coup de poing et remplacement intérimaire de dirigeant.',
+    title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies',
+    description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
     images: ['https://gslv.fr/images/og-image.jpg'],
     creator: '@gslv_fr',
     site: '@gslv_fr',
@@ -73,7 +71,6 @@ export const metadata: Metadata = {
     languages: {
       'fr-FR': 'https://gslv.fr/fr',
       'en-US': 'https://gslv.fr/en',
-      'th-TH': 'https://gslv.fr/th',
     },
   },
   icons: {
@@ -94,7 +91,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="fr">
+    <html lang="en">
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#0ea5e9" />
@@ -102,7 +99,6 @@ export default function RootLayout({
         <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
         <link rel="manifest" href="/manifest.json" />
         <link rel="sitemap" href="/sitemap.xml" />
-        <meta name="google-site-verification" content="google-site-verification-code" />
       </head>
       <body className={inter.className}>
         {children}

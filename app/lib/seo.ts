@@ -21,7 +21,7 @@ export function generateMetadata({
   keywords = [],
   image = 'https://gslv.fr/images/og-image.jpg',
   url = 'https://gslv.fr',
-  locale = 'fr',
+  locale = 'en',
   type = 'website',
   publishedTime,
   modifiedTime,
@@ -33,16 +33,16 @@ export function generateMetadata({
   const fullUrl = url.startsWith('https://') ? url : `https://gslv.fr${url}`
   
   const defaultKeywords = [
-    'CFO part-time',
-    'COO part-time', 
-    'consultant opérations coup de poing',
-    'restructuration entreprise',
-    'redressement judiciaire',
-    'levée de fonds',
-    'scaling startup',
-    'direction financière',
-    'direction opérationnelle',
-    'crise entreprise',
+    'operator',
+    'fractional COO',
+    'systems builder',
+    'scaling operations',
+    'AI operations',
+    'pricing systems',
+    'operational systems',
+    'startup operations',
+    'marketplace operations',
+    'crisis operator',
     'Guillaume Stehelin de Taisne',
     'GSLV'
   ]
@@ -109,9 +109,7 @@ export function generateMetadata({
         'max-snippet': -1,
       },
     },
-    verification: {
-      google: 'VOTRE_CODE_GOOGLE_ICI', // Remplacez par votre code Google Search Console
-    },
+    verification: {},
   }
 }
 
@@ -119,62 +117,62 @@ export function generateMetadata({
 export const seoConfig = {
   home: {
     fr: {
-      title: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
-      description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Structuration financière, opérations et restructuration pour startups et scale-ups.',
-      keywords: ['CFO part-time', 'COO part-time', 'consultant opérations coup de poing', 'restructuration entreprise', 'redressement judiciaire', 'levée de fonds', 'scaling startup']
+      title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies | GSLV',
+      description: 'Operator et systems builder aidant les fondateurs, scale-ups et investisseurs à structurer leurs opérations, pricing, automatisation et exécution en environnements à forte croissance.',
+      keywords: ['operator', 'COO fractionnel', 'systems builder', 'scaling operations', 'systèmes de pricing', 'opérations IA', 'exécution startup']
     },
     en: {
-      title: 'Guillaume Stehelin de Taisne – Part-time CFO & COO | GSLV',
-      description: 'Guillaume Stehelin de Taisne, Part-time CFO & COO. Financial structuring, operations and turnaround support for startups and scale-ups.',
-      keywords: ['part-time CFO', 'part-time COO', 'emergency operations consultant', 'business restructuring', 'judicial recovery', 'fundraising', 'startup scaling']
+      title: 'Guillaume Stehelin de Taisne — Operator building systems that scale companies | GSLV',
+      description: 'Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.',
+      keywords: ['operator', 'fractional COO', 'systems builder', 'scaling operations', 'AI operations', 'pricing systems', 'startup operations']
     }
   },
   services: {
     fr: {
-      title: 'Services CFO, COO et Consultant Coup de Poing',
-      description: 'Direction financière, opérationnelle et interventions d\'urgence pour entreprises en difficulté. Solutions personnalisées pour chaque stade de croissance.',
-      keywords: ['services CFO', 'services COO', 'consultant coup de poing', 'direction financière', 'direction opérationnelle', 'intervention urgence']
+      title: 'Services — Systèmes opérationnels, structuration et intervention de crise | GSLV',
+      description: 'Construction de systèmes opérationnels scalables, structuration de la croissance et intervention rapide en situations critiques.',
+      keywords: ['systèmes opérationnels', 'COO fractionnel', 'operator', 'scaling', 'crise opérationnelle', 'automatisation']
     },
     en: {
-      title: 'CFO, COO and Emergency Consultant Services',
-      description: 'Financial management, operational management and emergency interventions for companies in difficulty. Personalized solutions for each growth stage.',
-      keywords: ['CFO services', 'COO services', 'emergency consultant', 'financial management', 'operational management', 'emergency intervention']
+      title: 'Services — Operating systems, scaling and crisis intervention | GSLV',
+      description: 'Build scalable operating systems, structure growth from chaos and fix critical situations fast.',
+      keywords: ['operating systems', 'fractional COO', 'operator', 'scaling', 'crisis operator', 'automation']
     }
   },
   about: {
     fr: {
       title: 'À propos de Guillaume Stehelin de Taisne | GSLV',
-      description: 'Découvrez le parcours de Guillaume Stehelin de Taisne, Part-time CFO & COO avec 15+ années d\'expérience en restructuration et hypercroissance.',
-      keywords: ['Guillaume Stehelin de Taisne', 'à propos', 'parcours professionnel', 'témoignages clients', 'expertise restructuration']
+      description: "Operator avec 10+ ans d'expérience dans l'e-commerce, les marketplaces et les scale-ups internationaux. Rocket Internet, Jumia, Ligerio, Moverz.",
+      keywords: ['Guillaume Stehelin de Taisne', 'operator', 'COO fractionnel', 'Rocket Internet', 'Jumia', 'Ligerio', 'Moverz', 'systems builder']
     },
     en: {
       title: 'About Guillaume Stehelin de Taisne | GSLV',
-      description: 'Discover the journey of Guillaume Stehelin de Taisne, Part-time CFO & COO with 15+ years in restructuring and hypergrowth contexts.',
-      keywords: ['Guillaume Stehelin de Taisne', 'about', 'professional journey', 'client testimonials', 'restructuring expertise']
+      description: 'Operator with 10+ years across e-commerce, marketplaces and international scale-ups. Rocket Internet, Jumia, Ligerio, Moverz. Now building AI-driven systems.',
+      keywords: ['Guillaume Stehelin de Taisne', 'operator', 'fractional COO', 'Rocket Internet', 'Jumia', 'Ligerio', 'Moverz', 'systems builder']
     }
   },
   blog: {
     fr: {
-      title: 'Blog | Conseils CFO, COO et Opérations Coup de Poing',
-      description: 'Articles et conseils d\'experts sur la direction financière, opérationnelle et les interventions d\'urgence en entreprise.',
-      keywords: ['blog CFO', 'blog COO', 'conseils entreprise', 'direction financière', 'opérations coup de poing', 'articles experts']
+      title: 'Blog | Opérations, systèmes & IA',
+      description: "Réflexions concrètes sur les opérations, les systèmes de pricing, l'automatisation et l'exécution en environnements complexes.",
+      keywords: ['blog opérations', 'systèmes pricing', 'automatisation', 'scaling', 'operator', 'IA opérations']
     },
     en: {
-      title: 'Blog | CFO, COO and Emergency Operations Tips',
-      description: 'Expert articles and advice on financial management, operational management and emergency business interventions.',
-      keywords: ['CFO blog', 'COO blog', 'business advice', 'financial management', 'emergency operations', 'expert articles']
+      title: 'Blog | Operations, systems & AI',
+      description: 'Practical thinking on operations, pricing systems, automation and scaling execution in complex environments.',
+      keywords: ['operations blog', 'pricing systems', 'automation', 'scaling', 'operator', 'AI operations']
     }
   },
   contact: {
     fr: {
-      title: 'Contact | Réservez votre appel découverte',
-      description: 'Contactez Guillaume pour une consultation gratuite. Réponse garantie sous 24h. Paris, Bangkok. Email et téléphone.',
-      keywords: ['contact Guillaume', 'consultation gratuite', 'appel découverte', 'Paris Bangkok', 'réponse 24h']
+      title: 'Contact | Réserver un appel stratégique',
+      description: "Décris ta situation, tes contraintes et ce qui craque. Je reviens avec un angle d'attaque clair.",
+      keywords: ['appel stratégique', 'contact Guillaume', 'operator', 'COO fractionnel', 'intervention rapide']
     },
     en: {
-      title: 'Contact | Book your discovery call',
-      description: 'Contact Guillaume for a free consultation. Guaranteed response within 24h. Paris, Bangkok. Email and phone.',
-      keywords: ['contact Guillaume', 'free consultation', 'discovery call', 'Paris Bangkok', '24h response']
+      title: 'Contact | Book a strategy call',
+      description: 'Describe your situation, constraints and what is breaking. I will come back with a clear angle of attack.',
+      keywords: ['strategy call', 'contact Guillaume', 'operator', 'fractional COO', 'rapid intervention']
     }
   }
 }

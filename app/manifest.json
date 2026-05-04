@@ -1,7 +1,7 @@
 {
-  "name": "GSLV.fr - CFO & COO Part-time",
+  "name": "GSLV.fr — Operator building systems that scale companies",
   "short_name": "GSLV.fr",
-  "description": "Direction financière et opérationnelle externalisée pour startups et scaleups",
+  "description": "Operator and systems builder helping founders, scale-ups and investors structure operations, pricing, automation and execution in high-growth environments.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",
@@ -18,7 +18,7 @@
       "type": "image/png"
     }
   ],
-  "categories": ["business", "finance", "productivity"],
-  "lang": "fr"
+  "categories": ["business", "productivity", "utilities"],
+  "lang": "en"
 }
 

@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useTranslations, useLocale } from 'next-intl'
+import { useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
 import { MapPin, Building, Users, TrendingUp, Calendar, Star, ArrowRight, CheckCircle, RefreshCw } from 'lucide-react'
 import Link from 'next/link'
@@ -18,7 +18,6 @@ interface NewsItem {
 }
 
 export default function ConsultantCFOLaRochellePage() {
-  const t = useTranslations('consultant-cfo-la-rochelle')
   const locale = useLocale()
   const [localNews, setLocalNews] = useState<NewsItem[]>([])
   const [isLoadingNews, setIsLoadingNews] = useState(true)
@@ -50,35 +49,35 @@ export default function ConsultantCFOLaRochellePage() {
   const localServices = [
     {
       icon: <TrendingUp className="w-6 h-6" />,
-      title: "Accompagnement CFO part-time",
-      description: "Direction financière pour startups et PME de La Rochelle et sa région",
+      title: "Systèmes opérationnels scalables",
+      description: "Conception de workflows, outils internes, dashboards et couches d'automatisation pour rendre la croissance gérable.",
       features: [
-        "Pilotage financier et reporting",
-        "Optimisation de la trésorerie",
-        "Préparation aux levées de fonds",
-        "Accompagnement scaling"
+        "Conception et simplification des processus",
+        "Outils internes et automatisation",
+        "Workflows IA",
+        "Dashboards KPI et cadence opérationnelle"
       ]
     },
     {
       icon: <Building className="w-6 h-6" />,
-      title: "COO opérations coup de poing",
-      description: "Intervention d'urgence pour restructurer et optimiser vos opérations",
+      title: "Structurer la croissance depuis le chaos",
+      description: "Aider les fondateurs à transformer une croissance rapide en exécution reproductible : rôles, processus, reporting et accountability.",
       features: [
-        "Diagnostic opérationnel rapide",
-        "Mise en place de processus",
-        "Accompagnement équipes",
-        "Suivi performance"
+        "Conception du modèle opérationnel",
+        "Structure équipes et rythme d'exécution",
+        "Opérations supply / demand",
+        "Résolution des goulets d'étranglement"
       ]
     },
     {
       icon: <Users className="w-6 h-6" />,
-      title: "Conseil stratégique local",
-      description: "Expertise du marché rochelais et de l'écosystème Nouvelle-Aquitaine",
+      title: "Intervention de crise et diagnostic rapide",
+      description: "Quand les opérations, la trésorerie ou la gouvernance craquent, j'interviens rapidement pour diagnostiquer et stabiliser.",
       features: [
-        "Connaissance du tissu économique local",
-        "Réseau professionnel régional",
-        "Accompagnement levées de fonds",
-        "Conseil en croissance"
+        "Diagnostic 24–48h",
+        "Visibilité cash et runway",
+        "Stabilisation opérationnelle",
+        "Support exécutif intérimaire"
       ]
     }
   ]
@@ -150,10 +149,10 @@ export default function ConsultantCFOLaRochellePage() {
   ]
 
   const localStats = [
-    { number: "15+", label: "Années d'expérience" },
-    { number: "50+", label: "Entreprises accompagnées" },
-    { number: "100%", label: "Satisfaction client" },
-    { number: "24h", label: "Réponse garantie" }
+    { number: "10+", label: "Ans sur le terrain" },
+    { number: "€10M+", label: "CA scalé (Ligerio)" },
+    { number: "x20", label: "Débit logistique" },
+    { number: "550+", label: "ETP managés" }
   ]
 
   const startupEcosystemStats = [
@@ -187,7 +186,7 @@ export default function ConsultantCFOLaRochellePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
             >
-              Consultant CFO & COO à La Rochelle
+              COO Fractionnel & Opérateur Systèmes · La Rochelle
             </motion.h1>
             
             <motion.p
@@ -196,8 +195,8 @@ export default function ConsultantCFOLaRochellePage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-4xl mx-auto leading-relaxed mb-8"
             >
-              Expert en direction financière et opérationnelle pour startups et PME de La Rochelle. 
-              Accompagnement personnalisé dans l'écosystème entrepreneurial rochelais.
+              Basé à La Rochelle, j&apos;accompagne les fondateurs et investisseurs de Nouvelle-Aquitaine 
+              qui ont besoin de structurer leurs opérations, leurs systèmes et leur exécution pour passer à l&apos;échelle.
             </motion.p>
 
             <motion.div
@@ -208,12 +207,12 @@ export default function ConsultantCFOLaRochellePage() {
             >
               <Link href={`/${locale}/contact`}>
                 <Button size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-                  Consultation gratuite
+                  Réserver un appel
                 </Button>
               </Link>
               <Link href={`/${locale}/services`}>
                 <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto">
-                  Nos services
+                  Voir les services
                 </Button>
               </Link>
             </motion.div>
@@ -231,7 +230,7 @@ export default function ConsultantCFOLaRochellePage() {
               transition={{ duration: 0.8 }}
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-4 leading-tight"
             >
-              Services adaptés à La Rochelle
+              Ce que je fais à La Rochelle et en Nouvelle-Aquitaine
             </motion.h2>
             <motion.p
               initial={{ opacity: 0, y: 30 }}
@@ -239,7 +238,7 @@ export default function ConsultantCFOLaRochellePage() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="text-base sm:text-lg md:text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
             >
-              Une approche personnalisée pour l'écosystème entrepreneurial rochelais
+              Opérations, systèmes et exécution pour fondateurs et investisseurs qui veulent passer à l&apos;échelle.
             </motion.p>
           </div>
 

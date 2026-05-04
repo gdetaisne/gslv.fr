@@ -33,7 +33,7 @@ export default function PrivacyPage() {
               transition={{ duration: 0.8, delay: 0.4 }}
               className="text-xl text-gray-600 mb-8"
             >
-              Dernière mise à jour : 17 septembre 2024
+              Dernière mise à jour : 31 mars 2026
             </motion.p>
           </div>
         </div>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
             >
               <h2 className="text-2xl font-bold text-dark-900 mb-6">1. Collecte des données</h2>
               <p className="text-gray-700 mb-6">
-                Nous collectons les informations que vous nous fournissez directement, notamment lorsque vous :
+                TENEO W.L.L, société éditrice de gslv.fr, collecte les informations que vous nous fournissez directement, notamment lorsque vous :
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
                 <li>Remplissez notre formulaire de contact</li>
@@ -77,7 +77,7 @@ export default function PrivacyPage() {
               <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
                 <li>Avec votre consentement explicite</li>
                 <li>Pour respecter une obligation légale</li>
-                <li>Avec nos prestataires de services (sous contrat de confidentialité)</li>
+                <li>Avec nos prestataires techniques et d&apos;hébergement lorsque cela est nécessaire à l&apos;exploitation du site</li>
               </ul>
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">4. Sécurité des données</h2>
@@ -87,24 +87,29 @@ export default function PrivacyPage() {
 
               <h2 className="text-2xl font-bold text-dark-900 mb-6">5. Vos droits</h2>
               <p className="text-gray-700 mb-6">
-                Conformément au RGPD, vous avez le droit de :
+                Sous réserve du droit applicable, vous pouvez demander :
               </p>
               <ul className="list-disc list-inside text-gray-700 mb-8 space-y-2">
-                <li>Accéder à vos données personnelles</li>
-                <li>Rectifier vos données personnelles</li>
-                <li>Supprimer vos données personnelles</li>
-                <li>Limiter le traitement de vos données</li>
-                <li>Vous opposer au traitement de vos données</li>
-                <li>Portabilité de vos données</li>
+                <li>L&apos;accès à vos données personnelles</li>
+                <li>La rectification de vos données personnelles</li>
+                <li>La suppression de vos données personnelles lorsque cela est possible</li>
+                <li>Toute information complémentaire sur le traitement de vos données</li>
               </ul>
 
-              <h2 className="text-2xl font-bold text-dark-900 mb-6">6. Contact</h2>
+              <h2 className="text-2xl font-bold text-dark-900 mb-6">6. Droit applicable</h2>
+              <p className="text-gray-700 mb-6">
+                Cette politique de confidentialité est interprétée conformément aux lois applicables dans le Kingdom of Bahrain, sauf disposition impérative contraire applicable à l&apos;utilisateur.
+              </p>
+
+              <h2 className="text-2xl font-bold text-dark-900 mb-6">7. Contact</h2>
               <p className="text-gray-700 mb-6">
                 Pour toute question concernant cette politique de confidentialité, vous pouvez nous contacter à :
               </p>
               <div className="bg-gray-50 p-6 rounded-lg">
+                <p className="text-gray-700 mb-2"><strong>Société :</strong> TENEO W.L.L</p>
                 <p className="text-gray-700 mb-2"><strong>Email :</strong> gdetaisne@gmail.com</p>
-                <p className="text-gray-700"><strong>Téléphone :</strong> +33 1 23 45 67 89</p>
+                <p className="text-gray-700 mb-2"><strong>Téléphone :</strong> +33 6 33 04 60 59</p>
+                <p className="text-gray-700"><strong>Adresse :</strong> Office 21, Building 6, Road 355, Block 327, Adliya, Kingdom of Bahrain</p>
               </div>
             </motion.div>
           </div>
