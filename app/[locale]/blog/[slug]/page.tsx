@@ -6,22 +6,10 @@ import { useLocale, useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Calendar, Clock, Tag, ArrowLeft, Share2, BookOpen } from 'lucide-react'
 import Link from 'next/link'
+import ReactMarkdown from 'react-markdown'
+import remarkGfm from 'remark-gfm'
 import { Card, CardContent } from '../../../components/Card'
 import { BlogPost } from '../../../types'
-
-function linkify(text: string): string {
-  // Transform markdown links [text](https://...) into anchor tags
-  let html = text.replace(
-    /\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">$1</a>'
-  )
-  // Transform raw URLs into anchor tags
-  html = html.replace(
-    /(https?:\/\/[^\s)]+)/g,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-primary-600 underline">$1</a>'
-  )
-  return html
-}
 
 export default function BlogPostPage() {
   const [article, setArticle] = useState<BlogPost | null>(null)
@@ -233,17 +221,35 @@ export default function BlogPostPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-lg max-w-none"
+            className="prose prose-lg prose-slate max-w-none
+              prose-headings:font-bold prose-headings:text-slate-900
+              prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
+              prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
+              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-5
+              prose-strong:text-slate-900 prose-strong:font-semibold
+              prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline
+              prose-hr:border-slate-200 prose-hr:my-8
+              prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-5
+              prose-li:text-gray-700 prose-li:mb-1
+              prose-blockquote:border-l-4 prose-blockquote:border-sky-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600"
           >
-            <div className="text-gray-700 leading-relaxed">
-              {article.content.split('\n').map((paragraph, index) => (
-                <p
-                  key={index}
-                  className="mb-6"
-                  dangerouslySetInnerHTML={{ __html: linkify(paragraph) }}
-                />
-              ))}
-            </div>
+            <ReactMarkdown
+              remarkPlugins={[remarkGfm]}
+              components={{
+                a: ({ href, children }) => (
+                  <a
+                    href={href}
+                    target={href?.startsWith('http') ? '_blank' : undefined}
+                    rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
+                    className="text-sky-600 hover:underline"
+                  >
+                    {children}
+                  </a>
+                ),
+              }}
+            >
+              {article.content}
+            </ReactMarkdown>
           </motion.div>
         </div>
       </section>
