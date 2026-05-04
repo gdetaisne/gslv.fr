@@ -5,7 +5,6 @@ import Link from 'next/link'
 import { useTranslations, useLocale } from 'next-intl'
 import { Menu, X, ChevronDown } from 'lucide-react'
 import { cn } from '@/app/lib/utils'
-import LanguageSwitcher from './LanguageSwitcher'
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -13,21 +12,12 @@ export default function Header() {
   const t = useTranslations('navigation')
   const locale = useLocale()
 
-  const isFr = locale === 'fr'
-
-  const dropdownItems = isFr
-    ? [
-        { name: 'Construire des systèmes opérationnels', href: `/${locale}/services#cfo` },
-        { name: 'Structurer la croissance', href: `/${locale}/services#coo` },
-        { name: 'Intervention de crise', href: `/${locale}/services#pompier` },
-        { name: 'COO La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
-      ]
-    : [
-        { name: 'Build scalable operating systems', href: `/${locale}/services#cfo` },
-        { name: 'Structure growth from chaos', href: `/${locale}/services#coo` },
-        { name: 'Fix critical situations fast', href: `/${locale}/services#pompier` },
-        { name: 'Fractional COO · La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
-      ]
+  const dropdownItems = [
+    { name: 'Build scalable operating systems', href: `/${locale}/services#cfo` },
+    { name: 'Structure growth from chaos', href: `/${locale}/services#coo` },
+    { name: 'Fix critical situations fast', href: `/${locale}/services#pompier` },
+    { name: 'Fractional COO · La Rochelle', href: `/${locale}/consultant-cfo-la-rochelle` },
+  ]
 
   const navigation = [
     { name: t('home'), href: `/${locale}` },
@@ -38,12 +28,12 @@ export default function Header() {
       hasDropdown: true,
       dropdownItems,
     },
-    { name: isFr ? 'Tarifs' : 'Pricing', href: `/${locale}/pricing` },
+    { name: 'Pricing', href: `/${locale}/pricing` },
     { name: t('blog'), href: `/${locale}/blog` },
   ]
 
-  const bookLabel = isFr ? 'Réserver un appel' : 'Book a call'
-  const brandTagline = isFr ? 'Operator · Systèmes · IA' : 'Operator · Systems · AI'
+  const bookLabel = 'Book a call'
+  const brandTagline = 'Operator · Systems · AI'
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-slate-950/90 backdrop-blur-sm border-b border-slate-800">
@@ -112,11 +102,8 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* Language switcher + CTA + mobile menu */}
+          {/* CTA + mobile menu */}
           <div className="flex items-center space-x-3">
-            <div className="hidden sm:block">
-              <LanguageSwitcher />
-            </div>
             <Link
               href={`/${locale}/contact`}
               className="hidden sm:inline-flex items-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md text-sm font-medium"
@@ -181,11 +168,10 @@ export default function Header() {
                   )}
                 </div>
               ))}
-              <div className="flex items-center justify-between pt-2 border-t border-slate-800">
-                <LanguageSwitcher />
+              <div className="pt-2 border-t border-slate-800">
                 <Link
                   href={`/${locale}/contact`}
-                  className="inline-flex items-center justify-center px-4 py-2 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md text-sm font-medium"
+                  className="inline-flex items-center justify-center w-full px-4 py-3 bg-sky-600 text-white rounded-lg hover:bg-sky-700 transition-colors shadow-md text-sm font-medium"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {bookLabel}

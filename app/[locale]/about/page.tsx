@@ -1,6 +1,6 @@
 'use client'
 
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { CheckCircle, Users, TrendingUp, Target, Zap, Linkedin, ChevronDown, ChevronUp } from 'lucide-react'
 import Image from 'next/image'
@@ -32,52 +32,19 @@ function linkifyMoverz(text: string) {
 
 export default function AboutPage() {
   const t = useTranslations('about')
-  const locale = useLocale()
   const [isTimelineExpanded, setIsTimelineExpanded] = useState(false)
 
-  const isFr = locale === 'fr'
+  const stats = [
+    { number: '10+', label: 'Years in the field' },
+    { number: 'x20', label: 'Logistics throughput' },
+    { number: '€10M+', label: 'Revenue scaled' },
+    { number: '550+', label: 'FTE managed' },
+  ]
 
-  const stats = isFr
-    ? [
-        { number: '10+', label: 'Ans de terrain' },
-        { number: 'x20', label: 'Débit logistique' },
-        { number: '€10M+', label: 'CA scalé' },
-        { number: '550+', label: 'ETP managés' },
-      ]
-    : [
-        { number: '10+', label: 'Years in the field' },
-        { number: 'x20', label: 'Logistics throughput' },
-        { number: '€10M+', label: 'Revenue scaled' },
-        { number: '550+', label: 'FTE managed' },
-      ]
-
-  const expertise = isFr
-    ? [
-        {
-          icon: <TrendingUp className="w-7 h-7 text-sky-500" />,
-          title: 'Systèmes opérationnels',
-          description: 'Workflows, outils internes, dashboards KPI et cadences opérationnelles qui remplacent la coordination manuelle.',
-        },
-        {
-          icon: <Target className="w-7 h-7 text-sky-500" />,
-          title: 'Diagnostic rapide',
-          description: 'En 24–48h, je cartographie les contraintes et identifie les actions à plus fort levier.',
-        },
-        {
-          icon: <Users className="w-7 h-7 text-sky-500" />,
-          title: 'Structuration de la croissance',
-          description: 'Modèle opérationnel, rôles, process, reporting et rythme d\'exécution pour rendre la croissance reproductible.',
-        },
-        {
-          icon: <Zap className="w-7 h-7 text-sky-500" />,
-          title: 'IA & automatisation',
-          description: 'Moteurs de pricing, computer vision, workflows automatisés et assistants internes — avec du code réel.',
-        },
-      ]
-    : [
-        {
-          icon: <TrendingUp className="w-7 h-7 text-sky-500" />,
-          title: 'Operating systems',
+  const expertise = [
+    {
+      icon: <TrendingUp className="w-7 h-7 text-sky-500" />,
+      title: 'Operating systems',
           description: 'Workflows, internal tools, KPI dashboards and operating cadences that replace manual coordination.',
         },
         {
@@ -98,42 +65,33 @@ export default function AboutPage() {
       ]
 
   const companies = [
-    { name: 'Jumia', logo: '/images/companies/jumia.png', description: isFr ? 'E-commerce panafricain' : 'Pan-African e-commerce' },
-    { name: 'HelloFood', logo: '/images/companies/hellofood.png', description: isFr ? 'Livraison de repas' : 'Food delivery' },
-    { name: 'Ligerio', logo: '/images/companies/ligerio.png', description: isFr ? 'E-commerce premium' : 'Premium e-commerce' },
-    { name: 'Aunis Ramonage', logo: '/images/companies/aunis-ramonage.png', description: isFr ? 'Services techniques' : 'Technical services' },
-    { name: 'Kaymu', logo: '/images/companies/kaymu.png', description: isFr ? 'Marketplace' : 'Marketplace' },
-    { name: 'Glossybox', logo: '/images/companies/glossybox.png', description: isFr ? 'Beauté & cosmétiques' : 'Beauty & cosmetics' },
-    { name: 'Orami', logo: '/images/companies/orami.png', description: isFr ? 'Maternité & bébé' : 'Maternity & baby' },
-    { name: 'Securclés', logo: '/images/companies/securcles.png', description: isFr ? 'Tech clés brevetée' : 'Patented key tech' },
-    { name: 'Jaiye', logo: '/images/companies/jaiye.jpeg', description: isFr ? 'Plateforme digitale' : 'Digital platform' },
-    { name: 'Lamudi', logo: '/images/companies/lamudi.png', description: isFr ? 'Immobilier en ligne' : 'Online real estate' },
-    { name: 'Lexolia', logo: '/images/companies/lexolia.png', description: isFr ? 'Solutions digitales' : 'Digital solutions' },
-    { name: 'Petloft', logo: '/images/companies/petloft.png', description: isFr ? 'Services animaux' : 'Pet services' },
+    { name: 'Jumia', logo: '/images/companies/jumia.png', description: 'Pan-African e-commerce' },
+    { name: 'HelloFood', logo: '/images/companies/hellofood.png', description: 'Food delivery' },
+    { name: 'Ligerio', logo: '/images/companies/ligerio.png', description: 'Premium e-commerce' },
+    { name: 'Aunis Ramonage', logo: '/images/companies/aunis-ramonage.png', description: 'Technical services' },
+    { name: 'Kaymu', logo: '/images/companies/kaymu.png', description: 'Marketplace' },
+    { name: 'Glossybox', logo: '/images/companies/glossybox.png', description: 'Beauty & cosmetics' },
+    { name: 'Orami', logo: '/images/companies/orami.png', description: 'Maternity & baby' },
+    { name: 'Securclés', logo: '/images/companies/securcles.png', description: 'Patented key tech' },
+    { name: 'Jaiye', logo: '/images/companies/jaiye.jpeg', description: 'Digital platform' },
+    { name: 'Lamudi', logo: '/images/companies/lamudi.png', description: 'Online real estate' },
+    { name: 'Lexolia', logo: '/images/companies/lexolia.png', description: 'Digital solutions' },
+    { name: 'Petloft', logo: '/images/companies/petloft.png', description: 'Pet services' },
   ]
 
   const timeline = t.raw('timeline')
 
-  const expandLabel = isFr ? 'Voir le parcours complet' : 'See full background'
-  const collapseLabel = isFr ? 'Voir moins' : 'See less'
-  const moreLabel = isFr
-    ? `+${timeline.length - 2} autres expériences`
-    : `+${timeline.length - 2} more experiences`
-  const achievementsLabel = isFr ? 'réalisations clés' : 'key achievements'
-  const companiesTitle = isFr ? 'Entreprises' : 'Companies'
-  const companiesSubtitle = isFr
-    ? 'Des environnements variés, le même objectif : structurer, simplifier et scaler.'
-    : 'Diverse environments. Same objective: structure, simplify and scale.'
-  const companiesCount = isFr ? '12+ entreprises' : '12+ companies'
-  const approachTitle = isFr ? 'Mon approche' : 'My approach'
-  const expertiseTitle = isFr ? 'Ce que j\'apporte' : 'What I bring'
-  const expertiseSubtitle = isFr
-    ? 'Une approche orientée exécution, systèmes et résultats mesurables.'
-    : 'An execution-first approach focused on systems and measurable results.'
-  const timelineTitle = isFr ? 'Parcours et preuves' : 'Background & proof'
-  const timelineSubtitle = isFr
-    ? 'Des expériences utiles quand il faut structurer, simplifier et scaler.'
-    : 'Experiences that matter when you need to structure, simplify and scale.'
+  const expandLabel = 'See full background'
+  const collapseLabel = 'See less'
+  const moreLabel = `+${timeline.length - 2} more experiences`
+  const achievementsLabel = 'key achievements'
+  const companiesTitle = 'Companies'
+  const companiesSubtitle = 'Diverse environments. Same objective: structure, simplify and scale.'
+  const companiesCount = '12+ companies'
+  const expertiseTitle = 'What I bring'
+  const expertiseSubtitle = 'An execution-first approach focused on systems and measurable results.'
+  const timelineTitle = 'Background & proof'
+  const timelineSubtitle = 'Experiences that matter when you need to structure, simplify and scale.'
 
   return (
     <div className="pt-16">
@@ -147,7 +105,7 @@ export default function AboutPage() {
               transition={{ duration: 0.5 }}
               className="text-xs font-semibold tracking-widest text-sky-600 uppercase mb-4"
             >
-              {isFr ? 'Operator · Systems Builder · Founder' : 'Operator · Systems Builder · Founder'}
+              Operator · Systems Builder · Founder
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -416,7 +374,7 @@ export default function AboutPage() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                {approachTitle}
+                My approach
               </h2>
               <p className="text-lg text-gray-600 mb-6 leading-relaxed">
                 {t('description')}
@@ -459,7 +417,7 @@ export default function AboutPage() {
               <div className="text-center mt-6">
                 <h3 className="text-2xl font-bold text-slate-900 mb-1">Guillaume Stehelin de Taisne</h3>
                 <p className="text-base text-gray-500 mb-3">
-                  {isFr ? 'Operator · Systems Builder · Founder' : 'Operator · Systems Builder · Founder'}
+                  Operator · Systems Builder · Founder
                 </p>
                 <Link
                   href="https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/"
@@ -468,7 +426,7 @@ export default function AboutPage() {
                   className="inline-flex items-center text-sky-600 hover:text-sky-700 font-medium transition-colors"
                 >
                   <Linkedin className="w-5 h-5 mr-2" />
-                  {isFr ? 'Profil LinkedIn' : 'LinkedIn profile'}
+                  LinkedIn profile
                 </Link>
               </div>
             </motion.div>

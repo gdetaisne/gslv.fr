@@ -1,7 +1,7 @@
 'use client'
 
 import { useState } from 'react'
-import { useTranslations, useLocale } from 'next-intl'
+import { useTranslations } from 'next-intl'
 import { motion } from 'framer-motion'
 import { Mail, MapPin, Clock, CheckCircle, ArrowRight, Linkedin } from 'lucide-react'
 import Button from '../../components/Button'
@@ -19,8 +19,6 @@ export default function ContactPage() {
   const [isSubmitted, setIsSubmitted] = useState(false)
 
   const t = useTranslations('contact')
-  const locale = useLocale()
-  const isFr = locale === 'fr'
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -53,23 +51,14 @@ export default function ContactPage() {
     setFormData({ ...formData, [e.target.name]: e.target.value })
   }
 
-  const stages = isFr
-    ? [
-        'Construire un système opérationnel',
-        'Structurer la croissance',
-        'Intervention de crise / SWAT',
-        'Sprint systèmes (outils, automatisation)',
-        'COO Fractionnel (mission continue)',
-        'Autre',
-      ]
-    : [
-        'Build an operating system',
-        'Structure growth from chaos',
-        'Crisis / SWAT intervention',
-        'Systems build sprint (tools, automation)',
-        'Fractional COO (ongoing)',
-        'Other',
-      ]
+  const stages = [
+    'Build an operating system',
+    'Structure growth from chaos',
+    'Crisis / SWAT intervention',
+    'Systems build sprint (tools, automation)',
+    'Fractional COO (ongoing)',
+    'Other',
+  ]
 
   if (isSubmitted) {
     return (
@@ -81,17 +70,11 @@ export default function ContactPage() {
           className="max-w-md mx-auto text-center px-4"
         >
           <CheckCircle className="w-16 h-16 text-emerald-400 mx-auto mb-4" />
-          <h2 className="text-2xl font-bold text-white mb-4">
-            {isFr ? 'Message envoyé !' : 'Message sent!'}
-          </h2>
+          <h2 className="text-2xl font-bold text-white mb-4">Message sent!</h2>
           <p className="text-slate-300 mb-6">
-            {isFr
-              ? 'Votre demande a été transmise. Je reviens vers vous rapidement avec un premier retour.'
-              : 'Your request has been sent. I will come back to you quickly with a first angle of attack.'}
+            Your request has been sent. I will come back to you quickly with a first angle of attack.
           </p>
-          <Button onClick={() => setIsSubmitted(false)}>
-            {isFr ? 'Envoyer une autre demande' : 'Send another request'}
-          </Button>
+          <Button onClick={() => setIsSubmitted(false)}>Send another request</Button>
         </motion.div>
       </div>
     )
@@ -109,7 +92,7 @@ export default function ContactPage() {
               transition={{ duration: 0.5 }}
               className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-4"
             >
-              {isFr ? 'Contact' : 'Contact'}
+              Contact
             </motion.p>
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -143,14 +126,8 @@ export default function ContactPage() {
             >
               <Card>
                 <CardHeader>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-2">
-                    {isFr ? 'Demande de contact' : 'Request a conversation'}
-                  </h2>
-                  <p className="text-gray-600">
-                    {isFr
-                      ? 'Quelques lignes suffisent pour cadrer un premier retour utile.'
-                      : 'A few lines are enough to frame a useful first response.'}
-                  </p>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">Request a conversation</h2>
+                  <p className="text-gray-600">A few lines are enough to frame a useful first response.</p>
                 </CardHeader>
                 <CardContent>
                   <form onSubmit={handleSubmit} className="space-y-5">
@@ -166,7 +143,7 @@ export default function ContactPage() {
                         onChange={handleChange}
                         required
                         className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
-                        placeholder={isFr ? 'Votre nom complet' : 'Your full name'}
+                        placeholder="Your full name"
                       />
                     </div>
 
@@ -197,7 +174,7 @@ export default function ContactPage() {
                         value={formData.company}
                         onChange={handleChange}
                         className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
-                        placeholder={isFr ? 'Votre entreprise' : 'Your company'}
+                        placeholder="Your company"
                       />
                     </div>
 
@@ -213,13 +190,9 @@ export default function ContactPage() {
                         required
                         className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base"
                       >
-                        <option value="">
-                          {isFr ? 'Sélectionnez votre besoin principal' : 'Select your primary need'}
-                        </option>
+                        <option value="">Select your primary need</option>
                         {stages.map((stage) => (
-                          <option key={stage} value={stage}>
-                            {stage}
-                          </option>
+                          <option key={stage} value={stage}>{stage}</option>
                         ))}
                       </select>
                     </div>
@@ -235,23 +208,12 @@ export default function ContactPage() {
                         onChange={handleChange}
                         rows={6}
                         className="w-full px-4 py-3.5 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sky-500 focus:border-transparent text-base resize-none"
-                        placeholder={
-                          isFr
-                            ? 'Décris ta situation : ce qui bloque, ce que tu veux construire, à quelle vitesse.'
-                            : 'Describe your situation: what is breaking, what you want to build, how fast you need to move.'
-                        }
+                        placeholder="Describe your situation: what is breaking, what you want to build, how fast you need to move."
                       />
                     </div>
 
-                    <Button
-                      type="submit"
-                      size="lg"
-                      className="w-full"
-                      isLoading={isSubmitting}
-                    >
-                      {isSubmitting
-                        ? (isFr ? 'Envoi...' : 'Sending...')
-                        : t('form.submit')}
+                    <Button type="submit" size="lg" className="w-full" isLoading={isSubmitting}>
+                      {isSubmitting ? 'Sending...' : t('form.submit')}
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
                   </form>
@@ -268,14 +230,8 @@ export default function ContactPage() {
             >
               <Card>
                 <CardHeader>
-                  <h2 className="text-2xl font-bold text-slate-900 mb-2">
-                    {isFr ? 'Contact direct' : 'Direct contact'}
-                  </h2>
-                  <p className="text-gray-600">
-                    {isFr
-                      ? 'Préfères un échange direct ? Voici comment me joindre.'
-                      : 'Prefer a direct conversation? Here is how to reach me.'}
-                  </p>
+                  <h2 className="text-2xl font-bold text-slate-900 mb-2">Direct contact</h2>
+                  <p className="text-gray-600">Prefer a direct conversation? Here is how to reach me.</p>
                 </CardHeader>
                 <CardContent>
                   <div className="space-y-5">
@@ -291,21 +247,15 @@ export default function ContactPage() {
                     <div className="flex items-center gap-4">
                       <MapPin className="w-5 h-5 text-sky-500 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-gray-700">
-                          {isFr ? 'Localisation' : 'Location'}
-                        </p>
-                        <p className="text-gray-600">Bahrain / Remote-first</p>
+                        <p className="text-sm font-medium text-gray-700">Location</p>
+                        <p className="text-gray-600">La Rochelle · Bangkok · Remote-first</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
                       <Clock className="w-5 h-5 text-sky-500 flex-shrink-0" />
                       <div>
-                        <p className="text-sm font-medium text-gray-700">
-                          {isFr ? 'Délai de réponse' : 'Response time'}
-                        </p>
-                        <p className="text-gray-600">
-                          {isFr ? 'Réponse sous 24h' : 'Within 24h'}
-                        </p>
+                        <p className="text-sm font-medium text-gray-700">Response time</p>
+                        <p className="text-gray-600">Within 24h</p>
                       </div>
                     </div>
                     <div className="flex items-center gap-4">
@@ -326,27 +276,16 @@ export default function ContactPage() {
                 </CardContent>
               </Card>
 
-              {/* What to expect */}
               <Card className="bg-slate-950 border-slate-800">
                 <CardContent className="p-6">
-                  <h3 className="text-lg font-bold text-white mb-4">
-                    {isFr ? 'Ce que vous recevrez' : 'What you will get'}
-                  </h3>
+                  <h3 className="text-lg font-bold text-white mb-4">What you will get</h3>
                   <ul className="space-y-3">
-                    {(isFr
-                      ? [
-                          'Un premier retour avec un angle d\'attaque clair',
-                          'Une évaluation rapide de votre situation',
-                          'Un format d\'engagement adapté à votre besoin',
-                          'Pas de pitch générique, pas de devis à l\'aveugle',
-                        ]
-                      : [
-                          'A first response with a clear angle of attack',
-                          'A fast assessment of your situation',
-                          'An engagement format matched to your need',
-                          'No generic pitch, no blind proposal',
-                        ]
-                    ).map((item, i) => (
+                    {[
+                      'A first response with a clear angle of attack',
+                      'A fast assessment of your situation',
+                      'An engagement format matched to your need',
+                      'No generic pitch, no blind proposal',
+                    ].map((item, i) => (
                       <li key={i} className="flex items-start gap-2 text-sm text-slate-300">
                         <CheckCircle className="w-4 h-4 text-emerald-400 mt-0.5 flex-shrink-0" />
                         {item}
