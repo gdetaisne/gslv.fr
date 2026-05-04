@@ -221,21 +221,28 @@ export default function BlogPostPage() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="prose prose-lg prose-slate max-w-none
-              prose-headings:font-bold prose-headings:text-slate-900
-              prose-h1:text-3xl prose-h2:text-2xl prose-h2:mt-10 prose-h2:mb-4
-              prose-h3:text-xl prose-h3:mt-6 prose-h3:mb-3
-              prose-p:text-gray-700 prose-p:leading-relaxed prose-p:mb-5
-              prose-strong:text-slate-900 prose-strong:font-semibold
-              prose-a:text-sky-600 prose-a:no-underline hover:prose-a:underline
-              prose-hr:border-slate-200 prose-hr:my-8
-              prose-ul:list-disc prose-ul:pl-6 prose-ul:mb-5
-              prose-li:text-gray-700 prose-li:mb-1
-              prose-blockquote:border-l-4 prose-blockquote:border-sky-500 prose-blockquote:pl-4 prose-blockquote:italic prose-blockquote:text-gray-600"
           >
             <ReactMarkdown
               remarkPlugins={[remarkGfm]}
               components={{
+                h1: ({ children }) => (
+                  <h1 className="text-3xl font-bold text-slate-900 mt-10 mb-5">{children}</h1>
+                ),
+                h2: ({ children }) => (
+                  <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-100">{children}</h2>
+                ),
+                h3: ({ children }) => (
+                  <h3 className="text-xl font-semibold text-slate-800 mt-8 mb-3">{children}</h3>
+                ),
+                p: ({ children }) => (
+                  <p className="text-gray-700 leading-relaxed mb-5 text-base">{children}</p>
+                ),
+                strong: ({ children }) => (
+                  <strong className="font-semibold text-slate-900">{children}</strong>
+                ),
+                em: ({ children }) => (
+                  <em className="italic text-gray-600">{children}</em>
+                ),
                 a: ({ href, children }) => (
                   <a
                     href={href}
@@ -245,6 +252,26 @@ export default function BlogPostPage() {
                   >
                     {children}
                   </a>
+                ),
+                ul: ({ children }) => (
+                  <ul className="list-disc pl-6 mb-5 space-y-1 text-gray-700">{children}</ul>
+                ),
+                ol: ({ children }) => (
+                  <ol className="list-decimal pl-6 mb-5 space-y-1 text-gray-700">{children}</ol>
+                ),
+                li: ({ children }) => (
+                  <li className="text-gray-700 leading-relaxed">{children}</li>
+                ),
+                hr: () => (
+                  <hr className="border-slate-200 my-10" />
+                ),
+                blockquote: ({ children }) => (
+                  <blockquote className="border-l-4 border-sky-400 pl-4 my-6 italic text-gray-600 bg-slate-50 py-2 rounded-r">
+                    {children}
+                  </blockquote>
+                ),
+                code: ({ children }) => (
+                  <code className="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>
                 ),
               }}
             >
