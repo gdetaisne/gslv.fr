@@ -461,7 +461,7 @@ export default function HomePageClient() {
               whileInView={{ opacity: 1 }}
               className="text-xs font-semibold tracking-widest text-sky-400 uppercase mb-3"
             >
-              {locale === 'fr' ? 'Expériences' : 'Case studies'}
+              Case studies
             </motion.p>
             <motion.h2
               initial={{ opacity: 0, y: 20 }}
@@ -469,7 +469,7 @@ export default function HomePageClient() {
               transition={{ duration: 0.8 }}
               className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight"
             >
-              {locale === 'fr' ? 'Ce que j\'ai construit' : 'What I have built'}
+              What I have built
             </motion.h2>
           </div>
 
@@ -597,6 +597,58 @@ export default function HomePageClient() {
         </div>
       </section>
 
+      {/* Press & Media Section */}
+      <section className="py-10 bg-white border-t border-slate-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-xs font-semibold tracking-widest text-slate-400 uppercase mb-8">
+            Featured in
+          </p>
+          <div className="flex flex-wrap justify-center items-center gap-6 sm:gap-10">
+            <a
+              href="https://lepanier.io/10m-de-ca-en-5-ans-en-vendant-des-materiaux-de-construction/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-2 text-center"
+            >
+              <span className="text-base font-bold text-slate-700 group-hover:text-sky-600 transition-colors">
+                Le Panier
+              </span>
+              <span className="text-xs text-slate-400 group-hover:text-slate-600 transition-colors max-w-[180px]">
+                Ep. #286 — €10M in 5 years selling construction materials
+              </span>
+            </a>
+            <div className="w-px h-10 bg-slate-200 hidden sm:block" />
+            <a
+              href="https://www.frenchweb.fr/seed-e-commerce-ligerio-leve-39-millions-deuros-aupres-de-go-capital-et-de-business-angels/437388"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-2 text-center"
+            >
+              <span className="text-base font-bold text-slate-700 group-hover:text-sky-600 transition-colors">
+                FrenchWeb
+              </span>
+              <span className="text-xs text-slate-400 group-hover:text-slate-600 transition-colors max-w-[180px]">
+                Ligerio raises €3.9M — Go Capital & BPI
+              </span>
+            </a>
+            <div className="w-px h-10 bg-slate-200 hidden sm:block" />
+            <a
+              href="https://www.cfnews.net/Annuaires-base-de-deals/Societes/LIGERIO-VESTIGES-INTERIEURS"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group flex flex-col items-center gap-2 text-center"
+            >
+              <span className="text-base font-bold text-slate-700 group-hover:text-sky-600 transition-colors">
+                CFNEWS
+              </span>
+              <span className="text-xs text-slate-400 group-hover:text-slate-600 transition-colors max-w-[180px]">
+                Ligerio — deal coverage
+              </span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* CTA Section */}
       <section className="py-12 sm:py-20 bg-slate-950">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
@@ -630,7 +682,7 @@ export default function HomePageClient() {
             <Link href={`/${locale}/about`}>
               <Button variant="outline" size="lg" className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 bg-transparent border-slate-700 text-slate-200 hover:bg-slate-900/60 w-full sm:w-auto">
                 <ArrowRight className="w-5 h-5 mr-2" />
-                {locale === 'fr' ? 'Mon parcours' : 'My background'}
+                My background
               </Button>
             </Link>
           </motion.div>

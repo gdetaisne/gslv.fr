@@ -280,6 +280,30 @@
         "logo": "/images/companies/orami.png",
         "content": "His scaling expertise allowed us to grow from 10 to 100 employees without losing control. Guillaume knows how to anticipate growth challenges and implement the right systems.",
         "rating": 5
+      },
+      {
+        "name": "Christophe Montague",
+        "position": "Partner, M&A & Fundraising",
+        "company": "MGT Partner",
+        "linkedin": "https://www.linkedin.com/in/christophe-montague/",
+        "content": "Extremely sharp, methodic and still fun to work with, Guillaume is a passionate and bright executive, with the potential to manage large business entities. I would definitely recommend him.",
+        "rating": 5
+      },
+      {
+        "name": "Tarmo Amer",
+        "position": "Co-Founder & CFO",
+        "company": "Crumbo (ex Africa Internet Group)",
+        "linkedin": "https://www.linkedin.com/in/tarmoamer/",
+        "content": "Guillaume and I worked together in Africa Internet Group for about 9 months. Guillaume has a very professional mindset, sharp, diligent, never the one to sweep issues under the carpet. He's well versed in financial management and is very good at applying it and coaching the team. He'll be a valuable addition to any team.",
+        "rating": 5
+      },
+      {
+        "name": "Sylvain Niset",
+        "position": "CEO/CRO",
+        "company": "Scale-up advisor",
+        "linkedin": "https://www.linkedin.com/in/sylvain-niset/",
+        "content": "Since the beginning of his journey at Rocket Internet, Guillaume has proven many times he is able to understand problems quickly and provide pragmatic solutions in many aspects of the business: cost control, contracts, people management and many others. He is able to have a 360 view of the business and provide the right solutions to sustain healthy growth.",
+        "rating": 5
       }
     ]
   },
