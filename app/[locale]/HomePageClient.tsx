@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, AlertTriangle, ChevronLeft, ChevronRight, Settings, BarChart3, Target } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, AlertTriangle, ChevronLeft, ChevronRight, Settings, BarChart3, Target, Linkedin } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -548,18 +548,46 @@ export default function HomePageClient() {
                     <blockquote className="text-sm sm:text-base text-gray-700 mb-6 italic leading-relaxed">
                       &quot;{testimonial.content}&quot;
                     </blockquote>
-                    <div className="flex items-center">
-                      <div className="w-12 h-12 rounded-full bg-slate-900 flex items-center justify-center text-sky-400 font-bold text-lg mr-4">
-                        {testimonial.name.charAt(0)}
-                      </div>
-                      <div>
-                        <div className="font-semibold text-sm sm:text-base text-gray-900">
-                          {testimonial.name}
+                    <div className="flex items-center justify-between">
+                      <div className="flex items-center">
+                        {/* Photo ou initiale */}
+                        <div className="w-12 h-12 rounded-full overflow-hidden mr-4 flex-shrink-0 bg-slate-900 flex items-center justify-center">
+                          {testimonial.photo ? (
+                            <Image
+                              src={testimonial.photo}
+                              alt={testimonial.name}
+                              width={48}
+                              height={48}
+                              className="object-cover w-full h-full"
+                              onError={(e) => { e.currentTarget.style.display = 'none' }}
+                            />
+                          ) : (
+                            <span className="text-sky-400 font-bold text-lg">
+                              {testimonial.name.charAt(0)}
+                            </span>
+                          )}
                         </div>
-                        <div className="text-xs sm:text-sm text-gray-600">
-                          {testimonial.position}, {testimonial.company}
+                        <div>
+                          <div className="font-semibold text-sm sm:text-base text-gray-900">
+                            {testimonial.name}
+                          </div>
+                          <div className="text-xs sm:text-sm text-gray-600">
+                            {testimonial.position}, {testimonial.company}
+                          </div>
                         </div>
                       </div>
+                      {/* LinkedIn link discret */}
+                      {testimonial.linkedin && (
+                        <a
+                          href={testimonial.linkedin}
+                          target="_blank"
+                          rel="noopener noreferrer nofollow"
+                          className="ml-3 text-slate-300 hover:text-sky-500 transition-colors flex-shrink-0"
+                          title={`${testimonial.name} on LinkedIn`}
+                        >
+                          <Linkedin className="w-4 h-4" />
+                        </a>
+                      )}
                     </div>
                   </CardContent>
                 </Card>

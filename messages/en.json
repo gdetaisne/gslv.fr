@@ -230,6 +230,8 @@
         "position": "CEO, Jumia",
         "company": "Jumia",
         "logo": "/images/companies/jumia.png",
+        "photo": "/images/testimonials/francis-d.jpg",
+        "linkedin": "https://www.linkedin.com/in/francis-dufay-5a11561a/",
         "content": "Guillaume supported us through many complex situations: tax audits, sudden executive departures, management embezzlement suspicions. He is very effective, knows how to dive deep into details while maintaining a holistic view. I highly recommend him.",
         "rating": 5
       },
@@ -246,6 +248,8 @@
         "position": "Founder, Ligerio",
         "company": "Ligerio",
         "logo": "/images/companies/ligerio.png",
+        "photo": "/images/testimonials/clement-f.jpg",
+        "linkedin": "https://www.linkedin.com/in/cuisinenaturelle/",
         "content": "In a crisis situation, Guillaume took command immediately. He implemented our CRM and restructured our processes. His ability to stabilize operations and reassure teams saved our company.",
         "rating": 5
       },
@@ -254,6 +258,8 @@
         "position": "CEO, Glossybox",
         "company": "Glossybox",
         "logo": "/images/companies/glossybox.png",
+        "photo": "/images/testimonials/caren-g.jpg",
+        "linkedin": "https://www.linkedin.com/in/caren-dr-genthner-kappesz/",
         "content": "We mandated Guillaume during the sale of Glossybox (€70M revenue). The sale was blocked due to data quality. Guillaume restructured the entire group across 5 countries, brought everything into IFRS compliance and managed a tax audit on our holding. The sale was finalized 8 months after his arrival.",
         "rating": 5
       },
@@ -262,6 +268,8 @@
         "position": "Founder, Kaymu",
         "company": "Kaymu",
         "logo": "/images/companies/kaymu.png",
+        "photo": "/images/testimonials/rolland-d.jpg",
+        "linkedin": "https://www.linkedin.com/in/roland-de-heere/",
         "content": "Guillaume completely restructured our operations. From cash management to process optimization, he transformed our company. An exceptional professional.",
         "rating": 5
       },
