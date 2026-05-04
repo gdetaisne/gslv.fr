@@ -9,7 +9,7 @@ type BlogPost = {
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://gslv.fr'
-  const locales = ['fr', 'en']
+  const locales = ['en']
   
   const staticPages = [
     '',

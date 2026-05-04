@@ -1,0 +1,60 @@
+# GSLV.fr — Guillaume Stehelin de Taisne
+
+> Operator and systems builder with 10+ years of experience scaling companies in complex environments.
+
+## Who is Guillaume Stehelin de Taisne?
+
+Guillaume Stehelin de Taisne (also known as Guillaume Stehelin) is a French operator and entrepreneur specialising in operational systems, pricing automation, and scaling e-commerce and service businesses.
+
+**Current:** Founder & CEO of [Moverz](https://moverz.fr) — an AI-driven pricing and operations engine for the moving services market (founded 2025, €1M+ GMV in 3 months).
+
+**Previous:**
+- Co-founder of Ligerio (2021–2025) — French e-commerce platform for heavy flooring and wall coverings. Scaled from near-zero to €10M+ annual revenue, 50–100% YoY growth for 3 consecutive years, break-even March 2024, team of 40+, raised €3.9M (Go Capital, BPI France). Hired the first employee. Exited mid-2025.
+- Finance & Operations, Rocket Internet / Africa Internet Group (2013–2017) — Operated across Cameroon (incorporated 7 entities in 8 months), Côte d'Ivoire (scaled Jumia CI from 100 to 350 employees with Francis Dufay), Nigeria, Ghana, Senegal, Algeria. Berlin mission: unblocked Glossybox sale to The Hut Group (August 2017) by completing IFRS restatement across 7 entities (France, Germany, UK, USA, Sweden, Norway, Austria) and resolving a 8-figure multi-country tax exposure.
+
+**Education:**
+- Harvard University (Extension School, Computer Science)
+- Université Paris Dauphine
+
+**Contact:** gdetaisne@gmail.com
+**LinkedIn:** https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/
+**Website:** https://gslv.fr
+
+## What GSLV.fr is
+
+GSLV.fr is Guillaume Stehelin de Taisne's professional website. It contains:
+- Long-form articles on operations, scaling, logistics, AI systems, and CFO/COO practice
+- Information about his current and past work
+- Details on his services as a fractional COO / operator
+
+## Key articles
+
+- [How We Scaled Ligerio to €10M Revenue](https://gslv.fr/en/blog/scaling-ligerio-ecommerce-10m-revenue-logistics-operations) — Operations, logistics, and systems in a 2.5-tonne average order e-commerce business. Covers dropshipping→consignment→own stock model, 20x throughput improvement, SEO war room, B2B channel.
+- [What Rocket Internet Taught Me About Execution](https://gslv.fr/en/blog/rocket-internet-africa-execution-jumia-lessons) — Launching 7 companies in 8 months in West Africa, scaling Jumia CI, crisis operations (embezzlement, tax audits, social plans), Glossybox IFRS remediation and sale.
+
+## Areas of expertise
+
+- Operational systems design and implementation
+- Scaling e-commerce operations (logistics, suppliers, multi-channel)
+- AI-driven pricing engines
+- Logistics optimization for heavy/complex goods
+- Financial control and cash management
+- Fractional COO / embedded operator
+- Workflow automation
+- Crisis management and restructuring
+- Multi-country operations
+- IFRS restatement and M&A finance
+
+## Media and press
+
+- Le Panier podcast #286 (May 2024): https://lepanier.io/10m-de-ca-en-5-ans-en-vendant-des-materiaux-de-construction/
+- FrenchWeb — Ligerio €3.9M seed round (November 2022): https://www.frenchweb.fr/seed-e-commerce-ligerio-leve-39-millions-deuros-aupres-de-go-capital-et-de-business-angels/437388
+- CFNEWS — Ligerio deal coverage: https://www.cfnews.net/Annuaires-base-de-deals/Societes/LIGERIO-VESTIGES-INTERIEURS
+
+## Services
+
+- **Operating Diagnostic** — 24–48h diagnostic of operations, workflows, systems and bottlenecks. Prioritized action plan.
+- **Fractional COO** — Embedded operator for 3–12 month missions. Build systems, manage teams, drive execution.
+- **Crisis Intervention** — Fast deployment in critical situations: CFO/COO replacement, restructuring, M&A unblocking.
+
+Pricing starts at €750+/day. Contact: gdetaisne@gmail.com

@@ -1,365 +1,75 @@
-'use client'
-
-import { useState, useEffect } from 'react'
-import { useParams } from 'next/navigation'
-import { useLocale, useTranslations } from 'next-intl'
-import { motion } from 'framer-motion'
-import { Calendar, Clock, Tag, ArrowLeft, Share2, BookOpen } from 'lucide-react'
-import Link from 'next/link'
-import ReactMarkdown from 'react-markdown'
-import remarkGfm from 'remark-gfm'
-import { Card, CardContent } from '../../../components/Card'
+import { Metadata } from 'next'
+import fs from 'fs'
+import path from 'path'
 import { BlogPost } from '../../../types'
+import BlogPostClient from './BlogPostClient'
 
-export default function BlogPostPage() {
-  const [article, setArticle] = useState<BlogPost | null>(null)
-  const [relatedArticles, setRelatedArticles] = useState<BlogPost[]>([])
-  const [isLoading, setIsLoading] = useState(true)
-  const params = useParams()
-  const locale = useLocale()
-  const t = useTranslations('buttons')
+type Props = {
+  params: { locale: string; slug: string }
+}
 
-  useEffect(() => {
-    const loadArticle = async () => {
-      try {
-        // Load all articles to find the specific one
-        const response = await fetch(`/data/blog/${locale}.json`)
-        const articles = await response.json()
-        
-        const foundArticle = articles.find((a: BlogPost) => a.slug === params.slug)
-        if (foundArticle) {
-          setArticle(foundArticle)
-          
-          // Find related articles (same category, different article)
-          const related = articles
-            .filter((a: BlogPost) => a.category === foundArticle.category && a.id !== foundArticle.id)
-            .slice(0, 3)
-          setRelatedArticles(related)
-        }
-      } catch (error) {
-        console.error('Error loading article:', error)
-      } finally {
-        setIsLoading(false)
-      }
-    }
-
-    if (params.slug) {
-      loadArticle()
-    }
-  }, [params.slug, locale])
-
-  const formatDate = (date: Date) => {
-    return new Intl.DateTimeFormat(locale === 'fr' ? 'fr-FR' : locale === 'en' ? 'en-US' : 'th-TH', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-    }).format(new Date(date))
+async function getArticle(locale: string, slug: string): Promise<BlogPost | null> {
+  try {
+    const filePath = path.join(process.cwd(), 'public', 'data', 'blog', `${locale}.json`)
+    const fileContents = fs.readFileSync(filePath, 'utf8')
+    const articles: BlogPost[] = JSON.parse(fileContents)
+    return articles.find(a => a.slug === slug) ?? null
+  } catch {
+    return null
   }
+}
 
-  const handleShare = async () => {
-    if (navigator.share) {
-      try {
-        await navigator.share({
-          title: article?.title,
-          text: article?.excerpt,
-          url: window.location.href,
-        })
-      } catch (error) {
-        console.log('Error sharing:', error)
-      }
-    } else {
-      // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href)
-      alert('Lien copié dans le presse-papiers!')
-    }
-  }
-
-  if (isLoading) {
-    return (
-      <div className="pt-16 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="w-8 h-8 border-4 border-primary-600 border-t-transparent rounded-full animate-spin mx-auto mb-4"></div>
-          <p className="text-gray-600">Chargement de l'article...</p>
-        </div>
-      </div>
-    )
-  }
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const article = await getArticle(params.locale, params.slug)
+  const baseUrl = 'https://gslv.fr'
 
   if (!article) {
-    return (
-      <div className="pt-16 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold text-gray-900 mb-4">Article non trouvé</h1>
-          <p className="text-gray-600 mb-6">L'article que vous recherchez n'existe pas.</p>
-          <Link
-            href={`/${locale}/blog`}
-            className="inline-flex items-center px-4 py-2 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
-          >
-            <ArrowLeft className="w-4 h-4 mr-2" />
-            Retour au blog
-          </Link>
-        </div>
-      </div>
-    )
+    return {
+      title: 'Article not found | GSLV.fr',
+      description: 'This article could not be found.',
+    }
   }
 
-  return (
-    <div className="pt-16">
-      {/* Schema.org Article Structured Data */}
-      {article && (
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{
-            __html: JSON.stringify({
-              '@context': 'https://schema.org',
-              '@type': 'Article',
-              headline: article.seo?.title || article.title,
-              description: article.seo?.description || article.excerpt,
-              author: {
-                '@type': 'Person',
-                name: 'Guillaume Stehelin de Taisne',
-                url: 'https://www.linkedin.com/in/guillaume-stehelin-de-taisne-4a59805a/',
-                jobTitle: 'Operator building systems that scale companies',
-                worksFor: {
-                  '@type': 'Organization',
-                  name: 'GSLV'
-                }
-              },
-              publisher: {
-                '@type': 'Organization',
-                name: 'GSLV.fr',
-                url: 'https://gslv.fr',
-                logo: {
-                  '@type': 'ImageObject',
-                  url: 'https://gslv.fr/images/logo/logo.png'
-                }
-              },
-              datePublished: article.publishedAt,
-              dateModified: article.publishedAt,
-              mainEntityOfPage: {
-                '@type': 'WebPage',
-                '@id': typeof window !== 'undefined' ? window.location.href : `https://gslv.fr/${locale}/blog/${article.slug}`
-              },
-              keywords: article.seo?.keywords?.join(', ') || article.tags.join(', '),
-              articleSection: article.category,
-              wordCount: article.content.split(' ').length,
-              inLanguage: locale === 'fr' ? 'fr-FR' : 'en-US'
-            }, null, 2)
-          }}
-        />
-      )}
-      
-      {/* Article Header */}
-      <section className="py-12 bg-white border-b border-gray-200">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="mb-6">
-            <Link
-              href={`/${locale}/blog`}
-              className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium"
-            >
-              <ArrowLeft className="w-4 h-4 mr-2" />
-              Retour au blog
-            </Link>
-          </div>
+  const title = article.seo?.title || `${article.title} | GSLV.fr`
+  const description = article.seo?.description || article.excerpt
+  const keywords = article.seo?.keywords || article.tags
+  const url = `${baseUrl}/${params.locale}/blog/${params.slug}`
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <div className="flex items-center justify-between mb-4">
-              <span className="px-3 py-1 bg-primary-100 text-primary-700 rounded-full text-sm font-medium">
-                {article.category}
-              </span>
-              <button
-                onClick={handleShare}
-                className="inline-flex items-center px-3 py-1 text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <Share2 className="w-4 h-4 mr-1" />
-                Partager
-              </button>
-            </div>
+  return {
+    title,
+    description,
+    keywords,
+    authors: [{ name: 'Guillaume Stehelin de Taisne', url: baseUrl }],
+    openGraph: {
+      title,
+      description,
+      url,
+      type: 'article',
+      siteName: 'GSLV.fr',
+      publishedTime: new Date(article.publishedAt).toISOString(),
+      authors: ['Guillaume Stehelin de Taisne'],
+      tags: article.tags,
+      images: [
+        {
+          url: `${baseUrl}/images/og-image.jpg`,
+          width: 1200,
+          height: 630,
+          alt: article.title,
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title,
+      description,
+      images: [`${baseUrl}/images/og-image.jpg`],
+    },
+    alternates: {
+      canonical: url,
+    },
+  }
+}
 
-            <h1 className="text-3xl md:text-4xl font-bold text-dark-900 mb-6">
-              {article.title}
-            </h1>
-
-            <div className="flex items-center space-x-6 text-sm text-gray-500 mb-6">
-              <div className="flex items-center">
-                <Calendar className="w-4 h-4 mr-1" />
-                {formatDate(article.publishedAt)}
-              </div>
-              <div className="flex items-center">
-                <Clock className="w-4 h-4 mr-1" />
-                {article.readTime} min de lecture
-              </div>
-              <div className="flex items-center">
-                <BookOpen className="w-4 h-4 mr-1" />
-                {article.tags.length} tags
-              </div>
-            </div>
-
-            <div className="flex flex-wrap gap-2">
-              {article.tags.map((tag, index) => (
-                <span
-                  key={index}
-                  className="inline-flex items-center px-2 py-1 rounded text-xs bg-gray-100 text-gray-600"
-                >
-                  <Tag className="w-3 h-3 mr-1" />
-                  {tag}
-                </span>
-              ))}
-            </div>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Article Content */}
-      <section className="py-12 bg-white">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            <ReactMarkdown
-              remarkPlugins={[remarkGfm]}
-              components={{
-                h1: ({ children }) => (
-                  <h1 className="text-3xl font-bold text-slate-900 mt-10 mb-5">{children}</h1>
-                ),
-                h2: ({ children }) => (
-                  <h2 className="text-2xl font-bold text-slate-900 mt-12 mb-4 pb-2 border-b border-slate-100">{children}</h2>
-                ),
-                h3: ({ children }) => (
-                  <h3 className="text-xl font-semibold text-slate-800 mt-8 mb-3">{children}</h3>
-                ),
-                p: ({ children }) => (
-                  <p className="text-gray-700 leading-relaxed mb-5 text-base">{children}</p>
-                ),
-                strong: ({ children }) => (
-                  <strong className="font-semibold text-slate-900">{children}</strong>
-                ),
-                em: ({ children }) => (
-                  <em className="italic text-gray-600">{children}</em>
-                ),
-                a: ({ href, children }) => (
-                  <a
-                    href={href}
-                    target={href?.startsWith('http') ? '_blank' : undefined}
-                    rel={href?.startsWith('http') ? 'noopener noreferrer' : undefined}
-                    className="text-sky-600 hover:underline"
-                  >
-                    {children}
-                  </a>
-                ),
-                ul: ({ children }) => (
-                  <ul className="list-disc pl-6 mb-5 space-y-1 text-gray-700">{children}</ul>
-                ),
-                ol: ({ children }) => (
-                  <ol className="list-decimal pl-6 mb-5 space-y-1 text-gray-700">{children}</ol>
-                ),
-                li: ({ children }) => (
-                  <li className="text-gray-700 leading-relaxed">{children}</li>
-                ),
-                hr: () => (
-                  <hr className="border-slate-200 my-10" />
-                ),
-                blockquote: ({ children }) => (
-                  <blockquote className="border-l-4 border-sky-400 pl-4 my-6 italic text-gray-600 bg-slate-50 py-2 rounded-r">
-                    {children}
-                  </blockquote>
-                ),
-                code: ({ children }) => (
-                  <code className="bg-slate-100 text-slate-800 px-1.5 py-0.5 rounded text-sm font-mono">{children}</code>
-                ),
-              }}
-            >
-              {article.content}
-            </ReactMarkdown>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Related Articles */}
-      {relatedArticles.length > 0 && (
-        <section className="py-20 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 className="text-3xl font-bold text-dark-900 mb-8 text-center">
-              Articles similaires
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {relatedArticles.map((relatedArticle, index) => (
-                <motion.div
-                  key={relatedArticle.id}
-                  initial={{ opacity: 0, y: 20 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.6, delay: index * 0.1 }}
-                >
-                  <Card hover className="h-full">
-                    <CardContent>
-                      <div className="flex items-center justify-between mb-3">
-                        <span className="px-2 py-1 bg-primary-100 text-primary-700 rounded text-xs font-medium">
-                          {relatedArticle.category}
-                        </span>
-                        <div className="flex items-center text-sm text-gray-500">
-                          <Clock className="w-4 h-4 mr-1" />
-                          {relatedArticle.readTime} min
-                        </div>
-                      </div>
-                      <h3 className="text-lg font-bold text-dark-900 mb-2 line-clamp-2">
-                        {relatedArticle.title}
-                      </h3>
-                      <p className="text-gray-600 text-sm line-clamp-3 mb-4">
-                        {relatedArticle.excerpt}
-                      </p>
-                      <Link
-                        href={`/${locale}/blog/${relatedArticle.slug}`}
-                        className="inline-flex items-center text-primary-600 hover:text-primary-700 font-medium text-sm"
-                      >
-                        Lire la suite
-                        <ArrowLeft className="w-4 h-4 ml-1 rotate-180" />
-                      </Link>
-                    </CardContent>
-                  </Card>
-                </motion.div>
-              ))}
-            </div>
-          </div>
-        </section>
-      )}
-
-      {/* CTA Section */}
-      <section className="py-20 bg-gradient-to-r from-primary-600 to-accent-600">
-        <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-          >
-            <h2 className="text-3xl md:text-4xl font-bold text-white mb-6">
-              Besoin d'aide pour votre startup ?
-            </h2>
-            <p className="text-xl text-white/90 mb-8">
-              Découvrez comment nos services CFO & COO part-time peuvent accélérer votre croissance
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Link
-                href={`/${locale}/contact`}
-                className="inline-flex items-center px-6 py-3 bg-white text-primary-600 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
-              >
-                {t('buttons.bookCall')}
-              </Link>
-              <Link
-                href={`/${locale}/services`}
-                className="inline-flex items-center px-6 py-3 border-2 border-white text-white rounded-lg font-semibold hover:bg-white/10 transition-colors"
-              >
-                Découvrir nos services
-              </Link>
-            </div>
-          </motion.div>
-        </div>
-      </section>
-    </div>
-  )
+export default function BlogPostPage() {
+  return <BlogPostClient />
 }

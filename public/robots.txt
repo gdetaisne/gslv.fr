@@ -7,11 +7,8 @@ Sitemap: https://gslv.fr/sitemap.xml
 # Disallow admin and private areas
 Disallow: /admin/
 Disallow: /private/
-Disallow: /api/
 
-# Allow all blog content
-Allow: /blog/
-Allow: /fr/blog/
+# Allow all public content
+Allow: /en/
 Allow: /en/blog/
-Allow: /th/blog/
-
+Allow: /api/sitemap
