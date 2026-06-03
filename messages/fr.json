@@ -107,6 +107,17 @@
     ],
     "timeline": [
       {
+        "year": "2025–",
+        "title": "Fondateur — Teneolog",
+        "description": "Conçu et construit de A à Z Teneolog, un SaaS deep-tech B2B qui valide en quelques secondes la faisabilité réelle d'une livraison poids-lourd (accès, virages, manœuvre, entrée/sortie). Stack complète développée en solo : API, workers, moteur géospatial et analyse cinématique, jusqu'en production.",
+        "achievements": [
+          "Verdict OK / NOK / à valider en ~15s",
+          "Géospatial PostGIS + ortho IGN + Street View",
+          "Vision IA + routage poids-lourd",
+          "De l'idée à la prod — API, workers, infra"
+        ]
+      },
+      {
         "year": "2024–",
         "title": "Founder & CEO — Moverz",
         "description": "Construction d'un moteur de pricing et d'opérations IA pour le marché européen du déménagement (€10Bn total, €2Bn en France). Conception de la stack complète : pricing dynamique, computer vision, back-office supply-side et workflow de réservation end-to-end.",
@@ -206,6 +217,10 @@
       "title": "Études de cas",
       "intro": "Quelques exemples de ce que j'ai construit, décrits à un niveau non confidentiel. Contexte, système construit, résultat.",
       "items": [
+        {
+          "title": "Teneolog — SaaS deep-tech de faisabilité logistique poids-lourd",
+          "description": "Fondateur : conçu et construit de A à Z un SaaS B2B qui valide en quelques secondes si un poids-lourd peut réellement livrer une adresse (accès, virages, manœuvre, entrée/sortie). Système : moteur géospatial (PostGIS, orthophotos IGN, Street View), Vision IA, routage poids-lourd et analyse cinématique des virages. Sortie : verdict OK / NOK / à valider + score de confiance + alternative exploitable. Développé en solo de l'idée jusqu'à la production (API, workers, infra)."
+        },
         {
           "title": "Moverz — Infrastructure de pricing IA pour un marché de €10Bn",
           "description": "Construction d'un moteur de pricing et d'opérations dynamique pour le marché européen fragmenté du déménagement. Système : modèle de pricing 100+ variables, computer vision (photo → inventaire → prix), back-office supply-side 20+ paramètres, workflow end-to-end de la qualification à la réservation. Résultat : €1M+ de demandes de devis en 3 mois de lancement."

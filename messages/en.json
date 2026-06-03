@@ -107,6 +107,17 @@
     ],
     "timeline": [
       {
+        "year": "2025–",
+        "title": "Founder — Teneolog",
+        "description": "Designed and built Teneolog end-to-end, a B2B deep-tech SaaS that validates in seconds whether a heavy-freight delivery is actually feasible (access, turns, manoeuvre, entry/exit). Full stack solo-built: API, workers, geospatial engine and kinematic analysis, all the way to production.",
+        "achievements": [
+          "OK / NOK / review verdict in ~15s",
+          "Geospatial PostGIS + IGN ortho + Street View",
+          "Vision AI + heavy-vehicle routing",
+          "From idea to production — API, workers, infra"
+        ]
+      },
+      {
         "year": "2024–",
         "title": "Founder & CEO — Moverz",
         "description": "Building an AI-driven pricing and operations engine for the European moving market (€10Bn total, €2Bn in France). Designing the full stack: dynamic pricing, computer vision, supply-side back-office and end-to-end booking workflow.",
@@ -206,6 +217,10 @@
       "title": "Case studies",
       "intro": "A few examples of what I have built, described at a non-confidential level. Context, system built, result.",
       "items": [
+        {
+          "title": "Teneolog — deep-tech SaaS for heavy-freight delivery feasibility",
+          "description": "Founder: designed and built end-to-end a B2B SaaS that validates in seconds whether a heavy-goods vehicle can actually deliver to an address (access, turns, manoeuvre, entry/exit). System: geospatial engine (PostGIS, IGN orthophotos, Street View), Vision AI, heavy-vehicle routing and kinematic turn analysis. Output: OK / NOK / review verdict + confidence score + actionable alternative. Solo-built from idea to production (API, workers, infra)."
+        },
         {
           "title": "Moverz — AI-driven pricing infrastructure for a €10Bn market",
           "description": "Built a dynamic pricing and operations engine for the fragmented European moving market. System includes: 100+ variable pricing model, computer vision (photo → inventory → price), supply-side back-office with 20+ parameters, and end-to-end workflow from qualification to booking. Result: €1M+ in customer quote requests within 3 months of launch."

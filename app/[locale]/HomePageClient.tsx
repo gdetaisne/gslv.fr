@@ -2,7 +2,7 @@
 
 import { useTranslations, useLocale } from 'next-intl'
 import { motion } from 'framer-motion'
-import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, AlertTriangle, ChevronLeft, ChevronRight, Settings, BarChart3, Target, Linkedin } from 'lucide-react'
+import { ArrowRight, CheckCircle, Star, TrendingUp, Zap, AlertTriangle, ChevronLeft, ChevronRight, Settings, BarChart3, Target, Linkedin, Truck } from 'lucide-react'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useState, useEffect } from 'react'
@@ -86,7 +86,36 @@ export default function HomePageClient() {
   const trackRecordItems = tTrackRecord.raw('items')
 
   // Case studies
-  const caseStudies = [
+  const caseStudies: Array<{
+    label: string
+    href?: string
+    tag: string
+    title: string
+    bullets: string[]
+    accent: string
+  }> = [
+    {
+      label: 'Teneolog',
+      href: 'https://teneolog.com',
+      tag: locale === 'fr' ? 'Fondateur · En cours' : 'Founder · Ongoing',
+      title: locale === 'fr'
+        ? 'SaaS deep-tech conçu et construit de A à Z, jusqu\'en production'
+        : 'Deep-tech SaaS designed and built end-to-end, into production',
+      bullets: locale === 'fr'
+        ? [
+            'Valide la faisabilité d\'une livraison poids-lourd en ~15s',
+            'Géospatial (PostGIS, ortho IGN) + Vision IA + routage PL',
+            'Verdict OK / NOK / à valider + score + alternative',
+            'De l\'idée à la prod — API, workers, infra — en solo',
+          ]
+        : [
+            'Validates heavy-freight delivery feasibility in ~15s',
+            'Geospatial (PostGIS, IGN ortho) + Vision AI + HGV routing',
+            'Verdict OK / NOK / review + confidence score + alternative',
+            'From idea to production — API, workers, infra — solo-built',
+          ],
+      accent: 'amber',
+    },
     {
       label: 'Moverz',
       tag: locale === 'fr' ? 'En cours · 2024' : 'Ongoing · 2024',
@@ -156,6 +185,7 @@ export default function HomePageClient() {
     sky:     { bg: 'bg-sky-500/10',     text: 'text-sky-400',     border: 'border-sky-500/30',     dot: 'bg-sky-400' },
     emerald: { bg: 'bg-emerald-500/10', text: 'text-emerald-400', border: 'border-emerald-500/30', dot: 'bg-emerald-400' },
     indigo:  { bg: 'bg-indigo-500/10',  text: 'text-indigo-400',  border: 'border-indigo-500/30',  dot: 'bg-indigo-400' },
+    amber:   { bg: 'bg-amber-500/10',   text: 'text-amber-400',   border: 'border-amber-500/30',   dot: 'bg-amber-400' },
   }
 
   return (
@@ -295,6 +325,21 @@ export default function HomePageClient() {
                   </h3>
                 </CardHeader>
                 <CardContent className="space-y-3 text-sm text-slate-200/90">
+                  <div className="flex items-start gap-2">
+                    <Truck className="w-4 h-4 text-amber-400 mt-0.5 flex-shrink-0" />
+                    <span>
+                      Founder of{' '}
+                      <a
+                        href="https://teneolog.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-amber-300 hover:underline underline-offset-2"
+                      >
+                        Teneolog
+                      </a>{' '}
+                      — a deep-tech SaaS I built end-to-end: geospatial + Vision AI engine validating heavy-freight delivery feasibility in seconds.
+                    </span>
+                  </div>
                   <div className="flex items-start gap-2">
                     <TrendingUp className="w-4 h-4 text-sky-400 mt-0.5 flex-shrink-0" />
                     <span>Scaled Ligerio from €0 to €10M+ revenue in 4 years — logistics throughput x20.</span>
@@ -473,7 +518,7 @@ export default function HomePageClient() {
             </motion.h2>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
             {caseStudies.map((cs, index) => {
               const colors = accentMap[cs.accent]
               return (
@@ -485,9 +530,20 @@ export default function HomePageClient() {
                   className={`rounded-2xl border ${colors.border} bg-slate-900/60 p-6 flex flex-col gap-4`}
                 >
                   <div className="flex items-center justify-between">
-                    <span className={`text-xs font-bold tracking-widest uppercase ${colors.text}`}>
-                      {cs.label}
-                    </span>
+                    {cs.href ? (
+                      <a
+                        href={cs.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={`text-xs font-bold tracking-widest uppercase ${colors.text} hover:underline underline-offset-4`}
+                      >
+                        {cs.label}
+                      </a>
+                    ) : (
+                      <span className={`text-xs font-bold tracking-widest uppercase ${colors.text}`}>
+                        {cs.label}
+                      </span>
+                    )}
                     <span className="text-xs text-slate-500">{cs.tag}</span>
                   </div>
                   <h3 className="text-base sm:text-lg font-bold text-white leading-snug">

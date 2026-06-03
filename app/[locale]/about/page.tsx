@@ -8,21 +8,24 @@ import Link from 'next/link'
 import { Card, CardContent, CardHeader } from '../../components/Card'
 import { useState } from 'react'
 
-const MOVERZ_URL = 'https://moverz.fr/'
+const BRAND_LINKS: Record<string, string> = {
+  Moverz: 'https://moverz.fr/',
+  Teneolog: 'https://teneolog.com',
+}
 
 function linkifyMoverz(text: string) {
   if (!text) return text
-  const parts = text.split(/(Moverz)/g)
+  const parts = text.split(/(Moverz|Teneolog)/g)
   return parts.map((part, index) =>
-    part === 'Moverz' ? (
+    BRAND_LINKS[part] ? (
       <Link
         key={index}
-        href={MOVERZ_URL}
+        href={BRAND_LINKS[part]}
         target="_blank"
         rel="noopener noreferrer nofollow"
         className="underline decoration-dotted underline-offset-2 hover:text-sky-600"
       >
-        Moverz
+        {part}
       </Link>
     ) : (
       part
