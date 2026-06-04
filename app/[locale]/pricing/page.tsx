@@ -14,44 +14,46 @@ export default function PricingPage() {
 
   const pricingPlans = [
     {
-      id: 'diagnostic',
-      name: 'Operating Diagnostic',
-      icon: <TrendingUp className="w-8 h-8 text-sky-400" />,
-      price: '€750',
-      period: 'ex VAT / day',
-      description: '24–48h audit of operations, cash, systems and bottlenecks.',
-      color: 'from-sky-500 to-sky-700',
-      bgColor: 'bg-sky-50',
-      borderColor: 'border-sky-200',
-      features: [
-        'Operational workflow mapping',
-        'Cash and runway visibility',
-        'High-leverage bottleneck identification',
-        'Systems and tools assessment',
-        '30-day action priorities',
-        'Prioritized deliverable with action plan',
-      ],
-      isPopular: false,
-    },
-    {
-      id: 'fractional',
-      name: 'Fractional COO / Operator',
+      id: 'operations',
+      name: 'IT-OPS · Operations',
       icon: <Settings className="w-8 h-8 text-emerald-400" />,
       price: '€750',
       period: 'ex VAT / day',
-      description: 'Ongoing hands-on execution for founders and investors.',
+      description: 'Fractional ops operator: I own the operating model and build the tools and automation that run it day to day.',
       color: 'from-emerald-500 to-emerald-700',
       bgColor: 'bg-emerald-50',
       borderColor: 'border-emerald-200',
       features: [
-        'Operating model design',
-        'Team structure and execution rhythm',
-        'Systems and KPI dashboard build',
-        'Workflow automation',
+        'Operating model & process design',
+        'Internal tools, dashboards & automation',
+        'Execution rhythm & team structure',
+        'Supply/demand & throughput optimization',
         'Growth bottleneck resolution',
-        'Direct ownership on critical topics',
+        'KPI visibility across the business',
       ],
       isPopular: true,
+      isBonus: false,
+    },
+    {
+      id: 'finance',
+      name: 'IT-OPS · Finance',
+      icon: <TrendingUp className="w-8 h-8 text-sky-400" />,
+      price: '€750',
+      period: 'ex VAT / day',
+      description: 'Fractional CFO with an IT edge: finance process, reporting, controls and cash — automated, not manual.',
+      color: 'from-sky-500 to-sky-700',
+      bgColor: 'bg-sky-50',
+      borderColor: 'border-sky-200',
+      features: [
+        'Financial reporting & KPI automation',
+        'Cash, runway & treasury visibility',
+        'Controls, IFRS & compliance structuring',
+        'Restructuring & cost optimization',
+        'Fundraising & due-diligence readiness',
+        'Finance tooling & dashboard build',
+      ],
+      isPopular: false,
+      isBonus: false,
     },
     {
       id: 'sprint',
@@ -59,19 +61,20 @@ export default function PricingPage() {
       icon: <Zap className="w-8 h-8 text-indigo-400" />,
       price: '€750',
       period: 'ex VAT / day',
-      description: 'Design and implementation of internal tools, workflows, dashboards and automation.',
+      description: 'Design and build of internal tools, AI workflows, dashboards and automation — real code, team-ready.',
       color: 'from-indigo-500 to-indigo-700',
       bgColor: 'bg-indigo-50',
       borderColor: 'border-indigo-200',
       features: [
         'Target operating system design',
-        'Internal tools and automation',
+        'Internal tools & custom software',
         'AI-enabled workflows',
         'Dashboards and management cadence',
+        'Integrations across your stack',
         'Documentation and handover',
-        'Team-ready deliverable',
       ],
       isPopular: false,
+      isBonus: false,
     },
     {
       id: 'crisis',
@@ -79,7 +82,7 @@ export default function PricingPage() {
       icon: <AlertTriangle className="w-8 h-8 text-rose-400" />,
       price: '€1,000',
       period: 'ex VAT / day',
-      description: 'Immediate stabilization when operations, cash or governance are breaking.',
+      description: 'When operations, cash or governance are breaking. My favorite playground: stabilize fast, then rebuild the system.',
       color: 'from-rose-500 to-rose-700',
       bgColor: 'bg-rose-50',
       borderColor: 'border-rose-200',
@@ -88,10 +91,11 @@ export default function PricingPage() {
         'Fast takeover of blocking issues',
         'Immediate cash and runway visibility',
         'Critical operations stabilization',
-        'Clear and actionable arbitrations',
+        'IT & process rebuilt to prevent relapse',
         'Interim executive support',
       ],
       isPopular: false,
+      isBonus: true,
     },
   ]
 
@@ -114,7 +118,7 @@ export default function PricingPage() {
             transition={{ duration: 0.8 }}
             className="text-4xl md:text-6xl font-bold text-white mb-6"
           >
-            Four formats. No fluff.
+            An operator who builds the IT.
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -122,7 +126,7 @@ export default function PricingPage() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="text-xl md:text-2xl text-slate-300 mb-8 max-w-4xl mx-auto"
           >
-            Diagnostic, fractional execution, systems build or crisis intervention — each format matches a real situation.
+            Same backbone in every format: I design the process and build the IT and automation behind it. Two core verticals — operations and finance — plus a systems build sprint. Each engagement starts with a 24–48h diagnostic. Crisis intervention is the bonus: the part I love most.
           </motion.p>
         </div>
       </section>
@@ -146,7 +150,14 @@ export default function PricingPage() {
                     </span>
                   </div>
                 )}
-                <Card className={`h-full flex flex-col ${plan.bgColor} ${plan.borderColor} border-2 ${plan.isPopular ? 'ring-2 ring-emerald-400 ring-opacity-50' : ''}`}>
+                {plan.isBonus && (
+                  <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 z-10">
+                    <span className="bg-amber-500 text-white px-4 py-2 rounded-full text-sm font-semibold whitespace-nowrap">
+                      ★ Bonus · what I love
+                    </span>
+                  </div>
+                )}
+                <Card className={`h-full flex flex-col ${plan.bgColor} ${plan.borderColor} border-2 ${plan.isPopular ? 'ring-2 ring-emerald-400 ring-opacity-50' : ''} ${plan.isBonus ? 'ring-2 ring-amber-400 ring-opacity-50' : ''}`}>
                   <CardHeader className="text-center p-6">
                     <div className={`w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-gradient-to-br ${plan.color}`}>
                       {plan.icon}

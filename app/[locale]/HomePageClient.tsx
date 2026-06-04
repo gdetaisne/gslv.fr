@@ -118,6 +118,7 @@ export default function HomePageClient() {
     },
     {
       label: 'Moverz',
+      href: 'https://moverz.fr',
       tag: locale === 'fr' ? 'En cours · 2024' : 'Ongoing · 2024',
       title: locale === 'fr'
         ? 'Infrastructure de pricing IA pour un marché de €10Bn'
@@ -139,6 +140,7 @@ export default function HomePageClient() {
     },
     {
       label: 'Ligerio',
+      href: 'https://ligerio.fr',
       tag: '2021–2025',
       title: locale === 'fr'
         ? 'Scaler un e-commerce logistique-intensif à €10M+'
